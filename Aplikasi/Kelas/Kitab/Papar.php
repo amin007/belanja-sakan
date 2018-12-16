@@ -1,5 +1,5 @@
 <?php
-namespace Aplikasi\Kitab; //echo __NAMESPACE__; 
+namespace Aplikasi\Kitab; //echo __NAMESPACE__;
 class Papar
 {
 #==========================================================================================
@@ -46,7 +46,7 @@ class Papar
 		else
 		{
 			if( in_array($nama,$cariNama) )
-				require $paparFail;	
+				require $paparFail;
 			elseif ( $nama == 'semak')
 				require $paparFail;	
 			else
