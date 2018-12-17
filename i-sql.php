@@ -1,6 +1,6 @@
 <?php
 /*
--- contoh sql untuk nama_pengguna
+-- contoh sql senarai table yang ada
 -- Adminer 4.6.3 MySQL dump
 
 DROP TABLE IF EXISTS `kod_mediumpembayaran`;
@@ -23,6 +23,38 @@ INSERT INTO `kod_mediumpembayaran` (`no`, `kod`, `keterangan`, `catatan`) VALUES
 (8,	'08',	'sewa beli | hire purchase',	''),
 (9,	'09',	'percuma | free',	''),
 (10,	'10',	'lain-lain (contoh:konsesi)\r\n|others (eg: concessions)',	'');
+
+DROP TABLE IF EXISTS `kod_puncapembelian`;
+CREATE TABLE `kod_puncapembelian` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `kod` char(2) NOT NULL,
+  `keterangan` text NOT NULL,
+  `catatan` text NOT NULL,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `kod_puncapembelian` (`no`, `kod`, `keterangan`, `catatan`) VALUES
+(1,	'01',	'pasar basah',	''),
+(2,	'02',	'pasar borong',	''),
+(3,	'03',	'pasar tani/pasar tamu',	''),
+(4,	'04',	'pasar malam',	''),
+(5,	'05',	'kedai runcit di dalam pasar basah/pasar borong',	''),
+(6,	'06',	'kedai runcit',	''),
+(7,	'07',	'kedai runcit/akhbar di pusat membeli belah',	''),
+(8,	'08',	'pasar mini / mini market',	''),
+(9,	'09',	'Pasar raya',	''),
+(10,	'10',	'departmental store',	''),
+(11,	'11',	'Kedai `convenience`',	''),
+(12,	'12',	'Pasar raya besar (Hypermarket)',	''),
+(13,	'13',	'kedai khusus',	''),
+(14,	'14',	'restoran/kedai makan',	''),
+(15,	'15',	'restoran bercawangan / food court',	''),
+(16,	'16',	'gerai kecil/karavan/ food truck/kiosk',	''),
+(17,	'17',	'restoran berhawa dingin / restoran 24 jam',	''),
+(18,	'18',	'stesen petrol',	''),
+(19,	'19',	'farmasi',	''),
+(20,	'20',	'pembelian atas talian/pembelian melalui tempahan',	''),
+(21,	'21',	'lain-lain',	'');
 
 DROP TABLE IF EXISTS `nama_pengguna`;
 CREATE TABLE `nama_pengguna` (
@@ -61,5 +93,5 @@ CREATE TABLE `senarai_belanja` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
--- 2018-12-17 00:20:15
+-- 2018-12-17 05:18:18
 */
