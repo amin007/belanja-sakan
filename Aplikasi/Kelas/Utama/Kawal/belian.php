@@ -123,18 +123,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan($pilih, $myJadual);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilMedan($pilih,$idBorang)
-	{
-		# Set pembolehubah utama
-		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,$idBorang);
-		$this->papar->medan = $this->tanya->//cariSql
-			cariSemuaData
-			($myTable, $medan, $carian, $susun);
-		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($pilih, $myTable);
-		//$this->debugKandunganPaparan($pilih, $myTable);
-	}
-#-------------------------------------------------------------------------------------------
 	function panggilDBKhas01($pilih)
 	{
 		# Set pembolehubah utama
@@ -182,18 +170,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			($myJadual, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myJadual, $myJadual);
-		//$this->debugKandunganPaparan($pilih, $myJadual);
-	}
-#-------------------------------------------------------------------------------------------
-	function panggilSQL($pilih)
-	{
-		# Set pembolehubah utama
-		list($entah, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,$idBorang);
-		$this->papar->bentukJadual02[$pilih] = $this->tanya->//cariSql
-			cariSemuaData
-			($myJadual, $medan, $carian, $susun);
-		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($pilih, $myJadual);
 		//$this->debugKandunganPaparan($pilih, $myJadual);
 	}
 #-------------------------------------------------------------------------------------------
