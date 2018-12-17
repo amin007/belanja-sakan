@@ -97,6 +97,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	function tambahMedanDB($pilih)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
 		list($myTable) = $this->tanya->tambahPembolehubah($pilih);
 		$this->papar->medan = $this->tanya->//paparMedan
 			//paparMedan02 //pilihMedan //pilihMedan02
@@ -108,8 +109,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function panggilTable($myJadual,$medanID,$dataID)
 	{
-		# Set pembolehubah utama
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
 		list($entah, $medan, $carian, $susun) = $this->tanya->jadualAES($medanID,$dataID);
 		$this->papar->senarai[$myJadual] = $this->tanya->//cariSql
 			cariSemuaData
@@ -121,6 +122,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function panggilKhas01($pilih)
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,'');
 		$this->papar->bentukJadual01[$pilih] = $this->tanya->//cariSql
@@ -133,6 +135,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function panggilKhas02($pilih,'')
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,'');
 		$this->papar->bentukJadual02[$pilih] = $this->tanya->//cariSql
