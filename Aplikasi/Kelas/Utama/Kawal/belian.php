@@ -119,7 +119,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan($pilih, $myJadual);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilDBKhas01($pilih)
+	function panggilKhas01($pilih)
 	{
 		# Set pembolehubah utama
 		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,'');
@@ -131,7 +131,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan($pilih, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilDBKhas02($pilih,$myJadual,$idBorang)
+	function panggilKhas02($pilih,$myJadual,$idBorang)
 	{
 		# Set pembolehubah utama
 		//$myJadual = explode('.', $myJadual);
