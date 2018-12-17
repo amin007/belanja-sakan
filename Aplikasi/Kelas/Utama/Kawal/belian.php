@@ -131,17 +131,16 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan($pilih, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilKhas02($pilih,$myJadual,$idBorang)
+	function panggilKhas02($pilih,'')
 	{
 		# Set pembolehubah utama
-		//$myJadual = explode('.', $myJadual);
-		list($entah, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,$idBorang);
+		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,'');
 		$this->papar->bentukJadual02[$pilih] = $this->tanya->//cariSql
 			cariSemuaData
-			($myJadual, $medan, $carian, $susun);
+			($myTable, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($pilih, $myJadual);
-		//$this->debugKandunganPaparan($pilih, $myJadual);
+		$this->kandunganPaparan($pilih, $myTable);
+		//$this->debugKandunganPaparan($pilih, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	public function updateID($pilih)
