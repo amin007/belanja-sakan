@@ -35,7 +35,7 @@ class Kebenaran
 #------------------------------------------------------------------------------------
 	private static function senaraiLevel()
 	{
-		return array('pentadbir','pelawat','kawal','fe','pegawai');
+		return array('pentadbir','admin1','pelawat','user','fe','pegawai');
 	}
 #------------------------------------------------------------------------------------
 	public static function kawalKeluar()
