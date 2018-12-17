@@ -100,6 +100,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 	function semakid()
 	{
 		# debug $_POST
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		//echo '<pre>Test $_POST->'; print_r($_POST); echo '</pre>';
 
 		# semak data $this->tanya->ujiID(); 
