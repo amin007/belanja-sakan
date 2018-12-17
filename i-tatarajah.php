@@ -90,8 +90,9 @@ define('MSICBARU', serialize (
 		$e.'msic_v1',$e.'msic_bandingan',
 		$e.'msic',$e.'msic_nota_kaki')
 	));
-# namaPenuh,namaPendek,kataLaluan,level
-$loginMedan01 = '`full_name` as namaPenuh,`user` as namaPendek,`password`,`level`';
+## untuk table login
+# namaPenuh,namaPendek,email,kataLaluan,level
+$loginMedan01 = 'namaPengguna as namaPendek,`kataLaluan`,`level`,Nama_Penuh as namaPenuh,`email`,`nohp`';
 define('JADUAL_LOGIN', serialize(
-	array ('biodata','email','password',$loginMedan01)
+	array ('nama_pengguna','email|nohp','kataLaluan',$loginMedan01)
 	));
