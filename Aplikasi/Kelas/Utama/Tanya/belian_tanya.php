@@ -169,10 +169,10 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 	public function susunPembolehubah($pilih,$idBorang)
 	{
 		//$pilih = null;
-		if($pilih == 'semuaAES'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualAES($idBorang);
-		elseif($pilih == 'infoIctHasil'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualInfoIctHasil($idBorang);
+		if($pilih == 'kod_puncapembelian'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->kodPuncapembelian();
+		elseif($pilih == 'kod_mediumpembayaran'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->kodMediumpembayaran();
 		elseif($pilih == 'medanKP'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->jadualMedanKP($idBorang);
 		elseif($pilih == 'pertubuhan'): //echo "\$pilih = $pilih <br>";
@@ -196,15 +196,15 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
 #---------------------------------------------------------------------------------------------------#
-	function jadualAES($medanID,$dataID)
+	function kodPuncapembelian()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
-		$myTable = null;
-		$medan = '*';
+		$myTable = 'kod_puncapembelian';
+		$medan = 'kod,keterangan';
 		$carian = $susun = null;
 		# semak database
-			$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
+			/*$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
 				'atau'=>'WHERE', # WHERE / OR / AND
 				'medan' => $medanID, # cari dalam medan apa
 				'apa' => $dataID); # benda yang dicari//*/
@@ -212,15 +212,15 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
 #---------------------------------------------------------------------------------------------------#
-	function jadualInfoIctHasil($idBorang)
+	function kodMediumpembayaran()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
-		$myTable = 'data_malaysiabaru.mk_tr2010_hasil';
-		$medan = '*';
+		$myTable = 'kod_mediumpembayaran';
+		$medan = 'kod,keterangan';
 		$carian = $susun = null;
 		# semak database
-			$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
+			/*$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
 				'atau'=>'WHERE', # WHERE / OR / AND
 				'medan' => 'newss', # cari dalam medan apa
 				'apa' => $idBorang); # benda yang dicari//*/
