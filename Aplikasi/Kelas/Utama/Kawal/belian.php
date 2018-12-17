@@ -94,6 +94,31 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//*/
 	}
 #-------------------------------------------------------------------------------------------
+	function tambahMedanDB($pilih)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		list($myTable) = $this->tanya->tambahPembolehubah($pilih);
+		$this->papar->medan = $this->tanya->//paparMedan
+			//paparMedan02 //pilihMedan //pilihMedan02
+			pilihMedan02($myTable);//*/
+
+		# Set pembolehubah untuk Papar
+		$this->papar->_jadual = $myTable;
+	}
+#-------------------------------------------------------------------------------------------
+	function panggilTable($myJadual,$medanID,$dataID)
+	{
+		# Set pembolehubah utama
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		list($entah, $medan, $carian, $susun) = $this->tanya->jadualAES($medanID,$dataID);
+		$this->papar->senarai[$myJadual] = $this->tanya->//cariSql
+			cariSemuaData
+			($myJadual, $medan, $carian, $susun);
+		# Set pembolehubah untuk Papar
+		$this->kandunganPaparan($myJadual, $myJadual);
+		//$this->debugKandunganPaparan($pilih, $myJadual);
+	}
+#-------------------------------------------------------------------------------------------
 	function panggilDB($pilih,$myJadual,$idBorang)
 	{
 		# Set pembolehubah utama
@@ -145,31 +170,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			($myJadual, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($pilih, $myJadual);
-		//$this->debugKandunganPaparan($pilih, $myJadual);
-	}
-#-------------------------------------------------------------------------------------------
-	function tambahMedanDB($pilih)
-	{
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		list($myTable) = $this->tanya->tambahPembolehubah($pilih);
-		$this->papar->medan = $this->tanya->//paparMedan
-			//paparMedan02 //pilihMedan //pilihMedan02
-			pilihMedan02($myTable);//*/
-
-		# Set pembolehubah untuk Papar
-		$this->papar->_jadual = $myTable;
-	}
-#-------------------------------------------------------------------------------------------
-	function panggilTable($myJadual,$medanID,$dataID)
-	{
-		# Set pembolehubah utama
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		list($entah, $medan, $carian, $susun) = $this->tanya->jadualAES($medanID,$dataID);
-		$this->papar->senarai[$myJadual] = $this->tanya->//cariSql
-			cariSemuaData
-			($myJadual, $medan, $carian, $susun);
-		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($myJadual, $myJadual);
 		//$this->debugKandunganPaparan($pilih, $myJadual);
 	}
 #-------------------------------------------------------------------------------------------
