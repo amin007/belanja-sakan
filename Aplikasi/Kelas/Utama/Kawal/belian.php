@@ -123,17 +123,16 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan($pilih, $myJadual);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilMedan($pilih,$myJadual,$idBorang)
+	function panggilMedan($pilih,$idBorang)
 	{
 		# Set pembolehubah utama
-		list($entah, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,$idBorang);
-		//$myJadual = explode('.', $myJadual);
+		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,$idBorang);
 		$this->papar->medan = $this->tanya->//cariSql
 			cariSemuaData
-			($myJadual, $medan, $carian, $susun);
+			($myTable, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($pilih, $myJadual);
-		//$this->debugKandunganPaparan($pilih, $myJadual);
+		$this->kandunganPaparan($pilih, $myTable);
+		//$this->debugKandunganPaparan($pilih, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilDBKhas01($pilih)
@@ -144,8 +143,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			cariSemuaData
 			($myTable, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($pilih, $myJadual);
-		//$this->debugKandunganPaparan($pilih, $myJadual);
+		$this->kandunganPaparan($pilih, $myTable);
+		//$this->debugKandunganPaparan($pilih, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilDBKhas02($pilih,$myJadual,$idBorang)
@@ -283,8 +282,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		$this->panggilDBKhas01('kod_puncapembelian');
-		$this->panggilDBKhas01('kod_mediumpembayaran');
+		$this->panggilMedan('kod_puncapembelian',null);
+		$this->panggilMedan('kod_mediumpembayaran',null);
 		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
