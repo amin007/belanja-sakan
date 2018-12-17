@@ -73,7 +73,7 @@ CREATE TABLE `nama_pengguna` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `nama_pengguna` (`no`, `namaPengguna`, `kataLaluan`, `kataRahsia`, `level`, `nokp`, `Nama_Penuh`, `email`, `nohp`, `CatatNota`) VALUES
-(1,	'admin1',	'360cea6bdd8203dcb002a81f3b7e7408',	'',	'admin',	'01012019010000',	'admin1',	'admin1@duduk.mana',	'012345678',	'contoh password admin1satu'),
+(1,	'admin1',	'360cea6bdd8203dcb002a81f3b7e7408',	'',	'admin1',	'01012019010000',	'admin1',	'admin1@duduk.mana',	'012345678',	'contoh password admin1satu'),
 (2,	'user1',	'527404287f666a77506b77e5b6184c86',	'',	'user',	'010119010001',	'user1',	'user1@duduk.mana',	'011234567',	'contoh password user1satu');
 
 DROP TABLE IF EXISTS `senarai_belanja`;
