@@ -136,12 +136,10 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan($pilih, $myJadual);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilDBKhas01($pilih,$myTable,$idBorang)
+	function panggilDBKhas01($pilih)
 	{
 		# Set pembolehubah utama
-		$pecah = explode('.', $myTable);
-		$myJadual = $pecah[1];
-		list($entah, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,$idBorang);
+		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,'');
 		$this->papar->bentukJadual01[$pilih] = $this->tanya->//cariSql
 			cariSemuaData
 			($myTable, $medan, $carian, $susun);
@@ -285,15 +283,15 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		$this->papar->idBorang = (isset($_GET['cari'])) ? $_GET['cari'] : null;
-		$random = rand(-30, 30);
-		$this->papar->pautan = URL . 'borang/temui/400/1/' . $random;
+		$this->panggilDBKhas01('kod_puncapembelian');
+		$this->panggilDBKhas01('kod_mediumpembayaran');
+		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
 		$fail = array('1cari','index','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		//$this->semakPembolehubah(); # Semak data dulu
-		$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);
+		//$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);
 	}
 #-------------------------------------------------------------------------------------------
 	public function temui($a,$b,$c2) # daripada fungsi index()
