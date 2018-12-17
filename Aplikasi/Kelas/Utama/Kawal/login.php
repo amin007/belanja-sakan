@@ -118,6 +118,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	function loginid()
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		# semak data $_POST
 		list($myTable, $medan01, $medan02, $medan) = dpt_senarai('jadual_login');
 		$email = $_POST['username'];
