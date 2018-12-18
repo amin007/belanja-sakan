@@ -94,17 +94,26 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//*/
 	}
 #-------------------------------------------------------------------------------------------
+	function pilihMedan($pilih)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
+		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,'');
+		$this->papar->medan = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
+		# Set pembolehubah untuk Papar
+		$this->kandunganPaparan($myTable, $myTable);
+		//$this->debugKandunganPaparan($pilih, $myTable);
+	}
+#-------------------------------------------------------------------------------------------
 	function tambahMedanDB($pilih)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($myTable) = $this->tanya->tambahPembolehubah($pilih);
-		$this->papar->medan = $this->tanya->//paparMedan
-			//paparMedan02 //pilihMedan //pilihMedan02
-			pilihMedan02($myTable);//*/
-
+		$this->papar->medan = $this->tanya->pilihMedan02($myTable);
 		# Set pembolehubah untuk Papar
-		$this->papar->_jadual = $myTable;
+		$this->kandunganPaparan($myTable, $myTable);
+		//$this->debugKandunganPaparan($pilih, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilTable($myJadual,$medanID,$dataID)
@@ -133,7 +142,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan($pilih, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilKhas02($pilih,'')
+	function panggilKhas02($pilih,$entah)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
@@ -231,8 +240,10 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		$this->panggilMedan('kod_puncapembelian',null);
-		$this->panggilMedan('kod_mediumpembayaran',null);
+		//$this->panggilKhas01('kod_puncapembelian',null);
+		//$this->panggilKhas01('kod_mediumpembayaran',null);
+		//$this->pilihMedan('senarai_belanja');
+		$this->pilihMedan('nama_pengguna');
 		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
