@@ -100,7 +100,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,'');
 		list($result,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
-		$this->papar->medan = $meta;
+		$this->papar->kiramedan[$myTable] = $meta;
 		$this->papar->senarai[$myTable] = $result;
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myTable, $myTable);
@@ -242,8 +242,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		//$this->panggilKhas01('kod_puncapembelian',null);
-		//$this->panggilKhas01('kod_mediumpembayaran',null);
+		$this->panggilKhas01('kod_puncapembelian',null);
+		$this->panggilKhas01('kod_mediumpembayaran',null);
 		$this->pilihMedan('senarai_belanja');
 		//$this->pilihMedan('nama_pengguna');
 		$this->debugKandunganPaparan();//*/
