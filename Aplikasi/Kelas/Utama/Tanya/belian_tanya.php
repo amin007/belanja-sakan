@@ -173,8 +173,8 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 			list($myTable, $medan, $carian, $susun) = $this->kodPuncapembelian();
 		elseif($pilih == 'kod_mediumpembayaran'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->kodMediumpembayaran();
-		elseif($pilih == 'medanKP'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualMedanKP($idBorang);
+		elseif($pilih == 'senarai_belanja'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiBelanja($idBorang);
 		elseif($pilih == 'pertubuhan'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->jadualPertubuhan($idBorang);
 		elseif($pilih == 'limaPerangkaan'): //echo "\$pilih = $pilih <br>";
@@ -228,22 +228,18 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
 #---------------------------------------------------------------------------------------------------#
-	function jadualMedanKP($idBorang)
+	function jadualSenaraiBelanja($idBorang)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
-		$myTable = null;
-		$medan = 'medan,keterangan';
+		$myTable = 'senarai_belanja';
+		$medan = '*';
 		$carian = $susun = null;
 		# semak database
-			$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
+			/*$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
 				'atau' => 'WHERE', # WHERE / OR / AND
 				'medan' => 'kp', # cari dalam medan apa
 				'apa' => $idBorang); # benda yang dicari//*/
-			$carian[] = array('fix' => 'xnull', # cari x= / %like% / xlike / xnull
-				'atau' => 'AND', # WHERE / OR / AND
-				'medan' => 'keterangan', # cari dalam medan apa
-				'apa' => '-'); # benda yang dicari//*/
 
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
