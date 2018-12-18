@@ -308,6 +308,31 @@ class DB_Pdo extends \PDO
 		}
 	}
 #------------------------------------------------------------------------------------------------------------------
+	/**
+	 * selectAllMeta
+	 * @param string $sql An SQL string
+	 * @param array $array Paramters to bind
+	 * @param constant $fetchMode A PDO Fetch mode
+	 * @return mixed
+	 */
+	public function selectAllMeta($sql, $array = array(), $fetchMode = \PDO::FETCH_ASSOC)
+	{
+		//echo '<hr><pre>'; print_r($sql) . '</pre><hr>';
+		$sth = $this->prepare($sql);
+		foreach ($array as $key => $value)
+		{
+			$sth->bindValue("$key", $value);
+		}
+
+		$sth->execute();
+		$meta = $sth->getColumnMeta();
+		$problem = $sth->errorInfo(); # semak jika ada error
+		if($problem[0]=='00000')# pulangkan pembolehubah
+			return array($sth->fetchAll($fetchMode),$meta);
+		else
+			$this->bigError($sth,$problem);//*/
+	}
+#------------------------------------------------------------------------------------------------------------------
 #==================================================================================================================
 }
 
