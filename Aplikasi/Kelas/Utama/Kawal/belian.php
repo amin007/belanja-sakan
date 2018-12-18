@@ -261,17 +261,126 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$kira = count($this->papar->kiramedan[$myTable]);
 		echo "<hr> bil untuk kiramedan[$myTable] = $kira <br>";
 		//$this->semakPembolehubah($this->papar->kiramedan[$myTable]);
-		echo '<table>' . "\n";
-		echo '<tr><th>#</th><th>name</th><th>type</th><th>len</th><th>primaryKey</th></tr>';
+		echo '<table border="1">' . "\n";
+		echo '<tr><th>#</th><th>name</th><th>type</th><th>medan</th>'
+		. '<th>len</th></tr>';
 		foreach($this->papar->kiramedan[$myTable] as $key => $pilih):
-			$pilih['primaryKey'] = isset($pilih['flags'][1]) ? 'yes':null;
+			$kunciUtama = isset($pilih['flags'][1]) ? 'primaryKey':null;
+			$medan = $this->addInput($class=null, $myTable, $kunciUtama,
+			$pilih['native_type'], $pilih['name'], $data=null);
+
 			echo "\n<rr><td>$key</td><td>" . $pilih['name']
 			. '</td><td>' . $pilih['native_type']
+			. '</td><td>' . $medan
 			. '</td><td>' . $pilih['len']
-			. '</td><td>' . $pilih['primaryKey']
 			. '</td></tr>';
 		endforeach;
 		echo '</table>';
+	}
+#-------------------------------------------------------------------------------------------
+	public function addInput($class, $myTable, $kunciUtama, $jenisMedan, $namaMedan, $data)
+	{
+		# istihar pembolehubah
+		$labelDibawah = $data;
+		$name = 'name="' . $myTable . '[' . $namaMedan . ']"';
+		$tab2 = "\n\t\t";
+		$tab3 = "\n\t\t\t";
+		$tab4 = "\n\t\t\t\t";
+		# butang
+		$birutua = 'btn btn-primary btn-mini';
+		$birumuda = 'btn btn-info btn-mini';
+		$merah = 'btn btn-danger btn-mini';
+		$classInput = $class . 'input-group input-group';
+		$komen = '<!-- / "' . $class . 'input-group input-group" -->';
+
+		if(in_array($kunciUtama,array('primaryKey')))
+		{#untuk medan primary key
+			$data = null;
+			$input = $tab2 . '<div class="'.$classInput.'">' . $tab3
+				   . '<span class="input-group-addon">'. $name . '</span>' . $tab3
+				   . $this->labelBawah($labelDibawah)
+				   . '</div>' . $komen
+				   . '';
+		}
+		elseif(in_array($jenisMedan,array('STRING','VAR_STRING')))
+		{#kod utk input text
+			$input = $tab2 . '<div class="'.$classInput.'">' . $tab3
+				   //. '<span class="input-group-addon"></span>' . $tab3
+				   . '<input type="text" ' . $name . ' class="form-control">' . $tab3
+				   . $this->labelBawah($labelDibawah)
+				   . '</div>' . $name
+				   . '';
+		}
+		elseif(in_array($jenisMedan,array('LONG')))
+		{#kod utk input numbor
+			$input = $tab2 . '<div class="'.$classInput.'">' . $tab3
+				   //. '<span class="input-group-addon"></span>' . $tab3
+				   . '<input type="number" ' . $name . ' class="form-control">' . $tab3
+				   . $this->labelBawah($labelDibawah)
+				   . '</div>' . $name
+				   . '';
+		}
+		elseif(in_array($jenisMedan,array('DATE')))
+		{#kod utk input date
+			$input = $tab2 . '<div class="'.$classInput.'">' . $tab3
+				   //. '<span class="input-group-addon"></span>' . $tab3
+				   . '<input type="date" ' . $name . ' class="form-control">' . $tab3
+				   . $this->labelBawah($labelDibawah)
+				   . '</div>' . $name
+				   . '';
+		}
+		elseif(in_array($jenisMedan,array('BLOB')))
+		{#senarai medan untuk textarea
+			//$data = null;
+			$input = $tab2 . '<div class="'.$classInput.'">' . $tab3
+				   . '<textarea ' . $name . ' rows="5" cols="20"' . $tab3
+				   . ' class="form-control">' . $data . '</textarea>' . $tab3
+				   . $this->labelPre($labelDibawah)
+				   . '</div>' . $komen . $tab3
+				   . '';
+		}
+		elseif ( in_array($jenisMedan,array('blockquote')) )
+		{#kod untuk blockquote
+			$data = null;
+			$input = '<blockquote>'
+				   . '<p class="form-control-static text-info">' . $data . '</p>'
+				   //. '<small>Alamat <cite title="Source Title">baru</cite></small>'
+				   . '</blockquote>';
+		}
+		else
+		{#kod untuk lain2
+			$input = '<p class="form-control-static text-info">'
+			. $jenisMedan . '|' . $name . '</p>';
+		}
+
+		return $input; # pulangkan nilai
+	}
+#-------------------------------------------------------------------------------------------
+	public static function labelBawah($labelDibawah)
+	{
+		$input2 = null;
+		$tab2 = "\n\t\t";
+		$input2 = ($labelDibawah==null) ? '' :
+				'<span class="input-group-addon">'
+				. $labelDibawah . '</span>'
+				. $tab2;
+
+		return $input2;
+	}
+#-------------------------------------------------------------------------------------------
+	public static function labelPre($labelDibawah)
+	{
+		$input2 = null;
+		$tab2 = "\n\t\t";
+		$pre = 'pre';
+		//$pre = 'blockquote';
+		$input2 = ($labelDibawah==null) ? '' :
+				'<' . $pre . '>'
+				. $labelDibawah
+				. '</' . $pre . '>'
+				. $tab2;
+
+		return $input2;
 	}
 #-------------------------------------------------------------------------------------------
 #==========================================================================================
