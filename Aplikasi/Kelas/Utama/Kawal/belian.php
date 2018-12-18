@@ -94,12 +94,14 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//*/
 	}
 #-------------------------------------------------------------------------------------------
-	function pilihMedan($pilih, $bil)
+	function pilihMedan($pilih)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,'');
-		$this->papar->medan = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun, $bil);
+		list($result,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
+		$this->papar->medan = $meta;
+		$this->papar->senarai[$myTable] = $result;
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myTable, $myTable);
 		//$this->debugKandunganPaparan($pilih, $myTable);
@@ -243,7 +245,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->panggilKhas01('kod_puncapembelian',null);
 		//$this->panggilKhas01('kod_mediumpembayaran',null);
 		//$this->pilihMedan('senarai_belanja');
-		$this->pilihMedan('nama_pengguna',20);
+		$this->pilihMedan('nama_pengguna');
 		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
