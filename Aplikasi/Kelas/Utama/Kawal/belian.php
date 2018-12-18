@@ -244,8 +244,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 		//$this->panggilKhas01('kod_puncapembelian',null);
 		//$this->panggilKhas01('kod_mediumpembayaran',null);
-		//$this->pilihMedan('senarai_belanja');
-		$this->pilihMedan('nama_pengguna');
+		$this->pilihMedan('senarai_belanja');
+		//$this->pilihMedan('nama_pengguna');
 		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
