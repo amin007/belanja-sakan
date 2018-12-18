@@ -87,11 +87,11 @@ CREATE TABLE `senarai_belanja` (
   `harga_sebenar` tinyint(4) DEFAULT NULL COMMENT '1-harga sebenar/2-harga anggaran',
   `punca_pembelian` char(2) DEFAULT NULL,
   `medium_pembayaran` enum('01,02,03,04,05,06,07,08,09,10') DEFAULT NULL,
-  `mediaum_edagang` int(11) DEFAULT NULL COMMENT '1-ya/2-tidak',
-  `catatan` int(11) DEFAULT NULL,
+  `medium_edagang` int(11) DEFAULT NULL COMMENT '1-ya/2-tidak',
+  `catatan` text,
   PRIMARY KEY (`no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
--- 2018-12-17 05:18:18
+-- 2018-12-18 17:57:55
 */
