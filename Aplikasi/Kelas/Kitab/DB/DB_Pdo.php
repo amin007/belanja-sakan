@@ -315,17 +315,15 @@ class DB_Pdo extends \PDO
 	 * @param constant $fetchMode A PDO Fetch mode
 	 * @return mixed
 	 */
-	public function selectAllMeta($sql, $array = array(), $fetchMode = \PDO::FETCH_ASSOC)
+	public function selectAllMeta($sql, $kira = 0, $fetchMode = \PDO::FETCH_ASSOC)
 	{
 		//echo '<hr><pre>'; print_r($sql) . '</pre><hr>';
 		$sth = $this->prepare($sql);
-		foreach ($array as $key => $value)
-		{
-			$sth->bindValue("$key", $value);
-		}
-
 		$sth->execute();
-		$meta = $sth->getColumnMeta();
+		for($mula = 0; $mula < $kira; $mula++):
+			$meta[$mula] = $sth->getColumnMeta($mula);
+		endfor;
+
 		$problem = $sth->errorInfo(); # semak jika ada error
 		if($problem[0]=='00000')# pulangkan pembolehubah
 			return array($sth->fetchAll($fetchMode),$meta);
