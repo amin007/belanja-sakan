@@ -246,13 +246,32 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->panggilKhas01('kod_mediumpembayaran',null);
 		$this->pilihMedan('senarai_belanja');
 		//$this->pilihMedan('nama_pengguna');
-		$this->debugKandunganPaparan();//*/
+		$this->ujian01('senarai_belanja');
+		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
 		$fail = array('1cari','index','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		//$this->semakPembolehubah(); # Semak data dulu
 		//$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);
+	}
+#-------------------------------------------------------------------------------------------
+	function ujian01($myTable)
+	{
+		$kira = count($this->papar->kiramedan[$myTable]);
+		echo "<hr> bil untuk kiramedan[$myTable] = $kira <br>";
+		//$this->semakPembolehubah($this->papar->kiramedan[$myTable]);
+		echo '<table>' . "\n";
+		echo '<tr><th>#</th><th>name</th><th>type</th><th>len</th><th>primaryKey</th></tr>';
+		foreach($this->papar->kiramedan[$myTable] as $key => $pilih):
+			$pilih['primaryKey'] = isset($pilih['flags'][1]) ? 'yes':null;
+			echo "\n<rr><td>$key</td><td>" . $pilih['name']
+			. '</td><td>' . $pilih['native_type']
+			. '</td><td>' . $pilih['len']
+			. '</td><td>' . $pilih['primaryKey']
+			. '</td></tr>';
+		endforeach;
+		echo '</table>';
 	}
 #-------------------------------------------------------------------------------------------
 #==========================================================================================
