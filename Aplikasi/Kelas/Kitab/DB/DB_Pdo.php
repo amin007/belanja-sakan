@@ -319,9 +319,10 @@ class DB_Pdo extends \PDO
 	{
 		//echo '<hr><pre>'; print_r($sql) . '</pre><hr>';
 		$sth = $this->prepare($sql);
+		foreach ($array as $key => $value)
+			$sth->bindValue("$key", $value);
 		$sth->execute();
-		$kira =  $sth->columnCount();
-		for($mula = 0; $mula < $kira; $mula++):
+		for($mula = 0; $mula < $sth->columnCount(); $mula++):
 			$meta[$mula] = $sth->getColumnMeta($mula);
 		endfor;
 
