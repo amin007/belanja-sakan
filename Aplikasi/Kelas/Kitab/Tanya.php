@@ -52,10 +52,10 @@ class Tanya
 		return $this->db->getColumnNames($myTable, $database);
 	}
 #-------------------------------------------------------------------------------------------------
-	public function pilihMedan03($myTable, $medan, $carian, $susun)
+	public function pilihMedan03($myTable, $medan, $carian, $susun, $bil)
 	{
 		$sql = $this->sql->bentukSqlSelect($myTable, $medan, $carian, $susun);
-		list($result,$meta) = $this->db->selectAllMeta($sql);
+		list($result,$meta) = $this->db->selectAllMeta($sql,$bil);
 		//echo json_encode($result);
 		echo '<pre>$sql::' . htmlentities($sql) . '</pre><br>';
 		echo '<pre>$result::'; print_r($result); echo '</pre><br>';
