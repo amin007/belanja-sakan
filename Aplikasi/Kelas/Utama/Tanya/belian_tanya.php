@@ -174,9 +174,9 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		elseif($pilih == 'kod_mediumpembayaran'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->kodMediumpembayaran();
 		elseif($pilih == 'senarai_belanja'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiBelanja($idBorang);
-		elseif($pilih == 'pertubuhan'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualPertubuhan($idBorang);
+			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiBelanja();
+		elseif($pilih == 'nama_pengguna'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->jadualNamaPengguna();
 		elseif($pilih == 'limaPerangkaan'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->jaduaLimaPerangkaan($idBorang);
 		elseif($pilih == 'semuaBE'): //echo "\$pilih = $pilih <br>";
@@ -228,7 +228,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
 #---------------------------------------------------------------------------------------------------#
-	function jadualSenaraiBelanja($idBorang)
+	function jadualSenaraiBelanja()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
@@ -244,15 +244,15 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
 #---------------------------------------------------------------------------------------------------#
-	function jadualSemuaBE($idBorang)
+	function jadualNamaPengguna()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
-		$myTable = null;
+		$myTable = 'nama_pengguna';
 		$medan = '*';
 		$carian = $susun = null;
 		# semak database
-			$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
+			/*$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
 				'atau' => 'WHERE', # WHERE / OR / AND
 				'medan' => 'NoSiri', # cari dalam medan apa
 				'apa' => $idBorang); # benda yang dicari//*/
