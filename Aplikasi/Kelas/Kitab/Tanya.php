@@ -52,6 +52,18 @@ class Tanya
 		return $this->db->getColumnNames($myTable, $database);
 	}
 #-------------------------------------------------------------------------------------------------
+	public function pilihMedan03($myTable, $medan, $carian, $susun)
+	{
+		$sql = $this->sql->bentukSqlSelect($myTable, $medan, $carian, $susun);
+		list($result,$meta) = $this->db->selectAllMeta($sql);
+		//echo json_encode($result);
+		echo '<pre>$sql::' . htmlentities($sql) . '</pre><br>';
+		echo '<pre>$result::'; print_r($result); echo '</pre><br>';
+		echo '<pre>$meta::'; print_r($meta); echo '</pre><br>';
+
+		//return $result;
+	}
+#-------------------------------------------------------------------------------------------------
 	public function ubahMedan($myTable, $medan)
 	{
 		$sql = 'ALTER TABLE `' . $myTable . '` '
