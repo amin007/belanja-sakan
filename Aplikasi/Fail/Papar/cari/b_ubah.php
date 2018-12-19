@@ -24,3 +24,5 @@ if(!isset($this->cariID))
 	echo '<h1>data kosong daa</h1>';
 else # jenis template
 	include 'template_' . $this->template . '.php';
+#------------------------------------------------------------------------------------------
+echo '<pre>$_meta='; print_r($this->_meta); echo '</pre>';
