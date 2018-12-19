@@ -145,19 +145,11 @@ class Borang02_Ubah
 		elseif ( in_array($dataType,array('DATE')) )
 			$input = $this->inputTarikh($tab2, $tab2, $name, $data,
 				$classInput, $komenInput, $jadual, $key);
-		/*elseif(in_array($key,dpt_senarai('jadual_biodata2') )) #senarai medan untuk biodata
-			$input = $this->inputBiodata($tab2, $tab3, $name, $data,
-				$classInput, $komenInput);
-		elseif(in_array($key,array('hasil','belanja','bilpekerja','gaji',
-			'hartatetap','stokakhir','staf','aset','stok')))
+		elseif(in_array($dataType,array('NUMBER')))
 			$input = $this->inputNumber($tab2, $tab2, $name, $data,
 				$classInput, $komenInput);
-		elseif(in_array($key,array('amt_staf','amt_output','amt_input','amt_aset','amt_gaji',
-			'amt_jualan','amt_hasil','amt_belanja')))
-			$input = $this->inputNumber($tab2, $tab2, $name, $data,
-				$classInput, $komenInput);
-		elseif(in_array($key,array('no','batu','jalan','tmn_kg','daerah')))
-			$input = $this->inputAlamatBaru($tab2, $tab3, $name, $data,
+		elseif(in_array($dataType,array('VAR_STRING')))
+			$input = $this->inputTeksBiasa($tab2, $tab3, $name, $data,
 				$classInput, $komenInput);
 		elseif(in_array($key,array('namax','emailx','responden','fe',
 			'mko','respon','notel','nofax')))
