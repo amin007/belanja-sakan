@@ -8,7 +8,9 @@
 		{
 			?><thead><tr><th>#</th><?php
 			foreach ( array_keys($row[$kira]) as $tajuk )
+			{
 				?><th><?php echo $tajuk ?></th><?php
+			}
 			?></tr></thead>
 	<?php	$printed_headers = true;
 		}
