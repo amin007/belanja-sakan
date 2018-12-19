@@ -241,14 +241,14 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->panggilKhas01('kod_mediumpembayaran',null);
 		$this->pilihMedan('senarai_belanja');
 		//$this->pilihMedan('nama_pengguna');
-		$this->ujian01('senarai_belanja');
+		//$this->ujian01('senarai_belanja');
 		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
 		$fail = array('1cari','index','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		//$this->semakPembolehubah(); # Semak data dulu
-		//$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);
+		$this->paparKandungan($this->_folder, $fail[2], $noInclude=1);
 	}
 #-------------------------------------------------------------------------------------------
 	function ujian01($myTable)
