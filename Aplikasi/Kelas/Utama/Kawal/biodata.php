@@ -151,7 +151,7 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 				'apa' => $level); # benda yang dicari
 		# semak database
 			list($senarai[$myTable],$meta) = $this->tanya->
-				pilihMedan03($myTable, $medan, $carian, $susun);
+				pilihMedan03($myTable, $medan, $carian, null);
 				//cariSemuaData("`$myTable`", $medan, $carian, null);
 				//cariSql("`$myTable`", $medan, $carian, null);
 		# semak pembolehubah
