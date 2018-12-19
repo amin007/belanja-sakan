@@ -153,11 +153,11 @@ class Login extends \Aplikasi\Kitab\Kawal
 		{	# login berjaya
 			\Aplikasi\Kitab\Sesi::init(); # setkan $_SESSION utk 
 			# namaPenuh,namaPendek,email,kataLaluan,level 
-			\Aplikasi\Kitab\Sesi::set('be18_namaPendek', $data[0]['namaPendek']);
-			\Aplikasi\Kitab\Sesi::set('be18_namaPenuh', $data[0]['namaPenuh']);
-			\Aplikasi\Kitab\Sesi::set('be18_email', $data[0]['email']);
-			\Aplikasi\Kitab\Sesi::set('be18_levelPengguna', $data[0]['level']);
-			\Aplikasi\Kitab\Sesi::set('be18_loggedIn', true);
+			\Aplikasi\Kitab\Sesi::set('bs_namaPendek', $data[0]['namaPendek']);
+			\Aplikasi\Kitab\Sesi::set('bs_namaPenuh', $data[0]['namaPenuh']);
+			\Aplikasi\Kitab\Sesi::set('bs_email', $data[0]['email']);
+			\Aplikasi\Kitab\Sesi::set('bs_levelPengguna', $data[0]['level']);
+			\Aplikasi\Kitab\Sesi::set('bs_loggedIn', true);
 			//echo '<hr>Berjaya';
 			$this->levelPengguna($kira, $data, $data[0]['level']);
 		} 
