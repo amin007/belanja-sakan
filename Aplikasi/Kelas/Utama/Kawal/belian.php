@@ -258,6 +258,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
+		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		//$this->semakPembolehubah(); # Semak data dulu
