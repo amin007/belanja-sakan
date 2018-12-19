@@ -51,6 +51,28 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 	}
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
+	function debugKandunganPaparan()
+	{
+		echo '<hr>Nama class :' . __METHOD__ . '()<hr><pre>';
+		$semak = array('idBorang','senarai','myTable','_jadual','carian','c1','c2',
+			'medan','kiramedan','bentukJadual01','bentukJadual02','bentukJadual03',
+			'_meta','_method');
+		$takWujud = array(); $kira = 0;
+
+		foreach($semak as $apa):
+			if(isset($this->papar->$apa)):
+				echo '<br>$this->papar->' . $apa . ' : ';
+				print_r($this->papar->$apa);
+			else:
+				$takWujud[$kira++] = '$this->papar->' . $apa;
+			endif;
+		endforeach;
+
+		echo '<hr><font color="red">tidak wujud : '; print_r($takWujud);
+		echo '</font><hr>';
+		echo '</pre>';
+	}
+#-------------------------------------------------------------------------------------------
 	public function contoh($action = 'hasil')
 	{
 		# Set pemboleubah utama
@@ -90,6 +112,7 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		$this->jadualBiodata();
 		$this->papar->template = 'biasa';
 		//$this->papar->template = 'bootstrap';
+		$this->debugKandunganPaparan();//*/
 		$fail = array('index','b_ubah','b_ubah_kawalan');
 
 		# Pergi papar kandungan
@@ -97,24 +120,6 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		$this->_folder = 'cari'; # jika mahu ubah lokasi Papar
 		//$this->paparKandungan($this->_folder, $fail[1] , $noInclude=0);//*/
     }
-#-------------------------------------------------------------------------------------------
-	function semakDataJadual($senarai)
-	{
-		echo '<hr>Nama class :' . __METHOD__ . '<hr>';
-		echo '<pre>';
-		//echo '<br>Test $_POST->'; print_r($_POST);
-		//echo '<br>$senarai::'; print_r($senarai); 
-		//echo '<hr>$kira=' . sizeof($senarai) . '<hr>';
-		# semak pembolehubah dari jadual lain
-		echo '<br>$this->papar->medanID::'; print_r($this->papar->medanID);
-		echo '<br>$this->papar->cariID::'; print_r($this->papar->cariID);
-		echo '<br>$this->papar->carian::'; print_r($this->papar->carian);
-		echo '<br>$this->papar->_jadual::';	print_r($this->papar->_jadual);
-		echo '<br>$this->papar->senarai::'; print_r($this->papar->senarai);
-		echo '<br>$this->papar->_cariIndustri::'; print_r($this->papar->_cariIndustri);
-		echo '<br>$this->papar->_method::'; print_r($this->papar->_method);
-		echo '</pre>';
-	}
 #-------------------------------------------------------------------------------------------
 	function umpukNilai($umpuk)
 	{
