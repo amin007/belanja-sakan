@@ -104,7 +104,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->papar->senarai[$myTable] = $result;
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myTable, $myTable);
-		//$this->debugKandunganPaparan($p1, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	function tambahMedanDB($p1)
@@ -115,7 +114,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->papar->medan = $this->tanya->pilihMedan02($myTable);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myTable, $myTable);
-		//$this->debugKandunganPaparan($p1, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilTable($myJadual,$medanID,$dataID)
@@ -128,7 +126,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			($myJadual, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myJadual, $myJadual);
-		//$this->debugKandunganPaparan($p1, $myJadual);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilKhas01($p1,$p2)
@@ -141,7 +138,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			($myTable, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($p1, $myTable);
-		//$this->debugKandunganPaparan($p1, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilKhas02($p1,$p2)
@@ -154,7 +150,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			($myTable, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($p1, $myTable);
-		//$this->debugKandunganPaparan($p1, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	public function updateID($p1)
