@@ -256,12 +256,12 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		//$this->panggilKhas01('kod_puncapembelian',null);
-		//$this->panggilKhas01('kod_mediumpembayaran',null);
-		//$this->pilihMedan('senarai_belanja');
-		$this->pilihMedan('nama_pengguna');
-		$this->pilihMedan('kod_mediumpembayaran');
-		$this->pilihMedan('kod_puncapembelian');
+		$this->panggilKhas01('kod_puncapembelian',null);
+		$this->panggilKhas01('kod_mediumpembayaran',null);
+		$this->pilihMedan('senarai_belanja');
+		//$this->pilihMedan('nama_pengguna');
+		//$this->pilihMedan('kod_mediumpembayaran');
+		//$this->pilihMedan('kod_puncapembelian');
 		//$this->ujian01('senarai_belanja');
 		//$this->debugKandunganPaparan();//*/
 
@@ -270,7 +270,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$fail = array('1cari','index','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		//$this->semakPembolehubah(); # Semak data dulu
-		$this->paparKandungan($this->_folder, $fail[1], $noInclude=1);
+		$this->paparKandungan($this->_folder, $fail[2], $noInclude=1);
 	}
 #-------------------------------------------------------------------------------------------
 	function ujian01($myTable)
