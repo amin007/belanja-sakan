@@ -128,24 +128,24 @@ class Borang02_Ubah
 		return $input; # pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------
-	public function ubahInput3($type,$jadual,$kira,$key,$data)
+	public function ubahInput3($meta,$jadual,$kira,$key,$data)
 	{	# istihar pembolehubah
 		$name = 'name="' . $jadual . '[' . $key . ']"';
-		$dataType = $type[$key]['type'];
+		$dataType = $meta[$key]['type'];
 		# css
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
 
 		//if ( in_array($key,array(...)) )
-		/*if(in_array($dataType,array('BLOB')))
+		if( in_array($key,array('password','kataLaluan')) )
+			$input = $this->inputPassword($tab2, $tab3, $name, $data,
+				$classInput, $komenInput, $jadual, $key);
+		elseif(in_array($dataType,array('BLOB')))
 			$input = $this->inputTextarea($tab2, $name, $data); #kod utk textarea
 		elseif ( in_array($dataType,array('DATE')) )
 			$input = $this->inputTarikh($tab2, $tab2, $name, $data,
 				$classInput, $komenInput, $jadual, $key);
-		/*elseif ( in_array($key,array('password','kataLaluan')) )
-			$input = $this->inputPassword($tab2, $tab3, $name, $data,
-				$classInput, $komenInput, $jadual, $key);
-		elseif(in_array($key,dpt_senarai('jadual_biodata2') )) #senarai medan untuk biodata
+		/*elseif(in_array($key,dpt_senarai('jadual_biodata2') )) #senarai medan untuk biodata
 			$input = $this->inputBiodata($tab2, $tab3, $name, $data,
 				$classInput, $komenInput);
 		elseif(in_array($key,array('hasil','belanja','bilpekerja','gaji',
