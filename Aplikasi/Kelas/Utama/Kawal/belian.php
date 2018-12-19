@@ -136,7 +136,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1, $p2);
-		$this->papar->bentukJadual01[$pilih] = $this->tanya->//cariSql
+		$this->papar->bentukJadual01[$p1] = $this->tanya->//cariSql
 			cariSemuaData
 			($myTable, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
@@ -149,7 +149,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1, $p2);
-		$this->papar->bentukJadual02[$pilih] = $this->tanya->//cariSql
+		$this->papar->bentukJadual02[$p1] = $this->tanya->//cariSql
 			cariSemuaData
 			($myTable, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
