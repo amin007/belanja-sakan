@@ -94,14 +94,27 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//*/
 	}
 #-------------------------------------------------------------------------------------------
+	function ubahMeta($meta)
+	{
+		$kira = count($meta);
+		//echo "<hr> bil untuk \$meta = $kira <br>";
+		foreach($meta as $key => $pilih):
+			$meta[$key]['key'] = isset($pilih['flags'][1]) ?
+				$pilih['flags'][1] : null;
+			unset($meta[$key]['flags']);
+		endforeach;
+		//$this->semakPembolehubah($meta);
+		return $meta;
+	}
+#-------------------------------------------------------------------------------------------
 	function pilihMedan($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
 		list($result,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
-		$this->papar->kiramedan[$myTable] = $meta;
-		$this->papar->senarai[$myTable] = $result;
+		//$this->papar->kiramedan[$myTable] = $meta;
+		$this->papar->senarai[$myTable] = $this->ubahMeta($meta);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myTable, $myTable);
 	}
