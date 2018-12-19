@@ -64,6 +64,7 @@ CREATE TABLE `nama_pengguna` (
   `kataRahsia` mediumtext NOT NULL,
   `level` varchar(50) DEFAULT 'user',
   `nokp` varchar(20) DEFAULT NULL,
+  `tarikhlahir` date DEFAULT NULL,
   `Nama_Penuh` varchar(255) DEFAULT NULL,
   `email` varchar(50) DEFAULT '',
   `nohp` varchar(20) NOT NULL,
@@ -72,9 +73,9 @@ CREATE TABLE `nama_pengguna` (
   KEY `Bil` (`no`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-INSERT INTO `nama_pengguna` (`no`, `namaPengguna`, `kataLaluan`, `kataRahsia`, `level`, `nokp`, `Nama_Penuh`, `email`, `nohp`, `CatatNota`) VALUES
-(1,	'admin1',	'360cea6bdd8203dcb002a81f3b7e7408',	'',	'admin1',	'01012019010000',	'admin1',	'admin1@duduk.mana',	'012345678',	'contoh password admin1satu'),
-(2,	'user1',	'527404287f666a77506b77e5b6184c86',	'',	'user',	'010119010001',	'user1',	'user1@duduk.mana',	'011234567',	'contoh password user1satu');
+INSERT INTO `nama_pengguna` (`no`, `namaPengguna`, `kataLaluan`, `kataRahsia`, `level`, `nokp`, `tarikhlahir`, `Nama_Penuh`, `email`, `nohp`, `CatatNota`) VALUES
+(1,	'admin1',	'360cea6bdd8203dcb002a81f3b7e7408',	'',	'admin1',	'01012019010000',	'1900-01-01',	'admin1',	'admin1@duduk.mana',	'012345678',	'contoh password admin1satu'),
+(2,	'user1',	'527404287f666a77506b77e5b6184c86',	'',	'user',	'010119010001',	'2008-02-08',	'user1',	'user1@duduk.mana',	'011234567',	'contoh password user1satu');
 
 DROP TABLE IF EXISTS `senarai_belanja`;
 CREATE TABLE `senarai_belanja` (
@@ -93,5 +94,5 @@ CREATE TABLE `senarai_belanja` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
--- 2018-12-18 17:57:55
+-- 2018-12-19 15:31:19
 */
