@@ -8,7 +8,6 @@ $pilihJadual = 'ubah_medan00'; # borang baru berasaskan table
 # untuk kod baru
 //echo '<pre>$carian='; print_r($this->carian); echo '</pre>';
 //echo '<pre>$senarai='; print_r($this->senarai); echo '</pre>';
-//echo '<pre>$_cariIndustri='; print_r($this->_cariIndustri); echo '</pre>';
 
 # papar hasil carian
 $cari1 = '&nbsp;|&nbsp;'; $cari2 = '';
@@ -18,8 +17,9 @@ foreach ($this->senarai as $kunci2 => $nilai2)
 	$cari2 .= ( count($nilai2)==0 ) ? $kunci2 . " = Kosong<br>\r"
 	: $kunci2 . ' = ' . count($nilai2) . "<br>\r";
 echo "Anda mencari = $cari1\r<br>$cari2\r<hr>";//*/
+echo 'template = ' . $this->template . "\r<hr>";//*/
 
 //if(!isset($this->cariID))
 //	echo '<h1>data kosong daa</h1>';
 //else # jenis template
-	include 'template_' . $this->template . '.php';
+	include $this->template . '.php';
