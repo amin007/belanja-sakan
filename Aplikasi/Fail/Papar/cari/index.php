@@ -5,9 +5,10 @@ $pilihJadual = 'jadual_am';
 //$pilihJadual = 'ubah_medan02'; # borang ubah berasaskan bootstrap
 
 # untuk kod baru
-echo '<pre>$carian='; print_r($this->carian); echo '</pre>';
-echo '<pre>$senarai='; print_r($this->senarai); echo '</pre>';
-//echo '<pre>$_cariIndustri='; print_r($this->_cariIndustri); echo '</pre>';
+//echo '<pre>$carian='; print_r($this->carian); echo '</pre>';
+//echo '<pre>$senarai='; print_r($this->senarai); echo '</pre>';
+//echo '<pre>$bentukJadual01='; print_r($this->bentukJadual01); echo '</pre>';
+//echo '<pre>$bentukJadual02='; print_r($this->bentukJadual02); echo '</pre>';
 
 # papar hasil carian
 $cari1 = '&nbsp;|&nbsp;'; $cari2 = '';
