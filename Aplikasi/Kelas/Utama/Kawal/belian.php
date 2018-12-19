@@ -259,7 +259,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		echo '<table border="1">' . "\n";
 		echo '<tr><th>#</th><th>name</th><th>type</th><th>medan</th>'
 		. '<th>len</th></tr>';
-		foreach($this->papar->kiramedan[$myTable] as $key => $p1):
+		foreach($this->papar->kiramedan[$myTable] as $key => $pilih):
 			$kunciUtama = isset($pilih['flags'][1]) ? 'primaryKey':null;
 			$html = new \Aplikasi\Kitab\HTML_Input_Biasa();
 			$medan = $html->addInput(
