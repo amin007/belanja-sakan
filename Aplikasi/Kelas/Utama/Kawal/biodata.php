@@ -73,6 +73,33 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		echo '</pre>';
 	}
 #-------------------------------------------------------------------------------------------
+	function ubahMeta($meta)
+	{
+		$kira = count($meta);
+		//echo "<hr> bil untuk \$meta = $kira <br>";
+		foreach($meta as $key => $pilih):
+			$key2 = $pilih['name'];
+			//$meta[$key2]['table'] = $pilih['table'];
+			//$meta[$key2]['nama'] = $pilih['name'];
+			$meta[$key2]['len'] = $pilih['len'];
+			$meta[$key2]['type'] = $pilih['native_type'];
+			$meta[$key2]['key'] = isset($pilih['flags'][1]) ?
+				$pilih['flags'][0].'|'.$pilih['flags'][1] : null;
+			$meta[$key2]['type_pdo'] = $pilih['pdo_type'];
+			$meta[$key2]['type_precision'] = $pilih['precision'];
+			/*unset($meta[$key]['table']);
+			unset($meta[$key]['name']);
+			unset($meta[$key]['len']);
+			unset($meta[$key]['native_type']);
+			unset($meta[$key]['flags']);
+			unset($meta[$key]['pdo_type']);
+			unset($meta[$key]['precision']);//*/
+			unset($meta[$key]);
+		endforeach;
+		//$this->semakPembolehubah($meta);
+		return $meta;
+	}
+#-------------------------------------------------------------------------------------------
 	public function contoh($action = 'hasil')
 	{
 		# Set pemboleubah utama
@@ -128,7 +155,7 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		$this->papar->cariID = $pengguna;
 		$this->papar->carian[] = $pengguna;
 		$this->papar->_jadual = $myTable;
-		$this->papar->_meta = $meta;
+		$this->papar->_meta = $this->ubahMeta($meta);
 		$this->papar->senarai = $senarai;
 		$this->papar->_cariIndustri = null;
 		$this->papar->_method = huruf('kecil', namaClass($this));
