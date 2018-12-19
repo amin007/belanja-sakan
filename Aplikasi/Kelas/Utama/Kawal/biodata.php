@@ -153,7 +153,7 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 			list($senarai[$myTable],$meta) = $this->tanya->
 				pilihMedan03($myTable, $medan, $carian, $susun);
 				//cariSemuaData("`$myTable`", $medan, $carian, null);
-				cariSql("`$myTable`", $medan, $carian, null);
+				//cariSql("`$myTable`", $medan, $carian, null);
 		# semak pembolehubah
 			$this->umpukNilai(array($senarai, $meta, $medan01,
 				$pengguna, $myTable));
