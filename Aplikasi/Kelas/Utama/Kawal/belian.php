@@ -98,7 +98,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1,'');
+		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
 		list($result,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
 		$this->papar->kiramedan[$myTable] = $meta;
 		$this->papar->senarai[$myTable] = $result;
@@ -135,7 +135,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1, $p2);
+		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
 		$this->papar->bentukJadual01[$p1] = $this->tanya->//cariSql
 			cariSemuaData
 			($myTable, $medan, $carian, $susun);
@@ -148,7 +148,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1, $p2);
+		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
 		$this->papar->bentukJadual02[$p1] = $this->tanya->//cariSql
 			cariSemuaData
 			($myTable, $medan, $carian, $susun);
