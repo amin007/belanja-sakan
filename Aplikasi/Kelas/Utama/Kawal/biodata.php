@@ -123,7 +123,7 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function umpukNilai($umpuk)
 	{
-		list($senarai, $pengguna, $medan01, $pengguna, $myTable) = $umpuk;
+		list($senarai, $meta, $medan01, $pengguna, $myTable) = $umpuk;
 		$this->papar->medanID = $medan01;
 		$this->papar->cariID = $pengguna;
 		$this->papar->carian[] = $pengguna;
@@ -154,7 +154,7 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 				//cariSemuaData("`$myTable`", $medan, $carian, null);
 				cariSql("`$myTable`", $medan, $carian, null);
 		# semak pembolehubah
-			$this->umpukNilai(array($senarai, $pengguna, $medan01,
+			$this->umpukNilai(array($senarai, $meta, $medan01,
 				$pengguna, $myTable));
 
 		return array($senarai, $pengguna);
