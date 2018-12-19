@@ -262,7 +262,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$fail = array('1cari','index','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		//$this->semakPembolehubah(); # Semak data dulu
-		$this->paparKandungan($this->_folder, $fail[2], $noInclude=1);
+		$this->paparKandungan($this->_folder, $fail[1], $noInclude=1);
 	}
 #-------------------------------------------------------------------------------------------
 	function ujian01($myTable)
