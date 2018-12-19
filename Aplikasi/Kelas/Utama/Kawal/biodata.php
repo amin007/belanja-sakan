@@ -149,7 +149,8 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 				'medan' => $medan02, # cari dalam medan apa
 				'apa' => $level); # benda yang dicari
 		# semak database
-			$senarai[$myTable] = $this->tanya->
+			list($senarai[$myTable],$meta) = $this->tanya->
+				pilihMedan03($myTable, $medan, $carian, $susun);
 				//cariSemuaData("`$myTable`", $medan, $carian, null);
 				cariSql("`$myTable`", $medan, $carian, null);
 		# semak pembolehubah
