@@ -139,13 +139,13 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		$this->jadualBiodata();
 		$this->papar->template = 'biasa';
 		//$this->papar->template = 'bootstrap';
-		$this->debugKandunganPaparan();//*/
+		//$this->debugKandunganPaparan();//*/
 		$fail = array('index','b_ubah','b_ubah_kawalan');
 
 		# Pergi papar kandungan
 		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
 		$this->_folder = 'cari'; # jika mahu ubah lokasi Papar
-		//$this->paparKandungan($this->_folder, $fail[1] , $noInclude=0);//*/
+		$this->paparKandungan($this->_folder, $fail[1] , $noInclude=0);//*/
     }
 #-------------------------------------------------------------------------------------------
 	function umpukNilai($umpuk)
