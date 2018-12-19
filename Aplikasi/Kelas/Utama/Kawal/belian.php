@@ -112,7 +112,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 				$pilih['flags'][0].'|'.$pilih['flags'][1] : null;
 			//$meta[$key]['type_pdo'] = $pilih['pdo_type'];
 			//$meta[$key]['type_precision'] = $pilih['precision'];
-			unset($meta[$key]['table']);
+			//unset($meta[$key]['table']);
 			//unset($meta[$key]['name']);
 			//unset($meta[$key]['len']);
 			//unset($meta[$key]['native_type']);
