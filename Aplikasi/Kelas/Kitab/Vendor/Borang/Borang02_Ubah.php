@@ -57,28 +57,6 @@ class Borang02_Ubah
 </style><?php echo "\n";
 	}
 #------------------------------------------------------------------------------------------
-	public function atasSemakData($senarai, $cariID, $_jadual)
-	{
-		if(isset($senarai['kes'][0]['newss'])):
-			# set pembolehubah
-			$mencari = URL . 'kawalan/ubahCari/';
-			$carian = $cariID;
-			$mesej = ''; //$carian .' ada dalam ' . $this->_jadual;
-			@list($namaSyarikat, $semak1, $semak3) = explode("|", $senarai['kes'][0]['nama']);
-			?><nav class="floating-menu">
-			<p class="bg-primary"><?php
-			echo "\n&nbsp;" . $namaSyarikat
-			?></p></nav><?php
-
-			else: # set pembolehubah
-			$mencari = URL . 'kawalan/ubahCari/';
-			$carian = null;
-			$mesej = '::' . $cariID . ' tiada dalam ' . $_jadual;
-		endif;
-
-		return array($mencari, $carian, $mesej);
-	}
-#------------------------------------------------------------------------------------------
 	public function atasInputCarian($mencari, $carian, $mesej, $class)
 	{
 		echo "\n";?><div class="container">
