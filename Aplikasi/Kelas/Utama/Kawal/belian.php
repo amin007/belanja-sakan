@@ -104,9 +104,21 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			//$cari1 .= ( count($meta)==0 ) ? $nilai : $nilai . ' | ';
 		endforeach;*/
 		foreach($meta as $key => $pilih):
+			$meta[$key]['jadual'] = $pilih['table'];
+			$meta[$key]['nama'] = $pilih['name'];
+			$meta[$key]['panjang'] = $pilih['len'];
+			$meta[$key]['type'] = $pilih['native_type'];
 			$meta[$key]['key'] = isset($pilih['flags'][1]) ?
 				$pilih['flags'][0].'|'.$pilih['flags'][1] : null;
+			$meta[$key]['type_pdo'] = $pilih['pdo_type'];
+			$meta[$key]['type_precision'] = $pilih['precision'];
+			unset($meta[$key]['table']);
+			unset($meta[$key]['name']);
+			unset($meta[$key]['len']);
+			unset($meta[$key]['native_type']);
 			unset($meta[$key]['flags']);
+			unset($meta[$key]['pdo_type']);
+			unset($meta[$key]['precision']);
 		endforeach;
 		//$this->semakPembolehubah($meta);
 		return $meta;
