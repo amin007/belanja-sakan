@@ -98,9 +98,14 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		$kira = count($meta);
 		//echo "<hr> bil untuk \$meta = $kira <br>";
+		/*foreach($meta as $key => $pilih):
+			$c1 .= isset($pilih['flags'][1]) ?
+				$pilih['flags'][0].'|'.$pilih['flags'][1] : null;
+			//$cari1 .= ( count($meta)==0 ) ? $nilai : $nilai . ' | ';
+		endforeach;*/
 		foreach($meta as $key => $pilih):
 			$meta[$key]['key'] = isset($pilih['flags'][1]) ?
-				$pilih['flags'][1] : null;
+				$pilih['flags'][0].'|'.$pilih['flags'][1] : null;
 			unset($meta[$key]['flags']);
 		endforeach;
 		//$this->semakPembolehubah($meta);
@@ -114,10 +119,10 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
 		list($result,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
 		//$this->papar->kiramedan[$myTable] = $meta;
-		$this->papar->senarai['meta'] = $this->ubahMeta($meta);
+		$this->papar->senarai[$p1 . '|meta'] = $this->ubahMeta($meta);
 		$this->papar->senarai[$myTable] = $result;
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan('meta', $myTable);
+		$this->kandunganPaparan($p1, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	function tambahMedanDB($p1)
@@ -251,11 +256,12 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		$this->panggilKhas01('kod_puncapembelian',null);
-		$this->panggilKhas01('kod_mediumpembayaran',null);
+		//$this->panggilKhas01('kod_puncapembelian',null);
+		//$this->panggilKhas01('kod_mediumpembayaran',null);
 		//$this->pilihMedan('senarai_belanja');
-		//$this->pilihMedan('nama_pengguna');
-		//$this->pilihMedan('kod_mediumpembayaran');
+		$this->pilihMedan('nama_pengguna');
+		$this->pilihMedan('kod_mediumpembayaran');
+		$this->pilihMedan('kod_puncapembelian');
 		//$this->ujian01('senarai_belanja');
 		//$this->debugKandunganPaparan();//*/
 
