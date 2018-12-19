@@ -65,10 +65,10 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 	public function pembolehubahSesi()
 	{
 		$sesi = \Aplikasi\Kitab\Sesi::init();
-		//echo '<pre>MENU_ATAS - $_SESSION:'; print_r($_SESSION, 1); echo '</pre><br>';
+		echo '<pre>MENU_ATAS - $_SESSION:'; print_r($_SESSION); echo '</pre><br>';
 		# set pembolehubah
-		$pengguna = \Aplikasi\Kitab\Sesi::get('namaPendek');
-		$level = \Aplikasi\Kitab\Sesi::get('levelPengguna');
+		$pengguna = \Aplikasi\Kitab\Sesi::get('bs_namaPendek');
+		$level = \Aplikasi\Kitab\Sesi::get('bs_levelPengguna');
 
 		return array($pengguna, $level);
 	}
@@ -93,9 +93,9 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		$fail = array('index','b_ubah','b_ubah_kawalan');
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
+		$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
 		$this->_folder = 'cari'; # jika mahu ubah lokasi Papar
-		$this->paparKandungan($this->_folder, $fail[1] , $noInclude=0); //*/
+		//$this->paparKandungan($this->_folder, $fail[1] , $noInclude=0);//*/
     }
 #-------------------------------------------------------------------------------------------
 	function semakDataJadual($senarai)
@@ -145,8 +145,8 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 				'apa' => $level); # benda yang dicari
 		# semak database
 			$senarai[$myTable] = $this->tanya->
-				cariSemuaData("`$myTable`", $medan, $carian, null);
-				//cariSql("`$myTable`", $medan, $carian, null);
+				//cariSemuaData("`$myTable`", $medan, $carian, null);
+				cariSql("`$myTable`", $medan, $carian, null);
 		# semak pembolehubah
 			$this->umpukNilai(array($senarai, $pengguna, $medan01,
 				$pengguna, $myTable));
