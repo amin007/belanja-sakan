@@ -17,8 +17,8 @@ class Kebenaran
 	{
 		@session_start();
 
-		$kunci = \Aplikasi\Kitab\Sesi::get('be18_loggedIn');
-		$level = \Aplikasi\Kitab\Sesi::get('be18_levelPengguna');
+		$kunci = \Aplikasi\Kitab\Sesi::get('bs_loggedIn');
+		$level = \Aplikasi\Kitab\Sesi::get('bs_levelPengguna');
 		$senaraiLevel = \Aplikasi\Kitab\Kebenaran::senaraiLevel();
 		
 		//echo '<pre>kawalMasuk() :: $_SESSION->', print_r($_SESSION, 1);
@@ -42,8 +42,8 @@ class Kebenaran
 	{
 		@session_start();
 
-		$kunci = \Aplikasi\Kitab\Sesi::get('be18_loggedIn');
-		$level = \Aplikasi\Kitab\Sesi::get('be18_levelPengguna');
+		$kunci = \Aplikasi\Kitab\Sesi::get('bs_loggedIn');
+		$level = \Aplikasi\Kitab\Sesi::get('bs_levelPengguna');
 		$senaraiLevel = \Aplikasi\Kitab\Kebenaran::senaraiLevel();
 
 		//echo '<pre>kawalKeluar() :: $_SESSION->', print_r($_SESSION, 1);
