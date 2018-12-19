@@ -129,7 +129,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		list($result,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
 		//$this->papar->kiramedan[$myTable] = $meta;
 		$this->papar->bentukJadual01[$p1 . '|meta'] = $this->ubahMeta($meta);
-		$this->papar->senarai[$myTable] = $result;
+		$this->papar->senarai[$myTable] = $this->tanya->contoh_cariKhas03();
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($p1, $myTable);
 	}
