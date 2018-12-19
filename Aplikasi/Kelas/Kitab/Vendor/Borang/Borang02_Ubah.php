@@ -149,7 +149,7 @@ class Borang02_Ubah
 			$input = $this->inputNumber($tab2, $tab2, $name, $data,
 				$classInput, $komenInput);
 		elseif(in_array($dataType,array('VAR_STRING')))
-			$input = $this->inputTeksBiasa($tab2, $tab3, $name, $data,
+			$input = $this->inputBiodata($tab2, $tab3, $name, $data,
 				$classInput, $komenInput);
 		elseif(in_array($key,array('namax','emailx','responden','fe',
 			'mko','respon','notel','nofax')))
