@@ -5,9 +5,9 @@
 $Sesi = new \Aplikasi\Kitab\Sesi();
 $Sesi->init();
 //echo '<pre>'; print_r($_SESSION) . '</pre>';
-echo 'namaPendek=' . $Sesi->get('be18_namaPendek') . '<br>';
-echo 'namaPenuh=' . $Sesi->get('be18_namaPenuh') . '<br>';
-echo 'levelPengguna=' . $Sesi->get('be18_levelPengguna') . '<br>';
+echo 'namaPendek=' . $Sesi->get('bs_namaPendek') . '<br>';
+echo 'namaPenuh=' . $Sesi->get('bs_namaPenuh') . '<br>';
+echo 'levelPengguna=' . $Sesi->get('bs_levelPengguna') . '<br>';
 echo 'url=' . URL . '';
 //*/
 ?></p>
