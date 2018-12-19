@@ -74,14 +74,14 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		echo '</pre>';
 	}
 #-------------------------------------------------------------------------------------------
-	function kandunganPaparan($pilih, $myTable)
+	function kandunganPaparan($p1, $myTable)
 	{
 		//$this->papar->senarai[$myTable] = null;
 		$this->papar->myTable = $myTable;
 		$this->papar->_jadual = $myTable;
 		$this->papar->carian[] = 'semua';
 		$this->papar->c1 = $this->papar->c2 = null;
-		$this->papar->_pilih = $pilih;
+		$this->papar->_pilih = $p1;
 		$this->papar->template = 'template_biasa';
 		$this->papar->pilihJadual = 'pilih_jadual_am';
 		$this->papar->template2 = 'template_khas02';
@@ -94,28 +94,28 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//*/
 	}
 #-------------------------------------------------------------------------------------------
-	function pilihMedan($pilih)
+	function pilihMedan($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,'');
+		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1,'');
 		list($result,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
 		$this->papar->kiramedan[$myTable] = $meta;
 		$this->papar->senarai[$myTable] = $result;
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myTable, $myTable);
-		//$this->debugKandunganPaparan($pilih, $myTable);
+		//$this->debugKandunganPaparan($p1, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
-	function tambahMedanDB($pilih)
+	function tambahMedanDB($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable) = $this->tanya->tambahPembolehubah($pilih);
+		list($myTable) = $this->tanya->tambahPembolehubah($p1);
 		$this->papar->medan = $this->tanya->pilihMedan02($myTable);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myTable, $myTable);
-		//$this->debugKandunganPaparan($pilih, $myTable);
+		//$this->debugKandunganPaparan($p1, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilTable($myJadual,$medanID,$dataID)
@@ -128,7 +128,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			($myJadual, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myJadual, $myJadual);
-		//$this->debugKandunganPaparan($pilih, $myJadual);
+		//$this->debugKandunganPaparan($p1, $myJadual);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilKhas01($p1,$p2)
@@ -140,8 +140,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			cariSemuaData
 			($myTable, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($pilih, $myTable);
-		//$this->debugKandunganPaparan($pilih, $myTable);
+		$this->kandunganPaparan($p1, $myTable);
+		//$this->debugKandunganPaparan($p1, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilKhas02($p1,$p2)
@@ -153,8 +153,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			cariSemuaData
 			($myTable, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($pilih, $myTable);
-		//$this->debugKandunganPaparan($pilih, $myTable);
+		$this->kandunganPaparan($p1, $myTable);
+		//$this->debugKandunganPaparan($p1, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	public function updateID($p1)
@@ -204,7 +204,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	public function insertID($p1)
 	{
 		# ubahsuai $posmen
-		list($posmen,$senaraiJadual,$myTable) = $this->ubahsuaiPost2($pilih);
+		list($posmen,$senaraiJadual,$myTable) = $this->ubahsuaiPost2($p1);
 		//echo '<hr><pre>$_POST='; print_r($_POST); echo '</pre>';
 		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
 
@@ -264,7 +264,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		echo '<table border="1">' . "\n";
 		echo '<tr><th>#</th><th>name</th><th>type</th><th>medan</th>'
 		. '<th>len</th></tr>';
-		foreach($this->papar->kiramedan[$myTable] as $key => $pilih):
+		foreach($this->papar->kiramedan[$myTable] as $key => $p1):
 			$kunciUtama = isset($pilih['flags'][1]) ? 'primaryKey':null;
 			$html = new \Aplikasi\Kitab\HTML_Input_Biasa();
 			$medan = $html->addInput(
