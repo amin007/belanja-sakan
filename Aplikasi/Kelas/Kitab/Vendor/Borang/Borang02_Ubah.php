@@ -128,6 +128,57 @@ class Borang02_Ubah
 		return $input; # pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------
+	public function ubahInput3($type,$jadual,$kira,$key,$data)
+	{	# istihar pembolehubah
+		$name = 'name="' . $jadual . '[' . $key . ']"';
+		$dataType = $type[$key]['type'];
+		# css
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+
+		//if ( in_array($key,array(...)) )
+		if(in_array($dataType,array('BLOB')))
+			$input = $this->inputTextarea($tab2, $name, $data); #kod utk textarea
+		/*elseif ( in_array($key,array('password','kataLaluan')) )
+			$input = $this->inputPassword($tab2, $tab3, $name, $data,
+				$classInput, $komenInput, $jadual, $key);
+		elseif(in_array($key,dpt_senarai('jadual_biodata2') )) #senarai medan untuk biodata
+			$input = $this->inputBiodata($tab2, $tab3, $name, $data,
+				$classInput, $komenInput);
+		elseif ( in_array($key,array('keterangan')) ) # kod html untuk bukan input type
+			$input = $this->inputJadual($paparSahaja);
+		elseif(in_array($key,array('hasil','belanja','bilpekerja','gaji',
+			'hartatetap','stokakhir','staf','aset','stok')))
+			$input = $this->inputNumber($tab2, $tab2, $name, $data,
+				$classInput, $komenInput);
+		elseif(in_array($key,array('amt_staf','amt_output','amt_input','amt_aset','amt_gaji',
+			'amt_jualan','amt_hasil','amt_belanja')))
+			$input = $this->inputNumber($tab2, $tab2, $name, $data,
+				$classInput, $komenInput);
+		elseif ( in_array($key,array('lawat','terima','hantar','hantar_prosesan')) )
+			$input = $this->inputTarikh($tab2, $tab2, $name, $data,
+				$classInput, $komenInput, $jadual, $key);
+		elseif(in_array($key,array('no','batu','jalan','tmn_kg','daerah')))
+			$input = $this->inputAlamatBaru($tab2, $tab3, $name, $data,
+				$classInput, $komenInput);
+		elseif(in_array($key,array('namax','emailx','responden','fe',
+			'mko','respon','notel','nofax')))
+			$input = $this->inputTeksBesar($tab2, $tab3, $name, $data,
+				$classInput, $komenInput);
+		elseif(in_array($key,array('orang_a','notel_a','nofax_a','email_a')))
+			$input = $this->inputTeksBesar($tab2, $tab3, $name, $data,
+				$classInput, $komenInput);
+		elseif(in_array($key,array('pecah5P')))
+			$input = $this->inputTeksTakData($tab2, $tab3, $name);//*/
+		else
+		{#kod untuk lain2
+			$input = $tab2 . '<p class="form-control-static text-info">'
+				   . $data . '</p>';
+		}
+
+		return $input; # pulangkan nilai
+	}
+#------------------------------------------------------------------------------------------
 ###########################################################################################
 #------------------------------------------------------------------------------------------
 	function ccs()
