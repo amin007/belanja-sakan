@@ -7,13 +7,11 @@
 		if ( !$printed_headers ) # papar tajuk medan sekali sahaja:
 		{
 			?><thead><tr><th>#</th><?php
-			foreach ( array_keys($row[$kira]) as $tajuk ) 
-			{
+			foreach ( array_keys($row[$kira]) as $tajuk )
 				?><th><?php echo $tajuk ?></th><?php
-			}
 			?></tr></thead>
 	<?php	$printed_headers = true;
-		} 
+		}
 	# papar data $row ------------------------------------------------
 	?><tr><td align="center"><?php echo $kira+1 ?></td><?php
 		$html = new \Aplikasi\Kitab\Html_TD;
