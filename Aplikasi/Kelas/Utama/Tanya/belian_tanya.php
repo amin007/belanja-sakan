@@ -166,7 +166,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($idUser,$namaPendek);
 	}
 #---------------------------------------------------------------------------------------------------#
-	public function susunPembolehubah($pilih,$idBorang)
+	public function susunPembolehubah($pilih,$idBorang = null)
 	{
 		//$pilih = null;
 		if($pilih == 'kod_puncapembelian'): //echo "\$pilih = $pilih <br>";
