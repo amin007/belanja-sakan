@@ -122,7 +122,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($entah, $medan, $carian, $susun) = $this->tanya->jadualAES($medanID,$dataID);
+		list($p1, $medan, $carian, $susun) = $this->tanya->jadualAES($medanID,$dataID);
 		$this->papar->senarai[$myJadual] = $this->tanya->//cariSql
 			cariSemuaData
 			($myJadual, $medan, $carian, $susun);
@@ -131,11 +131,11 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan($pilih, $myJadual);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilKhas01($pilih)
+	function panggilKhas01($p1,$p2)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,'');
+		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1, $p2);
 		$this->papar->bentukJadual01[$pilih] = $this->tanya->//cariSql
 			cariSemuaData
 			($myTable, $medan, $carian, $susun);
@@ -144,11 +144,11 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan($pilih, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilKhas02($pilih,$entah)
+	function panggilKhas02($p1,$p2)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($pilih,'');
+		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1, $p2);
 		$this->papar->bentukJadual02[$pilih] = $this->tanya->//cariSql
 			cariSemuaData
 			($myTable, $medan, $carian, $susun);
@@ -157,10 +157,10 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan($pilih, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
-	public function updateID($pilih)
+	public function updateID($p1)
 	{
 		# ubahsuai $posmen
-		list($posmen,$senaraiJadual,$myTable,$medanID) = $this->ubahsuaiPost($pilih);
+		list($posmen,$senaraiJadual,$myTable,$medanID) = $this->ubahsuaiPost($p1);
 		//echo '<br>$dataID=' . $dataID . '<br>';
 		//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
@@ -179,9 +179,9 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		header('location: ' . URL . $lokasi); //*/
 	}
 #-------------------------------------------------------------------------------------------
-	function ubahsuaiPost($pilih)
+	function ubahsuaiPost($p1)
 	{
-		list($senaraiJadual) = $this->tanya->pilihJadual($pilih);
+		list($senaraiJadual) = $this->tanya->pilihJadual($p1);
 
 		$posmen = array(); //echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 		foreach ($_POST as $myTable => $value):
@@ -201,7 +201,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		return array($posmen,$senaraiJadual,$senaraiJadual[0]); # pulangkan nilai
 	}
 #-------------------------------------------------------------------------------------------
-	public function insertID($pilih)
+	public function insertID($p1)
 	{
 		# ubahsuai $posmen
 		list($posmen,$senaraiJadual,$myTable) = $this->ubahsuaiPost2($pilih);
