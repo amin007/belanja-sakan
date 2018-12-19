@@ -131,7 +131,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
 		list($result,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
 		//$this->papar->kiramedan[$myTable] = $meta;
-		$this->papar->senarai[$p1 . '|meta'] = $this->ubahMeta($meta);
+		$this->papar->bentukJadual01[$p1 . '|meta'] = $this->ubahMeta($meta);
 		$this->papar->senarai[$myTable] = $result;
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($p1, $myTable);
@@ -270,8 +270,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 		$this->panggilKhas01('kod_puncapembelian',null);
 		$this->panggilKhas01('kod_mediumpembayaran',null);
-		//$this->pilihMedan('senarai_belanja');
-		$this->pilihMedan('nama_pengguna');
+		$this->pilihMedan('senarai_belanja');
+		//$this->pilihMedan('nama_pengguna');
 		//$this->pilihMedan('kod_mediumpembayaran');
 		//$this->pilihMedan('kod_puncapembelian');
 		//$this->ujian01('senarai_belanja');
