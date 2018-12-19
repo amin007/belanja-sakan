@@ -128,6 +128,7 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		$this->papar->cariID = $pengguna;
 		$this->papar->carian[] = $pengguna;
 		$this->papar->_jadual = $myTable;
+		$this->papar->_meta = $meta;
 		$this->papar->senarai = $senarai;
 		$this->papar->_cariIndustri = null;
 		$this->papar->_method = huruf('kecil', namaClass($this));
