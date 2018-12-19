@@ -114,9 +114,10 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
 		list($result,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
 		//$this->papar->kiramedan[$myTable] = $meta;
-		$this->papar->senarai[$myTable] = $this->ubahMeta($meta);
+		$this->papar->senarai['meta'] = $this->ubahMeta($meta);
+		$this->papar->senarai[$myTable] = $result;
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($myTable, $myTable);
+		$this->kandunganPaparan('meta', $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	function tambahMedanDB($p1)
