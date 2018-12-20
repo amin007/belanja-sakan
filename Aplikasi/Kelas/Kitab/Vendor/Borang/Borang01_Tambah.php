@@ -399,13 +399,16 @@ class Borang01_Tambah
 #------------------------------------------------------------------------------------------
 	function inputOption($semua,$ulangData)
 	{
-		$dropmenu = ''; echo '<pre>$ulangData='; print_r($ulangData); echo '</pre>';
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
+		$dropmenu = '';
 		foreach ($ulangData[$key] as $myTable => $bil)
-		{# mula ulang $bilang
+		{# mula ulang $bil
+			//echo "\r" . $bil['keterangan'] . '<br>';
 			$dropmenu .= '<option value="' . $bil['kod'] . '">' . $bil['kod']
-			. '|' . $bil['keterangan'] . '</option>' . $tab3;
-		}# tamat ulang $bilang //*/
+			. '-' . $bil['keterangan'] . '</option>' . $tab3;
+		}# tamat ulang $bil//*/
 
 		return $dropmenu;
 	}
