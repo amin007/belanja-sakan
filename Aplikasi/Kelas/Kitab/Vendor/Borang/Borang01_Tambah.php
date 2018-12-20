@@ -157,8 +157,10 @@ class Borang01_Tambah
 			$input = $this->inputTextarea($semua); #kod utk textarea
 		elseif ( in_array($dataType,array('DATE')) )
 			$input = $this->inputTarikh($semua);
-		elseif(in_array($dataType,array('NUMBER','LONG','NEWDECIMAL')))
+		elseif(in_array($dataType,array('NUMBER','LONG')))
 			$input = $this->inputNumber($semua);
+		elseif(in_array($dataType,array('NEWDECIMAL')))
+			$input = $this->inputMataDuitan($semua);
 		elseif(in_array($dataType,array('TINY')))
 			$input = $this->inputTeksKecil($semua);
 		else
