@@ -71,6 +71,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 	{
 		$medan[0] = array(
 			//'no' => null, //int(11) Auto Increment
+			'nohp' => null, //varchar(20)
 			'jenis_belanja' => null, //varchar(50)
 			'tarikh' => null, //date
 			'belanja_keterangan' => null, //text
@@ -81,7 +82,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 			'medium_pembayaran' => null, //enum('01,02,03,04,05,06,07,08,09,10')
 			'medium_edagang' => null, //int(11)|1-ya/2-tidak
 			'catatan' => null, //text
-			'password' => null, //text
+			//'password' => null, //text
 		);
 
 		return $medan;
