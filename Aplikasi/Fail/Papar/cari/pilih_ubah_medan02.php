@@ -15,7 +15,7 @@ for ($kira=0; $kira < count($row); $kira++)
 		?><label for="inputTajuk" class="col-sm-2 control-label"><?php echo $key
 		?></label><?php echo "\n\t";
 		?><div class="<?php echo $class2 ?>"><?php
-		$paparData = $html->ubahInput($this->_meta, $this->_jadual,
+		$paparData = $html->ubahInput2($this->_meta, $this->_jadual,
 			$kira, $key, $data);
 		echo $paparData . "\n\t";
 		?></div><!-- / class="<?php echo $class2 ?>" --><?php echo "\n";
