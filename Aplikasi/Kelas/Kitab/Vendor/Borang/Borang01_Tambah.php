@@ -153,9 +153,9 @@ class Borang01_Tambah
 			$input = $this->inputPassword($css2,$semua);
 		elseif(in_array($dataType,array('VAR_STRING')))
 			$input = $this->inputTeksBesar($css2,$semua);
-		/*elseif(in_array($dataType,array('BLOB')))
-			$input = $this->inputTextarea($this->css(),$semua); #kod utk textarea
-		elseif ( in_array($dataType,array('DATE')) )
+		elseif(in_array($dataType,array('BLOB')))
+			$input = $this->inputTextarea($css2,$semua); #kod utk textarea
+		/*elseif ( in_array($dataType,array('DATE')) )
 			$input = $this->inputTarikh($this->css(),$semua);
 		elseif(in_array($dataType,array('NUMBER')))
 			$input = $this->inputNumber($this->css(),$semua);//*/
@@ -199,12 +199,11 @@ class Borang01_Tambah
 #------------------------------------------------------------------------------------------
 ###########################################################################################
 #------------------------------------------------------------------------------------------
-	function inputTextarea($semua)
+	function inputTextarea($css,$semua)
 	{
-		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,$classInput,$komenInput)
-			= $this->css();
+		list($tab2,$tab3,$classInput,$komenInput) = $css;
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
-		return ''
+		return $tab2
 		. '<textarea ' . $name . ' rows="1" cols="20"' . $tab2 
 		. ' class="form-control">' . $data . '</textarea>'
 		. $tab2 . '<pre>' . $data . '</pre>'
