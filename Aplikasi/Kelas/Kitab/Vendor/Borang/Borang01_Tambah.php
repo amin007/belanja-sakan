@@ -151,6 +151,8 @@ class Borang01_Tambah
 		//if ( in_array($key,array(...)) )
 		if( in_array($key,array('password','kataLaluan')) )
 			$input = $this->inputPassword($semua);
+		elseif( in_array($key,array('nohp')) )
+			$input = $this->inputBiodata($semua);
 		elseif(in_array($dataType,array('VAR_STRING')))
 			$input = $this->inputTeksBesar($semua);
 		elseif(in_array($dataType,array('BLOB')))
