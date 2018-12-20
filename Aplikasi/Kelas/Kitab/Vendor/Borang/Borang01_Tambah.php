@@ -49,32 +49,6 @@ class Borang01_Tambah
 </div><?php
 	}
 #------------------------------------------------------------------------------------------
-	public function atasLabelSyarikat()
-	{
-		echo "\n"; ?><style>
-.floating-menu {
-	padding: 5px;; width: 300px; z-index: 100;
-	position: fixed; bottom: 0px; right: 0px;
-}
-</style><?php echo "\n";
-	}
-#------------------------------------------------------------------------------------------
-	public function atasSemakData($senarai, $cariID, $_jadual)
-	{
-		if(isset($senarai['kes'][0]['newss'])):
-			# set pembolehubah
-			$mencari = URL . 'kawalan/ubahCari/';
-			$carian = $cariID;
-			$mesej = ''; //$carian .' ada dalam ' . $this->_jadual;
-			else: # set pembolehubah
-			$mencari = URL . 'kawalan/ubahCari/';
-			$carian = null;
-			$mesej = '::' . $cariID . ' tiada dalam ' . $_jadual;
-		endif;
-
-		return array($mencari, $carian, $mesej);
-	}
-#------------------------------------------------------------------------------------------
 	public function atasInputCarian($mencari, $carian, $mesej, $class)
 	{
 		echo "\n";?><div class="container">
