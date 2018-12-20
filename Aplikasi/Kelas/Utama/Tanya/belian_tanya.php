@@ -87,12 +87,17 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return $medan;
 	}
 #---------------------------------------------------------------------------------------------------#
-	public function contoh_cariKhas04()
+	public function contoh_cariKhas04($medan1)
 	{
-		$medan['harga_sebenar'][0]['kod'] = '1-harga sebenar';
-		$medan['harga_sebenar'][1]['keterangan'] = '2-harga anggaran';
-		$medan['medium_edagang'][0]['kod'] = '1-ya';
-		$medan['medium_edagang'][1]['keterangan'] = '2-tidak';
+		$medan2['harga_sebenar'][0]['kod'] = '1';
+		$medan2['harga_sebenar'][0]['keterangan'] = 'harga sebenar';
+		$medan2['harga_sebenar'][1]['kod'] = '2';
+		$medan2['harga_sebenar'][1]['keterangan'] = 'harga anggaran';
+		$medan2['medium_edagang'][0]['kod'] = '1';
+		$medan2['medium_edagang'][0]['keterangan'] = 'ya';
+		$medan2['medium_edagang'][1]['kod'] = '2';
+		$medan2['medium_edagang'][1]['keterangan'] = 'tidak';
+		$medan = array_merge($medan1, $medan2);
 
 		return $medan;
 	}
