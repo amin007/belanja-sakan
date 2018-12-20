@@ -11,7 +11,7 @@ require FUNGSI . '/Fungsi.php';
 
 # Sentiasa menyediakan garis condong di belakang (/) pada hujung jalan
 define('URL', dirname('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']) . '/');
-define('Tajuk_Muka_Surat', '***');
+define('Tajuk_Muka_Surat', 'Belanja Sakan');
 
 # setkan jquery, bootstrap dan font awesome sama ada local atau cdn
 ## cdn
