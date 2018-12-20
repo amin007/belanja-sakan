@@ -231,8 +231,11 @@ class Borang01_Tambah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputBiodata($tab2, $tab3, $name, $data, $classInput, $komenInput)
+	function inputBiodata($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return $tab2 
 		. '<div class="'.$classInput.'">' . $tab3
 		//. '<span class="input-group-addon"></span>' . $tab3
@@ -280,8 +283,11 @@ class Borang01_Tambah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputAlamatBaru($tab2, $tab3, $name, $data, $classInput, $komenInput)
-	{			
+	function inputAlamatBaru($semua)
+	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return '<div class="input-group input-group">' . $tab3
 		. '<span class="input-group-addon">' . $data . '</span>' . $tab3
 		. '<input type="text" ' . $name
@@ -321,8 +327,11 @@ class Borang01_Tambah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTeksTakData($tab2, $tab3, $name)
+	function inputTeksTakData($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#kod utk input text saiz besar
 		return ''
 		//'<div class="input-group input-group">' . $tab3
