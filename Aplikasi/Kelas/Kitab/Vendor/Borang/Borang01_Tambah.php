@@ -242,10 +242,12 @@ class Borang01_Tambah
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
+		$Sesi = new \Aplikasi\Kitab\Sesi(); $Sesi->init();
+		$data = $Sesi->get('bs_nohp');
 		return $tab2 
 		. '<div class="'.$classInput.'">' . $tab3
 		//. '<span class="input-group-addon"></span>' . $tab3
-		. '<input type="text" ' . $name  . ' value="' . $data . '"'
+		. '<input type="hidden" ' . $name  . ' value="' . $data . '"'
 		. ' class="form-control">'
 		. $tab2 . $this->labelBawah($data)
 		. '</div>' . $komenInput
