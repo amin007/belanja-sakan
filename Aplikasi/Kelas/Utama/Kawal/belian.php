@@ -266,7 +266,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		$this->panggilKhas01('kod_puncapembelian',null);
+		$this->panggilKhas01('punca_pembelian',null);
 		$this->panggilKhas01('kod_mediumpembayaran',null);
 		$this->pilihMedan('senarai_belanja');
 		//$this->pilihMedan('nama_pengguna');
