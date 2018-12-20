@@ -139,7 +139,7 @@ class Borang01_Tambah
 		return $input; # pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------
-	public function ubahInput2($jenis,$jadual,$kira,$key,$data)
+	public function ubahInput2($ulangdata,$jenis,$jadual,$kira,$key,$data)
 	{	# istihar pembolehubah
 		$name = 'name="' . $jadual . '[' . $key . ']"';
 		$dataType = $jenis[$key]['type'];// myGetType($data);
@@ -163,6 +163,8 @@ class Borang01_Tambah
 			$input = $this->inputMataDuitan($semua);
 		elseif(in_array($dataType,array('TINY')))
 			$input = $this->inputTeksKecil($semua);
+		elseif(in_array($dataType,array('STRING')))
+			$input = $this->inputSelectOption($semua,$ulangdata);
 		else
 		{#kod untuk lain2
 			$input = $tab2 . '<p class="form-control-static text-info">'
