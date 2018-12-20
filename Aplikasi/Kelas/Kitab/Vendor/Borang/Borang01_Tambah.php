@@ -12,10 +12,11 @@ class Borang01_Tambah
 			$this->medanTajuk($myTable, $class);
 		elseif($method == 'rangka'):
 		else:
-			$this->atasLabelSyarikat();
+			$this->medanTajuk($myTable, $class);
+			/*$this->atasLabelSyarikat();
 			list($mencari, $carian, $mesej) =
 				$this->atasSemakData($senarai, $cariID, $_jadual);
-			$this->atasInputCarian($mencari, $carian, $mesej, $class);
+			$this->atasInputCarian($mencari, $carian, $mesej, $class);*/
 		endif;
 	}
 #------------------------------------------------------------------------------------------
