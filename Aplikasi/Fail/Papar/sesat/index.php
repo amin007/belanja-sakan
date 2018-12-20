@@ -27,7 +27,10 @@ $pencam = "$a$b$c$d$e$f$g$h";
 <pre><code>
 Contoh fungsi dalam class <?php echo $namaClass ?> extends \Aplikasi\Kitab\Kawal
 #===========================================================================================
+namespace Aplikasi\Kawal; //echo __NAMESPACE__;
 class <?php echo $namaClass ?> extends \Aplikasi\Kitab\Kawal
+#===========================================================================================
+namespace Aplikasi\Tanya; //echo __NAMESPACE__;
 class <?php echo $namaClass ?>_Tanya extends \Aplikasi\Kitab\Tanya
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
