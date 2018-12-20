@@ -228,9 +228,11 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputPassword($tab2, $tab3, $name, $data, $classInput, $komenInput,
-		$jadual, $key)
+	function inputPassword($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		$name2 = 'name="' . $jadual . '[' . $key . 'X]"';
 
 		return ''
@@ -244,8 +246,11 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputBiodata($tab2, $tab3, $name, $data, $classInput, $komenInput)
+	function inputBiodata($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return $tab2 
 		. '<div class="'.$classInput.'">' . $tab3
 		//. '<span class="input-group-addon"></span>' . $tab3
@@ -256,8 +261,11 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputNumber($tab2, $tab3, $name, $data, $classInput, $komenInput)
+	function inputNumber(($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return '<div class="input-group input-group-sm">' . $tab2
 		. '<span class="input-group-addon">Nilai</span>'
 		. '<input type="text" ' . $name
@@ -268,9 +276,11 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTarikh($tab2, $tab3, $name, $data, $classInput, $komenInput,
-		$jadual, $key)
+	function inputTarikh(($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#terima - style="font-family:sans-serif;font-size:10px;"
 		$X = 'name="' . $jadual . '[' . $key . 'X]"';
 		$dataX = ($key=='hantar_prosesan') ?
@@ -288,8 +298,11 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputAlamatBaru($tab2, $tab3, $name, $data, $classInput, $komenInput)
-	{			
+	function inputAlamatBaru($semua)
+	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return '<div class="input-group input-group">' . $tab3
 		. '<span class="input-group-addon">' . $data . '</span>' . $tab3
 		. '<input type="text" ' . $name
@@ -299,8 +312,11 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTeksBesar($tab2, $tab3, $name, $data, $classInput, $komenInput)
+	function inputTeksBesar($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#kod utk input text saiz besar
 		return '<div class="input-group input-group-lg">' . $tab3
 		. '<span class="input-group-addon">' . $data . '</span>' . $tab3
@@ -311,8 +327,11 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTeksKecil($tab2, $tab3, $name, $data, $classInput, $komenInput)
+	function inputTeksKecil($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#kod utk input text saiz besar
 		return '<div class="input-group input-group-sm">' . $tab3
 		. '<span class="input-group-addon">' . $data . '</span>' . $tab3
@@ -323,8 +342,11 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTeksTakData($tab2, $tab3, $name)
+	function inputTeksTakData($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#kod utk input text saiz besar
 		return ''
 		//'<div class="input-group input-group">' . $tab3
@@ -358,8 +380,11 @@ class Borang02_Ubah
 		return '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTeksBiasa($tab2, $tab3, $name, $data, $classInput, $komenInput)
+	function inputTeksBiasa($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return '<div class="input-group input-group-sm">' . $tab2
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
@@ -368,9 +393,11 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputSelectOption($tab2, $tab3, $name, $data, $classInput, $komenInput,
-		$key, $medan)
+	function inputSelectOption($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return '<div class="input-group input-group-sm">' . $tab2
 		. '<select ' . $name . ' class="form-control">' . $tab3
 		. '<option value="' . $key . '" selected>'
@@ -380,9 +407,11 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputSelectOption01($tab2, $tab3, $name, $data, $classInput, $komenInput,
-		$key, $medan)
+	function inputSelectOption01($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return '<div class="input-group input-group-sm">' . $tab2
 		. '<select ' . $name . ' class="form-control">' . $tab3
 		. '<option value="' . $key . '_a" selected>'
@@ -392,9 +421,11 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputSelectOption02($tab2, $tab3, $name, $data, $classInput, $komenInput,
-		$key, $medan)
+	function inputSelectOption02($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return '<div class="input-group input-group-sm">' . $tab2
 		. '<select ' . $name . ' class="form-control">' . $tab3
 		. '<option value="' . ($this->keratNama($key)) . '" selected>'
