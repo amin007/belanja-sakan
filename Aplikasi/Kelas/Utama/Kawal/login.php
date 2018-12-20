@@ -156,6 +156,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 			\Aplikasi\Kitab\Sesi::set('bs_namaPendek', $data[0]['namaPendek']);
 			\Aplikasi\Kitab\Sesi::set('bs_namaPenuh', $data[0]['namaPenuh']);
 			\Aplikasi\Kitab\Sesi::set('bs_email', $data[0]['email']);
+			\Aplikasi\Kitab\Sesi::set('bs_nohp', $data[0]['nohp']);
 			\Aplikasi\Kitab\Sesi::set('bs_levelPengguna', $data[0]['level']);
 			\Aplikasi\Kitab\Sesi::set('bs_loggedIn', true);
 			//echo '<hr>Berjaya';
