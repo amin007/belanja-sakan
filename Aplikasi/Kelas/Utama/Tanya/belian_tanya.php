@@ -191,7 +191,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		//$pilih = null;
 		if($pilih == 'punca_pembelian'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->kodPuncapembelian();
-		elseif($pilih == 'kod_mediumpembayaran'): //echo "\$pilih = $pilih <br>";
+		elseif($pilih == 'medium_pembayaran'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->kodMediumpembayaran();
 		elseif($pilih == 'senarai_belanja'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiBelanja();
