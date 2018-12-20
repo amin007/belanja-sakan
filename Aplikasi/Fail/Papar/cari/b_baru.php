@@ -15,5 +15,5 @@ $pilihJadual = 'baru_medan02'; # borang ubah berasaskan bootstrap
 //else # jenis template
 	include $this->template . '.php';
 #---------------------------------------------------------------------------------------
-echo '<pre>$bentukJadual01='; print_r($this->bentukJadual01); echo '</pre>';
+//echo '<pre>$bentukJadual01='; print_r($this->bentukJadual01); echo '</pre>';
 //echo '<pre>$meta='; print_r($this->_meta); echo '</pre>';
