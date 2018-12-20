@@ -82,6 +82,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->papar->carian[] = 'semua';
 		$this->papar->c1 = $this->papar->c2 = null;
 		$this->papar->_pilih = $p1;
+		$this->papar->_method = 'belian';
+		$this->papar->cariID = 'papar';
 		$this->papar->template = 'template_biasa';
 		$this->papar->pilihJadual = 'pilih_jadual_am';
 		$this->papar->template2 = 'template_khas02';
