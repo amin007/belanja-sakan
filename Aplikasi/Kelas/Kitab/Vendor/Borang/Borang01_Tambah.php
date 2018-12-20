@@ -154,7 +154,7 @@ class Borang01_Tambah
 		elseif(in_array($dataType,array('VAR_STRING')))
 			$input = $this->inputTeksBesar($semua);
 		elseif(in_array($dataType,array('BLOB')))
-			$input = $this->inputTextarea($css2,$semua); #kod utk textarea
+			$input = $this->inputTextarea($semua); #kod utk textarea
 		elseif ( in_array($dataType,array('DATE')) )
 			$input = $this->inputTarikh($semua);
 		elseif(in_array($dataType,array('NUMBER','LONG','NEWDECIMAL')))
