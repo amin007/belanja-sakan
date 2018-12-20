@@ -7,10 +7,13 @@ class Borang02_Ubah
 	public function medanCarian($pindah, $class = 'col-sm-7')
 	{
 		list($method, $myTable, $senarai, $cariID, $_jadual) = $pindah;
-		if($method == 'biodata'):
+		/*echo '<br>$method=' . $method . '<br>$myTable=' . $myTable;
+		echo '<br>$cariID=' . $cariID . '<br>$_jadual=' . $_jadual;*/
+		if(in_array($method,array('biodata','x'))):
 			$this->medanTajuk($myTable, $class);
 		elseif($method == 'rangka'):
 		else:
+			$this->medanTajuk($myTable, $class);
 			//$this->atasInputCarian($mencari, $carian, $mesej, $class);
 		endif;
 	}
