@@ -4,7 +4,7 @@
 <p><?php
 $Sesi = new \Aplikasi\Kitab\Sesi();
 $Sesi->init();
-//echo '<pre>'; print_r($_SESSION) . '</pre>';
+//echo '<pre>'; print_r($_SESSION); echo '</pre>';
 echo 'namaPendek=' . $Sesi->get('bs_namaPendek') . '<br>';
 echo 'namaPenuh=' . $Sesi->get('bs_namaPenuh') . '<br>';
 echo 'levelPengguna=' . $Sesi->get('bs_levelPengguna') . '<br>';
