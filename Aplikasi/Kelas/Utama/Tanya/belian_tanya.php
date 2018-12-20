@@ -87,6 +87,17 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return $medan;
 	}
 #---------------------------------------------------------------------------------------------------#
+	public function contoh_cariKhas04()
+	{
+		$medan['harga_sebenar'][0]['kod'] = '1-harga sebenar';
+		$medan['harga_sebenar'][1]['keterangan'] = '2-harga anggaran';
+		$medan['medium_edagang'][0]['kod'] = '1-ya';
+		$medan['medium_edagang'][1]['keterangan'] = '2-tidak';
+
+		return $medan;
+	}
+
+#---------------------------------------------------------------------------------------------------#
 #=====================================================================================================
 #---------------------------------------------------------------------------------------------------#
 	function pilihJadual()
