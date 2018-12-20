@@ -146,15 +146,15 @@ class Borang01_Tambah
 		$semua = array($jenis,$jadual,$kira,$key,$data,$name);
 		//if ( in_array($key,array(...)) )
 		if( in_array($key,array('password','kataLaluan')) )
-			$input = $this->inputPassword($this->css,$semua);
+			$input = $this->inputPassword($semua);
 		elseif(in_array($dataType,array('BLOB')))
-			$input = $this->inputTextarea($this->css,$semua); #kod utk textarea
+			$input = $this->inputTextarea($semua); #kod utk textarea
 		elseif ( in_array($dataType,array('DATE')) )
-			$input = $this->inputTarikh($this->css,$semua);
+			$input = $this->inputTarikh($semua);
 		elseif(in_array($dataType,array('NUMBER')))
-			$input = $this->inputNumber($this->css,$semua);
+			$input = $this->inputNumber($semua);
 		elseif(in_array($dataType,array('VAR_STRING')))
-			$input = $this->inputTeksBesar($this->css,$semua);
+			$input = $this->inputTeksBesar($semua);
 		else
 		{#kod untuk lain2
 			$input = $tab2 . '<p class="form-control-static text-info">'
@@ -195,9 +195,10 @@ class Borang01_Tambah
 #------------------------------------------------------------------------------------------
 ###########################################################################################
 #------------------------------------------------------------------------------------------
-	function inputTextarea($css,$semua)
+	function inputTextarea($semua)
 	{
-		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,$classInput,$komenInput) = $css;
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,$classInput,$komenInput)
+			= $this->css();
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return ''
 		. '<textarea ' . $name . ' rows="1" cols="20"' . $tab2 
@@ -277,9 +278,10 @@ class Borang01_Tambah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTeksBesar($css,$semua)
+	function inputTeksBesar($semua)
 	{
-		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,$classInput,$komenInput) = $css;
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,$classInput,$komenInput)
+			= $this->css();
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#kod utk input text saiz besar
 		return '<div class="input-group input-group-lg">' . $tab3
