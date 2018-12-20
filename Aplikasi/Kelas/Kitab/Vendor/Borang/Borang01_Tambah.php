@@ -150,7 +150,7 @@ class Borang01_Tambah
 		$css2 = array($tab2,$tab3,$classInput,$komenInput);
 		//if ( in_array($key,array(...)) )
 		if( in_array($key,array('password','kataLaluan')) )
-			$input = $this->inputPassword($css2,$semua);
+			$input = $this->inputPassword($semua);
 		elseif(in_array($dataType,array('VAR_STRING')))
 			$input = $this->inputTeksBesar($css2,$semua);
 		elseif(in_array($dataType,array('BLOB')))
@@ -210,9 +210,11 @@ class Borang01_Tambah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputPassword($tab2, $tab3, $name, $data, $classInput, $komenInput,
-		$jadual, $key)
+	function inputPassword($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		$name2 = 'name="' . $jadual . '[' . $key . 'X]"';
 
 		return ''
