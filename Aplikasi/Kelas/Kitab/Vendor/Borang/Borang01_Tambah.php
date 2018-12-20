@@ -161,9 +161,9 @@ class Borang01_Tambah
 			$input = $this->inputNumber($semua);
 		elseif(in_array($dataType,array('NEWDECIMAL')))
 			$input = $this->inputMataDuitan($semua);
-		elseif(in_array($dataType,array('TINY')))
-			$input = $this->inputTeksKecil($semua);
-		elseif(in_array($dataType,array('STRING')))
+		//elseif(in_array($dataType,array('TINY')))
+		//	$input = $this->inputTeksKecil($semua);
+		elseif(in_array($dataType,array('TINY','STRING')))
 			$input = $this->inputSelectOption($semua,$ulangdata);
 		else
 		{#kod untuk lain2
