@@ -147,11 +147,12 @@ class Borang01_Tambah
 		# css
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
+		$css2 = array($tab2,$tab3,$classInput,$komenInput);
 		//if ( in_array($key,array(...)) )
 		if( in_array($key,array('password','kataLaluan')) )
-			$input = $this->inputPassword($this->css(),$semua);
-		/*elseif(in_array($dataType,array('VAR_STRING')))
-			$input = $this->inputTeksBesar($this->css(),$semua);
+			$input = $this->inputPassword($css2,$semua);
+		elseif(in_array($dataType,array('VAR_STRING')))
+			$input = $this->inputTeksBesar($css2,$semua);
 		/*elseif(in_array($dataType,array('BLOB')))
 			$input = $this->inputTextarea($this->css(),$semua); #kod utk textarea
 		elseif ( in_array($dataType,array('DATE')) )
@@ -281,10 +282,9 @@ class Borang01_Tambah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTeksBesar($semua,$css)
+	function inputTeksBesar($css,$semua)
 	{
-		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,$classInput,$komenInput)
-			= $css;
+		list($tab2,$tab3,$classInput,$komenInput) = $css;
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#kod utk input text saiz besar
 		return '<div class="input-group input-group-lg">' . $tab3
