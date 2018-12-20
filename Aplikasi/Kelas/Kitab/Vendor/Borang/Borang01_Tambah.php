@@ -73,37 +73,32 @@ class Borang01_Tambah
 	{	# istihar pembolehubah
 		$name = 'name="' . $jadual . '[' . $key . ']"';
 		$dataType = myGetType($data);
+		$semua = array($jenis,$jadual,$kira,$key,$data,$name);
 		# css
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
 
 		//if ( in_array($key,array(...)) )
 		if(in_array($key,array('nota','nota_prosesan','catatan','CatatNota')))
-			$input = $this->inputTextarea($tab2, $name, $data); #kod utk textarea
+			$input = $this->inputTextarea($semua); #kod utk textarea
 		elseif ( in_array($key,array('password','kataLaluan')) )
-			$input = $this->inputPassword($tab2, $tab3, $name, $data, 
-				$classInput, $komenInput, $jadual, $key);
+			$input = $this->inputPassword($semua);
 		elseif(in_array($key,dpt_senarai('jadual_biodata2') )) #senarai medan untuk biodata
-			$input = $this->inputBiodata($tab2, $tab3, $name, $data, 
-				$classInput, $komenInput);
+			$input = $this->inputBiodata($semua);
 		elseif ( in_array($key,array('keterangan')) ) # kod html untuk bukan input type
 			$input = $this->inputJadual($paparSahaja);
 		elseif(in_array($key,array('hasil','belanja','bilpekerja','gaji',
 			'hartatetap','stokakhir','staf','aset','stok')))
-			$input = $this->inputNumber($tab2, $tab2, $name, $data,
-				$classInput, $komenInput);
+			$input = $this->inputNumber($semua);
 		elseif ( in_array($key,array('lawat','terima','hantar','hantar_prosesan')) )
-			$input = $this->inputTarikh($tab2, $tab2, $name, $data,
-				$classInput, $komenInput, $jadual, $key);
+			$input = $this->inputTarikh($semua);
 		elseif(in_array($key,array('no','batu','jalan','tmn_kg','daerah')))
-			$input = $this->inputAlamatBaru($tab2, $tab3, $name, $data, 
-				$classInput, $komenInput);
+			$input = $this->inputAlamatBaru($semua);
 		elseif(in_array($key,array('namax','emailx','responden','fe',
 			'mko','respon')))
-			$input = $this->inputTeksBesar($tab2, $tab3, $name, $data, 
-				$classInput, $komenInput);
+			$input = $this->inputTeksBesar($semua);
 		elseif(in_array($key,array('pecah5P')))
-			$input = $this->inputTeksTakData($tab2, $tab3, $name);
+			$input = $this->inputTeksTakData($semua);
 		else
 		{#kod untuk lain2
 			$input = $tab2 . '<p class="form-control-static text-info">' 
