@@ -152,7 +152,7 @@ class Borang01_Tambah
 		if( in_array($key,array('password','kataLaluan')) )
 			$input = $this->inputPassword($semua);
 		elseif(in_array($dataType,array('VAR_STRING')))
-			$input = $this->inputTeksBesar($css2,$semua);
+			$input = $this->inputTeksBesar($semua);
 		elseif(in_array($dataType,array('BLOB')))
 			$input = $this->inputTextarea($css2,$semua); #kod utk textarea
 		elseif ( in_array($dataType,array('DATE')) )
@@ -201,9 +201,10 @@ class Borang01_Tambah
 #------------------------------------------------------------------------------------------
 ###########################################################################################
 #------------------------------------------------------------------------------------------
-	function inputTextarea($css,$semua)
+	function inputTextarea($semua)
 	{
-		list($tab2,$tab3,$classInput,$komenInput) = $css;
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return $tab2
 		. '<textarea ' . $name . ' rows="1" cols="20"' . $tab2 
