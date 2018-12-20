@@ -382,7 +382,31 @@ class Borang01_Tambah
 		return '';
 	}
 #------------------------------------------------------------------------------------------
+	function inputSelectOption($semua,$ulangdata)
+	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
+		$option = $this->inputOption($semua,$ulangData);
+		return '<div class="input-group input-group-sm">' . $tab2
+		. '<select ' . $name . ' class="form-control">' . $tab3
+		. '</select>'
+		. $tab2 . '</div>'
+		. '';
+	}
 #------------------------------------------------------------------------------------------
+	function inputOption($semua,$ulangData)
+	{
+		$dropmenu = '';
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
+		foreach ($ulangData as $myTable => $bil)
+		{# mula ulang $bilang
+			$dropmenu .= '<option value="' . $bil['kod'] . '">' . $bil['kod']
+			. '|' . $bil['keterangan'] . '</option>' . $tab3;
+		}# tamat ulang $bilang //*/
+
+		return $dropmenu;
+	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
 }
