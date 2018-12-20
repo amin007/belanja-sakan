@@ -70,8 +70,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		endforeach;
 
 		echo '<hr><font color="red">tidak wujud : '; print_r($takWujud);
-		echo '</font><hr>';
-		echo '</pre>';
+		echo '</font><hr></pre>';
 	}
 #-------------------------------------------------------------------------------------------
 	function kandunganPaparan($p1, $myTable)
