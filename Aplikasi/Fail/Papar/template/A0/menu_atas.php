@@ -2,8 +2,8 @@
 $sesi = \Aplikasi\Kitab\Sesi::init();
 //echo '<pre>MENU_ATAS - $_SESSION:', print_r($_SESSION, 1) . '</pre><br>';
 # set pembolehubah
-$pengguna = \Aplikasi\Kitab\Sesi::get('be18_namaPendek');
-$level = \Aplikasi\Kitab\Sesi::get('be18_levelPengguna');
+$pengguna = \Aplikasi\Kitab\Sesi::get('bs_namaPendek');
+$level = \Aplikasi\Kitab\Sesi::get('bs_levelPengguna');
 
 $senaraiPengguna = array('pentadbir','biasa');
 $senaraiPentadbir = array('pentadbir','biasa');
@@ -46,7 +46,7 @@ $iconFA['video'] = '<i class="fa fa-video-camera" aria-hidden="true"></i>';
 		<a class="btn btn-info"><span class="glyphicon glyphicon-search"></span></a>
 	</div>
 	<input type="hidden" name="namajadual" value="syarikat">
-	<input type="text" name="jika[cari][1]" placeholder="Cari Newss / Nama" class="form-control" />
+	<input type="text" name="jika[cari][1]" placeholder="Cari Tarikh" class="form-control" />
 	<input type="hidden" name="susun" value="nama ASC">
 </div>
 </form>
