@@ -189,7 +189,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 	public function susunPembolehubah($pilih,$idBorang = null)
 	{
 		//$pilih = null;
-		if($pilih == 'kod_puncapembelian'): //echo "\$pilih = $pilih <br>";
+		if($pilih == 'punca_pembelian'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->kodPuncapembelian();
 		elseif($pilih == 'kod_mediumpembayaran'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->kodMediumpembayaran();
