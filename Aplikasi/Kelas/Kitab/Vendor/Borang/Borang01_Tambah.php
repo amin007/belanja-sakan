@@ -384,7 +384,7 @@ class Borang01_Tambah
 		return '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputSelectOption($semua,$ulangdata)
+	function inputSelectOption($semua,$ulangData)
 	{
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
@@ -399,9 +399,9 @@ class Borang01_Tambah
 #------------------------------------------------------------------------------------------
 	function inputOption($semua,$ulangData)
 	{
-		$dropmenu = '';
+		$dropmenu = ''; echo '<pre>$ulangData='; print_r($ulangData); echo '</pre>';
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
-		foreach ($ulangData as $myTable => $bil)
+		foreach ($ulangData[$key] as $myTable => $bil)
 		{# mula ulang $bilang
 			$dropmenu .= '<option value="' . $bil['kod'] . '">' . $bil['kod']
 			. '|' . $bil['keterangan'] . '</option>' . $tab3;
