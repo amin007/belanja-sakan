@@ -11,10 +11,7 @@ class Borang02_Ubah
 			$this->medanTajuk($myTable, $class);
 		elseif($method == 'rangka'):
 		else:
-			$this->atasLabelSyarikat();
-			list($mencari, $carian, $mesej) =
-				$this->atasSemakData($senarai, $cariID, $_jadual);
-			$this->atasInputCarian($mencari, $carian, $mesej, $class);
+			//$this->atasInputCarian($mencari, $carian, $mesej, $class);
 		endif;
 	}
 #------------------------------------------------------------------------------------------
@@ -55,28 +52,6 @@ class Borang02_Ubah
 	position: fixed; bottom: 0px; right: 0px;
 }
 </style><?php echo "\n";
-	}
-#------------------------------------------------------------------------------------------
-	public function atasSemakData($senarai, $cariID, $_jadual)
-	{
-		if(isset($senarai['kes'][0]['newss'])):
-			# set pembolehubah
-			$mencari = URL . 'kawalan/ubahCari/';
-			$carian = $cariID;
-			$mesej = ''; //$carian .' ada dalam ' . $this->_jadual;
-			@list($namaSyarikat, $semak1, $semak3) = explode("|", $senarai['kes'][0]['nama']);
-			?><nav class="floating-menu">
-			<p class="bg-primary"><?php
-			echo "\n&nbsp;" . $namaSyarikat
-			?></p></nav><?php
-
-			else: # set pembolehubah
-			$mencari = URL . 'kawalan/ubahCari/';
-			$carian = null;
-			$mesej = '::' . $cariID . ' tiada dalam ' . $_jadual;
-		endif;
-
-		return array($mencari, $carian, $mesej);
 	}
 #------------------------------------------------------------------------------------------
 	public function atasInputCarian($mencari, $carian, $mesej, $class)
@@ -153,15 +128,26 @@ class Borang02_Ubah
 	public function ubahInput2($jenis,$jadual,$kira,$key,$data)
 	{	# istihar pembolehubah
 		$name = 'name="' . $jadual . '[' . $key . ']"';
-		//$dataType = myGetType($data);
-		$dataType = $jenis[$key]['type'];
+		$dataType = $jenis[$key]['type'];// myGetType($data);
 		# css
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
 
 		//if ( in_array($key,array(...)) )
-		if(in_array($dataType,array('BLOB')))
+		if( in_array($key,array('password','kataLaluan')) )
+			$input = $this->inputPassword($tab2, $tab3, $name, $data,
+				$classInput, $komenInput, $jadual, $key);
+		elseif(in_array($dataType,array('BLOB')))
 			$input = $this->inputTextarea($tab2, $name, $data); #kod utk textarea
+		elseif ( in_array($dataType,array('DATE')) )
+			$input = $this->inputTarikh($tab2, $tab2, $name, $data,
+				$classInput, $komenInput, $jadual, $key);
+		elseif(in_array($dataType,array('NUMBER')))
+			$input = $this->inputNumber($tab2, $tab2, $name, $data,
+				$classInput, $komenInput);
+		elseif(in_array($dataType,array('VAR_STRING')))
+			$input = $this->inputBiodata($tab2, $tab3, $name, $data,
+				$classInput, $komenInput);
 		/*elseif ( in_array($key,array('password','kataLaluan')) )
 			$input = $this->inputPassword($tab2, $tab3, $name, $data,
 				$classInput, $komenInput, $jadual, $key);
@@ -181,7 +167,6 @@ class Borang02_Ubah
 				$classInput, $komenInput, $jadual, $key);
 		elseif(in_array($key,array('no','batu','jalan','tmn_kg','daerah')))
 			$input = $this->inputAlamatBaru($tab2, $tab3, $name, $data,
-				$classInput, $komenInput);
 		elseif(in_array($key,array('namax','emailx','responden','fe',
 			'mko','respon','notel','nofax')))
 			$input = $this->inputTeksBesar($tab2, $tab3, $name, $data,
@@ -190,7 +175,7 @@ class Borang02_Ubah
 			$input = $this->inputTeksBesar($tab2, $tab3, $name, $data,
 				$classInput, $komenInput);
 		elseif(in_array($key,array('pecah5P')))
-			$input = $this->inputTeksTakData($tab2, $tab3, $name);*/
+			$input = $this->inputTeksTakData($tab2, $tab3, $name);//*/
 		else
 		{#kod untuk lain2
 			$input = $tab2 . '<p class="form-control-static text-info">'
