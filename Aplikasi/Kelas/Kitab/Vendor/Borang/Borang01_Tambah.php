@@ -389,10 +389,9 @@ class Borang01_Tambah
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
-		$option = $this->inputOption($semua,$ulangData);
 		return '<div class="input-group input-group-sm">' . $tab2
 		. '<select ' . $name . ' class="form-control">' . $tab3
-		. '</select>'
+		. $this->inputOption($semua,$ulangData) . '</select>'
 		. $tab2 . '</div>'
 		. '';
 	}
