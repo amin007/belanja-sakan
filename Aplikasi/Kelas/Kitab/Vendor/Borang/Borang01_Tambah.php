@@ -144,6 +144,9 @@ class Borang01_Tambah
 		$name = 'name="' . $jadual . '[' . $key . ']"';
 		$dataType = $jenis[$key]['type'];// myGetType($data);
 		$semua = array($jenis,$jadual,$kira,$key,$data,$name);
+		# css
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
 		//if ( in_array($key,array(...)) )
 		if( in_array($key,array('password','kataLaluan')) )
 			$input = $this->inputPassword($this->css(),$semua);
