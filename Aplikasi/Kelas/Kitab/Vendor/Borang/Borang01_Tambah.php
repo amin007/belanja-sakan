@@ -155,9 +155,9 @@ class Borang01_Tambah
 			$input = $this->inputTeksBesar($css2,$semua);
 		elseif(in_array($dataType,array('BLOB')))
 			$input = $this->inputTextarea($css2,$semua); #kod utk textarea
-		/*elseif ( in_array($dataType,array('DATE')) )
-			$input = $this->inputTarikh($this->css(),$semua);
-		elseif(in_array($dataType,array('NUMBER')))
+		elseif ( in_array($dataType,array('DATE')) )
+			$input = $this->inputTarikh($semua);
+		/*elseif(in_array($dataType,array('NUMBER')))
 			$input = $this->inputNumber($this->css(),$semua);//*/
 		else
 		{#kod untuk lain2
@@ -252,9 +252,11 @@ class Borang01_Tambah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTarikh($tab2, $tab3, $name, $data, $classInput, $komenInput,
-		$jadual, $key)
+	function inputTarikh($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#terima - style="font-family:sans-serif;font-size:10px;"
 		$X = 'name="' . $jadual . '[' . $key . 'X]"';
 		$dataX = ($key=='hantar_prosesan') ?
