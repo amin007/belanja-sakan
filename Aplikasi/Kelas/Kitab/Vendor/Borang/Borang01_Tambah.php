@@ -159,6 +159,8 @@ class Borang01_Tambah
 			$input = $this->inputTarikh($semua);
 		elseif(in_array($dataType,array('NUMBER','LONG','NEWDECIMAL')))
 			$input = $this->inputNumber($semua);
+		elseif(in_array($dataType,array('TINY')))
+			$input = $this->inputTeksKecil($semua);
 		else
 		{#kod untuk lain2
 			$input = $tab2 . '<p class="form-control-static text-info">'
@@ -302,11 +304,14 @@ class Borang01_Tambah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTeksKecil($tab2, $tab3, $name, $data, $classInput, $komenInput)
+	function inputTeksKecil($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#kod utk input text saiz besar
 		return '<div class="input-group input-group-sm">' . $tab3
-		. '<span class="input-group-addon">' . $data . '</span>' . $tab3
+		. '<span class="input-group-addon">Kecil:' . $data . '</span>' . $tab3
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
 		. ' class="form-control">'
