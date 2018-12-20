@@ -8,7 +8,7 @@ if( isset($url) )
 {
 	echo '$url=>'; print_r($url);
 }
-$namaClass = $url[0];
+$namaClass = huruf('Besar',$url[0]);
 $namaFungsi = $url[1];
 $a = isset($url[2]) ? '$' . $url[2] : '';
 $b = isset($url[3]) ? ',$' . $url[3] : '';
@@ -26,6 +26,10 @@ $pencam = "$a$b$c$d$e$f$g$h";
 <div class="container">
 <pre><code>
 Contoh fungsi dalam class <?php echo $namaClass ?> extends \Aplikasi\Kitab\Kawal
+#===========================================================================================
+class <?php echo $namaClass ?> extends \Aplikasi\Kitab\Kawal
+class <?php echo $namaClass ?>_Tanya extends \Aplikasi\Kitab\Tanya
+#===========================================================================================
 #-------------------------------------------------------------------------------------------
 	public function <?php echo $namaFungsi ?>(<?php echo $pencam ?>)
 	{
