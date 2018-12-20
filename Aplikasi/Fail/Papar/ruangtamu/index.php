@@ -7,6 +7,8 @@ $Sesi->init();
 //echo '<pre>'; print_r($_SESSION); echo '</pre>';
 echo 'namaPendek=' . $Sesi->get('bs_namaPendek') . '<br>';
 echo 'namaPenuh=' . $Sesi->get('bs_namaPenuh') . '<br>';
+echo 'email=' . $Sesi->get('bs_email') . '<br>';
+echo 'nohp=' . $Sesi->get('bs_nohp') . '<br>';
 echo 'levelPengguna=' . $Sesi->get('bs_levelPengguna') . '<br>';
 echo 'url=' . URL . '';
 //*/
