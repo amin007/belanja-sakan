@@ -195,8 +195,10 @@ class Borang01_Tambah
 #------------------------------------------------------------------------------------------
 ###########################################################################################
 #------------------------------------------------------------------------------------------
-	function inputTextarea($tab2, $name, $data)
+	function inputTextarea($css,$semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,$classInput,$komenInput) = $css;
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return ''
 		. '<textarea ' . $name . ' rows="1" cols="20"' . $tab2 
 		. ' class="form-control">' . $data . '</textarea>'
@@ -275,8 +277,10 @@ class Borang01_Tambah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTeksBesar($tab2, $tab3, $name, $data, $classInput, $komenInput)
+	function inputTeksBesar($css,$semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,$classInput,$komenInput) = $css;
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#kod utk input text saiz besar
 		return '<div class="input-group input-group-lg">' . $tab3
 		. '<span class="input-group-addon">' . $data . '</span>' . $tab3
