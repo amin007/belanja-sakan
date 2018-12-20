@@ -278,10 +278,10 @@ class Borang01_Tambah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTeksBesar($semua)
+	function inputTeksBesar($semua,$css)
 	{
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,$classInput,$komenInput)
-			= $this->css();
+			= $css;
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#kod utk input text saiz besar
 		return '<div class="input-group input-group-lg">' . $tab3
