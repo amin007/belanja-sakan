@@ -146,15 +146,15 @@ class Borang01_Tambah
 		$semua = array($jenis,$jadual,$kira,$key,$data,$name);
 		//if ( in_array($key,array(...)) )
 		if( in_array($key,array('password','kataLaluan')) )
-			$input = $this->inputPassword($semua);
+			$input = $this->inputPassword($this->css(),$semua);
 		elseif(in_array($dataType,array('BLOB')))
-			$input = $this->inputTextarea($semua); #kod utk textarea
+			$input = $this->inputTextarea($this->css(),$semua); #kod utk textarea
 		elseif ( in_array($dataType,array('DATE')) )
-			$input = $this->inputTarikh($semua);
+			$input = $this->inputTarikh($this->css(),$semua);
 		elseif(in_array($dataType,array('NUMBER')))
-			$input = $this->inputNumber($semua);
+			$input = $this->inputNumber($this->css(),$semua);
 		elseif(in_array($dataType,array('VAR_STRING')))
-			$input = $this->inputTeksBesar($semua);
+			$input = $this->inputTeksBesar($this->css(),$semua);
 		else
 		{#kod untuk lain2
 			$input = $tab2 . '<p class="form-control-static text-info">'
