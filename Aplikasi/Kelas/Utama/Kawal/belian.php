@@ -308,5 +308,46 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		echo '</table>';
 	}
 #-------------------------------------------------------------------------------------------
+	public function baruSimpan($idBorang)
+	{
+		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
+		$senaraiJadual = array('senarai_belanja');
+		# ubahsuai $posmen
+		$posmen = $this->ubahsuaiPost3($senaraiJadual);
+		//echo '<br>$dataID=' . $dataID . '<br>';
+		//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
+		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
+
+		# mula ulang $senaraiJadual
+		foreach ($senaraiJadual as $kunci => $jadual)
+		{# mula ulang table
+			$this->tanya->ubahSqlSimpan
+			//ubahSimpan
+			($posmen[$jadual], $jadual, $medanID);
+		}# tamat ulang table
+
+		# pergi papar kandungan
+		//echo 'location: ' . URL . 'kawalan/ubah/' . $dataID;
+		//header('location: ' . URL . 'kawalan/ubah/' . $dataID); //*/
+	}
+#-------------------------------------------------------------------------------------------
+	function ubahsuaiPost3($senaraiJadual)
+	{
+		$posmen = array();
+		foreach ($_POST as $myTable => $value):
+		if ( in_array($myTable,$senaraiJadual) ):
+			foreach ($value as $kekunci => $papar)
+			{
+				$posmen[$myTable][$kekunci] = bersih($papar);
+			}//*/
+		endif; endforeach;
+
+		echo '<pre>$senaraiJadual='; print_r($senaraiJadual); echo '</pre>';
+		echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
+
+		return $posmen;
+	}
+#-------------------------------------------------------------------------------------------
 #==========================================================================================
 }
