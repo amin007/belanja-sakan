@@ -75,7 +75,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 			//'jenis_belanja' => null, //varchar(50)
 			'tarikh' => null, //date
 			'belanja_keterangan' => null, //text
-			'belanja_kod' => null, //int(11)
+			//'belanja_kod' => null, //int(11)
 			'amaun_rm' => null, //decimal(10,2)
 			'harga_sebenar' => null, //tinyint(4)|1-harga sebenar/2-harga anggaran
 			'punca_pembelian' => null, //char(2)
