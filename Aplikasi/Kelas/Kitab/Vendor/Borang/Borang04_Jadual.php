@@ -19,7 +19,7 @@ class Borang04_Jadual
 		elseif ($key=='Total'):Html_Url::gaya_url_6($data);
 		elseif ($key=='subject'):Html_Url::gaya_huruf('Besar_Depan', $data);
 		elseif(in_array($key,array('Mesej'))):
-			echo "\n\t\t\t"; 
+			echo "\n\t\t\t";
 			?><td><?php echo nl2br($data) ?></td><?php//*/
 		else:
 			echo "\n\t\t\t"; 
@@ -40,7 +40,6 @@ class Borang04_Jadual
 	{# primary key
 		$k0 = URL . 'belian/ubah/' . $data; //$this->iconFA(4)
 		list($pengguna,$level,$birutua,$birumuda,$merah) = $this->setPencam();
-		$btn = 'target="_blank" href="' . $k0 . '" class="' . $birumuda . '"';
 
 		$this->pautanTD('_blank',$k0,$birutua,$data,$this->iconFA(4));
 	}
@@ -63,7 +62,7 @@ class Borang04_Jadual
 	{
 		list($k,$btn) = $this->posdaftar($data);
 		$pautan = ($data==null) ? $data :
-		'<a target="_blank" href="' . $k[3] . '" class="' 
+		'<a target="_blank" href="' . $k[3] . '" class="'
 		. $this->butang('info') . '">' . $data . '</a>';
 
 		?><td><?php echo $pautan ?></td><?php
@@ -96,7 +95,7 @@ class Borang04_Jadual
 			$this->pautanTD('_blank',$k2,$warnaDanger,'Batch Non A1');
 			$this->pautanTD('_blank',$k3,$warnaSuccess,'Batch A1');
 			?></td><?php
-		endif;	
+		endif;
 	}
 #------------------------------------------------------------------------------------------
 	public static function gaya_url_5($data)
@@ -121,13 +120,13 @@ class Borang04_Jadual
 	{
 		echo "\n\t\t\t"; ?><td><?php
 		echo huruf($jenis, $data); //huruf('Besar_Depan', )
-		?></td><?php 
+		?></td><?php
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
 #------------------------------------------------------------------------------------------
 	public static function butang($warna = 'info',$saiz = 'kecil')
-	{ 
+	{
 		$btnW['primary'] = 'btn btn-primary'; # birutua
 		$btnW['info'] = 'btn btn-info'; # birumuda - utama
 		$btnW['danger'] = 'btn btn-danger'; # merah
@@ -174,7 +173,7 @@ class Borang04_Jadual
 		$pengguna = \Aplikasi\Kitab\Sesi::get('bs_namaPendek');
 		$level = \Aplikasi\Kitab\Sesi::get('bs_levelPengguna');
 		//echo "<br> \$pengguna : $pengguna | \$level = $level";
-		# butang 
+		# butang
 		$birutua = 'btn btn-primary btn-mini';
 		$birumuda = 'btn btn-info btn-mini';
 		$merah = 'btn btn-danger btn-mini';
