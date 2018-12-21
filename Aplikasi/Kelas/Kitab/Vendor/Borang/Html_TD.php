@@ -5,7 +5,7 @@ class Html_TD
 #==========================================================================================
 	function primaryKey($key, $data, $myTable = null, $ca = null, $cb = null)
 	{# primary key
-		$k0 = URL . 'kawalan/ubah/' . $data;
+		$k0 = URL . 'belian/ubah/' . $data;
 		$k1 = $this->iconFA(1) . '<a target="_blank" href="' . $k0 . '">'
 			. $data . '</a>&nbsp;';
 		list($pengguna,$level,$birutua,$birumuda,$merah) = $this->setPencam();
@@ -48,7 +48,7 @@ class Html_TD
 #==========================================================================================
 	function paparURL($key, $data, $myTable = null, $ca = null, $cb = null)
 	{
-		if ($key=='newss')
+		if(in_array($key,array('newss','no')))
 		{# primary key
 			$k1 = $this->primaryKey($key,$data,$myTable,$ca,$cb);
 			?><td><?php echo $k1 ?></td><?php
