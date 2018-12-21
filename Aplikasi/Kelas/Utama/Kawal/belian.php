@@ -19,13 +19,13 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 		$this->panggilJadual('senarai_belanja');
 		//$this->panggilJadual('nama_pengguna');
-		$this->debugKandunganPaparan();//*/
+		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
 		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
-		$this->paparKandungan($this->_folder, $fail[1], $noInclude=1);//*/
+		$this->paparKandungan($this->_folder, $fail[1], $noInclude=0);//*/
 	}
 ##------------------------------------------------------------------------------------------
 	public function paparHeader()
