@@ -308,7 +308,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	public function baruSimpan($idBorang)
 	{
-		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
 		$senaraiJadual = array('senarai_belanja');
 		# ubahsuai $posmen
@@ -320,14 +320,13 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		# mula ulang $senaraiJadual
 		foreach ($senaraiJadual as $kunci => $jadual)
 		{# mula ulang table
-			$this->tanya->ubahSqlSimpan
-			//ubahSimpan
-			($posmen[$jadual], $jadual, $medanID);
+			//$this->tanya->tambahSql($jadual, $posmen[$jadual]);
+			$this->tanya->tambahData($jadual, $posmen[$jadual]);
 		}# tamat ulang table
 
 		# pergi papar kandungan
-		//echo 'location: ' . URL . 'kawalan/ubah/' . $dataID;
-		//header('location: ' . URL . 'kawalan/ubah/' . $dataID); //*/
+		//echo 'location: ' . URL . '';
+		header('location: ' . URL . ''); //*/
 	}
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPost3($senaraiJadual)
