@@ -228,21 +228,21 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	public function insertID($p1)
 	{
 		# ubahsuai $posmen
-		list($posmen,$senaraiJadual,$myTable) = $this->ubahsuaiPost2($p1);
+		list($posmen,$senaraiJadual,$myTable) = $this->ubahsuaiPost($p1);
 		//echo '<hr><pre>$_POST='; print_r($_POST); echo '</pre>';
 		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
 
 		# mula ulang $senaraiJadual
 		foreach ($senaraiJadual as $kunci => $jadual)
 		{# mula ulang table
-			//$this->tanya->tambahSql($jadual, $posmen[$jadual]);
-			$this->tanya->tambahData($jadual, $posmen[$jadual]);
+			$this->tanya->tambahSql($jadual, $posmen[$jadual]);
+			//$this->tanya->tambahData($jadual, $posmen[$jadual]);
 		}# tamat ulang table
 
 		# Pergi papar kandungan
 		$lokasi = '' . $myTable;
-		//echo '<br>location: ' . URL . $lokasi;
-		header('location: ' . URL . $lokasi); //*/
+		echo '<br>location: ' . URL . $lokasi;
+		//header('location: ' . URL . $lokasi); //*/
 	}
 #-------------------------------------------------------------------------------------------
 #===========================================================================================
