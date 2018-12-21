@@ -227,19 +227,20 @@ class Belian extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPost1($p1)
 	{
-		list($senaraiJadual) = $this->tanya->pilihJadual($p1);
+		$senaraiJadual = $this->tanya->pilihJadual($p1);
+		//echo '<pre>$senaraiJadual='; print_r($senaraiJadual); echo '</pre>';
+		//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 
-		$posmen = array(); //echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
+		$posmen = array();
 		foreach ($_POST as $myTable => $value):
-			if ( in_array($myTable,$senaraiJadual) ):
-				foreach ($value as $kekunci => $papar)
-				{
-					$posmen[$myTable][$kekunci] = bersih($papar);
-					//$posmen[$myTable][$medanID] = $dataID;
-				}
-		endif; endforeach;//*/
+		if ( in_array($myTable,$senaraiJadual) ):
+			foreach ($value as $kekunci => $papar)
+			{
+				$posmen[$myTable][$kekunci] = bersih($papar);
+			}//*/
+		endif; endforeach;
 
-		$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
+		/*$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
 		echo '<pre>'; foreach($debugData as $semak): if(isset($$semak)):
 			echo '<br>$' . $semak . ' : '; print_r($$semak);
 		endif; endforeach; echo '</pre>';//*/
