@@ -309,7 +309,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	public function baruSimpan($idBorang)
 	{
 		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
+		//echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
 		$senaraiJadual = array('senarai_belanja');
 		# ubahsuai $posmen
 		$posmen = $this->ubahsuaiPost3($senaraiJadual);
@@ -341,8 +341,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			}//*/
 		endif; endforeach;
 
-		echo '<pre>$senaraiJadual='; print_r($senaraiJadual); echo '</pre>';
-		echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
+		//echo '<pre>$senaraiJadual='; print_r($senaraiJadual); echo '</pre>';
+		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
 
 		return $posmen;
 	}
