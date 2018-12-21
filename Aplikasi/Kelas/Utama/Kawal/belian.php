@@ -19,7 +19,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 		$this->panggilJadual('senarai_belanja');
 		//$this->panggilJadual('nama_pengguna');
-		//$this->debugKandunganPaparan();//*/
+		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
 		$this->_folder = 'cari';
@@ -364,6 +364,12 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
 
 		return $posmen;
+	}
+#-------------------------------------------------------------------------------------------
+	public function ubah($idBorang)
+	{
+		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
 	}
 #-------------------------------------------------------------------------------------------
 #==========================================================================================
