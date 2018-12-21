@@ -225,10 +225,32 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		return array($posmen,$senaraiJadual,$senaraiJadual[0]); # pulangkan nilai
 	}
 #-------------------------------------------------------------------------------------------
+	function ubahsuaiPost1($p1)
+	{
+		list($senaraiJadual) = $this->tanya->pilihJadual($p1);
+
+		$posmen = array(); //echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
+		foreach ($_POST as $myTable => $value):
+			if ( in_array($myTable,$senaraiJadual) ):
+				foreach ($value as $kekunci => $papar)
+				{
+					$posmen[$myTable][$kekunci] = bersih($papar);
+					//$posmen[$myTable][$medanID] = $dataID;
+				}
+		endif; endforeach;//*/
+
+		$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
+		echo '<pre>'; foreach($debugData as $semak): if(isset($$semak)):
+			echo '<br>$' . $semak . ' : '; print_r($$semak);
+		endif; endforeach; echo '</pre>';//*/
+
+		return array($posmen,$senaraiJadual,$senaraiJadual[0]); # pulangkan nilai
+	}
+#-------------------------------------------------------------------------------------------
 	public function insertID($p1)
 	{
 		# ubahsuai $posmen
-		list($posmen,$senaraiJadual,$myTable) = $this->ubahsuaiPost($p1);
+		list($posmen,$senaraiJadual,$myTable) = $this->ubahsuaiPost1($p1);
 		//echo '<hr><pre>$_POST='; print_r($_POST); echo '</pre>';
 		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
 
