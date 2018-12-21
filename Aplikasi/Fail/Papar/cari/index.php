@@ -24,3 +24,5 @@ echo "Anda mencari = $cari1\r<br>$cari2\r<hr>";//*/
 //	echo '<h1>data kosong daa</h1>';
 //else # jenis template
 	include $this->template . '.php';
+#-------------------------------------------------------------------------------
+echo '<pre>$meta='; print_r($this->_meta); echo '</pre>';
