@@ -19,7 +19,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 
 		# Pergi papar kandungan
-		/*$fail = array('1cari','index','b_ubah');
+		/*$this->_folder = 'cari';
+		$fail = array('1cari','index','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);*/
 	}
