@@ -9,7 +9,7 @@ if( isset($url) )
 	echo '$url=>'; print_r($url);
 }
 $namaClass = huruf('Besar',$url[0]);
-$namaFungsi = $url[1];
+$namaFungsi = isset($url[1]) ? $url[1] : 'index';
 $a = isset($url[2]) ? '$' . $url[2] : '';
 $b = isset($url[3]) ? ',$' . $url[3] : '';
 $c = isset($url[4]) ? ',$' . $url[4] : '';
