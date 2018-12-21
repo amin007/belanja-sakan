@@ -280,32 +280,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
-		//$this->semakPembolehubah(); # Semak data dulu
 		$this->paparKandungan($this->_folder, $fail[2], $noInclude=0);
-	}
-#-------------------------------------------------------------------------------------------
-	function ujian01($myTable)
-	{
-		$kira = count($this->papar->kiramedan[$myTable]);
-		echo "<hr> bil untuk kiramedan[$myTable] = $kira <br>";
-		//$this->semakPembolehubah($this->papar->kiramedan[$myTable]);
-		echo '<table border="1">' . "\n";
-		echo '<tr><th>#</th><th>name</th><th>type</th><th>medan</th>'
-		. '<th>len</th></tr>';
-		foreach($this->papar->kiramedan[$myTable] as $key => $pilih):
-			$kunciUtama = isset($pilih['flags'][1]) ? 'primaryKey':null;
-			$html = new \Aplikasi\Kitab\HTML_Input_Biasa();
-			$medan = $html->addInput(
-			$class=null, $myTable, $kunciUtama,
-			$pilih['native_type'], $pilih['name'], $data=null);
-
-			echo "\n<rr><td>$key</td><td>" . $pilih['name']
-			. '</td><td>' . $pilih['native_type']
-			. '</td><td>' . $medan
-			. '</td><td>' . $pilih['len']
-			. '</td></tr>';
-		endforeach;
-		echo '</table>';
 	}
 #-------------------------------------------------------------------------------------------
 	public function baruSimpan($idBorang)
