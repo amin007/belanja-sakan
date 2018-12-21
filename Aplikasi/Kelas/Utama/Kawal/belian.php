@@ -129,6 +129,19 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		return $meta;
 	}
 #-------------------------------------------------------------------------------------------
+	function panggilJadual($p1)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
+		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
+		list($data,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
+		//$this->papar->kiramedan[$myTable] = $meta;
+		$this->papar->_meta = $this->ubahMeta($meta);
+		$this->papar->senarai[$myTable] = $data;
+		# Set pembolehubah untuk Papar
+		$this->kandunganPaparan($p1, $myTable);
+	}
+#-------------------------------------------------------------------------------------------
 	function pilihMedan($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
