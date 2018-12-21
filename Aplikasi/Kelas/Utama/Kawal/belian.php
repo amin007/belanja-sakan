@@ -312,7 +312,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
 		$senaraiJadual = array('senarai_belanja');
 		# ubahsuai $posmen
-		$posmen = $this->ubahsuaiPost3($senaraiJadual);
+		$posmen = $this->ubahsuaiPostBaru($senaraiJadual);
 		//echo '<br>$dataID=' . $dataID . '<br>';
 		//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
@@ -329,7 +329,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		header('location: ' . URL . ''); //*/
 	}
 #-------------------------------------------------------------------------------------------
-	function ubahsuaiPost3($senaraiJadual)
+	function ubahsuaiPostBaru($senaraiJadual)
 	{
 		$posmen = array();
 		foreach ($_POST as $myTable => $value):
