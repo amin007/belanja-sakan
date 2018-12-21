@@ -15,10 +15,10 @@ class Belian extends \Aplikasi\Kitab\Kawal
 ##------------------------------------------------------------------------------------------
 	public function index()
 	{
-		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		$this->pilihMedan('senarai_belanja');
-		//$this->pilihMedan('nama_pengguna');
+		$this->panggilJadual('senarai_belanja');
+		//$this->panggilJadual('nama_pengguna');
 		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
