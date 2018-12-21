@@ -19,13 +19,16 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 
 		# Pergi papar kandungan
+		/*$fail = array('1cari','index','b_ubah');
+		//echo '<br>$fail = ' . $fail[0] . '<hr>';
+		$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);*/
+	}
+##------------------------------------------------------------------------------------------
+	public function paparHeader()
+	{
 		$lokasi = 'belian/google2';
 		//echo '<br>location: ' . URL . $lokasi;
 		header('location: ' . URL . $lokasi); //*/
-		/*$fail = array('1cari','index','b_ubah');
-		//echo '<br>$fail = ' . $fail[0] . '<hr>';
-		//$this->semakPembolehubah(); # Semak data dulu
-		$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);*/
 	}
 ##------------------------------------------------------------------------------------------
 	public function paparKandungan($folder, $fail, $noInclude)
