@@ -187,7 +187,7 @@ class Borang04_Jadual
 		$t = ($target == null) ? '':' target="' . $target . '"';
 		$data = ($data == '0' or $data == null) ? '&nbsp;':$data;
 		$iconFA = ($iconFA == null) ? '':$iconFA;
-	
+
 		?><a<?php echo $t ?> href="<?php echo $href ?>" class="<?php
 		echo $class ?>"><?php echo $data ?></a><?php
 	}
