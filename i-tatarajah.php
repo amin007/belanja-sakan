@@ -96,3 +96,6 @@ $loginMedan01 = 'namaPengguna as namaPendek,`kataLaluan`,`level`,Nama_Penuh as n
 define('JADUAL_LOGIN', serialize(
 	array ('nama_pengguna','email|nohp','kataLaluan',$loginMedan01)
 	));
+define('JADUAL_BIODATA2', serialize(
+	array ('namaPengguna','kataLaluan','level','Nama_Penuh','email','nohp','CatatNota')
+	));
