@@ -410,8 +410,11 @@ class Borang02_Ubah
 		foreach ($ulangData[$key] as $myTable => $bil)
 		{# mula ulang $bil
 			//echo "\r" . $bil['keterangan'] . '<br>';
-			$dropmenu .= '<option value="' . $bil['kod'] . '">' . $bil['kod']
-			. '-' . $bil['keterangan'] . '</option>' . $tab3;
+			$p0 = ($bil['kod'] == $data) ? ' selected' : '';
+			$k0 = ($bil['kod'] == $data) ? $data :  $bil['kod'];
+			$k1 = ($bil['kod'] == $data) ? "*$data" :  $bil['kod'];
+			$dropmenu .= '<option value="' . $k0 . '"' . $p0 . '>'
+			. $k1 . '-' . $bil['keterangan'] . '</option>' . $tab3;
 		}# tamat ulang $bil//*/
 
 		return $dropmenu;
