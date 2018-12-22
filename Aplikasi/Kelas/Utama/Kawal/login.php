@@ -66,16 +66,16 @@ class Login extends \Aplikasi\Kitab\Kawal
 		list($jadual, $medan01, $medan02, $medan) = dpt_senarai('jadual_login');
 		$posmen = $this->tanya->ubahsuaiPostBaru(array($jadual));
 		# sql insert
-		//$this->tanya->tambahSql($jadual, $posmen[$jadual]);
-		$this->tanya->tambahData($jadual, $posmen[$jadual]);
+		$this->tanya->tambahSql($jadual, $posmen[$jadual]);
+		//$this->tanya->tambahData($jadual, $posmen[$jadual]);
 		//$this->log_sql($jadual, $medan, $posmen);
 		# Semak data
-			//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
-			//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
+			echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
+			echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
 
 		# Pergi papar kandungan
 		//echo '<br>location: ' . URL . '';
-		header('location: ' . URL . ''); //*/
+		//header('location: ' . URL . ''); //*/
 	}
 #------------------------------------------------------------------------------------------
 	function salah()
