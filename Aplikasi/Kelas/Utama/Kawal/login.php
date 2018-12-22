@@ -163,7 +163,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 			\Aplikasi\Kitab\Sesi::set('bs_levelPengguna', $data[0]['level']);
 			\Aplikasi\Kitab\Sesi::set('bs_loggedIn', true);
 			//echo '<hr>Berjaya';
-			$this->levelPengguna($kira, $data, $data[0]['level']);
+			$this->levelPengguna($data[0]['level']);
 		} 
 		else # login gagal
 		{	echo '<hr>Tidak Berjaya';
@@ -171,7 +171,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 		}//*/
 	}
 #------------------------------------------------------------------------------------------
-	function levelPengguna($kira, $data, $level)
+	function levelPengguna($level)
 	{
 		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		echo "<pre>\$kira=$kira | \$data =>"; print_r($data);
