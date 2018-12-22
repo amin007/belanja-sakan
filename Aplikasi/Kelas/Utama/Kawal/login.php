@@ -177,8 +177,8 @@ class Login extends \Aplikasi\Kitab\Kawal
 			header('location:' . URL . 'ruangtamu');
 		elseif ($level == 'pegawai')
 			header('location:' . URL . 'ruangtamu');
-		elseif($level == 'pegawai2')
-			header('location:' . URL . 'homeadmin');
+		elseif($level == 'admin1home')
+			header('location:' . URL . 'admin1home');
 		else
 			header('location:' . URL . ''); //*/
 	}
