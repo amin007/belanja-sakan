@@ -69,9 +69,28 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 				$posmen[$myTable][$kekunci] = bersih($papar);
 			}//*/
 		endif; endforeach;
+		# semak data
+		$posmen = $this->kataLaluanX($senaraiJadual[0], $posmen);
 
 		return $posmen;
 	}
+#---------------------------------------------------------------------------------------------------#
+	public function kataLaluanX($myTable, $posmen)
+	{
+		$surat = array('kataLaluan');
+		foreach ($surat as $kekunci)
+		if(isset($posmen[$myTable][$kekunci . 'X']))
+			if(empty($posmen[$myTable][$kekunci . 'X'])):
+				unset($posmen[$myTable][$kekunci . 'X']);
+			else:
+				$posmen[$myTable]['level'] =
+					$posmen[$myTable][$kekunci . 'X'];
+				unset($posmen[$myTable][$kekunci . 'X']);
+			endif;
+
+		return $posmen; # pulangkan nilai
+	}
+#---------------------------------------------------------------------------------------------------#
 #---------------------------------------------------------------------------------------------------#
 #====================================================================================================
 }
