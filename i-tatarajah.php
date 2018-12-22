@@ -4,9 +4,9 @@ define('KAWAL', 'Aplikasi/Kelas/Utama/Kawal');
 define('TANYA', 'Aplikasi/Kelas/Utama/Tanya');
 define('PAPAR', 'Aplikasi/Fail/Papar');
 define('KITAB', 'Aplikasi/Kelas/Kitab');
-define('FUNGSI', 'Aplikasi/Fungsi');
 
 # Fungsi Global
+define('FUNGSI', 'Aplikasi/Fungsi');
 require FUNGSI . '/Fungsi.php';
 
 # Sentiasa menyediakan garis condong di belakang (/) pada hujung jalan
