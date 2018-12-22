@@ -33,9 +33,15 @@ class Kebenaran
 		//*/
 	}
 #------------------------------------------------------------------------------------
-	private static function senaraiLevel()
+	private static function semak()
 	{
-		return array('pentadbir','admin1','pelawat','user','fe','pegawai');
+		$kunci = \Aplikasi\Kitab\Sesi::get('bs_loggedIn');
+		$level = \Aplikasi\Kitab\Sesi::get('bs_levelPengguna');
+		$c1 = array('pelawat','user','fe','pegawai');
+		$c2 = array('pentadbir','admin1home');
+		$c3 = array('pentadbir','admin1home','pelawat','user','fe','pegawai');
+
+		return array($kunci,$level,$c1,$c2,$c3);
 	}
 #------------------------------------------------------------------------------------
 	public static function kawalKeluar()
