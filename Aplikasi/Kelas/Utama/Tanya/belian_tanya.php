@@ -102,15 +102,11 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 
 		return $medan;
 	}
-
 #---------------------------------------------------------------------------------------------------#
 #=====================================================================================================
 #---------------------------------------------------------------------------------------------------#
 	function pilihJadual()
 	{
-		/*$jadual = array('`aes`','`kawalan_aes`','`aes_alam_sekitar`',
-		'`aes_kp_205`','`aes_kp_206`','`aes_kp_207`','`aes_kp_800`',
-		'`aes_perkhidmatan`','`aes_pertanian`');//*/
 		$jadual = array('senarai_belanja');
 
 		return $jadual;
