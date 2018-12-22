@@ -66,10 +66,10 @@ class Login extends \Aplikasi\Kitab\Kawal
 		list($jadual, $medan01, $medan02, $medan) = dpt_senarai('jadual_login');
 		$posmen = $this->tanya->ubahsuaiPostBaru(array($jadual));
 		# Semak data
-			$this->tanya->tambahSql($jadual, $posmen[$jadual]);
+			/*$this->tanya->tambahSql($jadual, $posmen[$jadual]);
 			echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 			echo '<pre>$posmen='; print_r($posmen); echo '</pre>';//*/
-		/*# sql insert
+		# sql insert
 		$this->tanya->tambahData($jadual, $posmen[$jadual]);
 		//$this->log_sql($jadual, $medan, $posmen);
 
