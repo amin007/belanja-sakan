@@ -209,17 +209,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		elseif($pilih == 'nama_pengguna'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->jadualNamaPengguna();
 		elseif($pilih == 'limaPerangkaan'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jaduaLimaPerangkaan($idBorang);
-		elseif($pilih == 'semuaBE'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualSemuaBE($idBorang);
-		elseif($pilih == 'hasilBE'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualHasilBE($idBorang);
-		elseif($pilih == 'belanjaBE'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualBelanjaBE($idBorang);
-		elseif($pilih == 'stafBE'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualStafBE($idBorang);
-		elseif($pilih == 'staf02BE'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualStafBE($idBorang);
+			list($myTable, $medan, $carian, $susun) = $this->jaduaLimaPerangkaan();
 		else: //echo "\$pilih = $pilih <br>";
 			$myTable = $medan = $carian = $susun = null;
 		endif;
