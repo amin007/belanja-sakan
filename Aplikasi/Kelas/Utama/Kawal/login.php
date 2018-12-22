@@ -149,6 +149,9 @@ class Login extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	function kunciPintu($kira, $data)
 	{
+		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		echo "<pre>\$kira=$kira | \$data =>";
+		print_r($data); echo '</pre>';
 		if ($kira == 1) 
 		{	# login berjaya
 			\Aplikasi\Kitab\Sesi::init(); # setkan $_SESSION utk 
@@ -170,7 +173,10 @@ class Login extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	function levelPengguna($kira, $data, $level)
 	{
-		//header('location:' . URL . 'ruangtamu');
+		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		echo "<pre>\$kira=$kira | \$data =>"; print_r($data);
+		echo "\$level = $level </pre>";
+		/*header('location:' . URL . 'ruangtamu');
 		if ($level == 'kawal')
 			header('location:' . URL . 'ruangtamu');
 		elseif ($level == 'fe')
