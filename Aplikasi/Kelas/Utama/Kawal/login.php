@@ -65,9 +65,8 @@ class Login extends \Aplikasi\Kitab\Kawal
 
 		# Set pemboleubah utama
 		list($jadual, $medan01, $medan02, $medan) = dpt_senarai('jadual_login');
-		$senarai = array($jadual);
 		# Bentuk tatasusunan
-		$posmen = $this->ubahsuaiPostBaru($senarai);
+		$posmen = $this->ubahsuaiPostBaru(array($jadual));
 		# sql insert
 		$this->tanya->tambahSql($jadual, $posmen[$jadual]);
 		//$this->tanya->tambahData($jadual, $posmen[$jadual]);
@@ -79,20 +78,6 @@ class Login extends \Aplikasi\Kitab\Kawal
 		# Pergi papar kandungan
 		//echo '<br>location: ' . URL . '';
 		//header('location: ' . URL . ''); //*/
-	}
-#------------------------------------------------------------------------------------------
-	function ubahsuaiPostBaru($senaraiJadual)
-	{
-		$posmen = array();
-		foreach ($_POST as $myTable => $value):
-		if ( in_array($myTable,$senaraiJadual) ):
-			foreach ($value as $kekunci => $papar)
-			{
-				$posmen[$myTable][$kekunci] = bersih($papar);
-			}//*/
-		endif; endforeach;
-
-		return $posmen;
 	}
 #------------------------------------------------------------------------------------------
 	function salah()
