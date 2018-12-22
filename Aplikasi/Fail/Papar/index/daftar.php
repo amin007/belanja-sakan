@@ -31,14 +31,14 @@ table.excel thead th, table.excel tbody th {
 }
 table.excel tbody th { text-align:center; vertical-align: top; }
 table.excel tbody td { vertical-align:bottom; }
-table.excel tbody td 
-{ 
+table.excel tbody td
+{
 	padding: 0 3px; border: 1px solid #aaaaaa;
 	background:#ffffff;
 }
 .fa-input {font-family: FontAwesome}
 </style>
-</head>  
+</head>
 <body>
 
 <!-- Jadual nama_pengguna ########################################### -->
@@ -124,12 +124,12 @@ class="form-horizontal">
 <!-- footer class="footer">
 	<div class="container">
 		<span class="label label-info">
-		&copy; Hak Cipta Terperihara 2016. Theme Asal Bootstrap Twitter	
+		&copy; Hak Cipta Terperihara 2016. Theme Asal Bootstrap Twitter
 		</span>
 	</div>
 </footer -->
 
-<!-- khas untuk jquery dan js2 lain 
+<!-- khas untuk jquery dan js2 lain
 <?php
       $jquery_cdn = 'https://code.jquery.com/jquery-2.2.3.min.js';
  $bootstrapJS_413 = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js';
