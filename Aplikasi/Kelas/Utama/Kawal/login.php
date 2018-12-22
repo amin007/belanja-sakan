@@ -15,13 +15,14 @@ class Login extends \Aplikasi\Kitab\Kawal
 ##-----------------------------------------------------------------------------------------
 	public function index()
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		# Set pemboleubah utama
 		$this->papar->menuatas = 'tak';
 		$this->papar->TajukBesar = 'Sila Login';
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->mesej); # Semak data dulu
-		$this->paparKandungan($this->_folder, 'index');
+		header('location:' . URL);
+		//$this->paparKandungan($this->_folder, 'index');
 	}
 ##-----------------------------------------------------------------------------------------
 	public function paparKandungan($folder, $fail, $noInclude = 0)
