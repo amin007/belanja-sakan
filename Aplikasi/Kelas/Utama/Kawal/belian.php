@@ -363,10 +363,18 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		return $posmen;
 	}
 #-------------------------------------------------------------------------------------------
-	public function ubah($idBorang)
+	public function ubah($dataID)
 	{
-		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
+		$this->panggilTable('senarai_belanja','no',$dataID);
+		//$this->debugKandunganPaparan();//*/
+
+		# Pergi papar kandungan
+		$this->_folder = 'cari';
+		$fail = array('1cari','index','b_baru','b_ubah');
+		//echo '<br>$fail = ' . $fail[0] . '<hr>';
+		$this->paparKandungan($this->_folder, $fail[3], $noInclude=0);
 	}
 #-------------------------------------------------------------------------------------------
 #==========================================================================================
