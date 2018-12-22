@@ -28,6 +28,11 @@ class Kebenaran
 			header('location:' . URL . 'ruangtamu');
 			exit;
 		}
+		if ($kunci == true && in_array($level,$c2))
+		{
+			header('location:' . URL . 'admin1home');
+			exit;
+		}
 		//*/
 	}
 #------------------------------------------------------------------------------------
