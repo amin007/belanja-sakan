@@ -25,4 +25,5 @@ if(!isset($this->cariID))
 else # jenis template
 	include $this->template . '.php';
 #------------------------------------------------------------------------------------------
+echo '<pre>$bentukJadual01='; print_r($this->bentukJadual01); echo '</pre>';
 echo '<pre>$_meta='; print_r($this->_meta); echo '</pre>';
