@@ -173,9 +173,8 @@ class Login extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	function levelPengguna($level)
 	{
-		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
-		echo "<pre>\$kira=$kira | \$data =>"; print_r($data);
-		echo "\$level = $level </pre>";
+		/*echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		echo "<pre>\$level = $level </pre>";//*/
 		/*header('location:' . URL . 'ruangtamu');
 		if ($level == 'kawal')
 			header('location:' . URL . 'ruangtamu');
