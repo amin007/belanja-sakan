@@ -59,7 +59,7 @@ class Bacafail
 
 		list($membukaFail,$dataFail) = $this->bukafailutama($sumber . $url);
 		$kandungan = str_replace('{{url}}', $lokasi, $dataFail);
-		$kandungan = str_replace('{{main}}', URL, $dataFail);
+		$kandungan = str_replace('{{main}}', URL, $kandungan);
 
 		# pergi papar kandungan
 		echo $kandungan; //echo $dataFail;
