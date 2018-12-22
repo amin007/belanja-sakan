@@ -255,14 +255,12 @@ class Belian extends \Aplikasi\Kitab\Kawal
 				foreach ($value as $kekunci => $papar)
 				{
 					$posmen[$myTable][$kekunci] = bersih($papar);
-					$posmen[$myTable][$medanID] = $dataID;
 				}
 		endif; endforeach;//*/
 
 		/*echo '<pre>'; foreach($debugData as $semak): if(isset($$semak)):
 			echo '<br>$' . $semak . ' : '; print_r($$semak);
 		endif; endforeach; echo '</pre>';//*/
-		$this->debugPost(array('pilih','senaraiJadual','medanID','dataID','posmen'));
 
 		return array($posmen,$senaraiJadual,$senaraiJadual[0],$medanID); # pulangkan nilai
 	}
