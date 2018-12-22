@@ -132,6 +132,7 @@ class Borang02_Ubah
 	{	# istihar pembolehubah
 		$name = 'name="' . $jadual . '[' . $key . ']"';
 		$dataType = $jenis[$key]['type'];// myGetType($data);
+		$semua = array($jenis,$jadual,$kira,$key,$data,$name);
 		# css
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
