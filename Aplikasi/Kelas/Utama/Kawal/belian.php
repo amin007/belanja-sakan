@@ -59,16 +59,21 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	}
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
-	function debugPost()
+	function debugPost($pilih,$senaraiJadual,$medanID,$dataID,$posmen)
 	{
+		echo '<hr>Nama class :' . __METHOD__ . '()<hr><pre>';
 		$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
-		echo '<pre>';
 		foreach($debugData as $semak):
 			if(isset($$semak)):
 				echo '<br>$' . $semak . ' : '; print_r($$semak);
+			else:
+				$takWujud[$kira++] = '$' . $semak;
 			endif;
 		endforeach;
-		echo '</pre>';
+
+		echo '<hr><font color="red">tidak wujud : '; print_r($takWujud);
+		echo '</font><hr></pre>';
+
 		//$this->debugPost();//*/
 	}
 #-------------------------------------------------------------------------------------------
@@ -257,7 +262,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		echo '<pre>'; foreach($debugData as $semak): if(isset($$semak)):
 			echo '<br>$' . $semak . ' : '; print_r($$semak);
 		endif; endforeach; echo '</pre>';//*/
-		$this->debugPost();//*/
+		$this->debugPost($pilih,$senaraiJadual,$medanID,$dataID,$posmen);
 
 		return array($posmen,$senaraiJadual,$senaraiJadual[0],$medanID); # pulangkan nilai
 	}
