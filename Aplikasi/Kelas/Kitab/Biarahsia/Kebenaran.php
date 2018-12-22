@@ -23,7 +23,7 @@ class Kebenaran
 		//echo '<hr>$c3->'; print_r($c3);
 		//echo '<br>$kunci = ' . $kunci . ' | $level = ' . $level . ' |</pre>';
 
-		if ($kunci == true && in_array($level,$senaraiLevel))
+		if ($kunci == true && in_array($level,$c1))
 		{
 			header('location:' . URL . 'ruangtamu');
 			exit;
