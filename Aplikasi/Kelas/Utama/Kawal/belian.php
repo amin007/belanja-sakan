@@ -258,11 +258,10 @@ class Belian extends \Aplikasi\Kitab\Kawal
 				}
 		endif; endforeach;//*/
 
-		/*$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
-		echo '<pre>'; foreach($debugData as $semak): if(isset($$semak)):
+		/*echo '<pre>'; foreach($debugData as $semak): if(isset($$semak)):
 			echo '<br>$' . $semak . ' : '; print_r($$semak);
 		endif; endforeach; echo '</pre>';//*/
-		$this->debugPost($pilih,$senaraiJadual,$medanID,$dataID,$posmen);
+		$this->debugPost(array('pilih','senaraiJadual','medanID','dataID','posmen'));
 
 		return array($posmen,$senaraiJadual,$senaraiJadual[0],$medanID); # pulangkan nilai
 	}
