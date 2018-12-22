@@ -220,8 +220,11 @@ class Borang02_Ubah
 #------------------------------------------------------------------------------------------
 ###########################################################################################
 #------------------------------------------------------------------------------------------
-	function inputTextarea($tab2, $name, $data)
+	function inputTextarea($semua)
 	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return ''
 		. '<textarea ' . $name . ' rows="1" cols="20"' . $tab2 
 		. ' class="form-control">' . $data . '</textarea>'
