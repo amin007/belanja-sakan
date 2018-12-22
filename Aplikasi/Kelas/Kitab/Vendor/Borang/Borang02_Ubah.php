@@ -264,7 +264,7 @@ class Borang02_Ubah
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
 		. ' class="form-control">' . $tab2
-		. '<span class="input-group-addon">' . kira($data) . '</span>'
+		. '<span class="input-group-addon">' . ($data) . '</span>'
 		. $tab2 . '</div>' . $komenInput
 		. '';
 	}
