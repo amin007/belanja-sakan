@@ -70,9 +70,25 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 			}//*/
 		endif; endforeach;
 		# semak data
+		$posmen = $this->semaKataLaluan($senaraiJadual[0], $posmen);
 		$posmen = $this->kataLaluanX($senaraiJadual[0], $posmen);
 
 		return $posmen;
+	}
+#---------------------------------------------------------------------------------------------------#
+	public function semaKataLaluan($myTable, $posmen)
+	{
+		$surat = array('kataLaluan');
+		foreach ($surat as $kekunci)
+		if(isset($posmen[$myTable][$kekunci]))
+			if($posmen[$myTable][$kekunci] == $posmen[$myTable][$kekunci . 'X']):
+				$pass = $posmen[$myTable][$kekunci];
+				$pass = \Aplikasi\Kitab\RahsiaHash::rahsia('md5', $pass);
+				$posmen[$myTable][$kekunci] = $pass;
+			else:
+			endif;
+
+		return $posmen; # pulangkan nilai
 	}
 #---------------------------------------------------------------------------------------------------#
 	public function kataLaluanX($myTable, $posmen)
