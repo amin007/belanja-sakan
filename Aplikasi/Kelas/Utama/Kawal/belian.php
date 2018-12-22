@@ -360,9 +360,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			}//*/
 		endif; endforeach;
 
-		//echo '<pre>$senaraiJadual='; print_r($senaraiJadual); echo '</pre>';
-		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
-
 		return $posmen;
 	}
 #-------------------------------------------------------------------------------------------
