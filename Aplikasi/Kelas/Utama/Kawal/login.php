@@ -175,7 +175,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 	{
 		/*echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		echo "<pre>\$level = $level </pre>";//*/
-		/*header('location:' . URL . 'ruangtamu');
+		//header('location:' . URL . 'ruangtamu');
 		if ($level == 'kawal')
 			header('location:' . URL . 'ruangtamu');
 		elseif ($level == 'fe')
@@ -185,7 +185,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 		elseif($level == 'admin1home')
 			header('location:' . URL . 'admin1home');
 		else
-			header('location:' . URL . ''); //*/
+			header('location:' . URL . '');//*/
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
