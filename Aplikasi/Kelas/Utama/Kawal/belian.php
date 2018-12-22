@@ -204,7 +204,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->kandunganPaparan($p1, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
-	public function updateID($p1)
+	public function ubahSimpan($p1)
 	{
 		# ubahsuai $posmen
 		list($posmen,$senaraiJadual,$myTable,$medanID) = $this->ubahsuaiPost($p1);
@@ -215,15 +215,15 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		# mula ulang $senaraiJadual
 		foreach ($senaraiJadual as $kunci => $jadual)
 		{# mula ulang table
-			$this->tanya->//ubahSqlSimpan
-			ubahSimpan
+			$this->tanya->ubahSqlSimpan
+			//ubahSimpan
 			($posmen[$jadual], $jadual, $medanID);
 		}# tamat ulang table
 
 		# Pergi papar kandungan
 		$lokasi = 'vendor/profile';
-		//echo '<br>location: ' . URL . $lokasi;
-		header('location: ' . URL . $lokasi); //*/
+		echo '<br>location: ' . URL . $lokasi;
+		//header('location: ' . URL . $lokasi); //*/
 	}
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPost($p1)
