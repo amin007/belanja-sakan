@@ -26,7 +26,7 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 		$this->paparKandungan($this->_folder, 'index');
 	}
 ##-----------------------------------------------------------------------------------------
-	public function paparKandungan($folder, $fail, $noInclude=0)
+	public function paparKandungan($folder, $fail, $noInclude=1)
 	{	# Pergi papar kandungan
 		$jenis = $this->papar->pilihTemplate($template=0);
 		$this->papar->bacaTemplate(
