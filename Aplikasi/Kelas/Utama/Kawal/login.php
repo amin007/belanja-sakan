@@ -149,9 +149,9 @@ class Login extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	function kunciPintu($kira, $data)
 	{
-		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		/*echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		echo "<pre>\$kira=$kira | \$data =>";
-		print_r($data); echo '</pre>';
+		print_r($data); echo '</pre>';//*/
 		if ($kira == 1) 
 		{	# login berjaya
 			\Aplikasi\Kitab\Sesi::init(); # setkan $_SESSION utk 
