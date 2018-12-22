@@ -3,7 +3,6 @@
 -- contoh sql senarai table yang ada
 -- Adminer 4.6.3 MySQL dump
 
-
 DROP TABLE IF EXISTS `kod_mediumpembayaran`;
 CREATE TABLE `kod_mediumpembayaran` (
   `no` int(11) NOT NULL AUTO_INCREMENT,
@@ -23,7 +22,7 @@ INSERT INTO `kod_mediumpembayaran` (`no`, `kod`, `keterangan`, `catatan`) VALUES
 (7,	'07',	'kredit selain dari menggunakan kad kredit\r\n|credit other than using a credit card',	''),
 (8,	'08',	'sewa beli | hire purchase',	''),
 (9,	'09',	'percuma | free',	''),
-(10,'10',	'lain-lain (contoh:konsesi)\r\n|others (eg: concessions)',	'');
+(10,	'10',	'lain-lain (contoh:konsesi)\r\n|others (eg: concessions)',	'');
 
 DROP TABLE IF EXISTS `kod_puncapembelian`;
 CREATE TABLE `kod_puncapembelian` (
@@ -44,18 +43,18 @@ INSERT INTO `kod_puncapembelian` (`no`, `kod`, `keterangan`, `catatan`) VALUES
 (7,	'07',	'kedai runcit/akhbar di pusat membeli belah',	''),
 (8,	'08',	'pasar mini / mini market',	''),
 (9,	'09',	'Pasar raya',	''),
-(10,'10',	'departmental store',	''),
-(11,'11',	'Kedai `convenience`',	''),
-(12,'12',	'Pasar raya besar (Hypermarket)',	''),
-(13,'13',	'kedai khusus',	''),
-(14,'14',	'restoran/kedai makan',	''),
-(15,'15',	'restoran bercawangan / food court',	''),
-(16,'16',	'gerai kecil/karavan/ food truck/kiosk',	''),
-(17,'17',	'restoran berhawa dingin / restoran 24 jam',	''),
-(18,'18',	'stesen petrol',	''),
-(19,'19',	'farmasi',	''),
-(20,'20',	'pembelian atas talian/pembelian melalui tempahan',	''),
-(21,'21',	'lain-lain',	'');
+(10,	'10',	'departmental store',	''),
+(11,	'11',	'Kedai `convenience`',	''),
+(12,	'12',	'Pasar raya besar (Hypermarket)',	''),
+(13,	'13',	'kedai khusus',	''),
+(14,	'14',	'restoran/kedai makan',	''),
+(15,	'15',	'restoran bercawangan / food court',	''),
+(16,	'16',	'gerai kecil/karavan/ food truck/kiosk',	''),
+(17,	'17',	'restoran berhawa dingin / restoran 24 jam',	''),
+(18,	'18',	'stesen petrol',	''),
+(19,	'19',	'farmasi',	''),
+(20,	'20',	'pembelian atas talian/pembelian melalui tempahan',	''),
+(21,	'21',	'lain-lain',	'');
 
 DROP TABLE IF EXISTS `nama_pengguna`;
 CREATE TABLE `nama_pengguna` (
@@ -88,12 +87,15 @@ CREATE TABLE `senarai_belanja` (
   `amaun_rm` decimal(10,2) DEFAULT NULL,
   `harga_sebenar` tinyint(4) DEFAULT NULL COMMENT '1-harga sebenar/2-harga anggaran',
   `punca_pembelian` char(2) DEFAULT NULL,
-  `medium_pembayaran` enum('01,02,03,04,05,06,07,08,09,10') DEFAULT NULL,
+  `medium_pembayaran` char(2) DEFAULT NULL,
   `medium_edagang` tinyint(4) DEFAULT NULL COMMENT '1-ya/2-tidak',
   `catatan` text,
   PRIMARY KEY (`no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO `senarai_belanja` (`no`, `nohp`, `jenis_belanja`, `tarikh`, `belanja_keterangan`, `belanja_kod`, `amaun_rm`, `harga_sebenar`, `punca_pembelian`, `medium_pembayaran`, `medium_edagang`, `catatan`) VALUES
+(1,	'011234567',	NULL,	'2018-12-20',	'nasi goreng kampung',	NULL,	5.00,	1,	'14',	'01',	2,	'makan malam'),
+(2,	'011234567',	NULL,	'2018-12-22',	'mee goreng udang',	NULL,	5.00,	1,	'15',	'09',	2,	NULL);
 
--- 2018-12-20 06:35:52
+-- 2018-12-22 11:18:48
 */
