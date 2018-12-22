@@ -70,8 +70,8 @@ class Login extends \Aplikasi\Kitab\Kawal
 		$posmen = $this->ubahsuaiPostBaru($senarai);
 		//$senaraiData = $this->tanya->ubahPosmen($posmen, $myTable);
 		# sql insert
-		$this->tanya->tambahSqlBanyakNilai($myTable, $medan, $senaraiData);
-		//$this->tanya->tambahBanyakNilai($myTable, $medan, $senaraiData);
+		$this->tanya->tambahSql($jadual, $posmen[$jadual]);
+		//$this->tanya->tambahData($jadual, $posmen[$jadual]);
 		//$this->log_sql($myTable, $medan, $senaraiData);
 		# Semak data
 			//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
