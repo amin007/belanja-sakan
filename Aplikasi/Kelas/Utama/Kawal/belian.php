@@ -169,7 +169,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($p1, $medan, $carian, $susun) = $this->tanya->jadualAES($medanID,$dataID);
+		list($p1, $medan, $carian, $susun) =
+			$this->tanya->susunTatasusunan($medanID,$dataID);
 		$this->papar->senarai[$myJadual] = $this->tanya->//cariSql
 			cariSemuaData
 			($myJadual, $medan, $carian, $susun);
