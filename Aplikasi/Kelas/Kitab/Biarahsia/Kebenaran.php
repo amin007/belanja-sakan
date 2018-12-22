@@ -59,6 +59,7 @@ class Kebenaran
 		{
 			Sesi::destroy();
 			header('location:' . URL . '');
+			exit;
 		}
 		//*/
 	}
