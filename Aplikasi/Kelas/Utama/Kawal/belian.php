@@ -230,7 +230,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		list($medanID,$senaraiJadual) = $this->tanya->pilihUbahPost($p1);
 
-		$posmen = array(); echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
+		$posmen = array(); //echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 		foreach ($_POST as $myTable => $value):
 			if ( in_array($myTable,$senaraiJadual) ):
 				foreach ($value as $kekunci => $papar)
@@ -240,10 +240,11 @@ class Belian extends \Aplikasi\Kitab\Kawal
 				}
 		endif; endforeach;//*/
 
-		$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
+		/*$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
 		echo '<pre>'; foreach($debugData as $semak): if(isset($$semak)):
 			echo '<br>$' . $semak . ' : '; print_r($$semak);
 		endif; endforeach; echo '</pre>';//*/
+		$this->debugPost();//*/
 
 		return array($posmen,$senaraiJadual,$senaraiJadual[0],$medanID); # pulangkan nilai
 	}
