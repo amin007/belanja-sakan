@@ -84,6 +84,7 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 			if($posmen[$myTable][$kekunci] == $posmen[$myTable][$kekunci . 'X']):
 				$pass = $posmen[$myTable][$kekunci];
 				$pass = \Aplikasi\Kitab\RahsiaHash::rahsia('md5', $pass);
+				//$garam = \Aplikasi\Kitab\RahsiaHash::cincang($pass);
 				$posmen[$myTable][$kekunci] = $pass;
 			else:
 			endif;
