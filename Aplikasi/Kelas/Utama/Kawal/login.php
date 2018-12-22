@@ -67,8 +67,8 @@ class Login extends \Aplikasi\Kitab\Kawal
 		list($myTable, $medan01, $medan02, $medan) = dpt_senarai('jadual_login');
 		$senarai = array($myTable);
 		# Bentuk tatasusunan
-		$posmen = $this->tanya->semakPOST($myTable, $senarai, $_POST);
-		$senaraiData = $this->tanya->ubahPosmen($posmen, $myTable);
+		$posmen = $this->ubahsuaiPostBaru($senarai);
+		//$senaraiData = $this->tanya->ubahPosmen($posmen, $myTable);
 		# sql insert
 		$this->tanya->tambahSqlBanyakNilai($myTable, $medan, $senaraiData);
 		//$this->tanya->tambahBanyakNilai($myTable, $medan, $senaraiData);
