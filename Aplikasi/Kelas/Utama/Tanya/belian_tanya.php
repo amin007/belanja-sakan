@@ -151,7 +151,6 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($jadual, $medan, $carian, $cariID);
 	}
 #---------------------------------------------------------------------------------------------------#
-
 	public function medanRangka()
 	{
 		$medan = 'newss,ssm,concat_ws("<br>",nama,operator) as nama,'
