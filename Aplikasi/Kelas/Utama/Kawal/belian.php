@@ -228,15 +228,15 @@ class Belian extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPost($p1)
 	{
-		list($senaraiJadual) = $this->tanya->pilihJadual($p1);
+		list($medanID,$senaraiJadual) = $this->tanya->pilihUbahPost($p1);
 
-		$posmen = array(); //echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
+		$posmen = array(); echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 		foreach ($_POST as $myTable => $value):
 			if ( in_array($myTable,$senaraiJadual) ):
 				foreach ($value as $kekunci => $papar)
 				{
 					$posmen[$myTable][$kekunci] = bersih($papar);
-					//$posmen[$myTable][$medanID] = $dataID;
+					$posmen[$myTable][$medanID] = $dataID;
 				}
 		endif; endforeach;//*/
 
@@ -245,7 +245,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			echo '<br>$' . $semak . ' : '; print_r($$semak);
 		endif; endforeach; echo '</pre>';//*/
 
-		return array($posmen,$senaraiJadual,$senaraiJadual[0]); # pulangkan nilai
+		return array($posmen,$senaraiJadual,$senaraiJadual[0],$medanID); # pulangkan nilai
 	}
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPost1($p1)
