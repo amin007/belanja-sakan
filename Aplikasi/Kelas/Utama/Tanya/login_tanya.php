@@ -22,7 +22,7 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 		//*/
 	}
 #---------------------------------------------------------------------------------------------------#
-	function semakid($medan = 'namaPenuh,namaPendek,email,kataLaluan,level', $jadual = 'nama_pengguna')
+	function semakid($medan = '*', $jadual = 'nama_pengguna')
 	{
 		$semakLogin = $this->db->prepare("
 			SELECT  $medan FROM  $jadual WHERE 
