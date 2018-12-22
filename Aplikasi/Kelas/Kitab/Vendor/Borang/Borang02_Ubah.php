@@ -152,6 +152,10 @@ class Borang02_Ubah
 			$input = $this->inputNumber($semua);
 		elseif(in_array($dataType,array('NEWDECIMAL')))
 			$input = $this->inputMataDuitan($semua);
+		//elseif(in_array($dataType,array('TINY')))
+		//	$input = $this->inputTeksKecil($semua);
+		elseif(in_array($dataType,array('TINY','STRING')))
+			$input = $this->inputSelectOption($semua,$ulangdata);
 		else
 		{#kod untuk lain2
 			$input = $tab2 . '<p class="form-control-static text-info">'
