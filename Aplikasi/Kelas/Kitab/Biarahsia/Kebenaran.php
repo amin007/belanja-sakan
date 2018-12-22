@@ -19,8 +19,8 @@ class Kebenaran
 
 		list($kunci,$level,$c1,$c2,$c3) = \Aplikasi\Kitab\Kebenaran::semak();
 
-		//echo '<pre>kawalMasuk() :: $_SESSION->', print_r($_SESSION, 1);
-		//echo '<hr>$senaraiLevel->', print_r($senaraiLevel, 1);
+		//echo '<pre>kawalMasuk() :: $_SESSION->'; print_r($_SESSION);
+		//echo '<hr>$c3->'; print_r($c3);
 		//echo '<br>$kunci = ' . $kunci . ' | $level = ' . $level . ' |</pre>';
 
 		if ($kunci == true && in_array($level,$senaraiLevel))
