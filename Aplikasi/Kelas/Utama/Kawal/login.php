@@ -71,14 +71,13 @@ class Login extends \Aplikasi\Kitab\Kawal
 		# sql insert
 		$this->tanya->tambahSql($jadual, $posmen[$jadual]);
 		//$this->tanya->tambahData($jadual, $posmen[$jadual]);
-		//$this->log_sql($jadual, $medan, $senaraiData);
+		//$this->log_sql($jadual, $medan, $posmen);
 		# Semak data
 			//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 			//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
-			//echo '<pre>$senaraiData='; print_r($senaraiData); echo '</pre>';
 
 		# Pergi papar kandungan
-		//echo '<br>location: ' . URL . $this->_folder . '/rangkabaru/selesai';
+		//echo '<br>location: ' . URL . '';
 		//header('location: ' . URL . ''); //*/
 	}
 #------------------------------------------------------------------------------------------
