@@ -64,15 +64,15 @@ class Login extends \Aplikasi\Kitab\Kawal
 		echo '<pre>Test $_POST->'; print_r($_POST); echo '</pre>';
 
 		# Set pemboleubah utama
-		list($myTable, $medan01, $medan02, $medan) = dpt_senarai('jadual_login');
-		$senarai = array($myTable);
+		list($jadual, $medan01, $medan02, $medan) = dpt_senarai('jadual_login');
+		$senarai = array($jadual);
 		# Bentuk tatasusunan
 		$posmen = $this->ubahsuaiPostBaru($senarai);
-		//$senaraiData = $this->tanya->ubahPosmen($posmen, $myTable);
+		//$senaraiData = $this->tanya->ubahPosmen($posmen, $jadual);
 		# sql insert
 		$this->tanya->tambahSql($jadual, $posmen[$jadual]);
 		//$this->tanya->tambahData($jadual, $posmen[$jadual]);
-		//$this->log_sql($myTable, $medan, $senaraiData);
+		//$this->log_sql($jadual, $medan, $senaraiData);
 		# Semak data
 			//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 			//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
