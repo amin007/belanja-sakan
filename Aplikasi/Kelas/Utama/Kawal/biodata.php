@@ -158,6 +158,7 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		$this->papar->_meta = $this->ubahMeta($meta);
 		$this->papar->senarai = $senarai;
 		$this->papar->_cariIndustri = null;
+		$this->papar->bentukJadual01 = null;
 		$this->papar->_method = huruf('kecil', namaClass($this));
 		//$this->semakDataJadual($senarai); # semak Pembolehubah
 	}
