@@ -59,10 +59,10 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	}
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
-	function debugPost($pilih,$senaraiJadual,$medanID,$dataID,$posmen)
+	function debugPost($debugData)
 	{
 		echo '<hr>Nama class :' . __METHOD__ . '()<hr><pre>';
-		$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
+		$takWujud = array(); $kira = 0;
 		foreach($debugData as $semak):
 			if(isset($$semak)):
 				echo '<br>$' . $semak . ' : '; print_r($$semak);
