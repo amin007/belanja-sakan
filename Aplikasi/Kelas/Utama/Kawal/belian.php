@@ -240,7 +240,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		}# tamat ulang table
 
 		# Pergi papar kandungan
-		$lokasi = 'vendor/profile';
+		$lokasi = 'belian/';
 		echo '<br>location: ' . URL . $lokasi;
 		//header('location: ' . URL . $lokasi); //*/
 	}
