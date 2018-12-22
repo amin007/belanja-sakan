@@ -24,13 +24,9 @@ class Kebenaran
 		//echo '<br>$kunci = ' . $kunci . ' | $level = ' . $level . ' |</pre>';
 
 		if ($kunci == true && in_array($level,$c1))
-		{
 			header('location:' . URL . 'ruangtamu');
-		}
 		if ($kunci == true && in_array($level,$c2))
-		{
 			header('location:' . URL . 'admin1home');
-		}
 		//*/
 	}
 #------------------------------------------------------------------------------------
