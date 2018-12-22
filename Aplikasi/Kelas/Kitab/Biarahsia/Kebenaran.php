@@ -51,7 +51,7 @@ class Kebenaran
 
 		list($kunci,$level,$c1,$c2,$c3) = \Aplikasi\Kitab\Kebenaran::semak();
 
-		//echo '<pre>kawalKeluar() :: $_SESSION->', print_r($_SESSION, 1);
+		//echo '<pre>kawalKeluar() :: $_SESSION->'; print_r($_SESSION);
 		//echo '<hr>$c3->'; print_r($c3);
 		//echo '<br>$kunci = ' . $kunci . ' | $level = ' . $level . ' |</pre>';
 
