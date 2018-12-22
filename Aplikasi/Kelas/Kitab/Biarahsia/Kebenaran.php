@@ -17,10 +17,8 @@ class Kebenaran
 	{
 		@session_start();
 
-		$kunci = \Aplikasi\Kitab\Sesi::get('bs_loggedIn');
-		$level = \Aplikasi\Kitab\Sesi::get('bs_levelPengguna');
-		$senaraiLevel = \Aplikasi\Kitab\Kebenaran::senaraiLevel();
-		
+		list($kunci,$level,$c1,$c2,$c3) = \Aplikasi\Kitab\Kebenaran::semak();
+
 		//echo '<pre>kawalMasuk() :: $_SESSION->', print_r($_SESSION, 1);
 		//echo '<hr>$senaraiLevel->', print_r($senaraiLevel, 1);
 		//echo '<br>$kunci = ' . $kunci . ' | $level = ' . $level . ' |</pre>';
