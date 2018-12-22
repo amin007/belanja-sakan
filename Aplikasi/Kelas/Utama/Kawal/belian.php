@@ -172,7 +172,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		list($p1, $medan, $carian, $susun) =
 			$this->tanya->susunTatasusunan($medanID,$dataID);
 		list($result,$meta) = $this->tanya->//cariSql
-			cariSemuaData
+			cariSemuaDataMeta
 			($myJadual, $medan, $carian, $susun);
 		$this->papar->_meta = $this->ubahMeta($meta);
 		$this->papar->senarai[$myJadual] = $result;
