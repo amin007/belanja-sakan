@@ -193,6 +193,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			cariSemuaDataMeta
 			($myJadual, $medan, $carian, $susun);
 		$this->papar->_meta = $this->ubahMeta($meta);
+		$this->papar->carian[0] = $dataID;
 		$this->papar->senarai[$myJadual] = $result;
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myJadual, $myJadual);
