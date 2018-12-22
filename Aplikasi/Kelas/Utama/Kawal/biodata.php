@@ -137,8 +137,8 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 	{# Set pembolehubah utama
 		//echo '<hr>' . $this->_namaClass . '<hr>';
 		$this->jadualBiodata();
-		$this->papar->template = 'biasa';
-		//$this->papar->template = 'bootstrap';
+		$this->papar->template = 'template_biasa';
+		//$this->papar->template = 'template_bootstrap';
 		//$this->debugKandunganPaparan();//*/
 		$fail = array('index','b_ubah','b_ubah_kawalan');
 
