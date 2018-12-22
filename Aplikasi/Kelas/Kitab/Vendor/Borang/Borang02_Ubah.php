@@ -139,19 +139,19 @@ class Borang02_Ubah
 
 		//if ( in_array($key,array(...)) )
 		if( in_array($key,array('password','kataLaluan')) )
-			$input = $this->inputPassword($tab2, $tab3, $name, $data,
-				$classInput, $komenInput, $jadual, $key);
-		elseif(in_array($dataType,array('BLOB')))
-			$input = $this->inputTextarea($tab2, $name, $data); #kod utk textarea
-		elseif ( in_array($dataType,array('DATE')) )
-			$input = $this->inputTarikh($tab2, $tab2, $name, $data,
-				$classInput, $komenInput, $jadual, $key);
-		elseif(in_array($dataType,array('NUMBER')))
-			$input = $this->inputNumber($tab2, $tab2, $name, $data,
-				$classInput, $komenInput);
+			$input = $this->inputPassword($semua);
+		elseif( in_array($key,array('nohp')) )
+			$input = $this->inputBiodata($semua);
 		elseif(in_array($dataType,array('VAR_STRING')))
-			$input = $this->inputBiodata($tab2, $tab3, $name, $data,
-				$classInput, $komenInput);
+			$input = $this->inputTeksBesar($semua);
+		elseif(in_array($dataType,array('BLOB')))
+			$input = $this->inputTextarea($semua); #kod utk textarea
+		elseif ( in_array($dataType,array('DATE')) )
+			$input = $this->inputTarikh($semua);
+		elseif(in_array($dataType,array('NUMBER','LONG')))
+			$input = $this->inputNumber($semua);
+		elseif(in_array($dataType,array('NEWDECIMAL')))
+			$input = $this->inputMataDuitan($semua);
 		/*elseif ( in_array($key,array('password','kataLaluan')) )
 			$input = $this->inputPassword($tab2, $tab3, $name, $data,
 				$classInput, $komenInput, $jadual, $key);
