@@ -219,6 +219,16 @@ class Tanya
 	public function cariSemuaData($myTable, $medan, $carian, $susun)
 	{
 		$sql = $this->sql->bentukSqlSelect($myTable, $medan, $carian, $susun);
+		$result = $this->db->selectAll($sql);
+		//echo '<pre>$sql::' . htmlentities($sql) . '</pre><br>';
+		//echo '<pre>$result::'; print_r($result); echo '</pre><br>';
+
+		return $result;
+	}
+	#---------------------------------------------------------------------------------------------
+	public function cariSemuaDataMeta($myTable, $medan, $carian, $susun)
+	{
+		$sql = $this->sql->bentukSqlSelect($myTable, $medan, $carian, $susun);
 		list($result,$meta) = $this->db->selectAllMeta($sql);
 		//echo '<pre>$sql::' . htmlentities($sql) . '</pre><br>';
 		//echo '<pre>$result::'; print_r($result); echo '</pre><br>';
