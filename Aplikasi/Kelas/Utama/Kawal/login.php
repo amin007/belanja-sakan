@@ -68,7 +68,6 @@ class Login extends \Aplikasi\Kitab\Kawal
 		$senarai = array($jadual);
 		# Bentuk tatasusunan
 		$posmen = $this->ubahsuaiPostBaru($senarai);
-		//$senaraiData = $this->tanya->ubahPosmen($posmen, $jadual);
 		# sql insert
 		$this->tanya->tambahSql($jadual, $posmen[$jadual]);
 		//$this->tanya->tambahData($jadual, $posmen[$jadual]);
