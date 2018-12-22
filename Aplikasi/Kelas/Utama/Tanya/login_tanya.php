@@ -83,14 +83,26 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 			if(empty($posmen[$myTable][$kekunci . 'X'])):
 				unset($posmen[$myTable][$kekunci . 'X']);
 			else:
-				$posmen[$myTable]['level'] =
-					$posmen[$myTable][$kekunci . 'X'];
-				unset($posmen[$myTable][$kekunci . 'X']);
+				$posmen[$myTable][$kekunci . 'X'] = 'user';
+				$posmen[$myTable] = $this->replace_key
+					($posmen[$myTable], $kekunci . 'X', 'level');
 			endif;
 
 		return $posmen; # pulangkan nilai
 	}
 #---------------------------------------------------------------------------------------------------#
+	function replace_key($arr, $oldkey, $newkey)
+	{
+		# https://fellowtuts.com/php/change-array-key-without-changing-order/
+		if(array_key_exists( $oldkey, $arr))
+		{
+			$keys = array_keys($arr);
+			$keys[array_search($oldkey, $keys)] = $newkey;
+			return array_combine($keys, $arr);
+		}
+
+		return $arr;
+	}
 #---------------------------------------------------------------------------------------------------#
 #====================================================================================================
 }
