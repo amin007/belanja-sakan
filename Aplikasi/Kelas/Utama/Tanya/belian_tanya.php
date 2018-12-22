@@ -112,6 +112,14 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return $jadual;
 	}
 #---------------------------------------------------------------------------------------------------#
+	function pilihUbahPost()
+	{
+		$medan = 'no';
+		$jadual = array('senarai_belanja');
+
+		return array($medan,$jadual);
+	}
+#---------------------------------------------------------------------------------------------------#
 	function jadualDataCorp($cariApa)
 	{
 		$jadual = $this->pilihJadual();
