@@ -22,19 +22,6 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 		//*/
 	}
 #---------------------------------------------------------------------------------------------------#
-	function ujiID($medan = 'namaPenuh,namaPendek,email,kataLaluan,level', $jadual = 'nama_pengguna')
-	{
-		echo 'class Login_Tanya::ujiID() extends \Aplikasi\Kitab\Tanya<br>';
-		$username =  $_POST['username'];
-		$password = \Aplikasi\Kitab\RahsiaHash::rahsia('md5', $_POST['password']);
-
-		$cari[] = array('fix'=>'x=','atau'=>'WHERE','medan'=>'email','apa'=>$username);
-		$cari[] = array('fix'=>'x=','atau'=>'AND','medan'=>'kataLaluan','apa'=>$password);
-		# tanya Sql
-		$hasil = $this->//tatasusunanUbah2A//cariSemuaData//
-			cariSql($jadual, $medan, $cari, $susun = null);
-	}
-#---------------------------------------------------------------------------------------------------#
 	function semakid($medan = 'namaPenuh,namaPendek,email,kataLaluan,level', $jadual = 'nama_pengguna')
 	{
 		$semakLogin = $this->db->prepare("
