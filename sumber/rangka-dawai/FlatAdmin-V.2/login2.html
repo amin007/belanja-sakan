@@ -18,47 +18,45 @@
 <div class="login-box">
 <div class="login-form row">
 <!-- mula - kawasan login form ----------------------------------------------------------------------------- -->
-				<div class="col-sm-12 text-center login-header">
-					<i class="login-logo fa fa-connectdevelop fa-5x" aria-hidden="true"></i>
-					<!-- i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i -->
-					<!-- i class="fa fa-behance fa-5x" aria-hidden="true">16</i -->
-					<h4 class="login-title">Flat Admin V2</h4>
+<div class="col-sm-12 text-center login-header">
+	<i class="login-logo fa fa-connectdevelop fa-5x" aria-hidden="true"></i>
+	<!-- i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i -->
+	<!-- i class="fa fa-behance fa-5x" aria-hidden="true">16</i -->
+	<h4 class="login-title">Flat Admin V2</h4>
+</div>
+<div class="col-sm-12">
+	<div class="login-body">
+		<div class="progress hidden" id="login-progress">
+			<div class="progress-bar progress-bar-success progress-bar-striped active"
+			role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+				Log In...
+			</div>
+		</div>
+		<form method="POST" action="login/semakid">
+			<div class="form-group has-info">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+					<input class="form-control" type="text" placeholder="Email address" name="username">
 				</div>
-				<div class="col-sm-12">
-					<div class="login-body">
-						<div class="progress hidden" id="login-progress">
-							<div class="progress-bar progress-bar-success progress-bar-striped active" 
-							role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-								Log In...
-							</div>
-						</div>
-						<form method="POST" action="login/semakid">
-							<div class="form-group has-info">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
-									<input class="form-control" type="text" placeholder="Email address" name="username">
-								</div>
-							</div>
-							
-							<div class="form-group has-info">						
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
-									<input class="form-control" type="password" placeholder="Password" name="password">
-								</div>
-							</div>
-							
-							<div class="login-button text-center">
-								<input type="submit" class="btn btn-primary" value="Login">
-							</div>
-						</form>
-					</div><!-- / class="login-body" -->
-					<div class="login-footer">
-						<span class="text-right"><a href="#" class="color-white">Forgot password?</a></span>
-						<span class="text-right">
-							<a href="{{url}}index/daftar" class="btn btn-success btn-block text-center">Daftar Baru</a>
-						</span>
-					</div><!-- / class="login-footer" -->
-				</div><!-- / class="col-sm-12" -->
+			</div>
+			<div class="form-group has-info">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+					<input class="form-control" type="password" placeholder="Password" name="password">
+				</div>
+			</div>
+			<div class="login-button text-center">
+				<input type="submit" class="btn btn-primary" value="Login">
+			</div>
+		</form>
+	</div><!-- / class="login-body" -->
+	<div class="login-footer">
+		<span class="text-right"><a href="#" class="color-white">Forgot password?</a></span>
+		<span class="text-right">
+			<a href="{{url}}index/daftar" class="btn btn-success btn-block text-center">Daftar Baru</a>
+		</span>
+	</div><!-- / class="login-footer" -->
+</div><!-- / class="col-sm-12" -->
 <!-- tamat - kawasan login form ----------------------------------------------------------------------------- -->
 </div><!-- / class="login-form row" -->
 </div><!-- / class="login-box" -->
