@@ -13,7 +13,7 @@ class Bacafail
 
 		return array($membukaFail,$dataFail);
 	}
-
+#------------------------------------------------------------------------------------------
 	public function bukafailmenu($url)
 	{
 		$bacaMenuAtas = fopen($url, "rb");
@@ -24,12 +24,13 @@ class Bacafail
 
 		return array($bacaMenuAtas,$menuAtas);
 	}
-#==========================================================================================	
+#==========================================================================================
+#------------------------------------------------------------------------------------------
 	public function loginCSS()
 	{
 		// miminium/asset/css/plugins/simple-line-icons.css
 	}
-
+#------------------------------------------------------------------------------------------
 	public function loginTemplate()
 	{
 		$url[] = 'AdminLTE-2.3.0/login2.html';
@@ -44,7 +45,7 @@ class Bacafail
 
 		return $url[$pilih];
 	}
-
+#------------------------------------------------------------------------------------------
 	public function login()
 	{
 		$url = $this->loginTemplate(); //echo "\$template = $template <br>";
@@ -64,7 +65,7 @@ class Bacafail
 
 		fclose($membukaFail); # tutup fail //*/
 	}
-
+#------------------------------------------------------------------------------------------
 	public function namafail()
 	{
 		# baca fail kandungan utama
