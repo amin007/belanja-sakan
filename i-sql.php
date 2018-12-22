@@ -61,7 +61,7 @@ CREATE TABLE `nama_pengguna` (
   `no` int(11) NOT NULL AUTO_INCREMENT,
   `namaPengguna` varchar(70) NOT NULL DEFAULT '',
   `kataLaluan` varchar(255) NOT NULL DEFAULT '',
-  `kataRahsia` mediumtext NOT NULL,
+  `kataRahsia` mediumtext,
   `level` varchar(50) DEFAULT 'user',
   `nokp` varchar(20) DEFAULT NULL,
   `Nama_Penuh` varchar(255) DEFAULT NULL,
@@ -73,8 +73,9 @@ CREATE TABLE `nama_pengguna` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `nama_pengguna` (`no`, `namaPengguna`, `kataLaluan`, `kataRahsia`, `level`, `nokp`, `Nama_Penuh`, `email`, `nohp`, `CatatNota`) VALUES
-(1,	'admin1',	'360cea6bdd8203dcb002a81f3b7e7408',	'',	'admin1',	'01012019010000',	'admin1',	'admin1@duduk.mana',	'012345678',	'contoh password admin1satu'),
-(2,	'user1',	'527404287f666a77506b77e5b6184c86',	'',	'user',	'010119010001',	'user1',	'user1@duduk.mana',	'011234567',	'contoh password user1satu');
+(1,	'admin1',	'360cea6bdd8203dcb002a81f3b7e7408',	NULL,	'admin1',	'01012019010000',	'admin1',	'admin1@duduk.mana',	'012345678',	'contoh password admin1satu'),
+(2,	'user1',	'527404287f666a77506b77e5b6184c86',	NULL,	'user',	'010119010001',	'user1',	'user1@duduk.mana',	'011234567',	'contoh password user1satu'),
+(3,	'user2',	'f64431857b59221f9f0a194b10a61d25',	NULL,	'user',	NULL,	'user2 daa',	'user2@duduk.mana',	'013456987',	'contoh password user2dua');
 
 DROP TABLE IF EXISTS `senarai_belanja`;
 CREATE TABLE `senarai_belanja` (
@@ -97,5 +98,5 @@ INSERT INTO `senarai_belanja` (`no`, `nohp`, `jenis_belanja`, `tarikh`, `belanja
 (1,	'011234567',	NULL,	'2018-12-20',	'nasi goreng kampung',	NULL,	5.00,	1,	'14',	'01',	2,	'makan malam'),
 (2,	'011234567',	NULL,	'2018-12-22',	'mee goreng udang',	NULL,	5.00,	1,	'15',	'09',	2,	NULL);
 
--- 2018-12-22 11:18:48
+-- 2018-12-22 17:03:16
 */
