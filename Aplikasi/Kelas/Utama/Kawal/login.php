@@ -83,6 +83,19 @@ class Login extends \Aplikasi\Kitab\Kawal
 		//header('location: ' . URL . ''); //*/
 	}
 #------------------------------------------------------------------------------------------
+	function ubahsuaiPostBaru($senaraiJadual)
+	{
+		$posmen = array();
+		foreach ($_POST as $myTable => $value):
+		if ( in_array($myTable,$senaraiJadual) ):
+			foreach ($value as $kekunci => $papar)
+			{
+				$posmen[$myTable][$kekunci] = bersih($papar);
+			}//*/
+		endif; endforeach;
+
+		return $posmen;
+	}
 #------------------------------------------------------------------------------------------
 	function salah()
 	{
