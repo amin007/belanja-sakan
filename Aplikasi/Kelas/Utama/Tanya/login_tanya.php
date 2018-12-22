@@ -22,7 +22,7 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 		//*/
 	}
 #---------------------------------------------------------------------------------------------------#
-	function semakid($medan = '*', $jadual = 'nama_pengguna')
+	function contoh01($medan = '*', $jadual = 'nama_pengguna')
 	{
 		$semakLogin = $this->db->prepare("
 			SELECT  $medan FROM  $jadual WHERE 
@@ -45,7 +45,7 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 		//$this->kunciPintu($kira, $data); # pilih pintu masuk
 	}
 #---------------------------------------------------------------------------------------------------#
-	function data_contoh($pilih)
+	function contoh02($pilih)
 	{
 		$data = array(
 			'namaPendek' => 'james007',
