@@ -2,7 +2,8 @@
 namespace Aplikasi\Tanya; //echo __NAMESPACE__; 
 class Login_Tanya extends \Aplikasi\Kitab\Tanya
 {
-#==========================================================================================
+#====================================================================================================
+#---------------------------------------------------------------------------------------------------#
 	public function __construct()
 	{
 		parent::__construct();
@@ -27,11 +28,12 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 		$semakLogin = $this->db->prepare("
 			SELECT  $medan FROM  $jadual WHERE 
 			email = :username AND kataLaluan = :password");
+		$pass01 = \Aplikasi\Kitab\RahsiaHash::rahsia('md5', $_POST['password']);
+		//$pass01 = \Aplikasi\Kitab\RahsiaHash::create('sha256', $_POST['password'], HASH_PASSWORD_KEY)
 
 		$semakLogin->execute(array(
 			':username' => $_POST['username'],
-			':password' => \Aplikasi\Kitab\RahsiaHash::rahsia('md5', $_POST['password'])
-			//':password' => \Aplikasi\Kitab\RahsiaHash::create('sha256', $_POST['password'], HASH_PASSWORD_KEY)
+			':password' => $pass01,
 		));
 
 		$semakLogin->debugDumpParams(); # semak $sth->debugDumpParams()
@@ -41,8 +43,6 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 		//$data = $this->data_contoh(0); # data olok-olok | dapatkan medan terlibat
 		//$kira = $this->data_contoh(1); # data olok-olok | kira jumlah data	
 		echo ' |<pre>$data='; print_r($data); echo '</pre> | $kira=' . $kira;
-
-		//$this->kunciPintu($kira, $data); # pilih pintu masuk
 	}
 #---------------------------------------------------------------------------------------------------#
 	function contoh02($pilih)
@@ -58,5 +58,5 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 	}
 #---------------------------------------------------------------------------------------------------#
 #---------------------------------------------------------------------------------------------------#
-#==========================================================================================
+#====================================================================================================
 }
