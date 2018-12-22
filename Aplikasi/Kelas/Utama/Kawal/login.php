@@ -61,12 +61,10 @@ class Login extends \Aplikasi\Kitab\Kawal
 	function registerid()
 	{
 		# debug $_POST
-		echo '<pre>Test $_POST->'; print_r($_POST); echo '</pre>';
-
-		# Set pemboleubah utama
+		//echo '<pre>Test $_POST->'; print_r($_POST); echo '</pre>';
+		# Set pembolehubah utama
 		list($jadual, $medan01, $medan02, $medan) = dpt_senarai('jadual_login');
-		# Bentuk tatasusunan
-		$posmen = $this->ubahsuaiPostBaru(array($jadual));
+		$posmen = $this->tanya->ubahsuaiPostBaru(array($jadual));
 		# sql insert
 		$this->tanya->tambahSql($jadual, $posmen[$jadual]);
 		//$this->tanya->tambahData($jadual, $posmen[$jadual]);
