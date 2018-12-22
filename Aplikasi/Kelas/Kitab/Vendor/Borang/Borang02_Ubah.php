@@ -388,6 +388,34 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
+	function inputSelectOption($semua,$ulangData)
+	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
+		return '<div class="input-group input-group-sm">' . $tab2
+		. '<select ' . $name . ' class="form-control">' . $tab3
+		. $this->inputOption($semua,$ulangData) . '</select>'
+		. $tab2 . '</div>'
+		. '';
+	}
+#------------------------------------------------------------------------------------------
+	function inputOption($semua,$ulangData)
+	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
+		$dropmenu = '';
+		foreach ($ulangData[$key] as $myTable => $bil)
+		{# mula ulang $bil
+			//echo "\r" . $bil['keterangan'] . '<br>';
+			$dropmenu .= '<option value="' . $bil['kod'] . '">' . $bil['kod']
+			. '-' . $bil['keterangan'] . '</option>' . $tab3;
+		}# tamat ulang $bil//*/
+
+		return $dropmenu;
+	}//*/
+#------------------------------------------------------------------------------------------
 	function inputSelectOption($semua)
 	{
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
