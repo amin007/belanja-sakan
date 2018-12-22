@@ -261,7 +261,7 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputNumber(($semua)
+	function inputNumber($semua)
 	{
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
@@ -276,7 +276,7 @@ class Borang02_Ubah
 		. '';
 	}
 #------------------------------------------------------------------------------------------
-	function inputTarikh(($semua)
+	function inputTarikh($semua)
 	{
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
