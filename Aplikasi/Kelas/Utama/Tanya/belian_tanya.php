@@ -291,7 +291,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
 #---------------------------------------------------------------------------------------------------#
-	function jadualPertubuhan($idBorang)
+	function susunTatasusunan($medanID,$dataID)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		$myTable = null;
@@ -300,8 +300,8 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		# semak database
 			$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
 				'atau' => 'WHERE', # WHERE / OR / AND
-				'medan' => 'NoSiri', # cari dalam medan apa
-				'apa' => $idBorang); # benda yang dicari//*/
+				'medan' => $medanID, # cari dalam medan apa
+				'apa' => $dataID); # benda yang dicari//*/
 
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
