@@ -130,6 +130,7 @@ class Borang02_Ubah
 #------------------------------------------------------------------------------------------
 	public function ubahInput2($ulangdata,$jenis,$jadual,$kira,$key,$data)
 	{	# istihar pembolehubah
+		echo '<br>' . $jadual . '<br>';
 		$name = 'name="' . $jadual . '[' . $key . ']"';
 		$dataType = $jenis[$key]['type'];// myGetType($data);
 		$semua = array($jenis,$jadual,$kira,$key,$data,$name);
