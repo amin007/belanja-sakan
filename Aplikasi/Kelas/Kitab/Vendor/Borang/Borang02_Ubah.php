@@ -130,13 +130,10 @@ class Borang02_Ubah
 #------------------------------------------------------------------------------------------
 	public function ubahInput2($ulangdata,$jenis,$jadual,$kira,$key,$data)
 	{	# istihar pembolehubah
-		echo '<br>' . $jadual . '<br>';
+		//echo '<br>' . $jadual . '<br>';
 		$name = 'name="' . $jadual . '[' . $key . ']"';
 		$dataType = $jenis[$key]['type'];// myGetType($data);
 		$semua = array($jenis,$jadual,$kira,$key,$data,$name);
-		# css
-		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
-			$classInput,$komenInput) = $this->ccs();
 
 		//if ( in_array($key,array(...)) )
 		if( in_array($key,array('password','kataLaluan')) )
@@ -159,7 +156,7 @@ class Borang02_Ubah
 			$input = $this->inputSelectOption($semua,$ulangdata);
 		else
 		{#kod untuk lain2
-			$input = $tab2 . '<p class="form-control-static text-info">'
+			$input = "\n\t\t" . '<p class="form-control-static text-info">'
 				   . $data . '</p>';
 		}
 
