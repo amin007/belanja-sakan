@@ -35,9 +35,6 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 			cariSql($jadual, $medan, $cari, $susun = null);
 	}
 #---------------------------------------------------------------------------------------------------#
-	function semak2id($medan = 'namaPenuh,namaPendek,email,kataLaluan,level', $jadual = 'nama_pengguna')
-	{}
-#---------------------------------------------------------------------------------------------------#
 	function semakid($medan = 'namaPenuh,namaPendek,email,kataLaluan,level', $jadual = 'nama_pengguna')
 	{
 		$semakLogin = $this->db->prepare("
@@ -73,33 +70,6 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 		return ($pilih==1) ? $kira : $data; # pulangkan nilai
 	}
 #---------------------------------------------------------------------------------------------------#
-	function kunciPintu($kira, $data)
-	{
-		if ($kira == 1) 
-		{	# login berjaya
-			\Aplikasi\Kitab\Sesi::init(); # setkan $_SESSION utk 
-			# namaPenuh,namaPendek,kataLaluan,level 
-			\Aplikasi\Kitab\Sesi::set('namaPendek', $data['namaPendek']);
-			\Aplikasi\Kitab\Sesi::set('namaPenuh', $data['namaPenuh']);
-			\Aplikasi\Kitab\Sesi::set('levelPengguna', $data['level']);
-			\Aplikasi\Kitab\Sesi::set('loggedIn', true);
-			echo '<hr>Berjaya';
-			//$this->levelPengguna($kira, $data, $data['level']);
-		} 
-		else # login gagal
-		{	//echo '<hr>Tidak Berjaya';
-			header('location:' . URL . 'login/salah');
-		}//*/
-	}
-#---------------------------------------------------------------------------------------------------#
-	function levelPengguna($kira, $data, $level)
-	{
-		//header('location:' . URL . 'ruangtamu');
-		if ($level != 'pelawat')
-			header('location:' . URL . 'ruangtamu');
-		else
-			header('location:' . URL . 'ruangtamu/pelawat'); //*/
-	}
 #---------------------------------------------------------------------------------------------------#
 #==========================================================================================
 }
