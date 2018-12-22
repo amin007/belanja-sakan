@@ -59,6 +59,19 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	}
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
+	function debugPost()
+	{
+		$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
+		echo '<pre>';
+		foreach($debugData as $semak):
+			if(isset($$semak)):
+				echo '<br>$' . $semak . ' : '; print_r($$semak);
+			endif;
+		endforeach;
+		echo '</pre>';
+		//$this->debugPost();//*/
+	}
+#-------------------------------------------------------------------------------------------
 	function debugKandunganPaparan()
 	{
 		echo '<hr>Nama class :' . __METHOD__ . '()<hr><pre>';
