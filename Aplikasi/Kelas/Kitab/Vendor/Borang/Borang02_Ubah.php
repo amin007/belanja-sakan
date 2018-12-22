@@ -414,48 +414,6 @@ class Borang02_Ubah
 		}# tamat ulang $bil//*/
 
 		return $dropmenu;
-	}//*/
-#------------------------------------------------------------------------------------------
-	function inputSelectOption($semua)
-	{
-		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
-			$classInput,$komenInput) = $this->ccs();
-		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
-		return '<div class="input-group input-group-sm">' . $tab2
-		. '<select ' . $name . ' class="form-control">' . $tab3
-		. '<option value="' . $key . '" selected>'
-		. $key . '</option>' . $tab3
-		. '</select>'
-		. $tab2 . '</div>'
-		. '';
-	}
-#------------------------------------------------------------------------------------------
-	function inputSelectOption01($semua)
-	{
-		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
-			$classInput,$komenInput) = $this->ccs();
-		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
-		return '<div class="input-group input-group-sm">' . $tab2
-		. '<select ' . $name . ' class="form-control">' . $tab3
-		. '<option value="' . $key . '_a" selected>'
-		. $key . '_a</option>' . $tab3
-		. '</select>'
-		. $tab2 . '</div>'
-		. '';
-	}
-#------------------------------------------------------------------------------------------
-	function inputSelectOption02($semua)
-	{
-		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
-			$classInput,$komenInput) = $this->ccs();
-		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
-		return '<div class="input-group input-group-sm">' . $tab2
-		. '<select ' . $name . ' class="form-control">' . $tab3
-		. '<option value="' . ($this->keratNama($key)) . '" selected>'
-		. ($this->keratNama($key)) . '</option>' . $tab3
-		. '</select>'
-		. $tab2 . '</div>'
-		. '';
 	}
 #------------------------------------------------------------------------------------------
 ###########################################################################################
