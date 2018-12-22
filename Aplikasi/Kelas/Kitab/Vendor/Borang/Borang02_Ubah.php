@@ -128,7 +128,7 @@ class Borang02_Ubah
 		return $input; # pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------
-	public function ubahInput2($jenis,$jadual,$kira,$key,$data)
+	public function ubahInput2($ulangdata,$jenis,$jadual,$kira,$key,$data)
 	{	# istihar pembolehubah
 		$name = 'name="' . $jadual . '[' . $key . ']"';
 		$dataType = $jenis[$key]['type'];// myGetType($data);
