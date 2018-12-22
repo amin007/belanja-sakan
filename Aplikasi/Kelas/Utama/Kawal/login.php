@@ -176,13 +176,13 @@ class Login extends \Aplikasi\Kitab\Kawal
 		/*echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		echo "<pre>\$level = $level </pre>";//*/
 		//header('location:' . URL . 'ruangtamu');
-		if($level == 'kawal')
+		if(in_array($level,array('kawal','fe','user')))
 			header('location:' . URL . 'ruangtamu');
 		elseif($level == 'user')
 			header('location:' . URL . 'ruangtamu');
-		elseif($level == 'pegawai')
+		elseif(in_array($level,array('pegawai','pegawai2')))
 			header('location:' . URL . 'ruangtamu');
-		elseif($level == 'admin1home')
+		elseif(in_array($level,array('pentadbir','admin1home')))
 			header('location:' . URL . 'admin1home');
 		else
 			header('location:' . URL . '');//*/
