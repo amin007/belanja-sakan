@@ -7,10 +7,10 @@ Ia terdiri dari 3 bahagian utama
 
 ### paparan utama
 ___
-* "index" **Home**
-* "login" **Login**
-* "daftar" **Register**
-* "lupapass" **Lupa Password**
+* "index" **Halaman**
+* "index" **Login**
+* "index/daftar" **Register**
+* "login/lupadaa" **Lupa Password**
 
 ### paparan user
 ___
@@ -42,7 +42,7 @@ ___
   * "cari/tentang/prosesan" **Prosesan**
 * Laporan
   * "laporan/bulanan" **Laporan Bulanan**
-  * "laporan/suku" **Laporan QSS**
+  * "laporan/suku" **Laporan Suku Tahun**
 * Bantuan
   * "bantuan/sistem" **Sistem**
   * "bantuan/forum/perdana" **Forum**
@@ -58,4 +58,4 @@ http://www.php-fig.org/psr/psr-4/
 
 # Sumber ilham dari 
 http://jream.com/lab
-
+https://github.com/amin007/mvc-melayu
