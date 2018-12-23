@@ -110,5 +110,5 @@ INSERT INTO `senarai_belanja` (`no`, `nohp`, `jenis_belanja`, `tarikh`, `belanja
 (12,	'0147852369',	NULL,	'2018-12-23',	'10oz fountain drink + (my) w4 edv 6in/wr/sld',	NULL,	10.90,	1,	'17',	'03',	2,	'beli dekat subway muar jalan arab/mariam.'),
 (13,	'0147852369',	NULL,	'2018-12-23',	'6 inci bbq chicken strips sub + chicken slide',	NULL,	4.70,	1,	'17',	'03',	2,	'beli dekat subway muar jalan arab/mariam.');
 
--- 2018-12-23 07:43:05
+-- 2018-12-23 08:33:38
 */
