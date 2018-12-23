@@ -131,6 +131,16 @@ class Html_TD
 	function pilihKey($semua)
 	{
 		list($key, $data, $myTable, $ca, $cb) = $semua;
+		$papar = '';
+		foreach ($ca[$myTable][$key] as $kpd => $bil)
+		{# mula ulang $bil
+			//echo "\r" . $bil['keterangan'] . '<br>';
+			$k0 = ($bil['kod'] == $data) ? $data :  $bil['kod'];
+			$papar = ($bil['kod'] == $data) ?
+				$data . '-' . $bil['keterangan'] : '';
+		}# tamat ulang $bil//*/
+
+		return $papar;
 	}
 #==========================================================================================
 	public function dataBernombor($data)
