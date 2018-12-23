@@ -47,6 +47,7 @@ class Html_TD
 #==========================================================================================
 	function paparURL($key, $data, $myTable = null, $ca = null, $cb = null)
 	{
+		$semua = array($key, $data, $myTable, $ca, $cb);
 		if(in_array($key,array('newss','no')))
 		{# primary key
 			$k1 = $this->primaryKey($key,$data,$myTable,$ca,$cb);
@@ -81,7 +82,7 @@ class Html_TD
 		elseif(in_array($key,array('harga_sebenar','punca_pembelian',
 		'medium_pembayaran','medium_edagang')))
 		{
-			//$k0 = $this->pilihKey($data,$myTable);
+			$k0 = $this->pilihKey($semua);
 			?><td><?php echo nl2br($data) ?></td><?php
 		}
 		else
