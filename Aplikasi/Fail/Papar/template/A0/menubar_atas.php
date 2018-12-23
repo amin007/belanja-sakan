@@ -48,7 +48,7 @@ if($pilihMenu == '1'): echo "\n";?>
 	<b class="caret"></b></a>
 	<ul class="dropdown-menu">
 	<li><a href="<?php echo URL ?>laporan/bulanan">Laporan Bulanan</a></li>
-		<li><a href="<?php echo URL ?>qss/suku1">Laporan QSS</a></li>
+	<li><a href="<?php echo URL ?>laporan/suku">Laporan Suku Tahunan</a></li>
 	<li class="divider"></li><?php
 /*	
 	echo "\n\t";
