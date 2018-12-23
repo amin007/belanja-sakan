@@ -12,6 +12,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 	{
 		echo '<pre>$jadual = ' . $jadual . '|<br>';
 		print_r($senarai); echo '</pre>';//*/
+		//$this->semakPembolehubah($bentukJadual01,'teste');
 	}
 #---------------------------------------------------------------------------------------------------#
 	function contoh_data01($pilih)
@@ -312,11 +313,6 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 				'apa' => $idBorang); # benda yang dicari//*/
 
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
-	}
-#---------------------------------------------------------------------------------------------------#
-	function buangNilai($bentukJadual01)
-	{
-		$this->semakPembolehubah($bentukJadual01,'teste');
 	}
 #---------------------------------------------------------------------------------------------------#
 #=====================================================================================================
