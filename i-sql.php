@@ -75,7 +75,8 @@ CREATE TABLE `nama_pengguna` (
 INSERT INTO `nama_pengguna` (`no`, `namaPengguna`, `kataLaluan`, `kataRahsia`, `level`, `nokp`, `Nama_Penuh`, `email`, `nohp`, `CatatNota`) VALUES
 (1,	'admin1',	'360cea6bdd8203dcb002a81f3b7e7408',	NULL,	'admin1',	'01012019010000',	'admin1',	'admin1@duduk.mana',	'012345678',	'contoh password admin1satu'),
 (2,	'user1',	'527404287f666a77506b77e5b6184c86',	NULL,	'user',	'010119010001',	'user1',	'user1@duduk.mana',	'011234567',	'contoh password user1satu'),
-(3,	'user2',	'f64431857b59221f9f0a194b10a61d25',	NULL,	'user',	NULL,	'user2 daa',	'user2@duduk.mana',	'013456987',	'contoh password user2dua');
+(3,	'user2',	'f64431857b59221f9f0a194b10a61d25',	NULL,	'user',	NULL,	'user2 daa',	'user2@duduk.mana',	'013456987',	'contoh password user2dua'),
+(4,	'user3',	'252348978ab4d7387888c26247f31659',	NULL,	'user',	NULL,	'Boboiboy Kuasa 3',	'user3@galaksi.mana',	'0147852369',	'contoh password user3tiga');
 
 DROP TABLE IF EXISTS `senarai_belanja`;
 CREATE TABLE `senarai_belanja` (
@@ -99,7 +100,15 @@ INSERT INTO `senarai_belanja` (`no`, `nohp`, `jenis_belanja`, `tarikh`, `belanja
 (2,	'011234567',	NULL,	'2018-12-22',	'mee goreng udang',	NULL,	5.00,	1,	'15',	'09',	2,	NULL),
 (3,	'013456987',	NULL,	'2018-12-23',	'grabcar',	NULL,	4.00,	1,	'20',	'05',	1,	'pergi dari rumah ke pejabat'),
 (4,	'013456987',	NULL,	'2018-12-23',	'grabcar',	NULL,	4.00,	1,	'20',	'09',	1,	'kupon percuma daa. terima kasih grab.'),
-(5,	'013456987',	NULL,	'2018-12-23',	'bayar pinjaman',	NULL,	20.00,	1,	'20',	'04',	1,	'kaklong punya duit daa');
+(5,	'013456987',	NULL,	'2018-12-23',	'bayar pinjaman',	NULL,	20.00,	1,	'20',	'04',	1,	'kaklong punya duit daa'),
+(6,	'0147852369',	NULL,	'2018-12-23',	'bubur ayam + teh tarik',	NULL,	5.65,	1,	'17',	'01',	2,	''),
+(7,	'0147852369',	NULL,	'2018-12-23',	'm&m chicmuffin + teh tarik',	NULL,	5.65,	1,	'17',	'01',	2,	''),
+(8,	'0147852369',	NULL,	'2018-12-23',	'6 keping biskut',	NULL,	9.40,	1,	'17',	'01',	2,	''),
+(9,	'0147852369',	NULL,	'2018-12-23',	'6 inci steak & chse sub',	NULL,	11.15,	1,	'17',	'03',	2,	''),
+(10,	'0147852369',	NULL,	'2018-12-23',	'(my) w4 edv 6in/wr/sld',	NULL,	10.90,	1,	'17',	'03',	2,	''),
+(11,	'0147852369',	NULL,	'2018-12-23',	'6 inci bbq chicken strips sub + spice italian',	NULL,	4.70,	1,	'17',	'03',	2,	''),
+(12,	'0147852369',	NULL,	'2018-12-23',	'10oz fountain drink + (my) w4 edv 6in/wr/sld',	NULL,	10.90,	1,	'17',	'03',	2,	''),
+(13,	'0147852369',	NULL,	'2018-12-23',	'6 inci bbq chicken strips sub + chicken slide',	NULL,	4.70,	1,	'17',	'03',	2,	'');
 
--- 2018-12-23 00:17:55
+-- 2018-12-23 06:08:37
 */
