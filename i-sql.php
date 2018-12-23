@@ -3,6 +3,46 @@
 -- contoh sql senarai table yang ada
 -- Adminer 4.7.0 MySQL dump
 
+DROP TABLE IF EXISTS `kod_dapatan`;
+CREATE TABLE `kod_dapatan` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `kod` char(10) NOT NULL,
+  `keterangan` text NOT NULL,
+  `catatan` text NOT NULL,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `kod_isirumah`;
+CREATE TABLE `kod_isirumah` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `kod` varchar(20) NOT NULL,
+  `keterangan` text NOT NULL,
+  `catatan` text NOT NULL,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `kod_isirumah` (`no`, `kod`, `keterangan`, `catatan`) VALUES
+(1,	'nama_isi_rumah',	'nama\r\nSiapakah nama ketua isi rumah?\r\n(ketua keluarga mesti penerima pendpaatan)\r\nsenaraikan semua ahli biasa bagi isi rumah ini.\r\n\r\nWho is the name of the head of the household?\r\n(family leader must be the recipient of the treatment)\r\nlist all ordinary members of this household.',	''),
+(2,	'pkir',	'perhubungan dengan ketua isi rumah',	''),
+(3,	'noair',	'no ahli isi rumah',	''),
+(4,	'j',	'jantina\r\n\r\n1. lelaki\r\n2. perempuan',	''),
+(5,	'tk',	'tahun kelahiran',	''),
+(6,	'u',	'umur',	''),
+(7,	'ket',	'kumpulan etnik',	''),
+(8,	'kw',	'kewarganegaraan\r\n\r\n1. warganegara malaysia\r\n2. bukan warganegara malaysia',	''),
+(9,	'rs',	'residen\r\n\r\n1. ya\r\n2. tidak\r\n\r\n(untuk bukan warganegara malaysia)',	''),
+(10,	'tp',	'taraf perkahwinan\r\n\r\n1. tidkapernah berkahwin\r\n2. berkahwin\r\n3. bali/duda\r\n4. bercerai\r\n5. berpisah',	''),
+(11,	'ps',	'persekolahan\r\n\r\n1. tidak bersekolah\r\n2. bersekolah\r\n3. tamat persekolahan',	''),
+(12,	'sts',	'nyatakan sebab utama tidak bersekolah atau tamat persekolahan bagi mereka yang berumur 7-18 tahun\r\n\r\n1. tidak mampu dari segi kewangan\r\n2. terlalu jauh dari institusi pendidikan\r\n3. tidak berminat\r\n4. cacat\r\n5. perlu bekerja untuk menambah pendapatan keluarga\r\n6. tiada sijil kelahiran\r\n7. tidak berkenaan',	''),
+(13,	'pt',	'taraf pendidian rasmi tertinggi\r\n\r\n(bagi mereka yang bersekolah di luar negara, dapatkan jumlah tahun di bangk sekolah)',	''),
+(14,	'sj',	'sijil tertinggi yang diperolehi disekolah, maktab atau universiti',	''),
+(15,	'airba',	'no. ahli isi rumah',	''),
+(16,	'ta',	'taraf aktiviti',	''),
+(17,	'pp',	'penerima pendapatan\r\n1. ya\r\n2. tidak',	''),
+(18,	'pk',	'pekerjaan',	''),
+(19,	'pn',	'industri',	'');
+
 DROP TABLE IF EXISTS `kod_mediumpembayaran`;
 CREATE TABLE `kod_mediumpembayaran` (
   `no` int(11) NOT NULL AUTO_INCREMENT,
@@ -77,20 +117,6 @@ INSERT INTO `nama_pengguna` (`no`, `namaPengguna`, `kataLaluan`, `kataRahsia`, `
 (2,	'user1',	'527404287f666a77506b77e5b6184c86',	NULL,	'user',	'010119010001',	'user1',	'user1@duduk.mana',	'011234567',	'contoh password user1satu'),
 (3,	'user2',	'f64431857b59221f9f0a194b10a61d25',	NULL,	'user',	NULL,	'user2 daa',	'user2@duduk.mana',	'013456987',	'contoh password user2dua'),
 (4,	'user3',	'252348978ab4d7387888c26247f31659',	NULL,	'user',	NULL,	'Boboiboy Kuasa 3',	'user3@galaksi.mana',	'0147852369',	'contoh password user3tiga');
-
-DROP TABLE IF EXISTS `penerimaan_bulan_semasa`;
-CREATE TABLE `penerimaan_bulan_semasa` (
-  `no` int(11) NOT NULL DEFAULT '0',
-  `nohp` varchar(20) NOT NULL,
-  `noair` char(2) NOT NULL,
-  `9a` text NOT NULL,
-  `9b` text NOT NULL,
-  `9c` text NOT NULL,
-  `9d` text,
-  `9e` text,
-  `09` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 
 DROP TABLE IF EXISTS `senarai_belanja`;
 CREATE TABLE `senarai_belanja` (
@@ -582,5 +608,20 @@ CREATE TABLE `z_jrc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
--- 2018-12-23 16:18:20
+DROP TABLE IF EXISTS `z_penerimaan_bulan_semasa`;
+CREATE TABLE `z_penerimaan_bulan_semasa` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `noair` char(2) NOT NULL,
+  `9a` text NOT NULL,
+  `9b` text NOT NULL,
+  `9c` text NOT NULL,
+  `9d` text,
+  `9e` text,
+  `09` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+-- 2018-12-23 16:46:13
 */
