@@ -17,6 +17,11 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
+		$this->panggilKhas02('punca_pembelian',null);
+		$this->panggilKhas02('medium_pembayaran',null);
+		$this->papar->c1 = $this->tanya->
+			contoh_cariKhas04($this->papar->bentukJadual02);
+		unset($this->papar->bentukJadual02);
 		$this->panggilJadual('senarai_belanja');
 		//$this->panggilJadual('nama_pengguna');
 		//$this->debugKandunganPaparan();//*/
@@ -104,7 +109,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->papar->myTable = $myTable;
 		$this->papar->_jadual = $myTable;
 		$this->papar->carian[] = 'semua';
-		$this->papar->c1 = $this->papar->c2 = null;
+		//$this->papar->c1 = $this->papar->c2 = null;
+		$this->papar->c2 = null;
 		$this->papar->_pilih = $p1;
 		$this->papar->_method = 'belian';
 		$this->papar->cariID = 'papar';
