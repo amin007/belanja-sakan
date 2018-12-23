@@ -1,7 +1,7 @@
 <?php
 /*
 -- contoh sql senarai table yang ada
--- Adminer 4.6.3 MySQL dump
+-- Adminer 4.7.0 MySQL dump
 
 DROP TABLE IF EXISTS `kod_mediumpembayaran`;
 CREATE TABLE `kod_mediumpembayaran` (
@@ -96,7 +96,10 @@ CREATE TABLE `senarai_belanja` (
 
 INSERT INTO `senarai_belanja` (`no`, `nohp`, `jenis_belanja`, `tarikh`, `belanja_keterangan`, `belanja_kod`, `amaun_rm`, `harga_sebenar`, `punca_pembelian`, `medium_pembayaran`, `medium_edagang`, `catatan`) VALUES
 (1,	'011234567',	NULL,	'2018-12-20',	'nasi goreng kampung',	NULL,	5.00,	1,	'14',	'01',	2,	'makan malam'),
-(2,	'011234567',	NULL,	'2018-12-22',	'mee goreng udang',	NULL,	5.00,	1,	'15',	'09',	2,	NULL);
+(2,	'011234567',	NULL,	'2018-12-22',	'mee goreng udang',	NULL,	5.00,	1,	'15',	'09',	2,	NULL),
+(3,	'013456987',	NULL,	'2018-12-23',	'grabcar',	NULL,	4.00,	1,	'20',	'05',	1,	'pergi dari rumah ke pejabat'),
+(4,	'013456987',	NULL,	'2018-12-23',	'grabcar',	NULL,	4.00,	1,	'20',	'09',	1,	'kupon percuma daa. terima kasih grab.'),
+(5,	'013456987',	NULL,	'2018-12-23',	'bayar pinjaman',	NULL,	20.00,	1,	'20',	'04',	1,	'kaklong punya duit daa');
 
--- 2018-12-22 17:03:16
+-- 2018-12-23 00:17:55
 */
