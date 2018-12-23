@@ -255,15 +255,15 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 	function jadualSenaraiBelanja()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
+		list($idUser,$nohp) = $this->tanyaDataSesi();
 		$myTable = 'senarai_belanja';
 		$medan = '*';
 		$carian = $susun = null;
 		# semak database
-			/*$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
+			$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
 				'atau' => 'WHERE', # WHERE / OR / AND
-				'medan' => 'kp', # cari dalam medan apa
-				'apa' => $idBorang); # benda yang dicari//*/
+				'medan' => 'nohp', # cari dalam medan apa
+				'apa' => $nohp); # benda yang dicari//*/
 
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
