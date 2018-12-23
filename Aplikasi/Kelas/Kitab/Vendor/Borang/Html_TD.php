@@ -83,7 +83,7 @@ class Html_TD
 		'medium_pembayaran','medium_edagang')))
 		{
 			$k0 = $this->pilihKey($semua);
-			?><td><?php echo nl2br($data) ?></td><?php
+			?><td><?php echo nl2br($k0) ?></td><?php
 		}
 		else
 		{
@@ -132,12 +132,11 @@ class Html_TD
 	{
 		list($key, $data, $myTable, $ca, $cb) = $semua;
 		$papar = '';
-		foreach ($ca[$myTable][$key] as $kpd => $bil)
+		foreach ($ca[$key] as $kpd => $bil)
 		{# mula ulang $bil
-			//echo "\r" . $bil['keterangan'] . '<br>';
-			$k0 = ($bil['kod'] == $data) ? $data :  $bil['kod'];
-			$papar = ($bil['kod'] == $data) ?
-				$data . '-' . $bil['keterangan'] : '';
+			//echo "\r" . $bil['kod'] . '|' . $bil['keterangan'] . '<br>';
+			if($bil['kod'] == $data)
+				$papar = $data . '-' . $bil['keterangan'];
 		}# tamat ulang $bil//*/
 
 		return $papar;
