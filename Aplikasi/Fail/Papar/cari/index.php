@@ -8,8 +8,6 @@ $pilihJadual = 'jadual_bootstrap';
 # untuk kod baru
 //echo '<pre>$carian='; print_r($this->carian); echo '</pre>';
 //echo '<pre>$senarai='; print_r($this->senarai); echo '</pre>';
-//echo '<pre>$bentukJadual01='; print_r($this->bentukJadual01); echo '</pre>';
-//echo '<pre>$bentukJadual02='; print_r($this->bentukJadual02); echo '</pre>';
 
 # papar hasil carian
 $cari1 = '&nbsp;|&nbsp;'; $cari2 = '';
@@ -27,4 +25,5 @@ echo '<a class="btn btn-primary" href="'
 //else # jenis template
 	include $this->template . '.php';
 #-------------------------------------------------------------------------------
-echo '<pre>$meta='; print_r($this->_meta); echo '</pre>';
+echo '<pre>$c1='; print_r($this->c1); echo '</pre>';
+echo '<pre>$_meta='; print_r($this->_meta); echo '</pre>';
