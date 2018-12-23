@@ -78,8 +78,10 @@ class Html_TD
 		{
 			?><td><?php echo nl2br($data) ?></td><?php
 		}
-		elseif(in_array($key,array('kp')))
+		elseif(in_array($key,array('harga_sebenar','punca_pembelian',
+		'medium_pembayaran','medium_edagang')))
 		{
+			//$k0 = $this->pilihKey($data,$myTable);
 			?><td><?php echo nl2br($data) ?></td><?php
 		}
 		else
