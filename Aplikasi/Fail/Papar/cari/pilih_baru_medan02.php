@@ -17,7 +17,7 @@ for ($kira=0; $kira < count($row); $kira++)
 		?><div class="<?php echo $class2 ?>"><?php
 		$paparData = $html->ubahInput2($this->bentukJadual01,
 			$this->_meta, $this->_jadual,$kira, $key, $data);
-		echo $paparData . "\n\t";
+		echo "\n\t\t" . $paparData . "\n\t";
 		?></div><!-- / class="<?php echo $class2 ?>" --><?php echo "\n";
 		?></div><!-- / class="form-group" --><?php echo "\n";
 	}## --------------------------------------------------------------------------
