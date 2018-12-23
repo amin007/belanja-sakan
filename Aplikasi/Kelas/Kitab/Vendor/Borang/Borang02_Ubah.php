@@ -232,8 +232,8 @@ class Borang02_Ubah
 		return $tab2 
 		. '<div class="'.$classInput.'">' . $tab3
 		//. '<span class="input-group-addon"></span>' . $tab3
-		. '<input type="text" ' . $name  . ' value="' . $data . '"'
-		. ' class="form-control">'
+		//. '<input type="text" ' . $name  . ' value="' . $data . '"'
+		//. ' class="form-control">'
 		. $tab2 . $this->labelBawah($data)
 		. '</div>' . $komenInput
 		. '';
