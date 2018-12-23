@@ -1,15 +1,14 @@
 <?php
-namespace Aplikasi\Kitab; //echo __NAMESPACE__; 
+namespace Aplikasi\Kitab; //echo __NAMESPACE__;
 class Html_TD
 {
 #==========================================================================================
 	function primaryKey($key, $data, $myTable = null, $ca = null, $cb = null)
 	{# primary key
 		$k0 = URL . 'belian/ubah/' . $data;
-		$k1 = $this->iconFA(1) . '<a target="_blank" href="' . $k0 . '">'
-			. $data . '</a>&nbsp;';
+		$k1 = $this->iconFA(1) . '<a href="' . $k0 . '">' . $data . '</a>&nbsp;';
 		list($pengguna,$level,$birutua,$birumuda,$merah) = $this->setPencam();
-		$btn = 'target="_blank" href="' . $k0 . '" class="' . $birumuda . '"';
+		$btn = 'href="' . $k0 . '" class="' . $birumuda . '"';
 
 		if ( in_array($pengguna,array('amin007','azwan')) && $myTable == 'aes'
 			&& $ca != null):
@@ -92,10 +91,9 @@ class Html_TD
 	function primaryKey02($key, $data, $myTable = null, $ca = null, $cb = null)
 	{# primary key
 		$k0 = URL . 'borang/be/' . $ca . '/' . $data . '/' . $cb;
-		$k1 = $this->iconFA(1) . '<a target="_blank" href="' . $k0 . '">'
-			. $data . '</a>&nbsp;';
+		$k1 = $this->iconFA(1) . '<a href="' . $k0 . '">' . $data . '</a>&nbsp;';
 		list($pengguna,$level,$birutua,$birumuda,$merah) = $this->setPencam();
-		$btn = 'target="_blank" href="' . $k0 . '" class="' . $birumuda . '"';
+		$btn = 'href="' . $k0 . '" class="' . $birumuda . '"';
 
 		if ( in_array($pengguna,array('amin007','azwan')) && $myTable == 'aes'
 			&& $ca != null):
