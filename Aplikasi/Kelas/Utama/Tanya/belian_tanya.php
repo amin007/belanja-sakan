@@ -299,7 +299,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
 #---------------------------------------------------------------------------------------------------#
-	function jaduaLimaPerangkaan($idBorang)
+	function susunTatasusunan2($idBorang)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		$myTable = null;
