@@ -14,37 +14,44 @@ ___
 
 ### paparan user
 ___
-* "ruangtamu" **Ruangtamu**
+* "ruangtamu" **Anjung**
+* "ruangtamu/logout" **Logout**
 * Dapatan
-  * "papar" **Jadual Dapatan**
-  * "baru" **Tambah Dapatan**
-  * "ubah" **Ubah Dapatan**
+  * "dapatan/index" **Jadual Dapatan**
+  * "dapatan/baru" **Tambah Dapatan**
+  * "dapatan/ubah" **Ubah Dapatan**
 * Belian
-  * "papar" **Jadual Belian**
-  * "baru" **Tambah Belian**
-  * "ubah" **Ubah Belian**
+  * "belian/index" **Jadual Belian**
+  * "belian/baru" **Tambah Belian**
+  * "belian/ubah" **Ubah Belian**
 * Semakan
-  * "papar" **Jadual Semakan**
-  * "baru" **Tambah Semakan**
-  * "ubah" **Ubah Semakan**
+  * "semakan/index" **Jadual Semakan**
+  * "semakan/baru" **Tambah Semakan**
+  * "semakan/ubah" **Ubah Semakan**
 * Staf
-  * "ubah" **Profile user**
-  * "baru" **Tambah Kes**
-  * "cari" **Semak Barcode**
-  * "baru" **Hantar Kes**
-  * "ubah" **Terima Di Prosesan**
+  * "biodata/ubah" **Profile user**
+  * "rangkabaru/masukdata" **Tambah Kes**
+  * "operasi/batch" **Semak Barcode**
+  * "operasi/hantar" **Hantar Kes**
+  * "proses/baru" **Terima Di Prosesan**
 * Cari
-  * "cari" **MSIC**
-  * "cari" **PRODUK**
-  * "cari" **LOKALITI JOHOR**
-  * "cari" **LOKALITI MALAYSIA**
-  * "cari" **Prosesan**
+  * "cari/tentang/msic/1" **MSIC**
+  * "cari/tentang/produk/1" **PRODUK**
+  * "cari/tentang/johor/2" **LOKALITI JOHOR**
+  * "cari/tentang/malaysia/2" **LOKALITI MALAYSIA**
+  * "cari/tentang/prosesan" **Prosesan**
 * Laporan
+  * "laporan/bulanan" **Laporan Bulanan**
+  * "laporan/suku" **Laporan QSS**
+* Bantuan
+  * "bantuan/sistem" **Sistem**
+  * "bantuan/forum/perdana" **Forum**
+  * "bantuan/mesej/utama" **Email**
 
 ### paparan admin1
 ___
 * "ruangtamu" **Ruangtamu**
-* "logout.php" **Logout**
+* "ruangtamu/logout" **Logout**
 
 # Standard
 http://www.php-fig.org/psr/psr-4/
