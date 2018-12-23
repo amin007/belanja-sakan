@@ -11,12 +11,12 @@ $pilihJadual = 'jadual_bootstrap';
 
 # papar hasil carian
 $cari1 = '&nbsp;|&nbsp;'; $cari2 = '';
-foreach ($this->carian as $kunci => $nilai)
-	$cari1 .= ( count($this->carian)==0 ) ? $nilai : $nilai . ' | ';
+/*foreach ($this->carian as $kunci => $nilai)
+	$cari1 .= ( count($this->carian)==0 ) ? $nilai : $nilai . ' | ';/*/
 foreach ($this->senarai as $kunci2 => $nilai2)
 	$cari2 .= ( count($nilai2)==0 ) ? $kunci2 . " = Kosong<br>\r"
 	: $kunci2 . ' = ' . count($nilai2) . "<br>\r";
-echo "Anda mencari = $cari1\r<br>$cari2\r<hr>\r";//*/
+//echo "Anda mencari = $cari1\r<br>$cari2\r<hr>\r";//*/
 echo '<a class="btn btn-primary" href="'
 . URL . 'belian/google2">Tambah Baru</a>' . "\n";
 
@@ -25,5 +25,5 @@ echo '<a class="btn btn-primary" href="'
 //else # jenis template
 	include $this->template . '.php';
 #-------------------------------------------------------------------------------
-echo '<pre>$c1='; print_r($this->c1); echo '</pre>';
-echo '<pre>$_meta='; print_r($this->_meta); echo '</pre>';
+//echo '<pre>$c1='; print_r($this->c1); echo '</pre>';
+//echo '<pre>$_meta='; print_r($this->_meta); echo '</pre>';
