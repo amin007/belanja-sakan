@@ -78,6 +78,20 @@ INSERT INTO `nama_pengguna` (`no`, `namaPengguna`, `kataLaluan`, `kataRahsia`, `
 (3,	'user2',	'f64431857b59221f9f0a194b10a61d25',	NULL,	'user',	NULL,	'user2 daa',	'user2@duduk.mana',	'013456987',	'contoh password user2dua'),
 (4,	'user3',	'252348978ab4d7387888c26247f31659',	NULL,	'user',	NULL,	'Boboiboy Kuasa 3',	'user3@galaksi.mana',	'0147852369',	'contoh password user3tiga');
 
+DROP TABLE IF EXISTS `penerimaan_bulan_semasa`;
+CREATE TABLE `penerimaan_bulan_semasa` (
+  `no` int(11) NOT NULL DEFAULT '0',
+  `nohp` varchar(20) NOT NULL,
+  `noair` char(2) NOT NULL,
+  `9a` text NOT NULL,
+  `9b` text NOT NULL,
+  `9c` text NOT NULL,
+  `9d` text,
+  `9e` text,
+  `09` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
 DROP TABLE IF EXISTS `senarai_belanja`;
 CREATE TABLE `senarai_belanja` (
   `no` int(11) NOT NULL AUTO_INCREMENT,
@@ -110,5 +124,463 @@ INSERT INTO `senarai_belanja` (`no`, `nohp`, `jenis_belanja`, `tarikh`, `belanja
 (12,	'0147852369',	NULL,	'2018-12-23',	'10oz fountain drink + (my) w4 edv 6in/wr/sld',	NULL,	10.90,	1,	'17',	'03',	2,	'beli dekat subway muar jalan arab/mariam.'),
 (13,	'0147852369',	NULL,	'2018-12-23',	'6 inci bbq chicken strips sub + chicken slide',	NULL,	4.70,	1,	'17',	'03',	2,	'beli dekat subway muar jalan arab/mariam.');
 
--- 2018-12-23 08:33:38
+DROP TABLE IF EXISTS `z_blok3`;
+CREATE TABLE `z_blok3` (
+  `no` int(11) NOT NULL DEFAULT '0',
+  `nohp` varchar(20) DEFAULT NULL,
+  `jenis_belanja` varchar(50) DEFAULT NULL,
+  `tarikh` date DEFAULT NULL,
+  `belanja_keterangan` text,
+  `belanja_kod` int(11) DEFAULT NULL,
+  `amaun_rm` decimal(10,2) DEFAULT NULL,
+  `harga_sebenar` tinyint(4) DEFAULT NULL COMMENT '1-harga sebenar/2-harga anggaran',
+  `punca_pembelian` char(2) DEFAULT NULL,
+  `medium_pembayaran` char(2) DEFAULT NULL,
+  `medium_edagang` tinyint(4) DEFAULT NULL COMMENT '1-ya/2-tidak',
+  `catatan` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_blok4a`;
+CREATE TABLE `z_blok4a` (
+  `no` int(11) NOT NULL DEFAULT '0',
+  `nohp` varchar(20) DEFAULT NULL,
+  `jenis_belanja` varchar(50) DEFAULT NULL,
+  `tarikh` date DEFAULT NULL,
+  `belanja_keterangan` text,
+  `belanja_kod` int(11) DEFAULT NULL,
+  `amaun_rm` decimal(10,2) DEFAULT NULL,
+  `harga_sebenar` tinyint(4) DEFAULT NULL COMMENT '1-harga sebenar/2-harga anggaran',
+  `punca_pembelian` char(2) DEFAULT NULL,
+  `medium_pembayaran` char(2) DEFAULT NULL,
+  `medium_edagang` tinyint(4) DEFAULT NULL COMMENT '1-ya/2-tidak',
+  `bulan` char(1) DEFAULT NULL,
+  `tahun` int(11) DEFAULT NULL,
+  `catatan` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_blok4b`;
+CREATE TABLE `z_blok4b` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) DEFAULT NULL,
+  `jenis_belanja` varchar(50) DEFAULT NULL,
+  `tarikh` date DEFAULT NULL,
+  `belanja_keterangan` text,
+  `belanja_kod` int(11) DEFAULT NULL,
+  `amaun_rm` decimal(10,2) DEFAULT NULL,
+  `harga_sebenar` tinyint(4) DEFAULT NULL COMMENT '1-harga sebenar/2-harga anggaran',
+  `punca_pembelian` char(2) DEFAULT NULL,
+  `medium_pembayaran` char(2) DEFAULT NULL,
+  `medium_edagang` tinyint(4) DEFAULT NULL COMMENT '1-ya/2-tidak',
+  `bulan` char(1) DEFAULT NULL,
+  `tahun` int(11) DEFAULT NULL,
+  `catatan` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_blok4c`;
+CREATE TABLE `z_blok4c` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) DEFAULT NULL,
+  `jenis_belanja` varchar(50) DEFAULT NULL,
+  `tarikh` date DEFAULT NULL,
+  `belanja_keterangan` text,
+  `belanja_kod` int(11) DEFAULT NULL,
+  `amaun_rm` decimal(10,2) DEFAULT NULL,
+  `harga_sebenar` tinyint(4) DEFAULT NULL COMMENT '1-harga sebenar/2-harga anggaran',
+  `punca_pembelian` char(2) DEFAULT NULL,
+  `medium_pembayaran` char(2) DEFAULT NULL,
+  `medium_edagang` tinyint(4) DEFAULT NULL COMMENT '1-ya/2-tidak',
+  `bulan` char(1) DEFAULT NULL,
+  `tahun` int(11) DEFAULT NULL,
+  `catatan` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_hk1`;
+CREATE TABLE `z_hk1` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `noair` char(2) NOT NULL,
+  `pk` char(2) NOT NULL,
+  `pn` char(2) NOT NULL,
+  `tp` text NOT NULL,
+  `incs11` text,
+  `incs12` text,
+  `incs13` text,
+  `incs14` text,
+  `incs15` text,
+  `incs16` text,
+  `incs17` text,
+  `incs18` text,
+  `incs19a` text,
+  `incs19b` text,
+  `incs19c` text,
+  `incs19` text,
+  `incs01` text,
+  `hk1` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_hk2`;
+CREATE TABLE `z_hk2` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `noair` char(2) NOT NULL,
+  `pk` char(2) NOT NULL,
+  `a1` text,
+  `a2` text,
+  `b1` text,
+  `b2` text,
+  `c1` text,
+  `c2` text,
+  `c3` text,
+  `c4(a)` text,
+  `c4(b)` text,
+  `c4` text,
+  `c5` text,
+  `21a(i)` text,
+  `21a(ii)` text,
+  `21a(iii)` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_hk3`;
+CREATE TABLE `z_hk3` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `noair` char(2) NOT NULL,
+  `pk` char(2) NOT NULL,
+  `a1` text,
+  `a2` text,
+  `a3` text,
+  `a4` text,
+  `b` text,
+  `c1` text,
+  `c2` text,
+  `c3` text,
+  `c4` text,
+  `c5` text,
+  `21a(i)` text,
+  `21a(ii)` text,
+  `21a(iii)` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_hk4`;
+CREATE TABLE `z_hk4` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `noair` char(2) NOT NULL,
+  `pn` char(2) NOT NULL,
+  `a1` text,
+  `a2` text,
+  `a3` text,
+  `a4` text,
+  `b1` text,
+  `b2` text,
+  `c1` text,
+  `c2` text,
+  `c3` text,
+  `c4` text,
+  `c5` text,
+  `21a(i)` text,
+  `21a(ii)` text,
+  `21a(iii)` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_hk5`;
+CREATE TABLE `z_hk5` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `noair` char(2) NOT NULL,
+  `pn` char(2) NOT NULL,
+  `a1` text,
+  `a2` text,
+  `a3` text,
+  `a4` text,
+  `b1` text,
+  `b2` text,
+  `c1` text,
+  `c2` text,
+  `c3` text,
+  `c4` text,
+  `c5` text,
+  `21a(i)` text,
+  `21a(ii)` text,
+  `21a(iii)` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_hk6`;
+CREATE TABLE `z_hk6` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `noair` char(2) NOT NULL,
+  `pn` char(2) NOT NULL,
+  `a1` text,
+  `a2` text,
+  `a3` text,
+  `a4` text,
+  `b1` text,
+  `b2` text,
+  `c1` text,
+  `c2` text,
+  `c3` text,
+  `c4` text,
+  `c5` text,
+  `21a(i)` text,
+  `21a(ii)` text,
+  `21a(iii)` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_hk7`;
+CREATE TABLE `z_hk7` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `noair` char(2) NOT NULL,
+  `sayur-sebulan` text,
+  `sayur-setahun` text,
+  `kelapa-sebulan` text,
+  `kelapa-setahun` text,
+  `ikan-sebulan` text,
+  `ikan-setahun` text,
+  `ayam-sebulan` text,
+  `ayam-setahun` text,
+  `itik-sebulan` text,
+  `itik-setahun` text,
+  `telur-sebulan` text,
+  `telur-setahun` text,
+  `rambutan-sebulan` text,
+  `rambutan-setahun` text,
+  `durian-sebulan` text,
+  `durian-setahun` text,
+  `pisang-sebulan` text,
+  `pisang-setahun` text,
+  `kayu api-sebulan` text,
+  `kayu api-setahun` text,
+  `A=>lain2-sebulan` text,
+  `A=>lain2-setahun` text,
+  `B=>lain2-sebulan` text,
+  `B=>lain2-setahun` text,
+  `C=>lain2-sebulan` text,
+  `C=>lain2-setahun` text,
+  `jumlah-setahun` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_hk8`;
+CREATE TABLE `z_hk8` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `noair` char(2) NOT NULL,
+  `incs22.1` text,
+  `incs22.2` text,
+  `incs22.3` text,
+  `incs22.3(i)` text,
+  `incs22.3(ii)` text,
+  `incs22.3(iii)` text,
+  `incs22` text,
+  `incs23.1` text,
+  `incs23.2` text,
+  `incs23.3` text,
+  `incs23.4` text,
+  `incs23.4(i)` text,
+  `incs23.4(ii)` text,
+  `incs23.4(iii)` text,
+  `incs23` text,
+  `incs32a.1` text,
+  `incs32a.2` text,
+  `incs32a.2(i)` text,
+  `incs32a.2(ii)` text,
+  `incs32a` text,
+  `incs32b.1` text,
+  `incs32b.2` text,
+  `incs32b.2(i)` text,
+  `incs32b.2(ii)` text,
+  `incs32b.2(iii)` text,
+  `incs32b` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_jr4`;
+CREATE TABLE `z_jr4` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `nama` varchar(100) DEFAULT NULL,
+  `pkir` char(2) DEFAULT NULL COMMENT 'hubungan dengan ketua isi rumah',
+  `noair` char(2) DEFAULT NULL,
+  `j` int(11) DEFAULT NULL COMMENT '1-lelaki | 2-perempuan',
+  `tk` int(11) DEFAULT NULL COMMENT 'tahun kelahiran',
+  `u` int(11) DEFAULT NULL COMMENT 'umur',
+  `ket` int(11) DEFAULT NULL COMMENT 'kumpulan etnik',
+  `kw` int(11) DEFAULT NULL COMMENT 'warganegara',
+  `rs` int(11) DEFAULT NULL COMMENT 'residen',
+  `tp` int(11) DEFAULT NULL COMMENT 'taraf perkahwinan',
+  `ps` int(11) DEFAULT NULL COMMENT 'persekolahan',
+  `sts` int(11) DEFAULT NULL COMMENT 'sebab tak sekolah',
+  `pt` int(11) DEFAULT NULL COMMENT 'taraf pendidikan',
+  `sj` int(11) DEFAULT NULL COMMENT 'sijil tertinggi',
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_jra`;
+CREATE TABLE `z_jra` (
+  `no` int(11) NOT NULL,
+  `nohp` varchar(20) NOT NULL,
+  `airba` char(2) NOT NULL COMMENT 'no ahli isi rumah',
+  `ta` char(2) NOT NULL COMMENT 'taraf aktiviti',
+  `pp` tinyint(4) NOT NULL COMMENT 'penerima pendapatan',
+  `pekerjaan` text NOT NULL COMMENT 'keterangan pekerjaan',
+  `pk` char(6) NOT NULL COMMENT 'kod pekerjaan',
+  `industri` text NOT NULL COMMENT 'keterangan industri',
+  `pn` char(5) NOT NULL COMMENT 'kod industri'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_jrb1`;
+CREATE TABLE `z_jrb1` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `airbb` char(2) NOT NULL,
+  `incs11` int(11) DEFAULT NULL,
+  `incs12` int(11) DEFAULT NULL,
+  `incs13` int(11) DEFAULT NULL,
+  `incs14` int(11) DEFAULT NULL,
+  `incs15` int(11) DEFAULT NULL,
+  `incs16` int(11) DEFAULT NULL,
+  `incs17` int(11) DEFAULT NULL,
+  `incs18` int(11) DEFAULT NULL,
+  `incs19a` int(11) DEFAULT NULL,
+  `incs19b` int(11) DEFAULT NULL,
+  `incs19c` int(11) DEFAULT NULL,
+  `incs19` int(11) DEFAULT NULL,
+  `incs01` int(11) DEFAULT NULL,
+  `incs21a(i)` int(11) DEFAULT NULL,
+  `incs21a(ii)` int(11) DEFAULT NULL,
+  `incs21a(iii)` int(11) DEFAULT NULL,
+  `incs21a` int(11) DEFAULT NULL,
+  `incs21b(i)` int(11) DEFAULT NULL,
+  `incs21b(ii)` int(11) DEFAULT NULL,
+  `incs21b(iii)` int(11) DEFAULT NULL,
+  `incs21b` int(11) DEFAULT NULL,
+  `incs21c` int(11) DEFAULT NULL,
+  `incs21d(i)` int(11) DEFAULT NULL,
+  `incs21d(ii)` int(11) DEFAULT NULL,
+  `incs21d(iii)` int(11) DEFAULT NULL,
+  `incs21d` int(11) DEFAULT NULL,
+  `incs21e(i)` int(11) DEFAULT NULL,
+  `incs21e(ii)` int(11) DEFAULT NULL,
+  `incs21e(iii)` int(11) DEFAULT NULL,
+  `incs2121e` int(11) DEFAULT NULL,
+  `incs21na` int(11) DEFAULT NULL,
+  `incs21ks` int(11) DEFAULT NULL,
+  `incs21` int(11) DEFAULT NULL,
+  `incs22` int(11) DEFAULT NULL,
+  `incs23` int(11) DEFAULT NULL,
+  `incs24` int(11) DEFAULT NULL,
+  `incs02` int(11) DEFAULT NULL,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_jrb2`;
+CREATE TABLE `z_jrb2` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `airbb` char(2) NOT NULL,
+  `incs31` int(11) DEFAULT NULL,
+  `incs32a` int(11) DEFAULT NULL,
+  `incs32b` int(11) DEFAULT NULL,
+  `incs32` int(11) DEFAULT NULL,
+  `incs33` int(11) DEFAULT NULL,
+  `incs34` int(11) DEFAULT NULL,
+  `incs03` int(11) DEFAULT NULL,
+  `incs41a` int(11) DEFAULT NULL,
+  `incs41b` int(11) DEFAULT NULL,
+  `incs41` int(11) DEFAULT NULL,
+  `incs42` int(11) DEFAULT NULL,
+  `incs43` int(11) DEFAULT NULL,
+  `incs44` int(11) DEFAULT NULL,
+  `incs45a` int(11) DEFAULT NULL,
+  `incs45b` int(11) DEFAULT NULL,
+  `incs45c` int(11) DEFAULT NULL,
+  `incs45d` int(11) DEFAULT NULL,
+  `incs45e` int(11) DEFAULT NULL,
+  `incs45f` int(11) DEFAULT NULL,
+  `incs45g` int(11) DEFAULT NULL,
+  `incs45h` int(11) DEFAULT NULL,
+  `incs45i` int(11) DEFAULT NULL,
+  `incs45j` int(11) DEFAULT NULL,
+  `incs45k` int(11) DEFAULT NULL,
+  `incs45l` int(11) DEFAULT NULL,
+  `incs45` int(11) DEFAULT NULL,
+  `incs46a(i)` int(11) DEFAULT NULL,
+  `incs46a(ii)` int(11) DEFAULT NULL,
+  `incs46a` int(11) DEFAULT NULL,
+  `incs46b` int(11) DEFAULT NULL,
+  `incs46c` int(11) DEFAULT NULL,
+  `incs46d(i)` int(11) DEFAULT NULL,
+  `incs46d(ii)` int(11) DEFAULT NULL,
+  `incs46d` int(11) DEFAULT NULL,
+  `incs46e` int(11) DEFAULT NULL,
+  `incs46f` int(11) DEFAULT NULL,
+  `incs46` int(11) DEFAULT NULL,
+  `incs05` int(11) DEFAULT NULL,
+  `incs46tp73` int(11) DEFAULT NULL,
+  `incs06` int(11) DEFAULT NULL,
+  `incs07` int(11) DEFAULT NULL,
+  `incs08` int(11) DEFAULT NULL,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `z_jrc`;
+CREATE TABLE `z_jrc` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) NOT NULL,
+  `airbb` char(2) NOT NULL,
+  `tp61a` int(11) NOT NULL,
+  `tp61b` int(11) NOT NULL,
+  `tp61c` int(11) NOT NULL,
+  `tp61` int(11) NOT NULL,
+  `tp62` int(11) NOT NULL,
+  `tp63` int(11) NOT NULL,
+  `tp64a` int(11) NOT NULL,
+  `tp64b` int(11) NOT NULL,
+  `tp64c` int(11) NOT NULL,
+  `tp64` int(11) NOT NULL,
+  `tp65` int(11) NOT NULL,
+  `tp66` int(11) NOT NULL,
+  `tp67` int(11) NOT NULL,
+  `tp73a` int(11) NOT NULL,
+  `tp68` int(11) NOT NULL,
+  `tp69` int(11) NOT NULL,
+  `tp70` int(11) NOT NULL,
+  `tp71` int(11) NOT NULL,
+  `tp72a` int(11) NOT NULL,
+  `tp72b` int(11) NOT NULL,
+  `tp72c` int(11) NOT NULL,
+  `tp73b` int(11) NOT NULL,
+  `tp73` int(11) NOT NULL,
+  `tp74` int(11) NOT NULL,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+-- 2018-12-23 16:18:20
 */
