@@ -188,8 +188,8 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 	{
 		$dataSulit = new \Aplikasi\Kitab\Sesi();
 		//echo '<pre>'; print_r($_SESSION); echo '</pre>';
-		$idUser = $dataSulit->get('idUser');
-		$namaPendek = $dataSulit->get('namaPendek');
+		$idUser = $dataSulit->get('bs_namaPendek');
+		$nohp = $dataSulit->get('bs_nohp');
 		/*echo 'idUser=' . $dataSulit->get('idUser') . '<br>';
 		echo 'namaPendek=' . $dataSulit->get('namaPendek') . '<br>';
 		echo 'namaPenuh=' . $dataSulit->get('namaPenuh') . '<br>';
@@ -197,7 +197,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		echo 'levelPengguna=' . $dataSulit->get('levelPengguna') . '';
 		echo '<hr>';//*/
 
-		return array($idUser,$namaPendek);
+		return array($idUser,$nohp);
 	}
 #---------------------------------------------------------------------------------------------------#
 	public function susunPembolehubah($pilih,$idBorang = null)
