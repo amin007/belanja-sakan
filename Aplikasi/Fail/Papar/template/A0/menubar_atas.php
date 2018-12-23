@@ -16,9 +16,7 @@ if($pilihMenu == '1'): echo "\n";?>
 	<a <?php echo $nav ?> href="#"><?=$icon['User']?>Staf
 	<b class="caret"></b></a>
 	<ul class="dropdown-menu">
-	<li><a href="<?php echo URL ?>biodata/ubah">
-		<?=$icon['User']?>Profile <?=$pengguna?>
-	</a></li>
+	<li><a href="<?php echo URL ?>biodata/ubah"><?=$icon['User']?>Profile <?=$pengguna?></a></li>
 	<li class="divider"></li>
 	<li><a href="<?php echo URL ?>rangkabaru/masukdata/1"><?=$icon['Barcode']?>Tambah Kes</a></li>
 	<li><a href="<?php echo URL ?>operasi/batch"><?=$icon['Barcode']?>Semak Barcode</a></li>
@@ -31,9 +29,7 @@ if($pilihMenu == '1'): echo "\n";?>
 	</ul>
 </li>
 <li class="dropdown">
-	<a <?php echo $nav ?> href="#">
-		<?=$icon['Filter']?>Cari
-	<b class="caret"></b></a>
+	<a <?php echo $nav ?> href="#"><?=$icon['Filter']?>Cari<b class="caret"></b></a>
 	<ul class="dropdown-menu">
 	<li><a href="<?php echo URL ?>cari/tentang/msic/1"><?=$icon['Filter']?>MSIC</a></li>
 	<li><a href="<?php echo URL ?>cari/tentang/produk/1"><?=$icon['Filter']?>PRODUK</a></li>
@@ -43,14 +39,12 @@ if($pilihMenu == '1'): echo "\n";?>
 	</ul>
 </li>
 <li class="dropdown">
-	<a <?php echo $nav ?> href="#">
-		<?=$icon['Stats']?>Laporan
-	<b class="caret"></b></a>
+	<a <?php echo $nav ?> href="#"><?=$icon['Stats']?>Laporan<b class="caret"></b></a>
 	<ul class="dropdown-menu">
 	<li><a href="<?php echo URL ?>laporan/bulanan">Laporan Bulanan</a></li>
 	<li><a href="<?php echo URL ?>laporan/suku">Laporan Suku Tahunan</a></li>
 	<li class="divider"></li><?php
-/*	
+/*
 	echo "\n\t";
 	$bulanan = bulanan('nama_bulan', null);
 	foreach ($bulanan as $key => $bln):?>
