@@ -331,12 +331,11 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 		$this->panggilKhas02('punca_pembelian',null);
 		$this->panggilKhas02('medium_pembayaran',null);
-		$this->pilihMedan('senarai_belanja');
 		$this->papar->bentukJadual01 = $this->tanya->
 			contoh_cariKhas04($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
+		$this->pilihMedan('senarai_belanja');
 		//$this->pilihMedan('nama_pengguna');
-		//$this->ujian01('senarai_belanja');
 		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
