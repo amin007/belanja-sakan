@@ -36,7 +36,7 @@ class Kebenaran
 		$kunci = \Aplikasi\Kitab\Sesi::get('bs_loggedIn');
 		$level = \Aplikasi\Kitab\Sesi::get('bs_levelPengguna');
 		$c1 = array('pelawat','user','fe','pegawai');
-		$c2 = array('pentadbir','admin1home');
+		$c2 = array('pentadbir','admin1home','admin2');
 		$c3 = array_merge($c1,$c2);
 
 		return array($kunci,$level,$c1,$c2,$c3);
@@ -50,7 +50,7 @@ class Kebenaran
 		echo '$c3->'; print_r($c3);
 		echo '<br>$kunci=' . $kunci . '|$level=' . $level . '|</pre><hr>';//*/
 
-		/*if ($kunci == false || !in_array($level,$c3))
+		if ($kunci == false || !in_array($level,$c3))
 		{
 			Sesi::destroy();
 			header('location:' . URL . '');
