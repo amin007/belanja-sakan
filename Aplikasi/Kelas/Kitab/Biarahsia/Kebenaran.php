@@ -15,8 +15,6 @@ class Kebenaran
 	 */
 	public static function kawalMasuk()
 	{
-		@session_start();
-
 		list($kunci,$level,$c1,$c2,$c3) = \Aplikasi\Kitab\Kebenaran::semak();
 
 		//echo '<pre>kawalMasuk() :: $_SESSION->'; print_r($_SESSION);
@@ -34,6 +32,7 @@ class Kebenaran
 #------------------------------------------------------------------------------------
 	private static function semak()
 	{
+		@session_start();
 		$kunci = \Aplikasi\Kitab\Sesi::get('bs_loggedIn');
 		$level = \Aplikasi\Kitab\Sesi::get('bs_levelPengguna');
 		$c1 = array('pelawat','user','fe','pegawai');
@@ -45,8 +44,6 @@ class Kebenaran
 #------------------------------------------------------------------------------------
 	public static function kawalKeluar()
 	{
-		@session_start();
-
 		list($kunci,$level,$c1,$c2,$c3) = \Aplikasi\Kitab\Kebenaran::semak();
 
 		//echo '<pre>kawalKeluar() :: $_SESSION->'; print_r($_SESSION);
