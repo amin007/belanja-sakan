@@ -56,5 +56,11 @@ class Index extends \Aplikasi\Kitab\Kawal
 		$this->paparKandungan('index', 'daftar', $noInclude=1);
 	}
 #------------------------------------------------------------------------------------------
+	function lupadaa()
+	{
+		# Pergi papar kandungan
+		$this->paparKandungan('index', 'daftar', $noInclude=1);
+	}
+#------------------------------------------------------------------------------------------
 #==========================================================================================
 }
