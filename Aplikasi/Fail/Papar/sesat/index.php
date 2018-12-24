@@ -8,37 +8,7 @@ if( isset($url) )
 {
 	echo '$url=>'; print_r($url);
 }
-$namaClass = huruf('Besar',$url[0]);
-$namaFungsi = isset($url[1]) ? $url[1] : 'index';
-$a = isset($url[2]) ? '$' . $url[2] : '';
-$b = isset($url[3]) ? ',$' . $url[3] : '';
-$c = isset($url[4]) ? ',$' . $url[4] : '';
-$d = isset($url[5]) ? ',$' . $url[5] : '';
-$e = isset($url[6]) ? ',$' . $url[6] : '';
-$f = isset($url[7]) ? ',$' . $url[7] : '';
-$g = isset($url[8]) ? ',$' . $url[8] : '';
-$h = isset($url[9]) ? ',$' . $url[9] : '';
-$pencam = "$a$b$c$d$e$f$g$h";
 ?></pre>
 </div><!-- / class="hero-unit" -->
 </div><!-- / class="container" -->
-
-<div class="container">
-<pre><code>
-Contoh fungsi dalam class <?php echo $namaClass ?> extends \Aplikasi\Kitab\Kawal
-#===========================================================================================
-namespace Aplikasi\Kawal; //echo __NAMESPACE__;
-class <?php echo $namaClass ?> extends \Aplikasi\Kitab\Kawal
-#===========================================================================================
-namespace Aplikasi\Tanya; //echo __NAMESPACE__;
-class <?php echo $namaClass ?>_Tanya extends \Aplikasi\Kitab\Tanya
-#===========================================================================================
-#-------------------------------------------------------------------------------------------
-	public function <?php echo $namaFungsi ?>(<?php echo $pencam ?>)
-	{
-		//echo '&lt;hr>Nama class :' . __METHOD__ . '()&lt;hr>';
-		echo '&lt;pre>$_POST:'; print_r($_POST); echo '&lt;/pre>';//*/
-	}
-#-------------------------------------------------------------------------------------------
-</code></pre>
-</div><!-- / class="container" -->
+<hr><?php include 'contoh_koding.php'; ?>
