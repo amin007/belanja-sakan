@@ -11,4 +11,4 @@ if( isset($url) )
 ?></pre>
 </div><!-- / class="hero-unit" -->
 </div><!-- / class="container" -->
-<hr><?php include 'contoh_koding.php'; ?>
+<?php include 'contoh_koding.php'; ?>
