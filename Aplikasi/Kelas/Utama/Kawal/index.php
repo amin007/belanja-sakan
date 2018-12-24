@@ -14,9 +14,9 @@ class Index extends \Aplikasi\Kitab\Kawal
 ##------------------------------------------------------------------------------------------
 	public function index()
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		# Set pemboleubah utama
 		$this->papar->tajuk = namaClass($this);
-		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 
 		# Pergi papar kandungan
 		$fail = array('index','login','daftar','ingatsemula');
@@ -52,6 +52,7 @@ class Index extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	function daftar()
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		# Pergi papar kandungan
 		$fail = array('index','login','daftar','ingatsemula');
 		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
@@ -60,6 +61,7 @@ class Index extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	function lupadaa()
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		# Pergi papar kandungan
 		$fail = array('index','login','daftar','ingatsemula');
 		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
