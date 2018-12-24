@@ -19,7 +19,7 @@ class Index extends \Aplikasi\Kitab\Kawal
 		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 
 		# Pergi papar kandungan
-		$fail = array('index','login','login_automatik');
+		$fail = array('index','login','daftar','ingatsemula');
 		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
 		$this->paparKandungan($this->_folder, $fail[1], $noInclude=1);
 	}
