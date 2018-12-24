@@ -4,11 +4,7 @@
 <br><br><br>
 <div class="container">
 <div class="form-group row"><div class="col-sm-8">
-	<div class="input-group input-group-lg">
-		<div class="input-group-prepend"><span class="input-group-text">
-		Ingat Semula Kata Laluan
-		</span></div>
-	</div>
+	<span class="input-group-text">Ingat Semula Kata Laluan</span>
 </div></div>
 <form method="POST" action="<?php echo URL ?>login/ingatsemula"
 class="form-horizontal">
@@ -45,10 +41,8 @@ class="form-horizontal">
 </div><!-- / class="form-group" -->
 <div class="form-group row">
 	<div class="col-sm-8">
-		<span class="input-group-text">
-			<input type="submit" name="Simpan" value="Ubah Kata Laluan"
-			class="btn btn-danger btn-large btn-block text-center">
-		</span>
+		<input type="submit" name="Simpan" value="Ubah Kata Laluan"
+		class="btn btn-danger btn-large btn-block text-center">
 	</div>
 </div></form>
 <!-- / class="form-horizontal" -->
