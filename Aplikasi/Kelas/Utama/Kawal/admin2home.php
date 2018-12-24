@@ -19,8 +19,8 @@ class Admin2home extends \Aplikasi\Kitab\Kawal
 		# Set pemboleubah utama
 
 		# Pergi papar kandungan
-		/*$this->_folder = 'ruangtamu';
-		$fail = array('admin2home','ruangtamu','pelawat');
+		$this->_folder = 'ruangtamu';
+		$fail = array('rumahAdmin2','ruangtamu','pelawat');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);//*/
 	}
