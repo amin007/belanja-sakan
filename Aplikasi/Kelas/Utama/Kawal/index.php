@@ -53,13 +53,17 @@ class Index extends \Aplikasi\Kitab\Kawal
 	function daftar()
 	{
 		# Pergi papar kandungan
-		$this->paparKandungan('index', 'daftar', $noInclude=1);
+		$fail = array('index','login','daftar','ingatsemula');
+		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
+		$this->paparKandungan($this->_folder, $fail[2], $noInclude=1);
 	}
 #------------------------------------------------------------------------------------------
 	function lupadaa()
 	{
 		# Pergi papar kandungan
-		$this->paparKandungan('index', 'daftar', $noInclude=1);
+		$fail = array('index','login','daftar','ingatsemula');
+		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
+		$this->paparKandungan($this->_folder, $fail[3], $noInclude=1);
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
