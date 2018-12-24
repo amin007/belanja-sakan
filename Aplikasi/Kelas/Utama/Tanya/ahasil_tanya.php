@@ -80,7 +80,79 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		32=>array( $a=>'08', $b=>'JUMLAH BERSIH [INCS{(01)+(02)+(03)+(06)}]|08')
 		//=>array( $a=>'-', $b=>'*'),
 		);
-
+	#***************************************************************************************
+		$c0['kod_bayarwajibdenda'] = array(
+			0=>array( $a=>'61', $b=>'1. Cukai pendapatan / Zakat pendapatan	| 61'),
+			1=>array( $a=>'62', $b=>'2. Cukai lain (cth : cukai jalan, cukai lapangan'
+				. ' terbang, dll.) | 62'),
+			2=>array( $a=>'63', $b=>'3. Bayaran wajib dan denda (cth : bayaran pasport,'
+				. ' ujian memandu, pendaftaran kereta motor, lesen memandu, dll.) | 63'),
+			3=>array( $a=>'64', $b=>'4. Pencaruman kepada KWSP / Skim Keselamatan Sosial'
+				. ' (pencaruman majikan dan pekerja)|64	'),
+			4=>array( $a=>'65', $b=>'5. Bayaran pampasan kerana kecederaan, ganti rugi'
+				. ' berdasarkan undang-undang, dll.|65'),
+			5=>array( $a=>'66', $b=>'6. Bayaran nafkah atau harta warisan|66'),
+			6=>array( $a=>'67', $b=>'7. Biasiswa, dermasiswa dan fellowships|67'),
+			7=>array( $a=>'73A', $b=>'Jumlah / Total   INCS 73A = (TP61 + TP62 +...+ TP67)|73A'),
+			8=>array( $a=>'68', $b=>'8. Pemberian kepada badan agama atau derma amal | 68'),
+			9=>array( $a=>'69', $b=>'9. Yuran keahlian kepada kesatuan sekerja, parti politik,'
+				. ' kelab sosial, dll.|69'),
+			10=>array( $a=>'70', $b=>'10. Hadiah berupa wang tunai atau mata benda|70'),
+			11=>array( $a=>'71', $b=>'11. Pindahan lain (terangkan)|71'),
+			12=>array( $a=>'72A', $b=>'12. Pemberian kepada isi rumah lain:a) Malaysia'
+				. ' |72a'),
+			13=>array( $a=>'72B', $b=>'12. Pemberian kepada isi rumah lain:b) '
+				. ' Negara-Negara lain / Foreign|72b'),
+			14=>array( $a=>'72C', $b=>'12. Pemberian kepada isi rumah lain:c) '
+				. ' Nyatakan Negara / Specify Country|72c'),
+			15=>array( $a=>'73B', $b=>'Jumlah/TotaL INCS 73B = (TP68 + TP69 +...+'
+				. ' TP72a + TP72b)|73B'),
+			16=>array( $a=>'TP73', $b=>'Jumlah/Total TP73 = (INCS 73A + INCS 73B)|73')
+			//=>array( $a=>'-', $b=>'*'),
+		);
+	#***************************************************************************************
+		$c0['kod_xtvttani'] = array(
+			=>array( $a=>'A1', $b=>'1.Penerimaan daripada jualan barang-barang keluaran|A1'),
+			=>array( $a=>'A2', $b=>'2.Jumlah perbelanjaan:-|A2'),
+			=>array( $a=>'B1', $b=>'2.Keuntungan  bersih  sebagaimana  tercatat  dalam'
+				. ' penyata kira-kira|B1'),
+			=>array( $a=>'B2', $b=>'3.Anggaran semula perkara B1 untuk tahun rujukan |B2'),
+			=>array( $a=>'C1', $b=>'1.Pendapatan bersih tahunan Sama ada [A1 - A2]'
+				. '  atau [B1 atau B2] | C1'),
+			=>array( $a=>'C2', $b=>'2.Peratus pembahagian yang dipegang oleh'
+				. '  ahli-ahli isi rumah | C2'),
+			=>array( $a=>'C3', $b=>'3.Nilai Mutlak bagi C2 | C3'),
+			=>array( $a=>'C4A', $b=>'4.Jumlah nilai bagi keluaran sendiri yang'
+				. ' digunakan untuk : (a) Kegunaan sendiri | c4a'),
+			=>array( $a=>'C4B', $b=>'4.Jumlah nilai bagi keluaran sendiri yang'
+				. ' digunakan untuk : (b) Lain-lain (seperti zakat, biji benih,'
+				. ' pemberian, dll.)|c4b'),
+			=>array( $a=>'C4', $b=>'4.Jumlah nilai bagi keluaran sendiri yang'
+				. ' digunakan : C4 = (a) + (b) |C4'),
+			=>array( $a=>'C5', $b=>'5.Pendapatan bersih yang diterima oleh'
+				. ' ahli isi rumah	C5 = C3 + C4 | C5')
+		//=>array( $a=>'-', $b=>'*'),
+		);
+	#***************************************************************************************
+		$c0['kod_perikanan'] = array(
+			=>array( $a=>'A1', $b=>'1.Nilai jumlah jualan (termasuk ikan kolam'
+				. '  / sangkar, air tawar dan air payau / laut)|A1'),
+			=>array( $a=>'A2', $b=>'2.Pendapatan yang diterima daripada sewaan bot'
+				. ' / perkakas dalam sua belas (12) bulan yang lalu |A2'),
+			=>array( $a=>'A3', $b=>'3.Lain-lain|A3'),
+			=>array( $a=>'A4', $b=>'A4 =  A1  +  A2 + A3|A4'),
+			=>array( $a=>'B', $b=>'1.Jumlah perbelanjaan | B'),
+			=>array( $a=>'C1', $b=>'1.Pendapatan bersih tahunan (A4 - B)|C1'),
+			=>array( $a=>'C2', $b=>'2.Peratus pembahagian yang dipegang oleh'
+				. ' ahli isi rumah|C2'),
+			=>array( $a=>'C3', $b=>'3.Nilai Mutlak bagi C2 | C3'),
+			=>array( $a=>'C4', $b=>'4.Anggaran barangan keluaran yang digunakan'
+				. ' sendiri setahun|C4'),
+			=>array( $a=>'C5', $b=>'5.Pendapatan bersih yang diterima oleh'
+				. ' ahli isi rumah[C5 = C3 + C4]|C5')
+		//=>array( $a=>'-', $b=>'*'),
+		);
+	#***************************************************************************************
 		return ($c0);
 	}
 #------------------------------------------------------------------------------------------#
