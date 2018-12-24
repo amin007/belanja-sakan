@@ -1,7 +1,7 @@
 <?php
 $bootstrapCSS_413 = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css';
  $ceruleanCSS_413 = 'https://maxcdn.bootstrapcdn.com/bootswatch/4.1.3/cerulean/bootstrap.min.css';
- $fontawesome_510 = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; 
+ $fontawesome_510 = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -119,6 +119,7 @@ class="form-horizontal">
 </div><!-- / class="container" -->
 <!-- Jadual nama_pengguna ########################################### -->
 <!-- menu tengah bawah -->
+
 <!-- Footer
 ================================================== -->
 <!-- footer class="footer">
@@ -137,53 +138,5 @@ class="form-horizontal">
 ================================================== -->
 <script type="text/javascript" src="<?php echo $jquery_cdn ?>"></script>
 <script type="text/javascript" src="<?php echo $bootstrapJS_413 ?>"></script>
-<script type="text/javascript">
-// kod jquery global
-	$(document).ready(function(){
-		/* ---------- Text editor ---------- */
-		$('.cleditor').cleditor();
-
-		/* ---------- Datapicker ---------- */
-		$('.date-picker').datepicker();
-
-		/* ---------- Choosen ---------- */
-		$('[data-rel="chosen"],[rel="chosen"]').chosen();
-
-		/* ---------- Placeholder Fix for IE ---------- */
-		$('input, textarea').placeholder();
-
-		/* ---------- Auto Height texarea ---------- */
-		$('textarea').autosize();
-		
-		/* ---------- Masked Input ---------- */
-		$("#date").mask("99/99/9999");
-		$("#phone").mask("(999) 999-9999");
-		$("#tin").mask("99-9999999");
-		$("#ssn").mask("999-99-9999");
-		
-		$.mask.definitions['~']='[+-]';
-		$("#eyescript").mask("~9.99 ~9.99 999");
-		
-		/* ---------- Textarea with limits ---------- */
-		$('#limit').inputlimiter({
-			limit: 10,
-			limitBy: 'words',
-			remText: 'You only have %n word%s remaining...',
-			limitText: 'Field limited to %n word%s.'
-		});
-		
-		/* ---------- Timepicker for Bootstrap ---------- */
-		$('#timepicker1').timepicker();
-		
-		/* ---------- DateRangepicker for Bootstrap ---------- */
-		$('#daterange').daterangepicker();
-		
-		/* ---------- Bootstrap Wysiwig ---------- */
-		$('.editor').wysiwyg();
-		
-		/* ---------- Colorpicker for Bootstrap ---------- */
-		$('#colorpicker1').colorpicker();	
-	});
-</script>
 </body>
 </html>
