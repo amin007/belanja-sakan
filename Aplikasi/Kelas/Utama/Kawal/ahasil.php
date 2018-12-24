@@ -16,15 +16,16 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 	public function index()
 	{
 		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
-		/*# Set pembolehubah utama
-		$this->panggilKhas02('punca_pembelian',null);
+		# Set pembolehubah utama
+		$this->papar->c1 = $this->tanya->pilihPencam();
+		/*$this->panggilKhas02('punca_pembelian',null);
 		$this->panggilKhas02('medium_pembayaran',null);
 		$this->papar->c1 = $this->tanya->
 			contoh_cariKhas04($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
 		$this->panggilJadual('senarai_belanja');
-		//$this->panggilJadual('nama_pengguna');
-		//$this->debugKandunganPaparan();//*/
+		$this->panggilJadual('nama_pengguna');//*/
+		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
 		/*$this->_folder = 'cari';
