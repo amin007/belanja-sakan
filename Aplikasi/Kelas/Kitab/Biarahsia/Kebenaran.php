@@ -17,7 +17,7 @@ class Kebenaran
 	{
 		list($kunci,$level,$c1,$c2,$c3) = \Aplikasi\Kitab\Kebenaran::semak();
 
-		echo '<pre>kawalMasuk() :: $_SESSION->'; print_r($_SESSION);
+		/*echo '<pre>kawalMasuk() :: $_SESSION->'; print_r($_SESSION);
 		echo '<hr>$c3->'; print_r($c3);
 		echo '<br>$kunci = ' . $kunci . ' | $level = ' . $level . ' |</pre>';//*/
 
@@ -25,7 +25,7 @@ class Kebenaran
 			header('location:' . URL . 'ruangtamu');
 		if ($kunci == true && in_array($level,$c2))
 			header('location:' . URL . 'admin1home');
-		if ($kunci == true && in_array($level,array('admin2home')))
+		if ($kunci == true && in_array($level,array('admin2')))
 			header('location:' . URL . 'admin2home');
 		//*/
 	}
