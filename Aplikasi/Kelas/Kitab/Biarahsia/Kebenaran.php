@@ -17,9 +17,9 @@ class Kebenaran
 	{
 		list($kunci,$level,$c1,$c2,$c3) = \Aplikasi\Kitab\Kebenaran::semak();
 
-		//echo '<pre>kawalMasuk() :: $_SESSION->'; print_r($_SESSION);
-		//echo '<hr>$c3->'; print_r($c3);
-		//echo '<br>$kunci = ' . $kunci . ' | $level = ' . $level . ' |</pre>';
+		echo '<pre>kawalMasuk() :: $_SESSION->'; print_r($_SESSION);
+		echo '<hr>$c3->'; print_r($c3);
+		echo '<br>$kunci = ' . $kunci . ' | $level = ' . $level . ' |</pre>';//*/
 
 		if ($kunci == true && in_array($level,$c1))
 			header('location:' . URL . 'ruangtamu');
@@ -46,9 +46,9 @@ class Kebenaran
 	{
 		list($kunci,$level,$c1,$c2,$c3) = \Aplikasi\Kitab\Kebenaran::semak();
 
-		//echo '<pre>kawalKeluar() :: $_SESSION->'; print_r($_SESSION);
-		//echo '<hr>$c3->'; print_r($c3);
-		//echo '<br>$kunci = ' . $kunci . ' | $level = ' . $level . ' |</pre>';
+		/*echo '<pre>kawalKeluar() :: $_SESSION->'; print_r($_SESSION);
+		echo '<hr>$c3->'; print_r($c3);
+		echo '<br>$kunci = ' . $kunci . ' | $level = ' . $level . ' |</pre>';//*/
 
 		if ($kunci == false || !in_array($level,$c3))
 		{
