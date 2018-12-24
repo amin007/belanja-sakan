@@ -15,7 +15,7 @@ class Admin2home extends \Aplikasi\Kitab\Kawal
 ##-----------------------------------------------------------------------------------------
 	public function index()
 	{
-		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pemboleubah utama
 
 		# Pergi papar kandungan
