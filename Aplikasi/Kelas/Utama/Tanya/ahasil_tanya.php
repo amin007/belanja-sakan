@@ -191,13 +191,14 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. 'dll kecuali zakat fitrah|61c');
 		$p[$k][]=array($a=>'61', $b=>$b1.'Jumlah [61a+61b+61c]|61');
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'62', $b=>'2. Cukai lain (cth:cukai jalan, cukai lapangan'
+		$p[$k][]=array($a=>'62', $b=>$b1.'2. Cukai lain (cth:cukai jalan, cukai lapangan'
 		. ' terbang, dll.)|62');
-		$p[$k][]=array($a=>'63', $b=>'3. Bayaran wajib & denda(cth:bayaran pasport,'
+		$p[$k][]=array($a=>'63', $b=>$b1.'3. Bayaran wajib & denda(cth:bayaran pasport,'
 		. ' ujian memandu, pendaftaran kereta motor, lesen memandu, dll.)|63');
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'64', $b=>'4. Pencaruman kepada KWSP / Skim Keselamatan Sosial'
-		. ' (pencaruman majikan & pekerja)|64');
+		$b2 = '(pencaruman majikan & pekerja)';
+		$p[$k][]=array($a=>'64', $b=>$b1.'4. Pencaruman kepada KWSP / Skim Keselamatan Sosial|64');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'65', $b=>'5. Bayaran pampasan kerana kecederaan, ganti rugi'
 		. ' berdasarkan undang-undang, dll.|65');
 		$p[$k][]=array($a=>'66', $b=>'6. Bayaran nafkah atau harta warisan|66');
