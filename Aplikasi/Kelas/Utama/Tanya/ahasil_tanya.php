@@ -41,8 +41,11 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'01', $b=>'[A]JUMLAH PENDAPATAN PEKERJAAN BERGAJI'
 		. ' [INCS{(11)+(12)+ ... +(19)}]|01' );
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'21A', $b=>'(i) Pertanian [Gunakan Helaian Kerja'
-		. ' PPIR/HK-3 & 4]|21A');
+		$p[$k][]=array($a=>'21A(i)', $b=>'|21A(i)');
+		$p[$k][]=array($a=>'21A(ii)', $b=>'|21A(ii)');
+		$p[$k][]=array($a=>'21A(iii)', $b=>'|21A(iii)');
+		$p[$k][]=array($a=>'21A', $b=>'|21A');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'21NA', $b=>'(ii) Bukan Pertanian[Gunakan'
 		. ' PPIR/HK-5]|21NA');
 		$p[$k][]=array($a=>'21KS', $b=>'Kegunaan sendiri [Gunakan Helaian kerja'
