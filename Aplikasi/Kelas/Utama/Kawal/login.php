@@ -213,6 +213,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		$senaraiJadual = array('nama_pengguna');
 		$posmen = $this->tanya->ubahsuaiPostBaru($senaraiJadual);
+		unset($posmen[$senaraiJadual[0]]['level']);
 		$medanID = 'nohp';
 		$this->ubahSimpan($senaraiJadual,$posmen,$medanID);
 	}
