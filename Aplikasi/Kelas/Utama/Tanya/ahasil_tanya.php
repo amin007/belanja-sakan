@@ -61,7 +61,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. '(cth: menerima pesanan melalui whatsapp,facebook,email dll'
 		. $b2 .'|21b(ii)');
 		$p[$k][]=array($a=>'21b(iii)', $b=>$b1.' bukan dlm talian'.$b2.'|21b(iii)');
-		$p[$k][]=array($a=>'21b', $b=>'Jumlah [21A(i)+21A(ii)+21A(iii)]|21b');
+		$p[$k][]=array($a=>'21b', $b=>'Jumlah [21b(i)+21b(ii)+21b(iii)]|21b');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'21c', , $b=>'Komisen drp aktiviti ICT'
 		. '(cth: komisen drp penyiaran iklan berbayar di website|21c');
