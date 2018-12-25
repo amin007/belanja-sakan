@@ -188,6 +188,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 	{
 		# ubahsuai $posmen
 		//$this->semakPembolehubah('medanID',$medanID);
+		//$this->semakPembolehubah('POST',$_POST);
 		//$this->semakPembolehubah('posmen',$posmen);
 
 		# mula ulang $senaraiJadual
