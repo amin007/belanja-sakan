@@ -197,7 +197,10 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' ujian memandu, pendaftaran kereta motor, lesen memandu, dll.)|63');
 		#-----------------------------------------------------------------------------------
 		$b2 = '(pencaruman majikan & pekerja)';
-		$p[$k][]=array($a=>'64', $b=>$b1.'4. Pencaruman kepada KWSP / Skim Keselamatan Sosial|64');
+		$p[$k][]=array($a=>'64a', $b=>$b1.'4. Pencaruman kepada KWSP/EPF'.$b2.'|64a');
+		$p[$k][]=array($a=>'64b', $b=>$b1.'4. Pencaruman kepada PERKESO/SOCSO'.$b2.'|64b');
+		$p[$k][]=array($a=>'64c', $b=>$b1.'4. Pencaruman kepada Lain-lain'.$b2.'|64c');
+		$p[$k][]=array($a=>'64', $b=>$b1.'Jumlah[64a+64b+64c]|64');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'65', $b=>$b1.'5. Bayaran pampasan kerana kecederaan, ganti rugi'
 		. ' berdasarkan undang-undang, dll.|65');
