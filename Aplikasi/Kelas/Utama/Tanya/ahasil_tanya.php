@@ -228,7 +228,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		//=>array( $a=>'-', $b=>'*');
 		);
 	#***************************************************************************************
-		$k = 'kod_kerjabergaji';
+		$k = 'kod_kerjabergaji_hk1';
 		$p[$k][]=array($a=>'PK', $b=>'Pekerjaan|PK' );
 		$p[$k][]=array($a=>'PN', $b=>'Industri|PN' );
 		$p[$k][]=array($a=>'Tp', $b=>'Tempoh|Tp' );
