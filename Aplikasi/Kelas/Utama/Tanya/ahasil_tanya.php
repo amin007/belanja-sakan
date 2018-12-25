@@ -22,17 +22,16 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$a = 'kod'; $b = 'keterangan';
 	#***************************************************************************************
 	$c0['kod_hasil'] = array(
-		0=>array( $a=>'11', $b=>'Upah dan gaji (sebelum potongan cukai pendapatan,'
+		0=>array( $a=>'11', $b=>'Upah & gaji(sebelum potongan cukai pendapatan,'
 			. ' pencaruman KWSP, dll.)|11' ),
-		1=>array( $a=>'12', $b=>'Elaun (cth : elaun sara hidup, elaun pakar, elaun'
+		1=>array( $a=>'12', $b=>'Elaun(cth:elaun sara hidup, elaun pakar, elaun'
 			. ' perumahan, elaun luar negeri, dll.)|12' ),
 		2=>array( $a=>'13', $b=>'Bonus|13' ),
-		3=>array( $a=>'14', $b=>'Wang tunai lain (cth : komisen, tip, pendapatan'
+		3=>array( $a=>'14', $b=>'Wang tunai lain(cth:komisen, tip, pendapatan'
 			. ' daripada kerja lebih masa, dll.)|14' ),
-		4=>array( $a=>'15', $b=>'Makanan percuma / konsesi|15' ),
-		5=>array( $a=>'16', $b=>'Tempat menginap percuma / konsesi|16' ),
-		6=>array( $a=>'17', $b=>'Barang pengguna dan perkhidmatan percuma'
-			. ' / konsesi|17' ),
+		4=>array( $a=>'15', $b=>'Makanan percuma/konsesi|15' ),
+		5=>array( $a=>'16', $b=>'Tempat menginap percuma/konsesi|16' ),
+		6=>array( $a=>'17', $b=>'Barang pengguna & perkhidmatan percuma/konsesi|17' ),
 		7=>array( $a=>'18', $b=>'Pembayaran lain yang diterima berupa mata benda'
 			. ' (cth : padi, getah, kelapa, dll.)|18' ),
 		8=>array( $a=>'19', $b=>'Pencaruman majikan kepada KWSP, PERKESO, dll.|19' ),
