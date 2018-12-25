@@ -197,9 +197,9 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' ujian memandu, pendaftaran kereta motor, lesen memandu, dll.)|63');
 		#-----------------------------------------------------------------------------------
 		$b2 = '(pencaruman majikan & pekerja)';
-		$p[$k][]=array($a=>'64a', $b=>$b1.'4. Pencaruman kepada KWSP/EPF'.$b2.'|64a');
-		$p[$k][]=array($a=>'64b', $b=>$b1.'4. Pencaruman kepada PERKESO/SOCSO'.$b2.'|64b');
-		$p[$k][]=array($a=>'64c', $b=>$b1.'4. Pencaruman kepada Lain-lain'.$b2.'|64c');
+		$p[$k][]=array($a=>'64a', $b=>$b1.'4. Pencaruman kpd KWSP/EPF'.$b2.'|64a');
+		$p[$k][]=array($a=>'64b', $b=>$b1.'4. Pencaruman kpd PERKESO/SOCSO'.$b2.'|64b');
+		$p[$k][]=array($a=>'64c', $b=>$b1.'4. Pencaruman kpd Lain-lain'.$b2.'|64c');
 		$p[$k][]=array($a=>'64', $b=>$b1.'Jumlah[64a+64b+64c]|64');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'65', $b=>$b1.'5. Bayaran pampasan kerana kecederaan, ganti rugi'
@@ -208,16 +208,17 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'67', $b=>$b1.'7. Bayaran pinjaman pelajaran|67');
 		$p[$k][]=array($a=>'73A', $b=>$b1.'Jumlah INCS 73A=(TP61 + TP62 +...+ TP67)|73A');
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'68', $b=>$b1.'8. Pemberian kepada badan agama atau derma amal | 68');
-		$p[$k][]=array($a=>'69', $b=>$b1.'9. Yuran keahlian kepada kesatuan sekerja, parti politik,'
-		. ' kelab sosial, dll.|69');
+		$p[$k][]=array($a=>'68', $b=>$b1.'8. Pemberian kpd badan agama atau'
+		. ' derma amal|68');
+		$p[$k][]=array($a=>'69', $b=>$b1.'9. Yuran keahlian kpd kesatuan sekerja,'
+		. ' parti politik,kelab sosial, dll.|69');
 		$p[$k][]=array($a=>'70', $b=>$b1.'10. Hadiah berupa wang tunai atau mata benda|70');
-		$p[$k][]=array($a=>'71', $b=>$b1.'11. Pindahan lain(terangkan)|71');
-		$p[$k][]=array($a=>'72A', $b=>$b1.'12. Pemberian kepada isi rumah lain:a)Malaysia'
+		$p[$k][]=array($a=>'71', $b=>$b1.'11. Pindahan lain(cth:zakar fitrah,dll)|71');
+		$p[$k][]=array($a=>'72A', $b=>$b1.'12. Pemberian kpd isi rumah lain:a)Malaysia'
 		. ' |72a');
-		$p[$k][]=array($a=>'72B', $b=>$b1.'12. Pemberian kepada isi rumah lain:b)'
+		$p[$k][]=array($a=>'72B', $b=>$b1.'12. Pemberian kpd isi rumah lain:b)'
 		. ' Negara-Negara lain / Foreign|72b');
-		$p[$k][]=array($a=>'72C', $b=>$b1.'12. Pemberian kepada isi rumah lain:c)'
+		$p[$k][]=array($a=>'72C', $b=>$b1.'12. Pemberian kpd isi rumah lain:c)'
 		. ' Nyatakan Negara / Specify Country|72c');
 		$p[$k][]=array($a=>'73B', $b=>$b1.'Jumlah/TotaL INCS 73B = (TP68 + TP69 +...+'
 		. ' TP72a + TP72b)|73B');
