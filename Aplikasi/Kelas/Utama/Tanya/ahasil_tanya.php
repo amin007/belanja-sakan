@@ -228,6 +228,29 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		//=>array( $a=>'-', $b=>'*');
 		);
 	#***************************************************************************************
+		$k = 'kod_kerjabergaji';
+		$p[$k][]=array($a=>'PK', $b=>'Pekerjaan|PK' );
+		$p[$k][]=array($a=>'PN', $b=>'Industri|PN' );
+		$p[$k][]=array($a=>'Tp', $b=>'Tempoh|Tp' );
+		$p[$k][]=array($a=>'11', $b=>'Upah & gaji(sebelum potongan cukai pendapatan,'
+		. ' pencaruman KWSP, dll.)|11' );
+		$p[$k][]=array($a=>'12', $b=>'Elaun(cth:elaun sara hidup, elaun pakar, elaun'
+		. ' perumahan, elaun luar negeri, dll.)|12' );
+		$p[$k][]=array($a=>'13', $b=>'Bonus|13' );
+		$p[$k][]=array($a=>'14', $b=>'Wang tunai lain(cth:komisen, tip, pendapatan'
+		. ' daripada kerja lebih masa, dll.)|14' );
+		$p[$k][]=array($a=>'15', $b=>'Makanan percuma/konsesi|15' );
+		$p[$k][]=array($a=>'16', $b=>'Tempat menginap percuma/konsesi|16' );
+		$p[$k][]=array($a=>'17', $b=>'Barang pengguna & perkhidmatan percuma/konsesi|17' );
+		$p[$k][]=array($a=>'18', $b=>'Pembayaran lain yg diterima berupa mata benda'
+		. ' (cth:padi, getah, kelapa, dll.)|18' );
+		$p[$k][]=array($a=>'19a', $b=>'Pencaruman majikan kpd KWSP|19a' );
+		$p[$k][]=array($a=>'19b', $b=>'Pencaruman majikan kpd PERKESO, dll.|19b' );
+		$p[$k][]=array($a=>'19c', $b=>'Pencaruman majikan kpd dll.|19c' );
+		$p[$k][]=array($a=>'19', $b=>'Jumlah [19a+19b+19c]|19' );
+		$p[$k][]=array($a=>'01', $b=>'[A]JUMLAH PENDAPATAN PEKERJAAN BERGAJI'
+		. ' [INCS{(11)+(12)+ ... +(19)}]|01' );
+	#***************************************************************************************
 		$k = 'kod_xtvttani';
 		$p[$k][]=array($a=>'A1', $b=>'1.Penerimaan daripada jualan barang-barang keluaran|A1');
 		$p[$k][]=array($a=>'A2', $b=>'2.Jumlah perbelanjaan|A2');
