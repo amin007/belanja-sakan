@@ -419,6 +419,15 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'22.3(iii)', $b=>$b1.'3(i)cukai pintu|22.3(iii)');
 		$p[$k][]=array($a=>'22', $b=>$b1.'4.jumlah sewa bersih tahunan (2-3)|22');
 		#-----------------------------------------------------------------------------------
+		$b1 = 'rumah/harta lain yg disewakan';
+		$p[$k][]=array($a=>'23.1', $b=>$b1.'1.jenis rumah/harta lain|23.1');
+		$p[$k][]=array($a=>'23.2', $b=>$b1.'2.bil rumah/harta lain|23.2');
+		$p[$k][]=array($a=>'23.3', $b=>$b1.'3.jumlah kasar sewa tahunan|23.3');
+		$p[$k][]=array($a=>'23.4', $b=>$b1.'4.jumlah perbelanjaan tahunan(i+ii+iii)|23.4');
+		$p[$k][]=array($a=>'23.4(i)', $b=>$b1.'4(i)pembaikan & penyelenggaraan|23.4(i)');
+		$p[$k][]=array($a=>'23.4(ii)', $b=>$b1.'4(i)cukai tanah|23.4(ii)');
+		$p[$k][]=array($a=>'23.4(iii)', $b=>$b1.'4(i)cukai pintu|23.4(iii)');
+		$p[$k][]=array($a=>'23.1', $b=>$b1.'5.jumlah sewa bersih tahunan (3-4)|23');
 		#-----------------------------------------------------------------------------------
 		#-----------------------------------------------------------------------------------
 		#-----------------------------------------------------------------------------------
