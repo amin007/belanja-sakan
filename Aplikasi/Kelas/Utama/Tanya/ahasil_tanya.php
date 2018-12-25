@@ -184,7 +184,13 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 	#***************************************************************************************
 		$k = 'kod_bayarpindahansemasa';
 		$b1 = 'Bayaran wajib/denda (TP 73A):';
-		$p[$k][]=array($a=>'61', $b=>'1. Cukai pendapatan/Zakat pendapatan|61');
+		#-----------------------------------------------------------------------------------
+		$p[$k][]=array($a=>'61a', $b=>$b1.'1a. Cukai pendapatan|61a');
+		$p[$k][]=array($a=>'61b', $b=>$b1.'1b. Zakat pendapatan|61b');
+		$p[$k][]=array($a=>'61c', $b=>$b1.'1c. lain2 zakat (cth: harta, perniagaan,'
+		. 'dll kecuali zakat fitrah|61c');
+		$p[$k][]=array($a=>'61', $b=>$b1.'Jumlah [61a+61b+61c]|61');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'62', $b=>'2. Cukai lain (cth:cukai jalan, cukai lapangan'
 		. ' terbang, dll.)|62');
 		$p[$k][]=array($a=>'63', $b=>'3. Bayaran wajib & denda(cth:bayaran pasport,'
