@@ -106,22 +106,27 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' [INCS{(21)+(22)+(23)+(24)}]|02');
 		#-----------------------------------------------------------------------------------
 		$b1 = 'Hasil selain pendapatan diperoleh:';
-		$p[$k][]=array($a=>'31', $b=>$b.'(i) Royalti(cth:hak cipta, paten &'
+		$p[$k][]=array($a=>'31', $b=>$b1.'(i) Royalti(cth:hak cipta, paten &'
 		. ' hak yg. serupa)|31');
-		$p[$k][]=array($a=>'32a', $b=>$b.'(ii-a) Sewa drp tanah pertanian'
+		$p[$k][]=array($a=>'32a', $b=>$b1.'(ii-a) Sewa drp tanah pertanian'
 		. ' [Gunakan helaian kerja PPIK/HK-8...INCS32]|32a');
-		$p[$k][]=array($a=>'32a', $b=>$b.'(ii-b) Sewa drp tanah bukan pertanian'
+		$p[$k][]=array($a=>'32a', $b=>$b1.'(ii-b) Sewa drp tanah bukan pertanian'
 		. ' [Gunakan helaian kerja PPIK/HK-8...INCS32]|32a');
-		$p[$k][]=array($a=>'32a', $b=>$b.'Jumlah [32a+32b]|32');
+		$p[$k][]=array($a=>'32a', $b=>$b1.'(ii)Jumlah [32a+32b]|32');
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'33', $b=>'(iii) Faedah(cth:deposit bank, bil, bon,'
+		$p[$k][]=array($a=>'33', $b=>$b1.'(iii) Faedah(cth:deposit bank, bil, bon,'
 		. ' pinjaman, dll.)|33');
-		$p[$k][]=array($a=>'34', $b=>'(iv) Dividen(cth: hak milik saham,'
+		$p[$k][]=array($a=>'34', $b=>$b1.'(iv) Dividen(cth: hak milik saham,'
 		. ' saham amanah dll.)|34');
-		$p[$k][]=array($a=>'03', $b=>'[C]JUMLAH PENDAPATAN DARIPADA HARTA'
+		$p[$k][]=array($a=>'03', $b=>$b1.'[C]JUMLAH PENDAPATAN DRP HARTA'
 		. ' [INCS{(31)+(32)+(33)+(34)}]|03');
-		$p[$k][]=array($a=>'41', $b=>'b.(i)	Kiriman wang yg diterima (daripada isi rumah'
-		. ' yg lain dalam & luar negeri)|41');
+		#-----------------------------------------------------------------------------------
+		$p[$k][]=array($a=>'41a', $b=>$b1.'(i)Kiriman wang yg diterima drp isi rumah'
+		. ' yg lain dlm negeri/negara)|41a');
+		$p[$k][]=array($a=>'41b', $b=>$b1.'(i)Kiriman wang yg diterima drp isi rumah'
+		. ' yg lain luar negeri/negara)|41b');
+		$p[$k][]=array($a=>'41', $b=>$b1.'Jumlah [41a+41b]|41');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'42', $b=>'(ii) Nafkah|42');
 		$p[$k][]=array($a=>'43', $b=>'(iii) Biasiswa/Dermasiswa/Fellowships|43');
 		$p[$k][]=array($a=>'44', $b=>'(iv) Pencen|44');
