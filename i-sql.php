@@ -43,6 +43,26 @@ INSERT INTO `kod_isirumah` (`no`, `kod`, `keterangan`, `catatan`) VALUES
 (18,	'pk',	'pekerjaan',	''),
 (19,	'pn',	'industri',	'');
 
+DROP TABLE IF EXISTS `kod_mediumhasil`;
+CREATE TABLE `kod_mediumhasil` (
+  `no` int(11) NOT NULL DEFAULT '0',
+  `kod` char(2) NOT NULL,
+  `keterangan` text NOT NULL,
+  `catatan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `kod_mediumhasil` (`no`, `kod`, `keterangan`, `catatan`) VALUES
+(1,	'01',	'bayaran terus | direct payment',	''),
+(2,	'02',	'cek/bank draf/kiriman wang/wang pos\r\n|check / bank draft / remittance / postal order',	''),
+(3,	'03',	'kad atm/debit/kad prabayar(contoh: tng)\r\n|atm / debit card / prepaid card (e.g: tng)',	''),
+(4,	'04',	'perbankan melalui internet/telefon\r\n|banking via internet / phone',	''),
+(5,	'05',	'pembayaran melalui telefon\r\n|payment by phone',	''),
+(6,	'06',	'kad kredit/kad caj\r\n|credit card / charge card',	''),
+(7,	'07',	'kredit selain dari menggunakan kad kredit\r\n|credit other than using a credit card',	''),
+(8,	'08',	'sewa beli | hire purchase',	''),
+(9,	'09',	'percuma | free',	''),
+(10,	'10',	'lain-lain (contoh:konsesi)\r\n|others (eg: concessions)',	'');
+
 DROP TABLE IF EXISTS `kod_mediumpembayaran`;
 CREATE TABLE `kod_mediumpembayaran` (
   `no` int(11) NOT NULL AUTO_INCREMENT,
@@ -63,6 +83,37 @@ INSERT INTO `kod_mediumpembayaran` (`no`, `kod`, `keterangan`, `catatan`) VALUES
 (8,	'08',	'sewa beli | hire purchase',	''),
 (9,	'09',	'percuma | free',	''),
 (10,	'10',	'lain-lain (contoh:konsesi)\r\n|others (eg: concessions)',	'');
+
+DROP TABLE IF EXISTS `kod_puncahasil`;
+CREATE TABLE `kod_puncahasil` (
+  `no` int(11) NOT NULL DEFAULT '0',
+  `kod` char(2) NOT NULL,
+  `keterangan` text NOT NULL,
+  `catatan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `kod_puncahasil` (`no`, `kod`, `keterangan`, `catatan`) VALUES
+(1,	'01',	'pasar basah',	''),
+(2,	'02',	'pasar borong',	''),
+(3,	'03',	'pasar tani/pasar tamu',	''),
+(4,	'04',	'pasar malam',	''),
+(5,	'05',	'kedai runcit di dalam pasar basah/pasar borong',	''),
+(6,	'06',	'kedai runcit',	''),
+(7,	'07',	'kedai runcit/akhbar di pusat membeli belah',	''),
+(8,	'08',	'pasar mini / mini market',	''),
+(9,	'09',	'Pasar raya',	''),
+(10,	'10',	'departmental store',	''),
+(11,	'11',	'Kedai `convenience`',	''),
+(12,	'12',	'Pasar raya besar (Hypermarket)',	''),
+(13,	'13',	'kedai khusus',	''),
+(14,	'14',	'restoran/kedai makan',	''),
+(15,	'15',	'restoran bercawangan / food court',	''),
+(16,	'16',	'gerai kecil/karavan/ food truck/kiosk',	''),
+(17,	'17',	'restoran berhawa dingin / restoran 24 jam',	''),
+(18,	'18',	'stesen petrol',	''),
+(19,	'19',	'farmasi',	''),
+(20,	'20',	'pembelian atas talian/pembelian melalui tempahan',	''),
+(21,	'21',	'lain-lain',	'');
 
 DROP TABLE IF EXISTS `kod_puncapembelian`;
 CREATE TABLE `kod_puncapembelian` (
@@ -148,7 +199,27 @@ INSERT INTO `senarai_belanja` (`no`, `nohp`, `jenis_belanja`, `tarikh`, `belanja
 (10,	'0147852369',	NULL,	'2018-12-23',	'(my) w4 edv 6in/wr/sld',	NULL,	10.90,	1,	'17',	'03',	2,	'beli dekat subway muar jalan arab/mariam.'),
 (11,	'0147852369',	NULL,	'2018-12-23',	'6 inci bbq chicken strips sub + spice italian',	NULL,	4.70,	1,	'17',	'03',	2,	'beli dekat subway muar jalan arab/mariam.'),
 (12,	'0147852369',	NULL,	'2018-12-23',	'10oz fountain drink + (my) w4 edv 6in/wr/sld',	NULL,	10.90,	1,	'17',	'03',	2,	'beli dekat subway muar jalan arab/mariam.'),
-(13,	'0147852369',	NULL,	'2018-12-23',	'6 inci bbq chicken strips sub + chicken slide',	NULL,	4.70,	1,	'17',	'03',	2,	'beli dekat subway muar jalan arab/mariam.');
+(13,	'0147852369',	NULL,	'2018-12-23',	'6 inci bbq chicken strips sub + chicken slide',	NULL,	4.70,	1,	'17',	'03',	2,	'beli dekat subway muar jalan arab/mariam.'),
+(14,	'0147852369',	NULL,	'2018-12-24',	'makan kuih teo',	NULL,	2.00,	1,	'14',	'01',	2,	'kantin lhdn'),
+(15,	'0147852369',	NULL,	'2018-12-24',	'milo',	NULL,	2.00,	1,	'14',	'01',	2,	'kantin lhdn');
+
+DROP TABLE IF EXISTS `senarai_pendapatan`;
+CREATE TABLE `senarai_pendapatan` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `nohp` varchar(20) DEFAULT NULL,
+  `jenis_hasil` varchar(50) DEFAULT NULL,
+  `tarikh` date DEFAULT NULL,
+  `hasil_keterangan` text,
+  `hasil_kod` int(11) DEFAULT NULL,
+  `amaun_rm` decimal(10,2) DEFAULT NULL,
+  `hasil_sebenar` tinyint(4) DEFAULT NULL COMMENT '1-harga sebenar/2-harga anggaran',
+  `punca_hasil` char(2) DEFAULT NULL,
+  `medium_hasil` char(2) DEFAULT NULL,
+  `medium_edagang` tinyint(4) DEFAULT NULL COMMENT '1-ya/2-tidak',
+  `catatan` text,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 DROP TABLE IF EXISTS `z_blok3`;
 CREATE TABLE `z_blok3` (
@@ -623,5 +694,4 @@ CREATE TABLE `z_penerimaan_bulan_semasa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
--- 2018-12-23 16:46:13
-*/
+-- 2018-12-25 23:56:34*/
