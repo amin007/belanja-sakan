@@ -105,10 +105,15 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'02', $b=>'[B] JUMLAH PENDAPATAN LAIN DIPEROLEH'
 		. ' [INCS{(21)+(22)+(23)+(24)}]|02');
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'31', $b=>'a.(i) Royalti(cth:hak cipta, paten &'
+		$b1 = 'Hasil selain pendapatan diperoleh:';
+		$p[$k][]=array($a=>'31', $b=>$b.'(i) Royalti(cth:hak cipta, paten &'
 		. ' hak yg. serupa)|31');
-		$p[$k][]=array($a=>'32', $b=>'(ii) Sewa daripada tanah pertanian [Gunakan Helaian'
-		. ' Kerja PPIR/HK-6 ...INCS32]|32');
+		$p[$k][]=array($a=>'32a', $b=>$b.'(ii-a) Sewa drp tanah pertanian'
+		. ' [Gunakan helaian kerja PPIK/HK-8...INCS32]|32a');
+		$p[$k][]=array($a=>'32a', $b=>$b.'(ii-b) Sewa drp tanah bukan pertanian'
+		. ' [Gunakan helaian kerja PPIK/HK-8...INCS32]|32a');
+		$p[$k][]=array($a=>'32a', $b=>$b.'Jumlah [32a+32b]|32');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'33', $b=>'(iii) Faedah(cth:deposit bank, bil, bon,'
 		. ' pinjaman, dll.)|33');
 		$p[$k][]=array($a=>'34', $b=>'(iv) Dividen(cth: hak milik saham,'
