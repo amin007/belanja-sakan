@@ -192,9 +192,27 @@ class Login extends \Aplikasi\Kitab\Kawal
 		$this->caraIngat01();
 	}
 #------------------------------------------------------------------------------------------
+	public function ubahSimpan($medanID,$posmen)
+	{
+		# ubahsuai $posmen
+		$this->semakPembolehubah('medanID',$medanID);
+		$this->semakPembolehubah('posmen',$posmen);
+
+		# mula ulang $senaraiJadual
+		foreach ($senaraiJadual as $kunci => $jadual)
+		{# mula ulang table
+			$this->tanya->ubahSqlSimpan
+			//ubahSimpan
+			($posmen[$jadual], $jadual, $medanID);
+		}# tamat ulang table
+	//*/
+	}
+#------------------------------------------------------------------------------------------
 	function caraIngat01()
 	{# untuk bakal pelanggan yang belanjawan terhad
 		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		$posmen = $this->tanya->ubahsuaiPostBaru(array('nama_pengguna'));
+		$this->ubahSimpan($medanID,$posmen);
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
