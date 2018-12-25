@@ -250,6 +250,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'19', $b=>'Jumlah [19a+19b+19c]|19' );
 		$p[$k][]=array($a=>'01', $b=>'[A]JUMLAH PENDAPATAN PEKERJAAN BERGAJI'
 		. ' [INCS{(11)+(12)+ ... +(19)}]|01' );
+		$p[$k][]=array($a=>'HK1', $b=>'Ringkasan:Jumlah pendapatan pekerjaan bergaji'
+		. ' utk setiap ahli isi rumah' );
 	#***************************************************************************************
 		$k = 'kod_xtvttani';
 		$p[$k][]=array($a=>'A1', $b=>'1.Penerimaan daripada jualan barang-barang keluaran|A1');
