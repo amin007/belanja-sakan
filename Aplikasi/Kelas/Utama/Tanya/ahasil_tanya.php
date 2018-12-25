@@ -133,18 +133,28 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		#-----------------------------------------------------------------------------------
 		$b1 = 'Hasil selain pendapatan diperoleh:<br>'
 		. '(v)Pembayaran lain berkala yg diterima:';
-		$p[$k][]=array($a=>'45a', $b=>$b1.';a. |45a');
-		$p[$k][]=array($a=>'45b', $b=>$b1.';a. |45b');
-		$p[$k][]=array($a=>'45c', $b=>$b1.';a. |45c');
-		$p[$k][]=array($a=>'45d', $b=>$b1.';a. |45d');
-		$p[$k][]=array($a=>'45e', $b=>$b1.';a. |45e');
-		$p[$k][]=array($a=>'45f', $b=>$b1.';a. |45f');
-		$p[$k][]=array($a=>'45g', $b=>$b1.';a. |45g');
-		$p[$k][]=array($a=>'45h', $b=>$b1.';a. |45h');
-		$p[$k][]=array($a=>'45i', $b=>$b1.';a. |45i');
-		$p[$k][]=array($a=>'45j', $b=>$b1.';a. |45j');
-		$p[$k][]=array($a=>'45k', $b=>$b1.';a. |45k');
-		$p[$k][]=array($a=>'45l', $b=>$b1.';a. |45l');
+		$p[$k][]=array($a=>'45a', $b=>$b1.'a. Elaun yg diterima oleh kerabat diraja |45a');
+		$p[$k][]=array($a=>'45b', $b=>$b1.'b. Bantuan yg diterima secara bulanan drp '
+		. 'Jab. Kebajikan Masyarakat dan/atau agensi kerajaan lain secara berkala |45b');
+		$p[$k][]=array($a=>'45c', $b=>$b1.'c. Penerimaan wang secara berkala drp'
+		. ' harta pusaka/tabung wang amanah|45c');
+		$p[$k][]=array($a=>'45d', $b=>$b1.'d. Pembayaran insurans secara berkala'
+		. ' disebabkan oleh kecederaan|45d');
+		$p[$k][]=array($a=>'45e', $b=>$b1.'e. Pampasan diberikan oleh majikan kpd'
+		. 'staf disebabkan kecacatan akibat kemalangan semasa bekerja. Pembayaran'
+		. ' diberi secara berkala setiap bulan berbentuk wang tunai|45e');
+		$p[$k][]=array($a=>'45f', $b=>$b1.'f. Elaun yg diterima oleh imam, bilal,'
+		. ' & siak yg dibayar bawah peruntukan masjid|45f');
+		$p[$k][]=array($a=>'45g', $b=>$b1.'g. Elaun yg diterima oleg sami/paderi'
+		. ' yang dibayar oleh rumah ibadat|45g');
+		$p[$k][]=array($a=>'45h', $b=>$b1.'h. Elaun bulanan ahli sukan (bukan profesional)'
+		. ' yg diterima drp Majlis Sukan Negara Malaysia|45h');
+		$p[$k][]=array($a=>'45i', $b=>$b1.'i. Lain-lain elaun(cth: undang, kumpulan'
+		. ' wang amanah, dll|45i');
+		$p[$k][]=array($a=>'45j', $b=>$b1.'j. Bantuan Sara Hidup/BRIM|45j');
+		$p[$k][]=array($a=>'45k', $b=>$b1.'k. Bantuan persekolahan|45k');
+		$p[$k][]=array($a=>'45l', $b=>$b1.'l. Baucer Buku 1Malaysia(BB1M)/'
+		. 'Kad Debit Pelajar(KADS1M)|45l');
 		$p[$k][]=array($a=>'45', $b=>$b1.'Jumlah [45a+45b+...45l] |45');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'46', $b=>'(vi) Hadiah berupa wang tunai atau mata benda|46');
