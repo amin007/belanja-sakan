@@ -157,7 +157,10 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. 'Kad Debit Pelajar(KADS1M)|45l');
 		$p[$k][]=array($a=>'45', $b=>$b1.'Jumlah [45a+45b+...45l] |45');
 		#-----------------------------------------------------------------------------------
+		$b1 = 'Hasil selain pendapatan diperoleh:<br>'
+		. '(vi)Hadiah berupa wang tunai atau mata benda:';
 		$p[$k][]=array($a=>'46', $b=>'(vi) Hadiah berupa wang tunai atau mata benda|46');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'05', $b=>'[D]JUMLAH PINDAHAN SEMASA YG DITERIMA [INCS{(41)+'
 		. ' (42)+ ... +(46)}]|05');
 		$p[$k][]=array($a=>'06', $b=>'[E]JUMLAH PINDAHAN SEMASA BERSIH YG DITERIMA'
