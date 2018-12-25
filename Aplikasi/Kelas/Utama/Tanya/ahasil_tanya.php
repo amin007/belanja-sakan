@@ -271,11 +271,11 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' digunakan utk:(b) Lain-lain (seperti zakat, biji benih,'
 		. ' pemberian, dll.)|C4B');
 		$p[$k][]=array($a=>'C4', $b=>'4.Jumlah nilai bagi keluaran sendiri yg'
-		. ' digunakan : C4=(a)+(b) |C4');
-		$p[$k][]=array($a=>'C5', $b=>'5.Pendapatan bersih yg diterima oleh'
-		. ' ahli isi rumah	C5 = C3 + C4 | C5')
+		. ' digunakan : C4=(a)+(b)|C4');
 		#-----------------------------------------------------------------------------------
-		$b1 = 'Hasil drp pertanian & perikanan:'
+		$p[$k][]=array($a=>'C5', $b=>'5.Pendapatan bersih yg diterima oleh'
+		. ' ahli isi rumah C5=C3+C4 | C5')
+		$b1 = 'C5| Hasil drp pertanian & perikanan:'
 		$p[$k][]=array($a=>'21A(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
 		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus dll'
 		. '|21A(i)');
