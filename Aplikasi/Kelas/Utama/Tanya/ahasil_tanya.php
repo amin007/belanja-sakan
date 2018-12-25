@@ -409,6 +409,16 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 	#***************************************************************************************
 		$k = 'kod_sewabersih_hk8';
 		$p[$k][]=array($a=>'NOAIR', $b=>'no. ahli isi rumah|NOAIR';
+		#-----------------------------------------------------------------------------------
+		$b1 = 'rumah yg diduduki sendiri';
+		$p[$k][]=array($a=>'22.1', $b=>$b1.'1.jenis rumah|22.1');
+		$p[$k][]=array($a=>'22.2', $b=>$b1.'2.jumlah kasar sewa tahunan|22.2');
+		$p[$k][]=array($a=>'22.3', $b=>$b1.'3.jumlah perbelanjaan tahunan(i+ii+iii)|22.3');
+		$p[$k][]=array($a=>'22.3(i)', $b=>$b1.'3(i)pembaikan & penyelenggaraan|22.3(i)');
+		$p[$k][]=array($a=>'22.3(ii)', $b=>$b1.'3(i)cukai tanah|22.3(ii)');
+		$p[$k][]=array($a=>'22.3(iii)', $b=>$b1.'3(i)cukai pintu|22.3(iii)');
+		$p[$k][]=array($a=>'22', $b=>$b1.'4.jumlah sewa bersih tahunan (2-3)|22');
+		#-----------------------------------------------------------------------------------
 	#***************************************************************************************
 		return ($c0);
 	}
