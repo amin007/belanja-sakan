@@ -35,9 +35,9 @@ class Login extends \Aplikasi\Kitab\Kawal
 		//*/
 	}
 ##-----------------------------------------------------------------------------------------
-	public function semakPembolehubah($senarai)
+	public function semakPembolehubah($nama, $senarai)
 	{
-		echo '<pre>$senarai:<br>';
+		echo '<pre>$' . $nama . ':<br>';
 		print_r($senarai);
 		echo '</pre>|';//*/
 	}
