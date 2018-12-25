@@ -253,7 +253,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'HK1', $b=>'Ringkasan:Jumlah pendapatan pekerjaan bergaji'
 		. ' utk setiap ahli isi rumah' );
 	#***************************************************************************************
-		$k = 'kod_xtvttani';
+		$k = 'kod_xtvttani_hk2';
+		$p[$k][]=array($a=>'PK', $b=>'Pekerjaan|PK' );
 		$p[$k][]=array($a=>'A1', $b=>'1.Penerimaan daripada jualan barang-barang keluaran|A1');
 		$p[$k][]=array($a=>'A2', $b=>'2.Jumlah perbelanjaan|A2');
 		$p[$k][]=array($a=>'B1', $b=>'2.Keuntungan  bersih  sebagaimana  tercatat  dalam'
