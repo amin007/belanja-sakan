@@ -55,8 +55,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$b1 = 'Hasil drp ICT:'
 		$b2 = '[Gunakan helaian kerja PPIK/HK-4]';
 		$p[$k][]=array($a=>'21b(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
-		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus dll'
-		. $b2 . '|21b(i)');
+		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus'
+		. ' dll' . $b2 . '|21b(i)');
 		$p[$k][]=array($a=>'21b(ii)', $b=>$b1.' dlm talian melalui traksaksi bukan edagang'
 		. '(cth: menerima pesanan melalui whatsapp,facebook,email dll'
 		. $b2 .'|21b(ii)');
@@ -76,6 +76,17 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. $b2 .'|21d(ii)');
 		$p[$k][]=array($a=>'21d(iii)', $b=>$b1.' bukan dlm talian'.$b2.'|21d(iii)');
 		$p[$k][]=array($a=>'21d', $b=>'Jumlah [21d(i)+21d(ii)+21d(iii)]|21d');
+		#-----------------------------------------------------------------------------------
+		$b1 = 'Hasil lain:'
+		$b2 = '[Gunakan helaian kerja PPIK/HK-6]';
+		$p[$k][]=array($a=>'21e(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
+		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus'
+		. ' dll' . $b2 . '|21e(i)');
+		$p[$k][]=array($a=>'21e(ii)', $b=>$b1.' dlm talian melalui traksaksi bukan edagang'
+		. '(cth: menerima pesanan melalui whatsapp,facebook,email dll'
+		. $b2 .'|21e(ii)');
+		$p[$k][]=array($a=>'21e(iii)', $b=>$b1.' bukan dlm talian'.$b2.'|21e(iii)');
+		$p[$k][]=array($a=>'21e', $b=>'Jumlah [21e(i)+21e(ii)+21e(iii)]|21e');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'21NA', $b=>'(ii) Bukan Pertanian[Gunakan'
 		. ' PPIR/HK-5]|21NA');
