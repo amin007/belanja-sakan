@@ -56,5 +56,22 @@ class RahsiaHash
 
 		return $pisau;
 	}
+#---------------------------------------------------------------------------------------------
+	function cariKey()
+	{
+		/*
+		str_shuffle($str); #http://php.net/manual/en/function.str-shuffle.php
+		random_int($min, $max); #http://php.net/manual/en/function.random-int.php
+		random_bytes(5); #http://php.net/manual/en/function.random-bytes.php
+		openssl_random_pseudo_bytes($i, $cstrong);
+		#http://php.net/manual/en/function.openssl-random-pseudo-bytes.php
+		crypt($password); #http://php.net/manual/en/function.crypt.php
+		uniqid(); #http://php.net/manual/en/function.uniqid.php
+		mt_rand(); #http://php.net/manual/en/function.mt-rand.php
+		mt_srand; #http://php.net/manual/en/function.mt-srand.php
+		#http://php.net/manual/en/function.password-hash.php
+		//*/
+	}
+#---------------------------------------------------------------------------------------------
 #=============================================================================================
 }
