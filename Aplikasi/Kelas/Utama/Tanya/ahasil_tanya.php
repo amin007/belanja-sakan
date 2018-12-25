@@ -95,14 +95,16 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'21', $b=>'JUMLAH PENDAPATAN PEKERJAAN SENDIRI'
 		. ' [INCS{(21A)+(21NA)+(21KS}]|21');
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'22', $b=>'(i)Sewa dinilai bagi rumah yg diduduki oleh pemiliknya'
-		. ' [Gunakan Helaian Kerja PPIR/HK-6 ...INCS22]|22');
-		$p[$k][]=array($a=>'23', $b=>'(ii)Sewa rumah atau harta lain (masukkan sewa tanah &'
-		. ' rumahsekali) [Gunakan Helaian Kerja PPIR/HK-6 ...INCS23]|23');
-		$p[$k][]=array($a=>'24', $b=>'(iii)Sewa daripada tempat menginap (cth :'
-		. ' sewa bilik di  TK tersebut)|24');
+		$b2 = 'Gunakan helaian kerja PPIK/HK-8';
+		$p[$k][]=array($a=>'22', $b=>'(i)Sewa dinilai bagi rumah yg diduduki oleh'
+		. ' pemiliknya['.$b2.'...INCS22]|22');
+		$p[$k][]=array($a=>'23', $b=>'(ii)Rumah/Harta lain yg disewakan ['
+		. $b2 . '...INCS23]|23');
+		$p[$k][]=array($a=>'24', $b=>'(iii)Sewa daripada tmpt menginap (cth:'
+		. ' sewa bilik di TK terpilih)|24');
 		$p[$k][]=array($a=>'02', $b=>'[B] JUMLAH PENDAPATAN LAIN DIPEROLEH'
 		. ' [INCS{(21)+(22)+(23)+(24)}]|02');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'31', $b=>'a.(i) Royalti(cth:hak cipta, paten &'
 		. ' hak yg. serupa)|31');
 		$p[$k][]=array($a=>'32', $b=>'(ii) Sewa daripada tanah pertanian [Gunakan Helaian'
