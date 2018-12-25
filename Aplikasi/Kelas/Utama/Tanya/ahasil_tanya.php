@@ -341,6 +341,35 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'21A(iii)', $b=>$b1.' bukan dlm talian|21A(iii)');
 		#-----------------------------------------------------------------------------------
 	#***************************************************************************************
+		$k = 'kod_pengangkutan_hk5';
+		$p[$k][]=array($a=>'PN', $b=>'Industri|PN' );
+		$p[$k][]=array($a=>'A1', $b=>'1.Jumlah bulan berniaga dlm setahun|A1');
+		$p[$k][]=array($a=>'A2', $b=>'2.Purata penerimaan drp jualan bulanan bagi'
+		. ' brg & perkhidmatan ICT|A2');
+		$p[$k][]=array($a=>'A3', $b=>'3.Purata perbelanjaan bulanan|A3');
+		$p[$k][]=array($a=>'A4', $b=>'4.Purata keuntungan bersih bulanan A4=A2-A3|A4');
+		$p[$k][]=array($a=>'B1', $b=>'1.Keuntungan bersih dlm penyata kira-kira|B1');
+		$p[$k][]=array($a=>'B2', $b=>'2.Anggaran semua B1 utk tahun rujukan|B2');
+		$p[$k][]=array($a=>'C1', $b=>'1.Pendapatan bersih tahunan sama ada'
+		. '(A4 X A1] ATAU [B1 ATAU B2])|C1');
+		$p[$k][]=array($a=>'C2', $b=>'2.Peratus pembahagian yg dipegang oleh'
+		. ' ahli isi rumah|C2');
+		$p[$k][]=array($a=>'C3', $b=>'3.Nilai Mutlak bagi C2 | C3');
+		$p[$k][]=array($a=>'C4', $b=>'4.Anggaran barangan keluaran yg digunakan'
+		. ' sendiri setahun|C4');
+		#-----------------------------------------------------------------------------------
+		$p[$k][]=array($a=>'C5', $b=>'5.Pendapatan bersih yg diterima oleh'
+		. ' ahli isi rumah C5=C3+C4|C5')
+		$b1 = 'C5| Hasil drp pengangkutan:'
+		$p[$k][]=array($a=>'21d(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
+		. '(cth: menerima pesanan melalui marketplace spt grab,uber,mycar,website khusus'
+		. ' dll' . $b2 . '|21d(i)');
+		$p[$k][]=array($a=>'21d(ii)', $b=>$b1.' dlm talian melalui traksaksi bukan edagang'
+		. '(cth: menerima pesanan melalui whatsapp,facebook,email dll'
+		. $b2 .'|21d(ii)');
+		$p[$k][]=array($a=>'21d(iii)', $b=>$b1.' bukan dlm talian'.$b2.'|21d(iii)');
+		#-----------------------------------------------------------------------------------
+	#***************************************************************************************
 		return ($c0);
 	}
 #------------------------------------------------------------------------------------------#
