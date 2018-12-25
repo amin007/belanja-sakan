@@ -41,10 +41,16 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'01', $b=>'[A]JUMLAH PENDAPATAN PEKERJAAN BERGAJI'
 		. ' [INCS{(11)+(12)+ ... +(19)}]|01' );
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'21A(i)', $b=>'|21A(i)');
-		$p[$k][]=array($a=>'21A(ii)', $b=>'|21A(ii)');
-		$p[$k][]=array($a=>'21A(iii)', $b=>'|21A(iii)');
-		$p[$k][]=array($a=>'21A', $b=>'|21A');
+		$b1 = 'Hasil drp pertanian & perikanan:'
+		$b2 = '[Gunakan helaian kerja PPIK/HK-2/3]';
+		$p[$k][]=array($a=>'21A(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
+		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus dll'
+		. $b2 . '|21A(i)');
+		$p[$k][]=array($a=>'21A(ii)', $b=>$b1.' dlm talian melalui traksaksi bukan edagang'
+		. '(cth: menerima pesanan melalui whatsapp,facebook,email dll'
+		. $b2 .'|21A(ii)');
+		$p[$k][]=array($a=>'21A(iii)', $b=>$b1.' bukan dlm talian'.$b2.'|21A(iii)');
+		$p[$k][]=array($a=>'21A', $b=>'Jumlah [21A(i)+21A(ii)+21A(iii)]|21A');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'21NA', $b=>'(ii) Bukan Pertanian[Gunakan'
 		. ' PPIR/HK-5]|21NA');
