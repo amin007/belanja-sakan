@@ -121,9 +121,9 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'03', $b=>$b1.'[C]JUMLAH PENDAPATAN DRP HARTA'
 		. ' [INCS{(31)+(32)+(33)+(34)}]|03');
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'41a', $b=>$b1.'(i)Kiriman wang yg diterima drp isi rumah'
+		$p[$k][]=array($a=>'41a', $b=>$b1.'(i-a)Kiriman wang yg diterima drp isi rumah'
 		. ' yg lain dlm negeri/negara)|41a');
-		$p[$k][]=array($a=>'41b', $b=>$b1.'(i)Kiriman wang yg diterima drp isi rumah'
+		$p[$k][]=array($a=>'41b', $b=>$b1.'(i-b)Kiriman wang yg diterima drp isi rumah'
 		. ' yg lain luar negeri/negara)|41b');
 		$p[$k][]=array($a=>'41', $b=>$b1.'Jumlah [41a+41b]|41');
 		#-----------------------------------------------------------------------------------
