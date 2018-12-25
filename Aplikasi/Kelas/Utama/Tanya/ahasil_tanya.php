@@ -182,7 +182,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		//$p[$k][]=array($a=>'-', $b=>'*');
 		);
 	#***************************************************************************************
-		$k = 'kod_bayarwajibdenda';
+		$k = 'kod_bayarpindahansemasa';
 		$p[$k][]=array($a=>'61', $b=>'1. Cukai pendapatan/Zakat pendapatan|61');
 		$p[$k][]=array($a=>'62', $b=>'2. Cukai lain (cth:cukai jalan, cukai lapangan'
 		. ' terbang, dll.)|62');
