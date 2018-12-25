@@ -215,6 +215,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 		$senaraiJadual = array('nama_pengguna');
 		$posmen = $this->tanya->ubahsuaiPostBaru($senaraiJadual);
 		unset($posmen[$senaraiJadual[0]]['level']);
+		unset($posmen[$senaraiJadual[0]]['email']);
 		$medanID = 'nohp';
 		$this->ubahSimpan($senaraiJadual,$posmen,$medanID);
 	}
