@@ -52,6 +52,18 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'21A(iii)', $b=>$b1.' bukan dlm talian'.$b2.'|21A(iii)');
 		$p[$k][]=array($a=>'21A', $b=>'Jumlah [21A(i)+21A(ii)+21A(iii)]|21A');
 		#-----------------------------------------------------------------------------------
+		$b1 = 'Hasil drp ICT:'
+		$b2 = '[Gunakan helaian kerja PPIK/HK-4]';
+		$p[$k][]=array($a=>'21b(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
+		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus dll'
+		. $b2 . '|21b(i)');
+		$p[$k][]=array($a=>'21b(ii)', $b=>$b1.' dlm talian melalui traksaksi bukan edagang'
+		. '(cth: menerima pesanan melalui whatsapp,facebook,email dll'
+		. $b2 .'|21b(ii)');
+		$p[$k][]=array($a=>'21b(iii)', $b=>$b1.' bukan dlm talian'.$b2.'|21b(iii)');
+		$p[$k][]=array($a=>'21b', $b=>'Jumlah [21A(i)+21A(ii)+21A(iii)]|21b');
+		#-----------------------------------------------------------------------------------
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'21NA', $b=>'(ii) Bukan Pertanian[Gunakan'
 		. ' PPIR/HK-5]|21NA');
 		$p[$k][]=array($a=>'21KS', $b=>'Kegunaan sendiri [Gunakan Helaian kerja'
