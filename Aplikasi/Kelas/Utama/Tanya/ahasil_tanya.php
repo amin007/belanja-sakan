@@ -287,13 +287,13 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		//=>array( $a=>'-', $b=>'*');
 		);
 	#***************************************************************************************
-		$k = 'kod_perikanan';
-		$p[$k][]=array($a=>'A1', $b=>'1.Nilai jumlah jualan (termasuk ikan kolam'
-		. '/sangkar, air tawar & air payau / laut)|A1');
+		$k = 'kod_perikanan_hk3';
+		$p[$k][]=array($a=>'A1', $b=>'1.Nilai jumlah jualan(termasuk ikan kolam/sangkar,'
+		. 'air tawar & air payau/laut)|A1');
 		$p[$k][]=array($a=>'A2', $b=>'2.Pendapatan yg diterima daripada sewaan bot'
-		. '/perkakas dalam sua belas (12) bulan yg lalu |A2');
+		. '/perkakas dlm dua belas (12) bulan yg lalu|A2');
 		$p[$k][]=array($a=>'A3', $b=>'3.Lain-lain|A3');
-		$p[$k][]=array($a=>'A4', $b=>'A4 =  A1  +  A2 + A3|A4');
+		$p[$k][]=array($a=>'A4', $b=>'Jumlah A4=A1+A2+A3|A4');
 		$p[$k][]=array($a=>'B', $b=>'1.Jumlah perbelanjaan | B');
 		$p[$k][]=array($a=>'C1', $b=>'1.Pendapatan bersih tahunan (A4 - B)|C1');
 		$p[$k][]=array($a=>'C2', $b=>'2.Peratus pembahagian yg dipegang oleh'
