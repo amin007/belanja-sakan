@@ -16,6 +16,28 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		//$this->semakPembolehubah($bentukJadual01,'teste');
 	}
 #------------------------------------------------------------------------------------------#
+	public function contoh_cariKhas01()
+	{
+		$medan[0] = array(
+			//'no' => null, //int(11) Auto Increment
+			'nohp' => null, //varchar(20)
+			'noair' => null, //char(2)
+			//'jenis_hasil' => null, //varchar(50)
+			'tarikh' => null, //date
+			'hasil_keterangan' => null, //text
+			//'hasil_kod' => null, //int(11)
+			'amaun_rm' => null, //decimal(10,2)
+			'hasil_sebenar' => null, //tinyint(4)|1-sebenar/2-anggaran
+			'punca_hasil' => null, //char(2)
+			'medium_hasil' => null, //enum('01,02,03,04,05,06,07,08,09,10')
+			'medium_edagang' => null, //int(11)|1-ya/2-tidak
+			'catatan' => null, //text
+			//'password' => null, //text
+		);
+
+		return $medan;
+	}
+#------------------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------------------#
 	function pilihPencam()
 	{
