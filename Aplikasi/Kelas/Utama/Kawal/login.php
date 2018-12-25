@@ -186,9 +186,15 @@ class Login extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	public function ingatsemula()
 	{
-		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
 		//$this->debugKandunganPaparan();//*/
+		$this->caraIngat01();
+	}
+#------------------------------------------------------------------------------------------
+	function caraIngat01()
+	{# untuk bakal pelanggan yang belanjawan terhad
+		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
