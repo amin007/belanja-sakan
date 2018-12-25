@@ -179,8 +179,6 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' [INCS 05 - TP73]|06');
 		$p[$k][]=array($a=>'07', $b=>'JUMLAH KASAR[INCS{(01)+(02)+(03)+(05)}]|07' );
 		$p[$k][]=array($a=>'08', $b=>'JUMLAH BERSIH[INCS{(01)+(02)+(03)+(06)}]|08');
-		//$p[$k][]=array($a=>'-', $b=>'*');
-		);
 	#***************************************************************************************
 		$k = 'kod_bayarpindahansemasa';
 		$b1 = 'Bayaran wajib/denda (TP 73A):';
@@ -225,8 +223,6 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'TP73', $b=>$b1.'Jumlah TP73=(73A + 73B)|73');
 		$p[$k][]=array($a=>'TP73', $b=>'Jumlah simpanan tunai 12 bulan yg lalu|74');
-		//=>array( $a=>'-', $b=>'*');
-		);
 	#***************************************************************************************
 		$k = 'kod_kerjabergaji_hk1';
 		$p[$k][]=array($a=>'PK', $b=>'Pekerjaan|PK' );
