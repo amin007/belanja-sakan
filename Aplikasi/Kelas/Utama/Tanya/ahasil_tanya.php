@@ -436,6 +436,13 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'32a.2(ii)', $b=>$b1.'2(ii)cukai tanah|32a.2(ii)');
 		$p[$k][]=array($a=>'32a', $b=>$b1.'3.jumlah sewa bersih tahunan (1-2)|32a');
 		#-----------------------------------------------------------------------------------
+		$b1 = 'sewa tanah bukan pertanian';
+		$p[$k][]=array($a=>'32b.1', $b=>$b1.'1.jumlah kasar sewa tahunan|32b.1');
+		$p[$k][]=array($a=>'32b.2', $b=>$b1.'2.jumlah perbelanjaan tahunan(i+ii+iii)|32b.2');
+		$p[$k][]=array($a=>'32b.2(i)', $b=>$b1.'2(i)penyelenggaraan|32b.2(i)');
+		$p[$k][]=array($a=>'32b.2(ii)', $b=>$b1.'2(ii)cukai tanah|32b.2(ii)');
+		$p[$k][]=array($a=>'32b.2(iii)', $b=>$b1.'2(iii)cukai pintu|32b.2(iii)');
+		$p[$k][]=array($a=>'32b', $b=>$b1.'3.jumlah sewa bersih tahunan (1-2)|32b');
 		#-----------------------------------------------------------------------------------
 	#***************************************************************************************
 		return ($c0);
