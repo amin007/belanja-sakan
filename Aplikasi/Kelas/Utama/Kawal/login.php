@@ -211,8 +211,10 @@ class Login extends \Aplikasi\Kitab\Kawal
 	function caraIngat01()
 	{# untuk bakal pelanggan yang belanjawan terhad
 		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		$posmen = $this->tanya->ubahsuaiPostBaru(array('nama_pengguna'));
-		$this->ubahSimpan($medanID,$posmen);
+		$senaraiJadual = array('nama_pengguna');
+		$posmen = $this->tanya->ubahsuaiPostBaru($senaraiJadual);
+		$medanID = 'nohp';
+		$this->ubahSimpan($senaraiJadual,$posmen,$medanID);
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
