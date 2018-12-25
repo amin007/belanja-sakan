@@ -184,14 +184,6 @@ class Login extends \Aplikasi\Kitab\Kawal
 			header('location:' . URL . '');//*/
 	}
 #------------------------------------------------------------------------------------------
-	public function ingatsemula()
-	{
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		//echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
-		//$this->debugKandunganPaparan();//*/
-		$this->caraIngat01();
-	}
-#------------------------------------------------------------------------------------------
 	public function ubahSimpan($senaraiJadual,$posmen,$medanID)
 	{
 		# ubahsuai $posmen
@@ -206,6 +198,14 @@ class Login extends \Aplikasi\Kitab\Kawal
 			($posmen[$jadual], $jadual, $medanID);
 		}# tamat ulang table
 	//*/
+	}
+#------------------------------------------------------------------------------------------
+	public function ingatsemula()
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		//echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
+		//$this->debugKandunganPaparan();//*/
+		$this->caraIngat01();
 	}
 #------------------------------------------------------------------------------------------
 	function caraIngat01()
