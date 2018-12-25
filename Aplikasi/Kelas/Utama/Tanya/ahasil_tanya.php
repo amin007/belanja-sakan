@@ -88,12 +88,11 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'21e(iii)', $b=>$b1.' bukan dlm talian'.$b2.'|21e(iii)');
 		$p[$k][]=array($a=>'21e', $b=>'Jumlah [21e(i)+21e(ii)+21e(iii)]|21e');
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'21NA', $b=>'(ii) Bukan Pertanian[Gunakan'
-		. ' PPIR/HK-5]|21NA');
-		$p[$k][]=array($a=>'21KS', $b=>'Kegunaan sendiri [Gunakan Helaian kerja'
-		. ' PPIR/HK-1]|21KS');
+		$p[$k][]=array($a=>'21KS', $b=>'Kegunaan sendiri [Gunakan helaian kerja'
+		. ' PPIR/HK-7]|21KS');
 		$p[$k][]=array($a=>'21', $b=>'JUMLAH PENDAPATAN PEKERJAAN SENDIRI'
 		. ' [INCS{(21A)+(21NA)+(21KS}]|21');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'22', $b=>'(i)Sewa dinilai bagi rumah yg diduduki oleh pemiliknya'
 		. ' [Gunakan Helaian Kerja PPIR/HK-6 ...INCS22]|22');
 		$p[$k][]=array($a=>'23', $b=>'(ii)Sewa rumah atau harta lain (masukkan sewa tanah &'
