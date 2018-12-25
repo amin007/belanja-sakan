@@ -187,7 +187,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 	public function ingatsemula()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
+		//echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
 		//$this->debugKandunganPaparan();//*/
 		$this->caraIngat01();
 	}
@@ -195,8 +195,8 @@ class Login extends \Aplikasi\Kitab\Kawal
 	public function ubahSimpan($senaraiJadual,$posmen,$medanID)
 	{
 		# ubahsuai $posmen
-		$this->semakPembolehubah('medanID',$medanID);
-		$this->semakPembolehubah('posmen',$posmen);
+		//$this->semakPembolehubah('medanID',$medanID);
+		//$this->semakPembolehubah('posmen',$posmen);
 
 		# mula ulang $senaraiJadual
 		foreach ($senaraiJadual as $kunci => $jadual)
