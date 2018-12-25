@@ -171,10 +171,12 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'46f', $b=>$b1.'Mata benda: c. Individu|46f');
 		$p[$k][]=array($a=>'46', $b=>$b1.' Jumlah  [46d(i)+46d(ii)|46');
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'05', $b=>'[D]JUMLAH PINDAHAN SEMASA YG DITERIMA [INCS{(41)+'
-		. ' (42)+ ... +(46)}]|05');
-		$p[$k][]=array($a=>'06', $b=>'[E]JUMLAH PINDAHAN SEMASA BERSIH YG DITERIMA'
-		. ' [INCS05-TP 73 (Rujuk PPIR 3)]|06');
+		$p[$k][]=array($a=>'05', $b=>'[D]JUMLAH PINDAHAN SEMASA YG DITERIMA<br>'
+		. '[INCS{(41)+(42)+(43)+(44)(45)+(46)}]|05');
+		$p[$k][]=array($a=>'TP73', $b=>'[E]JUMLAH PINDAHAN SEMASA<br>'
+		. ' [TP 73 (Rujuk JR-C PPIR 3)]|TP73');
+		$p[$k][]=array($a=>'06', $b=>'[F]JUMLAH PINDAHAN SEMASA BERSIH YG DITERIMA<br>'
+		. ' [INCS 05 - TP73]|06');
 		$p[$k][]=array($a=>'07', $b=>'JUMLAH KASAR[INCS{(01)+(02)+(03)+(05)}]|07' );
 		$p[$k][]=array($a=>'08', $b=>'JUMLAH BERSIH[INCS{(01)+(02)+(03)+(06)}]|08');
 		//$p[$k][]=array($a=>'-', $b=>'*');
