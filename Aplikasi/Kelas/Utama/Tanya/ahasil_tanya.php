@@ -169,7 +169,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'46d', $b=>$b1.'Mata benda:JUMLAH [46d(i)+46d(ii)|46d');
 		$p[$k][]=array($a=>'46e', $b=>$b1.'Mata benda: b. NGO/Swasta c. Individu|46e');
 		$p[$k][]=array($a=>'46f', $b=>$b1.'Mata benda: c. Individu|46f');
-		$p[$k][]=array($a=>'46', $b=>$b1.' Jumlah  [46d(i)+46d(ii)|46');
+		$p[$k][]=array($a=>'46', $b=>$b1.'Jumlah [46d(i)+46d(ii)|46');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'05', $b=>'[D]JUMLAH PINDAHAN SEMASA YG DITERIMA<br>'
 		. '[INCS{(41)+(42)+(43)+(44)(45)+(46)}]|05');
@@ -183,6 +183,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		);
 	#***************************************************************************************
 		$k = 'kod_bayarpindahansemasa';
+		$b1 = 'Bayaran wajib/denda (TP 73A):';
 		$p[$k][]=array($a=>'61', $b=>'1. Cukai pendapatan/Zakat pendapatan|61');
 		$p[$k][]=array($a=>'62', $b=>'2. Cukai lain (cth:cukai jalan, cukai lapangan'
 		. ' terbang, dll.)|62');
