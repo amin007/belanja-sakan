@@ -33,11 +33,14 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		5=>array( $a=>'16', $b=>'Tempat menginap percuma/konsesi|16' ),
 		6=>array( $a=>'17', $b=>'Barang pengguna & perkhidmatan percuma/konsesi|17' ),
 		7=>array( $a=>'18', $b=>'Pembayaran lain yang diterima berupa mata benda'
-			. ' (cth : padi, getah, kelapa, dll.)|18' ),
-		8=>array( $a=>'19', $b=>'Pencaruman majikan kepada KWSP, PERKESO, dll.|19' ),
-		9=>array( $a=>'01', $b=>'[A] JUMLAH PENDAPATAN PEKERJAAN BERGAJI'
-			. ' [INCS{(11)+(12)+'
-			. ' ... +(19)}]|01' ),
+			. ' (cth:padi, getah, kelapa, dll.)|18' ),
+		8=>array( $a=>'19a', $b=>'Pencaruman majikan kpd KWSP|19a' ),
+		9=>array( $a=>'19b', $b=>'Pencaruman majikan kpd PERKESO, dll.|19b' ),
+		10=>array( $a=>'19c', $b=>'Pencaruman majikan kpd dll.|19c' ),
+		11=>array( $a=>'19', $b=>'Jumlah [19a+19b+19c]|19' ),
+		12=>array( $a=>'01', $b=>'[A]JUMLAH PENDAPATAN PEKERJAAN BERGAJI'
+			. ' [INCS{(11)+(12)+ ... +(19)}]|01' ),
+		#-----------------------------------------------------------------------------------
 		10=>array( $a=>'21A', $b=>'(i) Pertanian [Gunakan Helaian Kerja'
 			. ' PPIR/HK-3 & 4]|21A' ),
 		11=>array( $a=>'21NA', $b=>'(ii) Bukan Pertanian[Gunakan'
