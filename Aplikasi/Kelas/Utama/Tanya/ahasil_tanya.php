@@ -158,8 +158,18 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'45', $b=>$b1.'Jumlah [45a+45b+...45l] |45');
 		#-----------------------------------------------------------------------------------
 		$b1 = 'Hasil selain pendapatan diperoleh:<br>'
-		. '(vi)Hadiah berupa wang tunai atau mata benda:';
-		$p[$k][]=array($a=>'46', $b=>'(vi) Hadiah berupa wang tunai atau mata benda|46');
+		. '(vi)Hadiah berupa ';
+		$p[$k][]=array($a=>'46a(i)', $b=>$b1.'Tunai: a(i). Kerajaan Persekutuan|46a(i)');
+		$p[$k][]=array($a=>'46a(ii)', $b=>$b1.'Tunai: a(ii). Kerajaan Negeri|46a(ii)');
+		$p[$k][]=array($a=>'46a', $b=>$b1.'Tunai: JUMLAH [46a(i)+46a(ii)|46a');
+		$p[$k][]=array($a=>'46b', $b=>$b1.'Tunai: b. NGO/Swasta|46b');
+		$p[$k][]=array($a=>'46c', $b=>$b1.'Tunai: c. Individu|46c');
+		$p[$k][]=array($a=>'46d(i)', $b=>$b1.'Mata benda:a(i). Kerajaan Persekutuan|46d(i)');
+		$p[$k][]=array($a=>'46d(ii)', $b=>$b1.'Mata benda:a(ii). Kerajaan Negeri|46d(i)');
+		$p[$k][]=array($a=>'46d', $b=>$b1.'Mata benda:JUMLAH [46d(i)+46d(ii)|46d');
+		$p[$k][]=array($a=>'46e', $b=>$b1.'Mata benda: b. NGO/Swasta c. Individu|46e');
+		$p[$k][]=array($a=>'46f', $b=>$b1.'Mata benda: c. Individu|46f');
+		$p[$k][]=array($a=>'46', $b=>$b1.' Jumlah  [46d(i)+46d(ii)|46');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'05', $b=>'[D]JUMLAH PINDAHAN SEMASA YG DITERIMA [INCS{(41)+'
 		. ' (42)+ ... +(46)}]|05');
