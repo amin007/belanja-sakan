@@ -132,9 +132,20 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'44', $b=>$b1.'(iv) Pencen|44');
 		#-----------------------------------------------------------------------------------
 		$b1 = 'Hasil selain pendapatan diperoleh:<br>'
-		. '(v)Pembayaran lain berkala yg diterima';
-		$p[$k][]=array($a=>'45', $b=>$b1.'(cth:harta'
-		. ' pesaka, kumpulan wang amanah, dll)|45');
+		. '(v)Pembayaran lain berkala yg diterima:';
+		$p[$k][]=array($a=>'45a', $b=>$b1.';a. |45a');
+		$p[$k][]=array($a=>'45b', $b=>$b1.';a. |45b');
+		$p[$k][]=array($a=>'45c', $b=>$b1.';a. |45c');
+		$p[$k][]=array($a=>'45d', $b=>$b1.';a. |45d');
+		$p[$k][]=array($a=>'45e', $b=>$b1.';a. |45e');
+		$p[$k][]=array($a=>'45f', $b=>$b1.';a. |45f');
+		$p[$k][]=array($a=>'45g', $b=>$b1.';a. |45g');
+		$p[$k][]=array($a=>'45h', $b=>$b1.';a. |45h');
+		$p[$k][]=array($a=>'45i', $b=>$b1.';a. |45i');
+		$p[$k][]=array($a=>'45j', $b=>$b1.';a. |45j');
+		$p[$k][]=array($a=>'45k', $b=>$b1.';a. |45k');
+		$p[$k][]=array($a=>'45l', $b=>$b1.';a. |45l');
+		$p[$k][]=array($a=>'45', $b=>$b1.'Jumlah [45a+45b+...45l] |45');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'46', $b=>'(vi) Hadiah berupa wang tunai atau mata benda|46');
 		$p[$k][]=array($a=>'05', $b=>'[D]JUMLAH PINDAHAN SEMASA YG DITERIMA [INCS{(41)+'
