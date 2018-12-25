@@ -51,28 +51,28 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 			. ' [INCS{(21A)+(21NA)+(21KS}]|21');
 		$p[$k][]=array($a=>'22', $b=>'(i)Sewa dinilai bagi rumah yang diduduki oleh pemiliknya'
 			. ' [Gunakan Helaian Kerja PPIR/HK-6 ...INCS22]|22');
-		$p[$k][]=array($a=>'23', $b=>'(ii)Sewa rumah atau harta lain (masukkan sewa tanah dan'
+		$p[$k][]=array($a=>'23', $b=>'(ii)Sewa rumah atau harta lain (masukkan sewa tanah &'
 			. ' rumahsekali) [Gunakan Helaian Kerja PPIR/HK-6 ...INCS23]|23');
 		$p[$k][]=array($a=>'24', $b=>'(iii)Sewa daripada tempat menginap (cth :'
 			. ' sewa bilik di  TK tersebut)|24');
 		$p[$k][]=array($a=>'02', $b=>'[B] JUMLAH PENDAPATAN LAIN DIPEROLEH'
 			. ' [INCS{(21)+(22)+(23)+(24)}]|02');
-		$p[$k][]=array($a=>'31', $b=>'a.(i) Royalti (cth : hak cipta, paten dan'
+		$p[$k][]=array($a=>'31', $b=>'a.(i) Royalti(cth:hak cipta, paten &'
 			. ' hak yg. serupa)|31');
 		$p[$k][]=array($a=>'32', $b=>'(ii) Sewa daripada tanah pertanian [Gunakan Helaian'
 			. ' Kerja PPIR/HK-6 ...INCS32]|32');
-		$p[$k][]=array($a=>'33', $b=>'(iii) Faedah (cth : deposit bank, bil, bon,'
+		$p[$k][]=array($a=>'33', $b=>'(iii) Faedah(cth:deposit bank, bil, bon,'
 			. ' pinjaman, dll.)|33');
-		$p[$k][]=array($a=>'34', $b=>'(iv) Dividen (cth :  hak milik saham,'
+		$p[$k][]=array($a=>'34', $b=>'(iv) Dividen(cth: hak milik saham,'
 			. ' saham amanah dll.)|34');
 		$p[$k][]=array($a=>'03', $b=>'[C]JUMLAH PENDAPATAN DARIPADA HARTA'
 			. ' [INCS{(31)+(32)+(33)+(34)}]|03');
 		$p[$k][]=array($a=>'41', $b=>'b.(i)	Kiriman wang yang diterima (daripada isi rumah'
-			. ' yang lain dalam dan luar negeri)|41');
+			. ' yang lain dalam & luar negeri)|41');
 		$p[$k][]=array($a=>'42', $b=>'(ii) Nafkah|42');
 		$p[$k][]=array($a=>'43', $b=>'(iii) Biasiswa / Dermasiswa / Fellowships|43');
 		$p[$k][]=array($a=>'44', $b=>'(iv) Pencen|44');
-		$p[$k][]=array($a=>'45', $b=>'(v) Pembayaran lain berkala yang diterima (cth : harta'
+		$p[$k][]=array($a=>'45', $b=>'(v) Pembayaran lain berkala yang diterima(cth:harta'
 			. ' pesaka, kumpulan wang amanah, dll)|45');
 		$p[$k][]=array($a=>'46', $b=>'(vi) Hadiah berupa wang tunai atau mata benda|46');
 		$p[$k][]=array($a=>'05', $b=>'[D] JUMLAH PINDAHAN SEMASA YANG DITERIMA [INCS{(41)+'
@@ -88,14 +88,14 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'61', $b=>'1. Cukai pendapatan/Zakat pendapatan|61');
 		$p[$k][]=array($a=>'62', $b=>'2. Cukai lain (cth:cukai jalan, cukai lapangan'
 		. ' terbang, dll.) | 62');
-		$p[$k][]=array($a=>'63', $b=>'3. Bayaran wajib dan denda (cth : bayaran pasport,'
+		$p[$k][]=array($a=>'63', $b=>'3. Bayaran wajib & denda(cth:bayaran pasport,'
 				. ' ujian memandu, pendaftaran kereta motor, lesen memandu, dll.) | 63');
 		$p[$k][]=array($a=>'64', $b=>'4. Pencaruman kepada KWSP / Skim Keselamatan Sosial'
-				. ' (pencaruman majikan dan pekerja)|64	');
+				. ' (pencaruman majikan & pekerja)|64	');
 		$p[$k][]=array($a=>'65', $b=>'5. Bayaran pampasan kerana kecederaan, ganti rugi'
 				. ' berdasarkan undang-undang, dll.|65');
 		$p[$k][]=array($a=>'66', $b=>'6. Bayaran nafkah atau harta warisan|66');
-		$p[$k][]=array($a=>'67', $b=>'7. Biasiswa, dermasiswa dan fellowships|67');
+		$p[$k][]=array($a=>'67', $b=>'7. Biasiswa, dermasiswa & fellowships|67');
 		$p[$k][]=array($a=>'73A', $b=>'Jumlah / Total   INCS 73A = (TP61 + TP62 +...+ TP67)|73A');
 		$p[$k][]=array($a=>'68', $b=>'8. Pemberian kepada badan agama atau derma amal | 68');
 		$p[$k][]=array($a=>'69', $b=>'9. Yuran keahlian kepada kesatuan sekerja, parti politik,'
@@ -139,7 +139,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 	#***************************************************************************************
 		$k = 'kod_perikanan';
 		$p[$k][]=array($a=>'A1', $b=>'1.Nilai jumlah jualan (termasuk ikan kolam'
-				. '  / sangkar, air tawar dan air payau / laut)|A1');
+				. '  / sangkar, air tawar & air payau / laut)|A1');
 		$p[$k][]=array($a=>'A2', $b=>'2.Pendapatan yang diterima daripada sewaan bot'
 				. ' / perkakas dalam sua belas (12) bulan yang lalu |A2');
 		$p[$k][]=array($a=>'A3', $b=>'3.Lain-lain|A3');
