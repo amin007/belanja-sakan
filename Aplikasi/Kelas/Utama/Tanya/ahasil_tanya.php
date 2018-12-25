@@ -255,21 +255,21 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 	#***************************************************************************************
 		$k = 'kod_xtvttani_hk2';
 		$p[$k][]=array($a=>'PK', $b=>'Pekerjaan|PK' );
-		$p[$k][]=array($a=>'A1', $b=>'1.Penerimaan daripada jualan barang-barang keluaran|A1');
+		$p[$k][]=array($a=>'A1', $b=>'1.Penerimaan drp jualan barang2 keluaran|A1');
 		$p[$k][]=array($a=>'A2', $b=>'2.Jumlah perbelanjaan|A2');
-		$p[$k][]=array($a=>'B1', $b=>'2.Keuntungan  bersih  sebagaimana  tercatat  dalam'
+		$p[$k][]=array($a=>'B1', $b=>'2.Keuntungan bersih sebagaimana tercatat dlm'
 		. ' penyata kira-kira|B1');
-		$p[$k][]=array($a=>'B2', $b=>'3.Anggaran semula perkara B1 untuk tahun rujukan |B2');
-		$p[$k][]=array($a=>'C1', $b=>'1.Pendapatan bersih tahunan Sama ada [A1 - A2]'
-		. '  atau [B1 atau B2] | C1');
+		$p[$k][]=array($a=>'B2', $b=>'3.Anggaran semula perkara B1 utk tahun rujukan |B2');
+		$p[$k][]=array($a=>'C1', $b=>'1.Pendapatan bersih tahunan sama ada [A1 - A2]'
+		. ' atau [B1 atau B2]|C1');
 		$p[$k][]=array($a=>'C2', $b=>'2.Peratus pembahagian yg dipegang oleh'
-		. '  ahli-ahli isi rumah | C2');
-		$p[$k][]=array($a=>'C3', $b=>'3.Nilai Mutlak bagi C2 | C3');
+		. '  ahli-ahli isi rumah|C2');
+		$p[$k][]=array($a=>'C3', $b=>'3.Nilai Mutlak bagi C2|C3');
 		$p[$k][]=array($a=>'C4A', $b=>'4.Jumlah nilai bagi keluaran sendiri yg'
-		. ' digunakan untuk:(a) Kegunaan sendiri | c4a');
+		. ' digunakan utk:(a) Kegunaan sendiri|C4A');
 		$p[$k][]=array($a=>'C4B', $b=>'4.Jumlah nilai bagi keluaran sendiri yg'
-		. ' digunakan untuk:(b) Lain-lain (seperti zakat, biji benih,'
-		. ' pemberian, dll.)|c4b');
+		. ' digunakan utk:(b) Lain-lain (seperti zakat, biji benih,'
+		. ' pemberian, dll.)|C4B');
 		$p[$k][]=array($a=>'C4', $b=>'4.Jumlah nilai bagi keluaran sendiri yg'
 		. ' digunakan : C4=(a)+(b) |C4');
 		$p[$k][]=array($a=>'C5', $b=>'5.Pendapatan bersih yg diterima oleh'
