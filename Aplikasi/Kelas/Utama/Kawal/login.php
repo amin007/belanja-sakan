@@ -192,7 +192,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 		$this->caraIngat01();
 	}
 #------------------------------------------------------------------------------------------
-	public function ubahSimpan($medanID,$posmen)
+	public function ubahSimpan($senaraiJadual,$posmen,$medanID)
 	{
 		# ubahsuai $posmen
 		$this->semakPembolehubah('medanID',$medanID);
