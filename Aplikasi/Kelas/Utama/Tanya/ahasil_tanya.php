@@ -205,8 +205,9 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'65', $b=>$b1.'5. Bayaran pampasan kerana kecederaan, ganti rugi'
 		. ' berdasarkan undang-undang, dll.|65');
 		$p[$k][]=array($a=>'66', $b=>$b1.'6. Bayaran nafkah atau harta warisan|66');
-		$p[$k][]=array($a=>'67', $b=>$b1.'7. Biasiswa, dermasiswa & fellowships|67');
-		$p[$k][]=array($a=>'73A', $b=>$b1.'Jumlah/Total INCS 73A = (TP61 + TP62 +...+ TP67)|73A');
+		$p[$k][]=array($a=>'67', $b=>$b1.'7. Bayaran pinjaman pelajaran|67');
+		$p[$k][]=array($a=>'73A', $b=>$b1.'Jumlah INCS 73A=(TP61 + TP62 +...+ TP67)|73A');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'68', $b=>$b1.'8. Pemberian kepada badan agama atau derma amal | 68');
 		$p[$k][]=array($a=>'69', $b=>$b1.'9. Yuran keahlian kepada kesatuan sekerja, parti politik,'
 		. ' kelab sosial, dll.|69');
