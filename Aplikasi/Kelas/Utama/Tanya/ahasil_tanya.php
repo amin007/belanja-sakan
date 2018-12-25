@@ -212,17 +212,18 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' derma amal|68');
 		$p[$k][]=array($a=>'69', $b=>$b1.'9. Yuran keahlian kpd kesatuan sekerja,'
 		. ' parti politik,kelab sosial, dll.|69');
-		$p[$k][]=array($a=>'70', $b=>$b1.'10. Hadiah berupa wang tunai atau mata benda|70');
+		$p[$k][]=array($a=>'70', $b=>$b1.'10. Hadiah berupa wang tunai/mata benda|70');
 		$p[$k][]=array($a=>'71', $b=>$b1.'11. Pindahan lain(cth:zakar fitrah,dll)|71');
 		$p[$k][]=array($a=>'72A', $b=>$b1.'12. Pemberian kpd isi rumah lain:a)Malaysia'
 		. ' |72a');
 		$p[$k][]=array($a=>'72B', $b=>$b1.'12. Pemberian kpd isi rumah lain:b)'
-		. ' Negara-Negara lain / Foreign|72b');
+		. ' Negara2 lain|72b');
 		$p[$k][]=array($a=>'72C', $b=>$b1.'12. Pemberian kpd isi rumah lain:c)'
-		. ' Nyatakan Negara / Specify Country|72c');
-		$p[$k][]=array($a=>'73B', $b=>$b1.'Jumlah/TotaL INCS 73B = (TP68 + TP69 +...+'
+		. ' Nyatakan Negara|72c');
+		$p[$k][]=array($a=>'73B', $b=>$b1.'Jumlah INCS 73B = (TP68 + TP69 +...+'
 		. ' TP72a + TP72b)|73B');
-		$p[$k][]=array($a=>'TP73', $b=>$b1.'Jumlah/Total TP73 = (INCS 73A + INCS 73B)|73')
+		#-----------------------------------------------------------------------------------
+		$p[$k][]=array($a=>'TP73', $b=>$b1.'Jumlah TP73 = (INCS 73A + INCS 73B)|73')
 		//=>array( $a=>'-', $b=>'*');
 		);
 	#***************************************************************************************
