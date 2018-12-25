@@ -131,8 +131,11 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'43', $b=>$b1.'(iii) Biasiswa/Dermasiswa/Fellowships|43');
 		$p[$k][]=array($a=>'44', $b=>$b1.'(iv) Pencen|44');
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'45', $b=>'(v) Pembayaran lain berkala yg diterima(cth:harta'
+		$b1 = 'Hasil selain pendapatan diperoleh:<br>'
+		. '(v)Pembayaran lain berkala yg diterima';
+		$p[$k][]=array($a=>'45', $b=>$b1.'(cth:harta'
 		. ' pesaka, kumpulan wang amanah, dll)|45');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'46', $b=>'(vi) Hadiah berupa wang tunai atau mata benda|46');
 		$p[$k][]=array($a=>'05', $b=>'[D]JUMLAH PINDAHAN SEMASA YG DITERIMA [INCS{(41)+'
 		. ' (42)+ ... +(46)}]|05');
