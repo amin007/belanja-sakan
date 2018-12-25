@@ -20,7 +20,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 	function pilihPencam()
 	{
 		$a = 'kod'; $b = 'keterangan';
-		$c0['kod_hasil'] = array(
+	#***************************************************************************************
+	$c0['kod_hasil'] = array(
 		0=>array( $a=>'11', $b=>'Upah dan gaji (sebelum potongan cukai pendapatan,'
 			. ' pencaruman KWSP, dll.)|11' ),
 		1=>array( $a=>'12', $b=>'Elaun (cth : elaun sara hidup, elaun pakar, elaun'
