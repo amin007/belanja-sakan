@@ -275,7 +275,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'C5', $b=>'5.Pendapatan bersih yg diterima oleh'
 		. ' ahli isi rumah C5=C3+C4|C5')
-		$b1 = 'C5| Hasil drp pertanian & perikanan:'
+		$b1 = 'C5| Hasil drp pertanian:'
 		$p[$k][]=array($a=>'21A(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
 		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus dll'
 		. '|21A(i)');
@@ -284,8 +284,6 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. '|21A(ii)');
 		$p[$k][]=array($a=>'21A(iii)', $b=>$b1.' bukan dlm talian|21A(iii)');
 		#-----------------------------------------------------------------------------------
-		//=>array( $a=>'-', $b=>'*');
-		);
 	#***************************************************************************************
 		$k = 'kod_perikanan_hk3';
 		$p[$k][]=array($a=>'A1', $b=>'1.Nilai jumlah jualan(termasuk ikan kolam/sangkar,'
@@ -313,8 +311,6 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. '|21A(ii)');
 		$p[$k][]=array($a=>'21A(iii)', $b=>$b1.' bukan dlm talian|21A(iii)');
 		#-----------------------------------------------------------------------------------
-		//=>array( $a=>'-', $b=>'*');
-		);
 	#***************************************************************************************
 		return ($c0);
 	}
