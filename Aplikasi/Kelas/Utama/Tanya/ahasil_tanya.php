@@ -274,6 +274,16 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' digunakan : C4=(a)+(b) |C4');
 		$p[$k][]=array($a=>'C5', $b=>'5.Pendapatan bersih yg diterima oleh'
 		. ' ahli isi rumah	C5 = C3 + C4 | C5')
+		#-----------------------------------------------------------------------------------
+		$b1 = 'Hasil drp pertanian & perikanan:'
+		$p[$k][]=array($a=>'21A(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
+		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus dll'
+		. '|21A(i)');
+		$p[$k][]=array($a=>'21A(ii)', $b=>$b1.' dlm talian melalui traksaksi bukan edagang'
+		. '(cth: menerima pesanan melalui whatsapp,facebook,email dll'
+		. '|21A(ii)');
+		$p[$k][]=array($a=>'21A(iii)', $b=>$b1.' bukan dlm talian|21A(iii)');
+		#-----------------------------------------------------------------------------------
 		//=>array( $a=>'-', $b=>'*');
 		);
 	#***************************************************************************************
