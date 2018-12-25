@@ -21,25 +21,25 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 	{
 		$a = 'kod'; $b = 'keterangan';
 	#***************************************************************************************
-	$c0['kod_hasil'] = array(
-		0=>array( $a=>'11', $b=>'Upah & gaji(sebelum potongan cukai pendapatan,'
-			. ' pencaruman KWSP, dll.)|11' ),
-		1=>array( $a=>'12', $b=>'Elaun(cth:elaun sara hidup, elaun pakar, elaun'
-			. ' perumahan, elaun luar negeri, dll.)|12' ),
-		2=>array( $a=>'13', $b=>'Bonus|13' ),
-		3=>array( $a=>'14', $b=>'Wang tunai lain(cth:komisen, tip, pendapatan'
-			. ' daripada kerja lebih masa, dll.)|14' ),
-		4=>array( $a=>'15', $b=>'Makanan percuma/konsesi|15' ),
-		5=>array( $a=>'16', $b=>'Tempat menginap percuma/konsesi|16' ),
-		6=>array( $a=>'17', $b=>'Barang pengguna & perkhidmatan percuma/konsesi|17' ),
-		7=>array( $a=>'18', $b=>'Pembayaran lain yang diterima berupa mata benda'
-			. ' (cth:padi, getah, kelapa, dll.)|18' ),
-		8=>array( $a=>'19a', $b=>'Pencaruman majikan kpd KWSP|19a' ),
-		9=>array( $a=>'19b', $b=>'Pencaruman majikan kpd PERKESO, dll.|19b' ),
-		10=>array( $a=>'19c', $b=>'Pencaruman majikan kpd dll.|19c' ),
-		11=>array( $a=>'19', $b=>'Jumlah [19a+19b+19c]|19' ),
-		12=>array( $a=>'01', $b=>'[A]JUMLAH PENDAPATAN PEKERJAAN BERGAJI'
-			. ' [INCS{(11)+(12)+ ... +(19)}]|01' ),
+		$k = 'kod_hasil';
+		$p[$k][]=array($a=>'11', $b=>'Upah & gaji(sebelum potongan cukai pendapatan,'
+		. ' pencaruman KWSP, dll.)|11' );
+		$p[$k][]=array($a=>'12', $b=>'Elaun(cth:elaun sara hidup, elaun pakar, elaun'
+		. ' perumahan, elaun luar negeri, dll.)|12' );
+		$p[$k][]=array($a=>'13', $b=>'Bonus|13' );
+		$p[$k][]=array($a=>'14', $b=>'Wang tunai lain(cth:komisen, tip, pendapatan'
+		. ' daripada kerja lebih masa, dll.)|14' );
+		$p[$k][]=array($a=>'15', $b=>'Makanan percuma/konsesi|15' );
+		$p[$k][]=array($a=>'16', $b=>'Tempat menginap percuma/konsesi|16' );
+		$p[$k][]=array($a=>'17', $b=>'Barang pengguna & perkhidmatan percuma/konsesi|17' );
+		$p[$k][]=array($a=>'18', $b=>'Pembayaran lain yang diterima berupa mata benda'
+		. ' (cth:padi, getah, kelapa, dll.)|18' );
+		$p[$k][]=array($a=>'19a', $b=>'Pencaruman majikan kpd KWSP|19a' );
+		$p[$k][]=array($a=>'19b', $b=>'Pencaruman majikan kpd PERKESO, dll.|19b' );
+		$p[$k][]=array($a=>'19c', $b=>'Pencaruman majikan kpd dll.|19c' );
+		$p[$k][]=array($a=>'19', $b=>'Jumlah [19a+19b+19c]|19' );
+		$p[$k][]=array($a=>'01', $b=>'[A]JUMLAH PENDAPATAN PEKERJAAN BERGAJI'
+		. ' [INCS{(11)+(12)+ ... +(19)}]|01' );
 		#-----------------------------------------------------------------------------------
 		10=>array( $a=>'21A', $b=>'(i) Pertanian [Gunakan Helaian Kerja'
 			. ' PPIR/HK-3 & 4]|21A' ),
