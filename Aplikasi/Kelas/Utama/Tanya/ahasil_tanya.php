@@ -88,6 +88,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'21e(iii)', $b=>$b1.' bukan dlm talian'.$b2.'|21e(iii)');
 		$p[$k][]=array($a=>'21e', $b=>'Jumlah [21e(i)+21e(ii)+21e(iii)]|21e');
 		#-----------------------------------------------------------------------------------
+		$p[$k][]=array($a=>'21NA', $b=>'Jumlah [21b+21c+21d+21e]|21c');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'21KS', $b=>'Kegunaan sendiri [Gunakan helaian kerja'
 		. ' PPIR/HK-7]|21KS');
 		$p[$k][]=array($a=>'21', $b=>'JUMLAH PENDAPATAN PEKERJAAN SENDIRI'
