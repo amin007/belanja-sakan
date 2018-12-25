@@ -194,7 +194,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'62', $b=>'2. Cukai lain (cth:cukai jalan, cukai lapangan'
 		. ' terbang, dll.)|62');
 		$p[$k][]=array($a=>'63', $b=>'3. Bayaran wajib & denda(cth:bayaran pasport,'
-		. ' ujian memandu, pendaftaran kereta motor, lesen memandu, dll.) | 63');
+		. ' ujian memandu, pendaftaran kereta motor, lesen memandu, dll.)|63');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'64', $b=>'4. Pencaruman kepada KWSP / Skim Keselamatan Sosial'
 		. ' (pencaruman majikan & pekerja)|64');
 		$p[$k][]=array($a=>'65', $b=>'5. Bayaran pampasan kerana kecederaan, ganti rugi'
