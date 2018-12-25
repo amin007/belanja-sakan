@@ -127,9 +127,10 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' yg lain luar negeri/negara)|41b');
 		$p[$k][]=array($a=>'41', $b=>$b1.'Jumlah [41a+41b]|41');
 		#-----------------------------------------------------------------------------------
-		$p[$k][]=array($a=>'42', $b=>'(ii) Nafkah|42');
-		$p[$k][]=array($a=>'43', $b=>'(iii) Biasiswa/Dermasiswa/Fellowships|43');
-		$p[$k][]=array($a=>'44', $b=>'(iv) Pencen|44');
+		$p[$k][]=array($a=>'42', $b=>$b1.'(ii) Nafkah|42');
+		$p[$k][]=array($a=>'43', $b=>$b1.'(iii) Biasiswa/Dermasiswa/Fellowships|43');
+		$p[$k][]=array($a=>'44', $b=>$b1.'(iv) Pencen|44');
+		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'45', $b=>'(v) Pembayaran lain berkala yg diterima(cth:harta'
 		. ' pesaka, kumpulan wang amanah, dll)|45');
 		$p[$k][]=array($a=>'46', $b=>'(vi) Hadiah berupa wang tunai atau mata benda|46');
