@@ -256,7 +256,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$k = 'kod_xtvttani_hk2';
 		$p[$k][]=array($a=>'PK', $b=>'Pekerjaan|PK' );
 		$p[$k][]=array($a=>'A1', $b=>'1.Penerimaan drp jualan barang2 keluaran|A1');
-		$p[$k][]=array($a=>'A2', $b=>'2.Jumlah perbelanjaan|A2');
+		$p[$k][]=array($a=>'A2', $b=>'2.Jumlah belanja|A2');
 		$p[$k][]=array($a=>'B1', $b=>'2.Keuntungan bersih sebagaimana tercatat dlm'
 		. ' penyata kira-kira|B1');
 		$p[$k][]=array($a=>'B2', $b=>'3.Anggaran semula perkara B1 utk tahun rujukan |B2');
@@ -292,7 +292,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. '/perkakas dlm dua belas (12) bulan yg lalu|A2');
 		$p[$k][]=array($a=>'A3', $b=>'3.Lain-lain|A3');
 		$p[$k][]=array($a=>'A4', $b=>'Jumlah A4=A1+A2+A3|A4');
-		$p[$k][]=array($a=>'B', $b=>'1.Jumlah perbelanjaan | B');
+		$p[$k][]=array($a=>'B', $b=>'1.Jumlah belanja | B');
 		$p[$k][]=array($a=>'C1', $b=>'1.Pendapatan bersih tahunan (A4 - B)|C1');
 		$p[$k][]=array($a=>'C2', $b=>'2.Peratus pembahagian yg dipegang oleh'
 		. ' ahli isi rumah|C2');
@@ -317,7 +317,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'A1', $b=>'1.Jumlah bulan berniaga dlm setahun|A1');
 		$p[$k][]=array($a=>'A2', $b=>'2.Purata penerimaan drp jualan bulanan bagi'
 		. ' brg & perkhidmatan ICT|A2');
-		$p[$k][]=array($a=>'A3', $b=>'3.Purata perbelanjaan bulanan|A3');
+		$p[$k][]=array($a=>'A3', $b=>'3.Purata belanja bulanan|A3');
 		$p[$k][]=array($a=>'A4', $b=>'4.Purata keuntungan bersih bulanan A4=A2-A3|A4');
 		$p[$k][]=array($a=>'B1', $b=>'1.Keuntungan bersih dlm penyata kira-kira|B1');
 		$p[$k][]=array($a=>'B2', $b=>'2.Anggaran semua B1 utk tahun rujukan|B2');
@@ -346,7 +346,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'A1', $b=>'1.Jumlah bulan berniaga dlm setahun|A1');
 		$p[$k][]=array($a=>'A2', $b=>'2.Purata penerimaan drp jualan bulanan bagi'
 		. ' brg & perkhidmatan ICT|A2');
-		$p[$k][]=array($a=>'A3', $b=>'3.Purata perbelanjaan bulanan|A3');
+		$p[$k][]=array($a=>'A3', $b=>'3.Purata belanja bulanan|A3');
 		$p[$k][]=array($a=>'A4', $b=>'4.Purata keuntungan bersih bulanan A4=A2-A3|A4');
 		$p[$k][]=array($a=>'B1', $b=>'1.Keuntungan bersih dlm penyata kira-kira|B1');
 		$p[$k][]=array($a=>'B2', $b=>'2.Anggaran semua B1 utk tahun rujukan|B2');
@@ -375,7 +375,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'A1', $b=>'1.Jumlah bulan berniaga dlm setahun|A1');
 		$p[$k][]=array($a=>'A2', $b=>'2.Purata penerimaan drp jualan bulanan bagi'
 		. ' brg & perkhidmatan ICT|A2');
-		$p[$k][]=array($a=>'A3', $b=>'3.Purata perbelanjaan bulanan|A3');
+		$p[$k][]=array($a=>'A3', $b=>'3.Purata belanja bulanan|A3');
 		$p[$k][]=array($a=>'A4', $b=>'4.Purata keuntungan bersih bulanan A4=A2-A3|A4');
 		$p[$k][]=array($a=>'B1', $b=>'1.Keuntungan bersih dlm penyata kira-kira|B1');
 		$p[$k][]=array($a=>'B2', $b=>'2.Anggaran semua B1 utk tahun rujukan|B2');
@@ -412,37 +412,37 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		#-----------------------------------------------------------------------------------
 		$b1 = 'rumah yg diduduki sendiri';
 		$p[$k][]=array($a=>'22.1', $b=>$b1.'1.jenis rumah|22.1');
-		$p[$k][]=array($a=>'22.2', $b=>$b1.'2.jumlah kasar sewa tahunan|22.2');
-		$p[$k][]=array($a=>'22.3', $b=>$b1.'3.jumlah perbelanjaan tahunan(i+ii+iii)|22.3');
+		$p[$k][]=array($a=>'22.2', $b=>$b1.'2.jum kasar sewa tahunan|22.2');
+		$p[$k][]=array($a=>'22.3', $b=>$b1.'3.jum belanja tahunan(i+ii+iii)|22.3');
 		$p[$k][]=array($a=>'22.3(i)', $b=>$b1.'3(i)pembaikan & penyelenggaraan|22.3(i)');
 		$p[$k][]=array($a=>'22.3(ii)', $b=>$b1.'3(i)cukai tanah|22.3(ii)');
 		$p[$k][]=array($a=>'22.3(iii)', $b=>$b1.'3(i)cukai pintu|22.3(iii)');
-		$p[$k][]=array($a=>'22', $b=>$b1.'4.jumlah sewa bersih tahunan (2-3)|22');
+		$p[$k][]=array($a=>'22', $b=>$b1.'4.jum sewa bersih tahunan (2-3)|22');
 		#-----------------------------------------------------------------------------------
 		$b1 = 'rumah/harta lain yg disewakan';
 		$p[$k][]=array($a=>'23.1', $b=>$b1.'1.jenis rumah/harta lain|23.1');
 		$p[$k][]=array($a=>'23.2', $b=>$b1.'2.bil rumah/harta lain|23.2');
-		$p[$k][]=array($a=>'23.3', $b=>$b1.'3.jumlah kasar sewa tahunan|23.3');
-		$p[$k][]=array($a=>'23.4', $b=>$b1.'4.jumlah perbelanjaan tahunan(i+ii+iii)|23.4');
+		$p[$k][]=array($a=>'23.3', $b=>$b1.'3.jum kasar sewa tahunan|23.3');
+		$p[$k][]=array($a=>'23.4', $b=>$b1.'4.jum belanja tahunan(i+ii+iii)|23.4');
 		$p[$k][]=array($a=>'23.4(i)', $b=>$b1.'4(i)pembaikan & penyelenggaraan|23.4(i)');
 		$p[$k][]=array($a=>'23.4(ii)', $b=>$b1.'4(i)cukai tanah|23.4(ii)');
 		$p[$k][]=array($a=>'23.4(iii)', $b=>$b1.'4(i)cukai pintu|23.4(iii)');
-		$p[$k][]=array($a=>'23.1', $b=>$b1.'5.jumlah sewa bersih tahunan (3-4)|23');
+		$p[$k][]=array($a=>'23.1', $b=>$b1.'5.jum sewa bersih tahunan (3-4)|23');
 		#-----------------------------------------------------------------------------------
 		$b1 = 'sewa tanah pertanian';
-		$p[$k][]=array($a=>'32a.1', $b=>$b1.'1.jumlah kasar sewa tahunan|32a.1');
-		$p[$k][]=array($a=>'32a.2', $b=>$b1.'2.jumlah perbelanjaan tahunan(i+ii)|32a.2');
+		$p[$k][]=array($a=>'32a.1', $b=>$b1.'1.jum kasar sewa tahunan|32a.1');
+		$p[$k][]=array($a=>'32a.2', $b=>$b1.'2.jum belanja tahunan(i+ii)|32a.2');
 		$p[$k][]=array($a=>'32a.2(i)', $b=>$b1.'2(i)penyelenggaraan|32a.2(i)');
 		$p[$k][]=array($a=>'32a.2(ii)', $b=>$b1.'2(ii)cukai tanah|32a.2(ii)');
-		$p[$k][]=array($a=>'32a', $b=>$b1.'3.jumlah sewa bersih tahunan (1-2)|32a');
+		$p[$k][]=array($a=>'32a', $b=>$b1.'3.jum sewa bersih tahunan (1-2)|32a');
 		#-----------------------------------------------------------------------------------
 		$b1 = 'sewa tanah bukan pertanian';
-		$p[$k][]=array($a=>'32b.1', $b=>$b1.'1.jumlah kasar sewa tahunan|32b.1');
-		$p[$k][]=array($a=>'32b.2', $b=>$b1.'2.jumlah perbelanjaan tahunan(i+ii+iii)|32b.2');
+		$p[$k][]=array($a=>'32b.1', $b=>$b1.'1.jum kasar sewa tahunan|32b.1');
+		$p[$k][]=array($a=>'32b.2', $b=>$b1.'2.jum belanja tahunan(i+ii+iii)|32b.2');
 		$p[$k][]=array($a=>'32b.2(i)', $b=>$b1.'2(i)penyelenggaraan|32b.2(i)');
 		$p[$k][]=array($a=>'32b.2(ii)', $b=>$b1.'2(ii)cukai tanah|32b.2(ii)');
 		$p[$k][]=array($a=>'32b.2(iii)', $b=>$b1.'2(iii)cukai pintu|32b.2(iii)');
-		$p[$k][]=array($a=>'32b', $b=>$b1.'3.jumlah sewa bersih tahunan (1-2)|32b');
+		$p[$k][]=array($a=>'32b', $b=>$b1.'3.jum sewa bersih tahunan (1-2)|32b');
 		#-----------------------------------------------------------------------------------
 	#***************************************************************************************
 		return ($c0);
