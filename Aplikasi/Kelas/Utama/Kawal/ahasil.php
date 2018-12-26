@@ -18,12 +18,11 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
 		//$this->papar->c1 = $this->tanya->pilihPencam();
-		$this->papar->senarai = $this->tanya->pilihPencam();
-		$this->kandunganPaparan('a', 'b');
 		$this->panggilKhas02('punca_hasil',null);
 		$this->panggilKhas02('medium_hasil',null);
-		/*$this->papar->c1 = $this->tanya->
-			contoh_cariKhas04($this->papar->bentukJadual02);
+		$this->papar->bentukJadual02 = $this->tanya->pilihPencam();
+		$this->papar->c1 = $this->tanya->
+			contoh_cariKhas02($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
 		$this->panggilJadual('senarai_belanja');
 		$this->panggilJadual('nama_pengguna');//*/
