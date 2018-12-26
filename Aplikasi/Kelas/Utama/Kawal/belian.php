@@ -132,8 +132,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function ubahMeta($meta)
 	{
-		$kira = count($meta);
-		//echo "<hr> bil untuk \$meta = $kira <br>";
 		foreach($meta as $key => $pilih):
 			$key2 = $pilih['name'];
 			//$meta[$key2]['table'] = $pilih['table'];
@@ -144,16 +142,9 @@ class Belian extends \Aplikasi\Kitab\Kawal
 				$pilih['flags'][0].'|'.$pilih['flags'][1] : null;
 			$meta[$key2]['type_pdo'] = $pilih['pdo_type'];
 			$meta[$key2]['type_precision'] = $pilih['precision'];
-			/*unset($meta[$key]['table']);
-			unset($meta[$key]['name']);
-			unset($meta[$key]['len']);
-			unset($meta[$key]['native_type']);
-			unset($meta[$key]['flags']);
-			unset($meta[$key]['pdo_type']);
-			unset($meta[$key]['precision']);//*/
 			unset($meta[$key]);
 		endforeach;
-		//$this->semakPembolehubah($meta);
+
 		return $meta;
 	}
 #-------------------------------------------------------------------------------------------
