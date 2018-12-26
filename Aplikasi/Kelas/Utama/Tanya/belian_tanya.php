@@ -78,7 +78,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return $medan;
 	}
 #------------------------------------------------------------------------------------------#
-	public function contoh_borangBaru01()
+	public function borangBaru01()
 	{
 		$medan[0] = array(
 			//'no' => null, //int(11) Auto Increment
