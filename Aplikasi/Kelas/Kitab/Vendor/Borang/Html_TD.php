@@ -79,8 +79,9 @@ class Html_TD
 		{
 			?><td><?php echo nl2br($data) ?></td><?php
 		}
-		elseif(in_array($key,array('harga_sebenar','punca_pembelian',
-		'medium_pembayaran','medium_edagang')))
+		elseif(in_array($key,array('harga_sebenar','punca_pembelian','medium_pembayaran',
+		'hasil_sebenar','punca_hasil','medium_hasil',
+		'medium_edagang')))
 		{
 			$k0 = $this->pilihKey($semua);
 			?><td><?php echo nl2br($k0) ?></td><?php
