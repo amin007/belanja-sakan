@@ -173,15 +173,16 @@ DROP TABLE IF EXISTS `senarai_belanja`;
 CREATE TABLE `senarai_belanja` (
   `no` int(11) NOT NULL AUTO_INCREMENT,
   `nohp` varchar(20) DEFAULT NULL,
+  `noair` varchar(2) DEFAULT NULL,
   `jenis_belanja` varchar(50) DEFAULT NULL,
   `tarikh` date DEFAULT NULL,
   `belanja_keterangan` text,
   `belanja_kod` int(11) DEFAULT NULL,
   `amaun_rm` decimal(10,2) DEFAULT NULL,
-  `harga_sebenar` tinyint(4) DEFAULT NULL COMMENT '1-harga sebenar/2-harga anggaran',
-  `punca_pembelian` char(2) DEFAULT NULL,
-  `medium_pembayaran` char(2) DEFAULT NULL,
-  `medium_edagang` tinyint(4) DEFAULT NULL COMMENT '1-ya/2-tidak',
+  `nilai_sebenar` tinyint(4) DEFAULT NULL COMMENT '1-sebenar/2-anggaran',
+  `punca` char(2) DEFAULT NULL COMMENT 'asal usul tukaran duit',
+  `tukaran` char(2) DEFAULT NULL COMMENT 'guna tunai atau kad atau online',
+  `edagang` tinyint(4) DEFAULT NULL COMMENT '1-ya/2-tidak',
   `catatan` text,
   PRIMARY KEY (`no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -207,15 +208,16 @@ DROP TABLE IF EXISTS `senarai_pendapatan`;
 CREATE TABLE `senarai_pendapatan` (
   `no` int(11) NOT NULL AUTO_INCREMENT,
   `nohp` varchar(20) DEFAULT NULL,
+  `noair` varchar(2) DEFAULT NULL,
   `jenis_hasil` varchar(50) DEFAULT NULL,
   `tarikh` date DEFAULT NULL,
   `hasil_keterangan` text,
   `hasil_kod` int(11) DEFAULT NULL,
   `amaun_rm` decimal(10,2) DEFAULT NULL,
-  `hasil_sebenar` tinyint(4) DEFAULT NULL COMMENT '1-harga sebenar/2-harga anggaran',
-  `punca_hasil` char(2) DEFAULT NULL,
-  `medium_hasil` char(2) DEFAULT NULL,
-  `medium_edagang` tinyint(4) DEFAULT NULL COMMENT '1-ya/2-tidak',
+  `nilai_sebenar` tinyint(4) DEFAULT NULL COMMENT '1-sebenar/2-anggaran',
+  `punca` char(2) DEFAULT NULL COMMENT 'asal usul tukaran duit',
+  `tukaran` char(2) DEFAULT NULL COMMENT 'guna tunai atau kad atau online',
+  `edagang` tinyint(4) DEFAULT NULL COMMENT '1-ya/2-tidak',
   `catatan` text,
   PRIMARY KEY (`no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
