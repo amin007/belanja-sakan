@@ -61,6 +61,23 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 #------------------------------------------------------------------------------------------#
 #===========================================================================================
 #------------------------------------------------------------------------------------------#
+	public function contoh_cariKhas02($medan1)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		$medanA['nilai_sebenar'][0]['kod'] = '1';
+		$medanA['nilai_sebenar'][0]['keterangan'] = 'sebenar';
+		$medanA['nilai_sebenar'][1]['kod'] = '2';
+		$medanA['nilai_sebenar'][1]['keterangan'] = 'anggaran';
+		$medanA['edagang'][0]['kod'] = '1';
+		$medanA['edagang'][0]['keterangan'] = 'ya';
+		$medanA['edagang'][1]['kod'] = '2';
+		$medanA['edagang'][1]['keterangan'] = 'tidak';
+		$medanA = array_merge($medan1, $medanA);
+		//*/
+
+		return $medan;
+	}
+#------------------------------------------------------------------------------------------#
 	public function contoh_borangBaru01()
 	{
 		$medan[0] = array(
@@ -78,23 +95,6 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 			'edagang' => null, //int(11)|1-ya/2-tidak
 			'catatan' => null, //text
 		);
-
-		return $medan;
-	}
-#------------------------------------------------------------------------------------------#
-	public function contoh_cariKhas02($medan1)
-	{
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		$medan2['nilai_sebenar'][0]['kod'] = '1';
-		$medan2['nilai_sebenar'][0]['keterangan'] = 'harga sebenar';
-		$medan2['nilai_sebenar'][1]['kod'] = '2';
-		$medan2['nilai_sebenar'][1]['keterangan'] = 'harga anggaran';
-		$medan2['edagang'][0]['kod'] = '1';
-		$medan2['edagang'][0]['keterangan'] = 'ya';
-		$medan2['edagang'][1]['kod'] = '2';
-		$medan2['edagang'][1]['keterangan'] = 'tidak';
-		$medan = array_merge($medan1, $medan2);
-		//*/
 
 		return $medan;
 	}
