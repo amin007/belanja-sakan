@@ -502,5 +502,53 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
+	function kodPuncaHasil()
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
+		$myTable = 'kod_puncahasil';
+		$medan = 'kod,keterangan';
+		$carian = $susun = null;
+		# semak database
+			/*$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
+				'atau'=>'WHERE', # WHERE / OR / AND
+				'medan' => $medanID, # cari dalam medan apa
+				'apa' => $dataID); # benda yang dicari//*/
+
+		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
+	}
+#------------------------------------------------------------------------------------------#
+	function kodMediumHasil()
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
+		$myTable = 'kod_mediumhasil';
+		$medan = 'kod,keterangan';
+		$carian = $susun = null;
+		# semak database
+			/*$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
+				'atau'=>'WHERE', # WHERE / OR / AND
+				'medan' => $medanID, # cari dalam medan apa
+				'apa' => $dataID); # benda yang dicari//*/
+
+		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
+	}
+#------------------------------------------------------------------------------------------#
+	function jadualSenaraiPendapatan()
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
+		$myTable = 'senarai_pendapatan';
+		$medan = '*';
+		$carian = $susun = null;
+		# semak database
+			/*$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
+				'atau'=>'WHERE', # WHERE / OR / AND
+				'medan' => $medanID, # cari dalam medan apa
+				'apa' => $dataID); # benda yang dicari//*/
+
+		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
+	}
+#------------------------------------------------------------------------------------------#
 #===========================================================================================
 }
