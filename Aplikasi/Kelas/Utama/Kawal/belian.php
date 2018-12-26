@@ -223,45 +223,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->kandunganPaparan($p1, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
-	public function ubahSimpan($p1)
-	{
-		# ubahsuai $posmen
-		list($posmen,$senaraiJadual,$medanID) = $this->ubahsuaiPost($p1);
-		//echo '<br>$medanID=' . $medanID . '<br>';
-		//$this->semakPembolehubah($_POST,'_POST');
-		//$this->semakPembolehubah($posmen,'posmen');
-
-		# mula ulang $senaraiJadual
-		foreach ($senaraiJadual as $kunci => $jadual)
-		{# mula ulang table
-			$this->tanya->ubahSqlSimpan
-			//ubahSimpan
-			($posmen[$jadual], $jadual, $medanID);
-		}# tamat ulang table
-
-		# Pergi papar kandungan
-		$lokasi = 'belian/';
-		//echo '<br>location:' . URL . $lokasi;
-		//header('location:' . URL . $lokasi); //*/
-	}
-#-------------------------------------------------------------------------------------------
-	function ubahsuaiPost($dataID)
-	{
-		list($medanID,$senaraiJadual) = $this->tanya->pilihUbahPost();
-
-		$posmen = array(); //$this->semakPembolehubah($_POST,'_POST');
-		foreach ($_POST as $myTable => $value):
-			if ( in_array($myTable,$senaraiJadual) ):
-				foreach ($value as $kekunci => $papar)
-				{
-					$posmen[$myTable][$kekunci] = bersih($papar);
-					$posmen[$myTable][$medanID] = bersih($dataID);
-				}
-		endif; endforeach;//*/
-
-		return array($posmen,$senaraiJadual,$medanID);# pulangkan nilai
-	}
-#-------------------------------------------------------------------------------------------
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
 	public function baru()
@@ -343,6 +304,45 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[3], $noInclude=0);//*/
+	}
+#-------------------------------------------------------------------------------------------
+	public function ubahSimpan($p1)
+	{
+		# ubahsuai $posmen
+		list($posmen,$senaraiJadual,$medanID) = $this->ubahsuaiPost($p1);
+		//echo '<br>$medanID=' . $medanID . '<br>';
+		//$this->semakPembolehubah($_POST,'_POST');
+		//$this->semakPembolehubah($posmen,'posmen');
+
+		# mula ulang $senaraiJadual
+		foreach ($senaraiJadual as $kunci => $jadual)
+		{# mula ulang table
+			$this->tanya->ubahSqlSimpan
+			//ubahSimpan
+			($posmen[$jadual], $jadual, $medanID);
+		}# tamat ulang table
+
+		# Pergi papar kandungan
+		$lokasi = 'belian/';
+		//echo '<br>location:' . URL . $lokasi;
+		//header('location:' . URL . $lokasi); //*/
+	}
+#-------------------------------------------------------------------------------------------
+	function ubahsuaiPost($dataID)
+	{
+		list($medanID,$senaraiJadual) = $this->tanya->pilihUbahPost();
+
+		$posmen = array(); //$this->semakPembolehubah($_POST,'_POST');
+		foreach ($_POST as $myTable => $value):
+			if ( in_array($myTable,$senaraiJadual) ):
+				foreach ($value as $kekunci => $papar)
+				{
+					$posmen[$myTable][$kekunci] = bersih($papar);
+					$posmen[$myTable][$medanID] = bersih($dataID);
+				}
+		endif; endforeach;//*/
+
+		return array($posmen,$senaraiJadual,$medanID);# pulangkan nilai
 	}
 #-------------------------------------------------------------------------------------------
 #==========================================================================================
