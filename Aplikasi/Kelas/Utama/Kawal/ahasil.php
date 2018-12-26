@@ -225,7 +225,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 	public function ubahSimpan($p1)
 	{
 		# ubahsuai $posmen
-		list($posmen,$senaraiJadual,$myTable,$medanID) = $this->ubahsuaiPost($p1);
+		list($posmen,$senaraiJadual,$medanID) = $this->ubahsuaiPost($p1);
 		//echo '<br>$dataID=' . $dataID . '<br>';
 		//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
