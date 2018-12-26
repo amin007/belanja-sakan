@@ -226,7 +226,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		# ubahsuai $posmen
 		list($posmen,$senaraiJadual,$medanID) = $this->ubahsuaiPost($p1);
-		//echo '<br>$dataID=' . $dataID . '<br>';
+		//echo '<br>$medanID=' . $medanID . '<br>';
 		//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
 
