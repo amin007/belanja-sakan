@@ -167,7 +167,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
 		list($$data,$meta) = $this->tanya->pilihMedan03//cariSql
 			($jadual, $medan, $carian, $susun);
-		/*$this->papar->_meta = $this->ubahMeta($meta);
+		$this->papar->_meta = $this->ubahMeta($meta);
 		$this->papar->senarai[$jadual] = $this->tanya->contoh_cariKhas03();
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($p1, $jadual);//*/
