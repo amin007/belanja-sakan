@@ -317,10 +317,10 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		unset($this->papar->bentukJadual02);//*/
 		$this->pilihMedan('senarai_pendapatan');
 		//$this->pilihMedan('nama_pengguna');
-		$this->debugKandunganPaparan();//*/
+		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
-		/*$this->_folder = 'cari';
+		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[2], $noInclude=0);//*/
