@@ -265,8 +265,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	function ubahsuaiPost1($p1)
 	{
 		$senaraiJadual = $this->tanya->pilihJadual($p1);
-		//echo '<pre>$senaraiJadual='; print_r($senaraiJadual); echo '</pre>';
-		//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
+		//$this->semakPembolehubah($senaraiJadual,'senaraiJadual');
+		//$this->semakPembolehubah($_POST,'_POST');
 
 		$posmen = array();
 		foreach ($_POST as $myTable => $value):
