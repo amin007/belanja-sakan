@@ -162,14 +162,16 @@ class Belian extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function pilihMedan($p1)
 	{
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
-		list($result,$meta) = $this->tanya->pilihMedan03($jadual, $medan, $carian, $susun);
-		$this->papar->_meta = $this->ubahMeta($meta);
+		list($result,$meta) = $this->tanya->//pilihMedan03
+			cariSql
+			($jadual, $medan, $carian, $susun);
+		/*$this->papar->_meta = $this->ubahMeta($meta);
 		$this->papar->senarai[$jadual] = $this->tanya->contoh_cariKhas03();
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($p1, $jadual);
+		$this->kandunganPaparan($p1, $jadual);//*/
 	}
 #-------------------------------------------------------------------------------------------
 	function tambahMedanDB($p1)
@@ -314,7 +316,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->papar->bentukJadual01 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
-		$this->pilihMedan('senarai_belanja');
+		//$this->pilihMedan('senarai_belanja');
 		//$this->pilihMedan('nama_pengguna');
 		$this->debugKandunganPaparan();//*/
 
