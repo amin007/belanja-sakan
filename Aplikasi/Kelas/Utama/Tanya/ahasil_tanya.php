@@ -63,7 +63,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'01', $b=>'[A]JUMLAH PENDAPATAN PEKERJAAN BERGAJI'
 		. ' [INCS{(11)+(12)+ ... +(19)}]|01' );
 		#-----------------------------------------------------------------------------------
-		$b1 = 'Hasil drp pertanian & perikanan:'
+		$b1 = 'Hasil drp pertanian & perikanan:';
 		$b2 = '[Gunakan helaian kerja PPIK/HK-2/3]';
 		$p[$k][]=array($a=>'21A(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
 		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus dll'
@@ -74,7 +74,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'21A(iii)', $b=>$b1.' bukan dlm talian'.$b2.'|21A(iii)');
 		$p[$k][]=array($a=>'21A', $b=>'Jumlah [21A(i)+21A(ii)+21A(iii)]|21A');
 		#-----------------------------------------------------------------------------------
-		$b1 = 'Hasil drp ICT:'
+		$b1 = 'Hasil drp ICT:';
 		$b2 = '[Gunakan helaian kerja PPIK/HK-4]';
 		$p[$k][]=array($a=>'21b(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
 		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus'
@@ -88,7 +88,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'21c', $b=>'Komisen drp aktiviti ICT'
 		. '(cth: komisen drp penyiaran iklan berbayar di website|21c');
 		#-----------------------------------------------------------------------------------
-		$b1 = 'Bukan pertanian & ict(Hasil Pengangkutan):'
+		$b1 = 'Bukan pertanian & ict(Hasil Pengangkutan):';
 		$b2 = '[Gunakan helaian kerja PPIK/HK-5]';
 		$p[$k][]=array($a=>'21d(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
 		. '(cth: menerima pesanan melalui marketplace spt grab,uber,mycar,website khusus'
@@ -99,7 +99,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'21d(iii)', $b=>$b1.' bukan dlm talian'.$b2.'|21d(iii)');
 		$p[$k][]=array($a=>'21d', $b=>'Jumlah [21d(i)+21d(ii)+21d(iii)]|21d');
 		#-----------------------------------------------------------------------------------
-		$b1 = 'Hasil lain:'
+		$b1 = 'Hasil lain:';
 		$b2 = '[Gunakan helaian kerja PPIK/HK-6]';
 		$p[$k][]=array($a=>'21e(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
 		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus'
@@ -292,8 +292,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' digunakan : C4=(a)+(b)|C4');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'C5', $b=>'5.Pendapatan bersih yg diterima oleh'
-		. ' ahli isi rumah C5=C3+C4|C5')
-		$b1 = 'C5| Hasil drp pertanian:'
+		. ' ahli isi rumah C5=C3+C4|C5');
+		$b1 = 'C5| Hasil drp pertanian:';
 		$p[$k][]=array($a=>'21A(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
 		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus dll'
 		. '|21A(i)');
@@ -319,8 +319,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' sendiri setahun|C4');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'C5', $b=>'5.Pendapatan bersih yg diterima oleh'
-		. ' ahli isi rumah C5=C3+C4|C5')
-		$b1 = 'C5| Hasil drp perikanan:'
+		. ' ahli isi rumah C5=C3+C4|C5');
+		$b1 = 'C5| Hasil drp perikanan:';
 		$p[$k][]=array($a=>'21A(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
 		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus dll'
 		. '|21A(i)');
@@ -348,8 +348,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' sendiri setahun|C4');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'C5', $b=>'5.Pendapatan bersih yg diterima oleh'
-		. ' ahli isi rumah C5=C3+C4|C5')
-		$b1 = 'C5| Hasil drp ict:'
+		. ' ahli isi rumah C5=C3+C4|C5');
+		$b1 = 'C5| Hasil drp ict:';
 		$p[$k][]=array($a=>'21A(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
 		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus dll'
 		. '|21A(i)');
@@ -377,8 +377,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' sendiri setahun|C4');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'C5', $b=>'5.Pendapatan bersih yg diterima oleh'
-		. ' ahli isi rumah C5=C3+C4|C5')
-		$b1 = 'C5| Hasil drp pengangkutan:'
+		. ' ahli isi rumah C5=C3+C4|C5');
+		$b1 = 'C5| Hasil drp pengangkutan:';
 		$p[$k][]=array($a=>'21d(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
 		. '(cth: menerima pesanan melalui marketplace spt grab,uber,mycar,website khusus'
 		. ' dll' . $b2 . '|21d(i)');
@@ -406,8 +406,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		. ' sendiri setahun|C4');
 		#-----------------------------------------------------------------------------------
 		$p[$k][]=array($a=>'C5', $b=>'5.Pendapatan bersih yg diterima oleh'
-		. ' ahli isi rumah C5=C3+C4|C5')
-		$b1 = 'C5| Hasil drp lain2:'
+		. ' ahli isi rumah C5=C3+C4|C5');
+		$b1 = 'C5| Hasil drp lain2:';
 		$p[$k][]=array($a=>'21A(i)', $b=>$b1.' dlm talian melalui traksaksi edagang'
 		. '(cth: menerima pesanan melalui marketplace spt shopee,lazada,website khusus dll'
 		. '|21A(i)');
@@ -418,17 +418,17 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		#-----------------------------------------------------------------------------------
 	#***************************************************************************************
 		$k = 'kod_kegunaansendiri_hk7';
-		$p[$k][]=array($a=>'NOAIR', $b=>'no. ahli isi rumah|NOAIR';
+		$p[$k][]=array($a=>'NOAIR', $b=>'no. ahli isi rumah|NOAIR');
 		$items = array('sayur-sayuran','kelapa','ikan','ayam','itik','telur','rambutan',
 		'durian','pisang','kayu api','lain2 0','lain2 1','lain2 2');
 		foreach($item as $item):
-			$p[$k][]=array($a=>$item, $b=>$item.'(purata sebulan)(jumlah setahun)';
+			$p[$k][]=array($a=>$item, $b=>$item.'(purata sebulan)(jumlah setahun)');
 		endforeach;
 	#***************************************************************************************
 		$k = 'kod_sewabersih_hk8';
-		$p[$k][]=array($a=>'NOAIR', $b=>'no. ahli isi rumah|NOAIR';
+		$p[$k][]=array($a=>'NOAIR', $b=>'no. ahli isi rumah|NOAIR');
 		#-----------------------------------------------------------------------------------
-		$b1 = 'rumah yg diduduki sendiri';
+		$b1 = 'rumah yg diduduki sendiri: ';
 		$p[$k][]=array($a=>'22.1', $b=>$b1.'1.jenis rumah|22.1');
 		$p[$k][]=array($a=>'22.2', $b=>$b1.'2.jum kasar sewa tahunan|22.2');
 		$p[$k][]=array($a=>'22.3', $b=>$b1.'3.jum belanja tahunan(i+ii+iii)|22.3');
@@ -437,7 +437,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'22.3(iii)', $b=>$b1.'3(i)cukai pintu|22.3(iii)');
 		$p[$k][]=array($a=>'22', $b=>$b1.'4.jum sewa bersih tahunan (2-3)|22');
 		#-----------------------------------------------------------------------------------
-		$b1 = 'rumah/harta lain yg disewakan';
+		$b1 = 'rumah/harta lain yg disewakan: ';
 		$p[$k][]=array($a=>'23.1', $b=>$b1.'1.jenis rumah/harta lain|23.1');
 		$p[$k][]=array($a=>'23.2', $b=>$b1.'2.bil rumah/harta lain|23.2');
 		$p[$k][]=array($a=>'23.3', $b=>$b1.'3.jum kasar sewa tahunan|23.3');
@@ -447,14 +447,14 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'23.4(iii)', $b=>$b1.'4(i)cukai pintu|23.4(iii)');
 		$p[$k][]=array($a=>'23.1', $b=>$b1.'5.jum sewa bersih tahunan (3-4)|23');
 		#-----------------------------------------------------------------------------------
-		$b1 = 'sewa tanah pertanian';
+		$b1 = 'sewa tanah pertanian :';
 		$p[$k][]=array($a=>'32a.1', $b=>$b1.'1.jum kasar sewa tahunan|32a.1');
 		$p[$k][]=array($a=>'32a.2', $b=>$b1.'2.jum belanja tahunan(i+ii)|32a.2');
 		$p[$k][]=array($a=>'32a.2(i)', $b=>$b1.'2(i)penyelenggaraan|32a.2(i)');
 		$p[$k][]=array($a=>'32a.2(ii)', $b=>$b1.'2(ii)cukai tanah|32a.2(ii)');
 		$p[$k][]=array($a=>'32a', $b=>$b1.'3.jum sewa bersih tahunan (1-2)|32a');
 		#-----------------------------------------------------------------------------------
-		$b1 = 'sewa tanah bukan pertanian';
+		$b1 = 'sewa tanah bukan pertanian: ';
 		$p[$k][]=array($a=>'32b.1', $b=>$b1.'1.jum kasar sewa tahunan|32b.1');
 		$p[$k][]=array($a=>'32b.2', $b=>$b1.'2.jum belanja tahunan(i+ii+iii)|32b.2');
 		$p[$k][]=array($a=>'32b.2(i)', $b=>$b1.'2(i)penyelenggaraan|32b.2(i)');
