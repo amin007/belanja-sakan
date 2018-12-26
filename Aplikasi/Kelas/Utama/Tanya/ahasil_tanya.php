@@ -183,5 +183,20 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
+	function ubahPencam($jadual,$medanID,$dataID)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
+		$medan = '*';
+		$carian = $susun = null;
+		# semak database
+			$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
+				'atau'=>'WHERE', # WHERE / OR / AND
+				'medan' => $medanID, # cari dalam medan apa
+				'apa' => $dataID); # benda yang dicari//*/
+
+		return array($jadual, $medan, $carian, $susun);#pulangkan nilai
+	}
+#------------------------------------------------------------------------------------------#
 #===========================================================================================
 }
