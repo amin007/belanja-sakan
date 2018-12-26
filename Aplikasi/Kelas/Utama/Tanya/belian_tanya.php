@@ -262,7 +262,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		$medan = '*';
 		$carian = $susun = null;
 		# semak database
-			$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
+			/*$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
 				'atau' => 'WHERE', # WHERE / OR / AND
 				'medan' => 'nohp', # cari dalam medan apa
 				'apa' => $nohp); # benda yang dicari//*/
