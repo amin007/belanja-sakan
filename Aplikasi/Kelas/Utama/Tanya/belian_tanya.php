@@ -99,21 +99,6 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return $medan;
 	}
 #------------------------------------------------------------------------------------------#
-	function pilihJadual()
-	{
-		$jadual = array('senarai_belanja');
-
-		return $jadual;
-	}
-#------------------------------------------------------------------------------------------#
-	function pilihUbahPost()
-	{
-		$medan = 'no';
-		$jadual = array('senarai_belanja');
-
-		return array($medan,$jadual);
-	}
-#------------------------------------------------------------------------------------------#
 	public function tanyaDataSesi()
 	{
 		$dataSulit = new \Aplikasi\Kitab\Sesi();
@@ -227,6 +212,21 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 				'apa' => $dataID); # benda yang dicari//*/
 
 		return array($jadual, $medan, $carian, $susun);#pulangkan nilai
+	}
+#------------------------------------------------------------------------------------------#
+	function pilihJadual()
+	{
+		$jadual = array('senarai_belanja');
+
+		return $jadual;
+	}
+#------------------------------------------------------------------------------------------#
+	function pilihUbahPost()
+	{
+		$medan = 'no';
+		$jadual = array('senarai_belanja');
+
+		return array($medan,$jadual);
 	}
 #------------------------------------------------------------------------------------------#
 #===========================================================================================
