@@ -69,10 +69,10 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 			'belanja_keterangan' => null, //text
 			//'belanja_kod' => null, //int(11)
 			'amaun_rm' => null, //decimal(10,2)
-			'harga_sebenar' => null, //tinyint(4)|1-harga sebenar/2-harga anggaran
-			'punca_pembelian' => null, //char(2)
-			'medium_pembayaran' => null, //enum('01,02,03,04,05,06,07,08,09,10')
-			'medium_edagang' => null, //int(11)|1-ya/2-tidak
+			'nilai_sebenar' => null, //tinyint(4)|1-sebenar/2-anggaran
+			'punca' => null, //char(2)
+			'tukaran' => null, //
+			'edagang' => null, //int(11)|1-ya/2-tidak
 			'catatan' => null, //text
 			//'password' => null, //text
 		);
