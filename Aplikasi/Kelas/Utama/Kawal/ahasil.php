@@ -162,7 +162,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function pilihMedan($p1)
 	{
-		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
 		list($data,$meta) = $this->tanya->pilihMedan03//cariSql
