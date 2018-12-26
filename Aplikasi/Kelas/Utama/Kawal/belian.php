@@ -116,7 +116,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->papar->c2 = null;
 		$this->papar->_pilih = $p1;
 		$this->papar->_method = 'belian';
-		$this->papar->baruBorang = 'belian/google2';
+		$this->papar->baruBorang = 'belian/baru';
 		$this->papar->cariID = 'papar';
 		$this->papar->template = 'template_biasa';
 		$this->papar->pilihJadual = 'pilih_jadual_am';
@@ -305,7 +305,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
-	public function google2()
+	public function baru()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
