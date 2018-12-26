@@ -59,7 +59,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return ($pilih==1) ? $kira : $data; # pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
-	public function contoh_cariKhas03()
+	public function contoh_borangBaru01()
 	{
 		$medan[0] = array(
 			//'no' => null, //int(11) Auto Increment
