@@ -18,7 +18,7 @@ echo 'url=' . URL . '';
 ?></p>
 
 	<a class="btn btn-primary btn-large" href="<?php echo URL ?>admin2home/logout">Keluar<i class="fa fa-binoculars fa-2x"></i></a>
-	<a class="btn btn-success btn-large" href="<?php echo URL ?>dapatan">Dapatan<i class="fa fa-binoculars fa-2x"></i></a>
+	<a class="btn btn-success btn-large" href="<?php echo URL ?>ahasil">Dapatan<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-danger btn-large" href="<?php echo URL ?>belian">Belian<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-warning btn-large" href="<?php echo URL ?>semakan">Semakan<i class="fa fa-binoculars fa-2x"></i></a>
 
