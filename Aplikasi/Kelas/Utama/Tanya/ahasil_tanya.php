@@ -29,8 +29,8 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 			'amaun_rm' => null, //decimal(10,2)
 			'nilai_sebenar' => null, //tinyint(4)|1-sebenar/2-anggaran
 			'punca' => null, //char(2)
-			'medium' => null, //enum('01,02,03,04,05,06,07,08,09,10')
-			'medium_edagang' => null, //int(11)|1-ya/2-tidak
+			'tukaran' => null, //
+			'edagang' => null, //int(11)|1-ya/2-tidak
 			'catatan' => null, //text
 			//'password' => null, //text
 		);
