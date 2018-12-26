@@ -49,7 +49,12 @@ class Html_TD
 	{
 		list($pengguna,$level,$birutua,$birumuda,$merah) = $this->setPencam();
 		list($key,$data,$myTable,$ca,$cb) = $semua;
-		return $data;
+			$k0 = URL . $cb . '/ubah/' . $data;
+			$btn = 'href="' . $k0 . '" class="' . $birumuda . '"';
+			$p = '<a '. $btn . '>' . $this->iconFA(1)
+			. 'Ubah</a><br>' . $data;
+
+		return $p;
 	}
 #==========================================================================================
 	function paparURL($key, $data, $myTable = null, $ca = null, $cb = null)
