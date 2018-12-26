@@ -241,8 +241,8 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 
 		# Pergi papar kandungan
 		$lokasi = 'ahasil/';
-		//echo '<br>location: ' . URL . $lokasi;
-		//header('location: ' . URL . $lokasi); //*/
+		//echo '<br>location:' . URL . $lokasi;
+		//header('location:' . URL . $lokasi); //*/
 	}
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPost($dataID)

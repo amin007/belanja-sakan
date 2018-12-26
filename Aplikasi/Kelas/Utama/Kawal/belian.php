@@ -241,8 +241,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 
 		# Pergi papar kandungan
 		$lokasi = 'belian/';
-		//echo '<br>location: ' . URL . $lokasi;
-		//header('location: ' . URL . $lokasi); //*/
+		//echo '<br>location:' . URL . $lokasi;
+		//header('location:' . URL . $lokasi); //*/
 	}
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPost($dataID)
