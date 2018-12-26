@@ -182,7 +182,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->kandunganPaparan($p1, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilTable($myJadual,$medanID,$dataID)
+	function panggilTable($jadual,$medanID,$dataID)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
@@ -190,12 +190,12 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			$this->tanya->susunTatasusunan($medanID,$dataID);
 		list($result,$meta) = $this->tanya->//cariSql
 			cariSemuaDataMeta
-			($myJadual, $medan, $carian, $susun);
+			($jadual, $medan, $carian, $susun);
 		$this->papar->_meta = $this->ubahMeta($meta);
 		$this->papar->carian[0] = $dataID;
-		$this->papar->senarai[$myJadual] = $result;
+		$this->papar->senarai[$jadual] = $result;
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($myJadual, $myJadual);
+		$this->kandunganPaparan($jadual, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilKhas01($p1,$p2)
