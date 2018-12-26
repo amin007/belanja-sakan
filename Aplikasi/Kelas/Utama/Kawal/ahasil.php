@@ -373,7 +373,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 
 		# pergi papar kandungan
 		//echo 'location:' . URL . '';
-		header('location:' . URL . '');//*/
+		header('location:' . URL . 'ahasil');//*/
 	}
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPostBaru($senaraiJadual)
