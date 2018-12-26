@@ -421,7 +421,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'NOAIR', $b=>'no. ahli isi rumah|NOAIR');
 		$items = array('sayur-sayuran','kelapa','ikan','ayam','itik','telur','rambutan',
 		'durian','pisang','kayu api','lain2 0','lain2 1','lain2 2');
-		foreach($item as $item):
+		foreach($items as $item):
 			$p[$k][]=array($a=>$item, $b=>$item.'(purata sebulan)(jumlah setahun)');
 		endforeach;
 	#***************************************************************************************
