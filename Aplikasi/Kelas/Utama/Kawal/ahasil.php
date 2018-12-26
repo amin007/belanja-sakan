@@ -108,7 +108,6 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function kandunganPaparan($p1, $myTable)
 	{
-		//$this->papar->senarai[$myTable] = null;
 		$this->papar->myTable = $myTable;
 		$this->papar->_jadual = $myTable;
 		$this->papar->carian[] = 'semua';
