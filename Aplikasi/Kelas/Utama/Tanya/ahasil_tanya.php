@@ -466,6 +466,22 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		return ($p);
 	}
 #------------------------------------------------------------------------------------------#
+	public function tanyaDataSesi()
+	{
+		$dataSulit = new \Aplikasi\Kitab\Sesi();
+		//echo '<pre>'; print_r($_SESSION); echo '</pre>';
+		$idUser = $dataSulit->get('bs_namaPendek');
+		$nohp = $dataSulit->get('bs_nohp');
+		/*echo 'idUser=' . $dataSulit->get('idUser') . '<br>';
+		echo 'namaPendek=' . $dataSulit->get('namaPendek') . '<br>';
+		echo 'namaPenuh=' . $dataSulit->get('namaPenuh') . '<br>';
+		echo 'email=' . $dataSulit->get('email') . '<br>';
+		echo 'levelPengguna=' . $dataSulit->get('levelPengguna') . '';
+		echo '<hr>';//*/
+
+		return array($idUser,$nohp);
+	}
+#------------------------------------------------------------------------------------------#
 	public function susunPembolehubah($pilih, $dataID = null)
 	{
 		//$pilih = null;
