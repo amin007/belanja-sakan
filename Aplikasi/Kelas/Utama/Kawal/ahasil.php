@@ -20,9 +20,9 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		//$this->papar->c1 = $this->tanya->pilihPencam();
 		$this->papar->senarai = $this->tanya->pilihPencam();
 		$this->kandunganPaparan('a', 'b');
-		/*$this->panggilKhas02('punca_pembelian',null);
-		$this->panggilKhas02('medium_pembayaran',null);
-		$this->papar->c1 = $this->tanya->
+		$this->panggilKhas02('punca_hasil',null);
+		$this->panggilKhas02('medium_hasil',null);
+		/*$this->papar->c1 = $this->tanya->
 			contoh_cariKhas04($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
 		$this->panggilJadual('senarai_belanja');
