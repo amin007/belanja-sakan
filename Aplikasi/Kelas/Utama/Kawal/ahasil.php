@@ -178,7 +178,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		list($result,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
 		//$this->papar->kiramedan[$myTable] = $meta;
 		$this->papar->_meta = $this->ubahMeta($meta);
-		$this->papar->senarai[$myTable] = $this->tanya->contoh_cariKhas03();
+		$this->papar->senarai[$myTable] = $this->tanya->contoh_borangBaru01();
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($p1, $myTable);
 	}
