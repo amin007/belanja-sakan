@@ -245,7 +245,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//header('location: ' . URL . $lokasi); //*/
 	}
 #-------------------------------------------------------------------------------------------
-	function ubahsuaiPost()
+	function ubahsuaiPost($dataID)
 	{
 		list($medanID,$senaraiJadual) = $this->tanya->pilihUbahPost();
 
@@ -255,6 +255,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 				foreach ($value as $kekunci => $papar)
 				{
 					$posmen[$myTable][$kekunci] = bersih($papar);
+					$posmen[$myTable][$medanID] = bersih($dataID);
 				}
 		endif; endforeach;//*/
 
