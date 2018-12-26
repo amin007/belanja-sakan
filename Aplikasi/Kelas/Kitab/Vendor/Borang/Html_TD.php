@@ -45,12 +45,14 @@ class Html_TD
 		return $p;
 	}
 #==========================================================================================
+#==========================================================================================
 	function paparURL($key, $data, $myTable = null, $ca = null, $cb = null)
 	{
 		$semua = array($key, $data, $myTable, $ca, $cb);
-		if(in_array($key,array('newss','nox')))
+		if(in_array($key,array('newss','no')))
 		{# primary key
-			$k1 = $this->primaryKey($key,$data,$myTable,$ca,$cb);
+			//$k1 = $this->primaryKey($key,$data,$myTable,$ca,$cb);
+			$k1 = $this->primaryKey3($semua);
 			?><td><?php echo $k1 ?></td><?php
 		}
 		elseif(in_array($key,array('batchAwal')))
