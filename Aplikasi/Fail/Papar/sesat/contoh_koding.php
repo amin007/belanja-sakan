@@ -48,7 +48,7 @@ class <?php echo $namaClass ?> extends \Aplikasi\Kitab\Kawal
 	{
 		$lokasi = 'pergi/mana';
 		//echo '&lt;br>location: ' . URL . $lokasi;
-		header('location: ' . URL . $lokasi); //*/
+		header('location:' . URL . $lokasi);//*/
 	}
 ##------------------------------------------------------------------------------------------
 	public function paparKandungan($folder, $fail, $noInclude)
@@ -72,7 +72,7 @@ class <?php echo $namaClass ?> extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '&lt;pre>sebelum:'; print_r($_SESSION) . '&lt;/pre>';
 		\Aplikasi\Kitab\Sesi::destroy();
-		header('location: ' . URL);
+		header('location:' . URL);
 		//exit;
 	}
 #===========================================================================================
