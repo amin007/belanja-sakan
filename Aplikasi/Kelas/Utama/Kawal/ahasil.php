@@ -113,7 +113,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		$this->papar->carian[] = 'semua';
 		if(!isset($this->papar->c1))
 			$this->papar->c1 = null;
-		$this->papar->c2 = null;
+		$this->papar->c2 = 'ahasil';
 		$this->papar->_pilih = $p1;
 		$this->papar->_method = 'ahasil';
 		$this->papar->baruBorang = 'ahasil/baru';
