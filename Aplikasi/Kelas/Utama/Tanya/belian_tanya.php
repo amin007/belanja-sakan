@@ -64,6 +64,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		$medan[0] = array(
 			//'no' => null, //int(11) Auto Increment
 			'nohp' => null, //varchar(20)
+			//'noair' => null, //char(2)
 			//'jenis_belanja' => null, //varchar(50)
 			'tarikh' => null, //date
 			'belanja_keterangan' => null, //text
