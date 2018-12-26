@@ -50,9 +50,11 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//*/
 	}
 ##------------------------------------------------------------------------------------------
-	public function semakPembolehubah($senarai)
+	public function semakPembolehubah($senarai,$jadual)
 	{
-		echo '<pre>'; print_r($senarai); echo '</pre>';//*/
+		echo '<pre>$jadual = ' . $jadual . '|<br>';
+		print_r($senarai); echo '</pre>';//*/
+		//$this->semakPembolehubah($ujian,'ujian');
 	}
 ##------------------------------------------------------------------------------------------
 	function logout()
