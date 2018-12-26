@@ -80,7 +80,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return $medan;
 	}
 #------------------------------------------------------------------------------------------#
-	public function contoh_cariKhas04($medan1)
+	public function contoh_cariKhas02($medan1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		$medan2['nilai_sebenar'][0]['kod'] = '1';
