@@ -198,7 +198,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->kandunganPaparan($jadual, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilKhas01($p1,$p2)
+	function panggilKhas01($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
@@ -210,7 +210,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->kandunganPaparan($p1, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilKhas02($p1,$p2)
+	function panggilKhas02($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
