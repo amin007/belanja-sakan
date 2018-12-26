@@ -99,7 +99,6 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		return $medan;
 	}
 #------------------------------------------------------------------------------------------#
-#------------------------------------------------------------------------------------------#
 	public function tanyaDataSesi()
 	{
 		$dataSulit = new \Aplikasi\Kitab\Sesi();
