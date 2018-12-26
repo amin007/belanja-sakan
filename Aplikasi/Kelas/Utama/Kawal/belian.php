@@ -312,17 +312,17 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->panggilKhas02('punca');
 		$this->panggilKhas02('traksaksi');
 		$this->papar->bentukJadual01 = $this->tanya->
-			contoh_cariKhas04($this->papar->bentukJadual02);
+			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
 		$this->pilihMedan('senarai_belanja');
 		//$this->pilihMedan('nama_pengguna');
-		//$this->debugKandunganPaparan();//*/
+		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
-		$this->_folder = 'cari';
+		/*$this->_folder = 'cari';
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
-		$this->paparKandungan($this->_folder, $fail[2], $noInclude=0);
+		$this->paparKandungan($this->_folder, $fail[2], $noInclude=0);//*/
 	}
 #-------------------------------------------------------------------------------------------
 	public function baruSimpan($idBorang)
