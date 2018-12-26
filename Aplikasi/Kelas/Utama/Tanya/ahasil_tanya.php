@@ -93,7 +93,6 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$medanA['edagang'][1]['keterangan'] = 'tidak';
 		$medanA = array_merge($medan1, $medanA);
 		//$medan = array_merge($medanA, $this->pilihPencam());
-		//$this->semakPembolehubah($medan,'medan');
 
 		return $medan;
 	}
