@@ -165,8 +165,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
-		list($result,$meta) = $this->tanya->//pilihMedan03
-			cariSql
+		list($$data,$meta) = $this->tanya->pilihMedan03//cariSql
 			($jadual, $medan, $carian, $susun);
 		/*$this->papar->_meta = $this->ubahMeta($meta);
 		$this->papar->senarai[$jadual] = $this->tanya->contoh_borangBaru01();
