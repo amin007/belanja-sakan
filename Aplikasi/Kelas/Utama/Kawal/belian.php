@@ -70,6 +70,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		echo '<hr>Nama class :' . __METHOD__ . '()<hr><pre>';
 		$takWujud = array(); $kira = 0;
+
 		foreach($debugData as $semak):
 			if(isset($$semak)):
 				echo '<br>$' . $semak . ' : '; print_r($$semak);
