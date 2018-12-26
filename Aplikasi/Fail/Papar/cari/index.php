@@ -17,7 +17,6 @@ foreach ($this->senarai as $kunci2 => $nilai2)
 	$cari2 .= ( count($nilai2)==0 ) ? $kunci2 . " = Kosong<br>\r"
 	: $kunci2 . ' = ' . count($nilai2) . "<br>\r";
 //echo "Anda mencari = $cari1\r<br>$cari2\r<hr>\r";//*/
-//echo '<a class="btn btn-primary" href="' . URL . 'belian/google2">Tambah Baru</a>' . "\n";
 echo '<a class="btn btn-primary" href="' . URL . $this->baruBorang . '">Tambah Baru</a>' . "\n";
 
 //if(!isset($this->cariID))
