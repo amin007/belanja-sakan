@@ -20,16 +20,15 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		//$this->papar->c1 = $this->tanya->pilihPencam();
 		$this->panggilKhas02('punca_hasil',null);
 		$this->panggilKhas02('medium_hasil',null);
-		$this->papar->bentukJadual02 = $this->tanya->pilihPencam();
 		$this->papar->c1 = $this->tanya->
 			contoh_cariKhas02($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
-		$this->panggilJadual('senarai_belanja');
-		$this->panggilJadual('nama_pengguna');//*/
-		//$this->debugKandunganPaparan();//*/
+		$this->panggilJadual('senarai_pendapatan');
+		//$this->panggilJadual('nama_pengguna');//*/
+		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
-		$this->_folder = 'cari';
+		/*$this->_folder = 'cari';
 		$fail = array('1cari','index','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[1], $noInclude=0);//*/
