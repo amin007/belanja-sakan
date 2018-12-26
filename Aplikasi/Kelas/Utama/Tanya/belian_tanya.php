@@ -74,7 +74,6 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 			'tukaran' => null, //
 			'edagang' => null, //int(11)|1-ya/2-tidak
 			'catatan' => null, //text
-			//'password' => null, //text
 		);
 
 		return $medan;
