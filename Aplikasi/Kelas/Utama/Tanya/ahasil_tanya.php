@@ -198,5 +198,20 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($jadual, $medan, $carian, $susun);#pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
+	function pilihJadual()
+	{
+		$jadual = array('senarai_pendapatan');
+
+		return $jadual;
+	}
+#------------------------------------------------------------------------------------------#
+	function pilihUbahPost()
+	{
+		$medan = 'no';
+		$jadual = array('senarai_pendapatan');
+
+		return array($medan,$jadual);
+	}
+#------------------------------------------------------------------------------------------#
 #===========================================================================================
 }
