@@ -72,7 +72,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		$medanA['edagang'][0]['keterangan'] = 'ya';
 		$medanA['edagang'][1]['kod'] = '2';
 		$medanA['edagang'][1]['keterangan'] = 'tidak';
-		$medanA = array_merge($medan1, $medanA);
+		$medan = array_merge($medan1, $medanA);
 		//*/
 
 		return $medan;
