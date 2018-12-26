@@ -370,7 +370,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		$this->papar->bentukJadual01 = $this->tanya->
 			contoh_cariKhas04($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
-		$this->panggilTable('senarai_belanja','no',$dataID);
+		$this->panggilTable('senarai_pendapatan','no',$dataID);
 		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
