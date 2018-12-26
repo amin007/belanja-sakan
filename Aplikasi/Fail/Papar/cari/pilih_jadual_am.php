@@ -16,7 +16,8 @@
 		}
 	# papar data $row ------------------------------------------------
 	?><tr><td align="center"><?php echo $kira+1 ?></td><?php
-		$html = new \Aplikasi\Kitab\Borang04_Jadual;
+		//$html = new \Aplikasi\Kitab\Borang04_Jadual;
+		$html = new \Aplikasi\Kitab\Html_TD;
 		foreach ( $row[$kira] as $key=>$data )
 		{
 			$html->paparURL($key, $data, $myTable,
