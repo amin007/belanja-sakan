@@ -371,13 +371,13 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
 		$this->panggilTable('senarai_pendapatan','no',$dataID);
-		//$this->debugKandunganPaparan();//*/
+		$this->debugKandunganPaparan();//*/
 
-		# Pergi papar kandungan
+		/*# Pergi papar kandungan
 		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
-		$this->paparKandungan($this->_folder, $fail[3], $noInclude=0);
+		$this->paparKandungan($this->_folder, $fail[3], $noInclude=0);//*/
 	}
 #-------------------------------------------------------------------------------------------
 #==========================================================================================
