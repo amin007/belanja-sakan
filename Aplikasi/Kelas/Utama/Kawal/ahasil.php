@@ -179,7 +179,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		list($jadual) = $this->tanya->tambahPembolehubah($p1);
 		$this->papar->medan = $this->tanya->pilihMedan02($jadual);
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($myTable, $myTable);
+		$this->kandunganPaparan($p1, $myTable);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilTable($myJadual,$medanID,$dataID)
