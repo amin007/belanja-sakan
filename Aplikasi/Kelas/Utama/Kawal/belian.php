@@ -245,9 +245,9 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//header('location: ' . URL . $lokasi); //*/
 	}
 #-------------------------------------------------------------------------------------------
-	function ubahsuaiPost($p1)
+	function ubahsuaiPost()
 	{
-		list($medanID,$senaraiJadual) = $this->tanya->pilihUbahPost($p1);
+		list($medanID,$senaraiJadual) = $this->tanya->pilihUbahPost();
 
 		$posmen = array(); //echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 		foreach ($_POST as $myTable => $value):
