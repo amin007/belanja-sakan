@@ -45,10 +45,10 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		$medanA['nilai_sebenar'][0]['keterangan'] = 'sebenar';
 		$medanA['nilai_sebenar'][1]['kod'] = '2';
 		$medanA['nilai_sebenar'][1]['keterangan'] = 'anggaran';
-		$medanA['medium_edagang'][0]['kod'] = '1';
-		$medanA['medium_edagang'][0]['keterangan'] = 'ya';
-		$medanA['medium_edagang'][1]['kod'] = '2';
-		$medanA['medium_edagang'][1]['keterangan'] = 'tidak';
+		$medanA['edagang'][0]['kod'] = '1';
+		$medanA['edagang'][0]['keterangan'] = 'ya';
+		$medanA['edagang'][1]['kod'] = '2';
+		$medanA['edagang'][1]['keterangan'] = 'tidak';
 		$medanA = array_merge($medan1, $medanA);
 		$medan = array_merge($medanA, $this->pilihPencam());
 		//$this->semakPembolehubah($medan,'medan');
