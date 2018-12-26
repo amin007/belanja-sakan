@@ -249,7 +249,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		list($medanID,$senaraiJadual) = $this->tanya->pilihUbahPost();
 
-		$posmen = array(); //echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
+		$posmen = array(); //$this->semakPembolehubah($_POST,'_POST');
 		foreach ($_POST as $myTable => $value):
 			if ( in_array($myTable,$senaraiJadual) ):
 				foreach ($value as $kekunci => $papar)
