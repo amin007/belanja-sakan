@@ -7,12 +7,11 @@ $pilihJadual = 'jadual_bootstrap';
 
 # untuk kod baru
 //echo '<pre>$carian='; print_r($this->carian); echo '</pre>';
-//echo '<pre>$senarai='; print_r($this->senarai); echo '</pre>';
 
 # papar hasil carian
-$cari1 = '&nbsp;|&nbsp;'; $cari2 = '';
-/*foreach ($this->carian as $kunci => $nilai)
-	$cari1 .= ( count($this->carian)==0 ) ? $nilai : $nilai . ' | ';/*/
+/*$cari1 = '&nbsp;|&nbsp;'; $cari2 = '';
+foreach ($this->carian as $kunci => $nilai)
+	$cari1 .= ( count($this->carian)==0 ) ? $nilai : $nilai . ' | ';
 foreach ($this->senarai as $kunci2 => $nilai2)
 	$cari2 .= ( count($nilai2)==0 ) ? $kunci2 . " = Kosong<br>\r"
 	: $kunci2 . ' = ' . count($nilai2) . "<br>\r";
@@ -26,3 +25,4 @@ echo '<a class="btn btn-primary" href="' . URL . $this->baruBorang . '">Tambah B
 #-------------------------------------------------------------------------------
 //echo '<pre>$c1='; print_r($this->c1); echo '</pre>';
 //echo '<pre>$_meta='; print_r($this->_meta); echo '</pre>';
+//echo '<pre>$senarai='; print_r($this->senarai); echo '</pre>';
