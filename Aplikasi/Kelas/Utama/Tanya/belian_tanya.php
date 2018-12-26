@@ -28,47 +28,6 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return ($pilih==1) ? $kira : $data; # pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
-	public function contoh_cariKhas01($a,$b,$c,$d)
-	{
-		$medan[0] = array(
-			'newss' => '000000123456',
-			'nossm' => 'JR0001234',
-			'nama' => 'Biar Rahsia',
-			'fe' => '','hantar' => '',
-			'tik' => '<input type="checkbox">',
-			'mko' => '','R' => '',
-			'nama_kp' => 'pembuatan',
-			'kp' => '205',
-			'msic2008' => '10101'
-		);
-		$medan[1] = array(
-			'newss' => '000000123457',
-			'nossm' => 'JR0001235',
-			'nama' => 'Biar Rahsia2',
-			'fe' => '','hantar' => '',
-			'tik' => '<input type="checkbox">',
-			'mko' => '','R' => '',
-			'nama_kp' => 'pembuatan',
-			'kp' => '205',
-			'msic2008' => '10101'
-		);
-
-		return $medan;
-	}
-#------------------------------------------------------------------------------------------#
-	public function contoh_cariKhas02($a,$b,$c,$d)
-	{
-		$medan[0] = array(
-			'newss' => '000000123456',
-			'nossm' => 'JR0001234',
-			'nama' => 'Biar Rahsia',
-			'operator' => '',
-			'alamat' => 'NO 1, JALAN 2, TAMAN 3 48000 MUAR',
-		);
-
-		return $medan;
-	}
-#------------------------------------------------------------------------------------------#
 	public function contoh_cariKhas03()
 	{
 		$medan[0] = array(
@@ -120,70 +79,6 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		$jadual = array('senarai_belanja');
 
 		return array($medan,$jadual);
-	}
-#------------------------------------------------------------------------------------------#
-	function jadualDataCorp($cariApa)
-	{
-		$jadual = $this->pilihJadual();
-		$medan = '*';
-		# cari id berasaskan newss/ssm/sidap/nama
-		//$id['nama'] = bersih(isset($_POST['cari']) ? $_POST['cari'] : null);
-		$apa = bersih(isset($cariApa[1]) ? $cariApa[1] : null);
-		//$apa = $cariApa[1];
-
-		return array($jadual,$medan,$apa);
-	}
-#------------------------------------------------------------------------------------------#
-	function dataCorp($cariApa)
-	{
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		//echo '<pre>$cariApa->'; print_r($cariApa); echo '</pre>';
-		$carian = null;
-		if($_POST==null || empty($_POST) ):
-			$carian .= null;
-		else:
-			list($jadual, $medan, $apa) = $this->jadualDataCorp($cariApa);
-			$carian[] = array( 'fix'=>'z%like%','atau'=>'WHERE',
-				'medan' => 'concat_ws("",newss,nossm,nama)',
-				'apa' => $apa );
-			$cariID = $apa;
-		endif;
-
-		//echo '<pre>$jadual->'; print_r($jadual); echo '</pre>';
-		//echo '<pre>$medan->'; print_r($medan); echo '</pre>';
-		//echo '<pre>$carian->'; print_r($carian); echo '</pre>';
-		//echo '<pre>$cariID->'; print_r($cariID); echo '</pre>';
-
-		return array($jadual, $medan, $carian, $cariID);
-	}
-#------------------------------------------------------------------------------------------#
-	public function medanRangka()
-	{
-		$medan = 'newss,ssm,concat_ws("<br>",nama,operator) as nama,'
-			. 'fe,batchProses,hantar_prosesan,mko,respon R,msic2008,kp,nama_kp,'
-			. 'concat_ws("<br>",alamat1,alamat2,poskod,bandar,negeri) as alamat'
-			//. 'concat_ws("<br>",semak1,mdt,notamdt2014,notamdt2012,notamdt2011) as nota_lama'
-			. "\r";
-
-		return $medan;
-	}
-#------------------------------------------------------------------------------------------#
-	public function medanData()
-	{
-		$medan = 'newss,nossm,nama,fe,"<input type=\"checkbox\">" as tik,' . "\r"
-			//. 'concat_ws("<br>",alamat1,alamat2,poskod,bandar,negeri) as alamat,'
-			. 'mko,respon R,survei,kp,msic2008,' . "\r"
-			. ' concat_ws("|",' . "\r"
-			. ' 	concat_ws("="," hasil",format(hasil,0)),' . "\r"
-			. ' 	concat_ws("="," belanja",format(belanja,0)),' . "\r"
-			. ' 	concat_ws("="," gaji",format(gaji,0)),' . "\r"
-			. ' 	concat_ws("="," aset",format(aset,0)),' . "\r"
-			. ' 	concat_ws("="," staf",format(staf,0)),' . "\r"
-			. ' 	concat_ws("="," stok akhir",format(stok,0))' . "\r"
-			. ' ) as data5P,nota'
-			. "\r";
-
-		return $medan;
 	}
 #------------------------------------------------------------------------------------------#
 	public function tanyaDataSesi()
@@ -282,36 +177,6 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 				'atau' => 'WHERE', # WHERE / OR / AND
 				'medan' => 'level', # cari dalam medan apa
 				'apa' => 'user'); # benda yang dicari//*/
-
-		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
-	}
-#------------------------------------------------------------------------------------------#
-	function susunTatasusunan($medanID,$dataID)
-	{
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		$myTable = null;
-		$medan = '*';
-		$carian = $susun = null;
-		# semak database
-			$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
-				'atau' => 'WHERE', # WHERE / OR / AND
-				'medan' => $medanID, # cari dalam medan apa
-				'apa' => $dataID); # benda yang dicari//*/
-
-		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
-	}
-#------------------------------------------------------------------------------------------#
-	function susunTatasusunan2($idBorang)
-	{
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		$myTable = null;
-		$medan = '*';
-		$carian = $susun = null;
-		# semak database
-			$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
-				'atau' => 'WHERE', # WHERE / OR / AND
-				'medan' => 'NoSiri', # cari dalam medan apa
-				'apa' => $idBorang); # benda yang dicari//*/
 
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
