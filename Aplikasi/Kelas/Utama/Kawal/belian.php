@@ -17,8 +17,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		$this->panggilKhas02('punca_pembelian',null);
-		$this->panggilKhas02('medium_pembayaran',null);
+		$this->panggilKhas02('punca',null);
+		$this->panggilKhas02('tukaran',null);
 		$this->papar->c1 = $this->tanya->
 			contoh_cariKhas04($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
