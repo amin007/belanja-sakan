@@ -188,7 +188,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($p1, $medan, $carian, $susun) =
-			$this->tanya->susunTatasusunan($medanID,$dataID);
+			$this->tanya->ubahPencam($jadual,$medanID,$dataID);
 		list($data,$meta) = $this->tanya->//cariSql
 			cariSemuaDataMeta
 			($jadual, $medan, $carian, $susun);
