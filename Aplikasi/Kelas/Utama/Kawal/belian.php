@@ -106,10 +106,10 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		echo '</font><hr></pre>';
 	}
 #-------------------------------------------------------------------------------------------
-	function kandunganPaparan($p1, $myTable)
+	function kandunganPaparan($p1, $jadual)
 	{
-		$this->papar->myTable = $myTable;
-		$this->papar->_jadual = $myTable;
+		$this->papar->myTable = $jadual;
+		$this->papar->_jadual = $jadual;
 		$this->papar->carian[] = 'semua';
 		if(!isset($this->papar->c1))
 			$this->papar->c1 = null;
