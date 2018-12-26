@@ -152,33 +152,33 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
-		list($data,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
+		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
+		list($data,$meta) = $this->tanya->pilihMedan03($jadual, $medan, $carian, $susun);
 		$this->papar->_meta = $this->ubahMeta($meta);
-		$this->papar->senarai[$myTable] = $data;
+		$this->papar->senarai[$jadual] = $data;
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($p1, $myTable);
+		$this->kandunganPaparan($p1, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
 	function pilihMedan($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
-		list($result,$meta) = $this->tanya->pilihMedan03($myTable, $medan, $carian, $susun);
-		//$this->papar->kiramedan[$myTable] = $meta;
+		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
+		list($result,$meta) = $this->tanya->pilihMedan03($jadual, $medan, $carian, $susun);
+		//$this->papar->kiramedan[$jadual] = $meta;
 		$this->papar->_meta = $this->ubahMeta($meta);
-		$this->papar->senarai[$myTable] = $this->tanya->contoh_borangBaru01();
+		$this->papar->senarai[$jadual] = $this->tanya->contoh_borangBaru01();
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($p1, $myTable);
+		$this->kandunganPaparan($p1, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
 	function tambahMedanDB($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable) = $this->tanya->tambahPembolehubah($p1);
-		$this->papar->medan = $this->tanya->pilihMedan02($myTable);
+		list($jadual) = $this->tanya->tambahPembolehubah($p1);
+		$this->papar->medan = $this->tanya->pilihMedan02($jadual);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($myTable, $myTable);
 	}
@@ -203,24 +203,24 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
+		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
 		$this->papar->bentukJadual01[$p1] = $this->tanya->//cariSql
 			cariSemuaData
-			($myTable, $medan, $carian, $susun);
+			($jadual, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($p1, $myTable);
+		$this->kandunganPaparan($p1, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilKhas02($p1,$p2)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($myTable, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
+		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
 		$this->papar->bentukJadual02[$p1] = $this->tanya->//cariSql
 			cariSemuaData
-			($myTable, $medan, $carian, $susun);
+			($jadual, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($p1, $myTable);
+		$this->kandunganPaparan($p1, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
 	public function ubahSimpan($p1)
