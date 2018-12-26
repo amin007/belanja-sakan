@@ -503,9 +503,9 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 	public function susunPembolehubah($pilih, $dataID = null)
 	{
 		//$pilih = null;
-		if($pilih == 'punca_hasil'): //echo "\$pilih = $pilih <br>";
+		if($pilih == 'punca'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->kodPuncaHasil();
-		elseif($pilih == 'medium_hasil'): //echo "\$pilih = $pilih <br>";
+		elseif($pilih == 'medium'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->kodMediumHasil();
 		elseif($pilih == 'senarai_pendapatan'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiPendapatan();
