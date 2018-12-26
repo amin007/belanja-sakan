@@ -316,7 +316,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		$this->papar->bentukJadual01 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
-		//$this->pilihMedan('senarai_pendapatan');
+		$this->pilihMedan('senarai_pendapatan');
 		//$this->pilihMedan('nama_pengguna');
 		$this->debugKandunganPaparan();//*/
 
