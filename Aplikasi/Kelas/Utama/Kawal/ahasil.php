@@ -277,10 +277,6 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 			}//*/
 		endif; endforeach;
 
-		/*$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
-		echo '<pre>'; foreach($debugData as $semak): if(isset($$semak)):
-			echo '<br>$' . $semak . ' : '; print_r($$semak);
-		endif; endforeach; echo '</pre>';//*/
 
 		return array($posmen,$senaraiJadual,$senaraiJadual[0]); # pulangkan nilai
 	}
@@ -358,6 +354,11 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 				$posmen[$myTable][$kekunci] = bersih($papar);
 			}//*/
 		endif; endforeach;
+
+		/*$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
+		echo '<pre>'; foreach($debugData as $semak): if(isset($$semak)):
+			echo '<br>$' . $semak . ' : '; print_r($$semak);
+		endif; endforeach; echo '</pre>';//*/
 
 		return $posmen;
 	}
