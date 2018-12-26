@@ -357,8 +357,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		}# tamat ulang table
 
 		# pergi papar kandungan
-		//echo 'location: ' . URL . '';
-		header('location: ' . URL . ''); //*/
+		//echo 'location:' . URL . '';
+		header('location:' . URL . ''); //*/
 	}
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPostBaru($senaraiJadual)
