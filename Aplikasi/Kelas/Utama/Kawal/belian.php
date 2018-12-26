@@ -368,7 +368,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->panggilKhas02('punca');
 		$this->panggilKhas02('tukaran');
 		$this->papar->bentukJadual01 = $this->tanya->
-			contoh_cariKhas04($this->papar->bentukJadual02);
+			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
 		$this->panggilTable('senarai_belanja','no',$dataID);
 		//$this->debugKandunganPaparan();//*/
