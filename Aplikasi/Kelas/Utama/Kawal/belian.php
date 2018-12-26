@@ -108,11 +108,11 @@ class Belian extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function kandunganPaparan($p1, $myTable)
 	{
-		//$this->papar->senarai[$myTable] = null;
 		$this->papar->myTable = $myTable;
 		$this->papar->_jadual = $myTable;
 		$this->papar->carian[] = 'semua';
-		//$this->papar->c1 = $this->papar->c2 = null;
+		if(!isset($this->papar->c1))
+			$this->papar->c1 = null;
 		$this->papar->c2 = null;
 		$this->papar->_pilih = $p1;
 		$this->papar->_method = 'belian';
