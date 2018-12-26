@@ -13,7 +13,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 	{
 		echo '<pre>$jadual = ' . $jadual . '|<br>';
 		print_r($senarai); echo '</pre>';//*/
-		//$this->semakPembolehubah($bentukJadual01,'teste');
+		//$this->semakPembolehubah($ujian,'ujian');
 	}
 #------------------------------------------------------------------------------------------#
 	function contoh_sql01($url, $cariID)
