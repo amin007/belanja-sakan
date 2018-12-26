@@ -188,12 +188,12 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 		list($p1, $medan, $carian, $susun) =
 			$this->tanya->susunTatasusunan($medanID,$dataID);
-		list($result,$meta) = $this->tanya->//cariSql
+		list($data,$meta) = $this->tanya->//cariSql
 			cariSemuaDataMeta
 			($jadual, $medan, $carian, $susun);
 		$this->papar->_meta = $this->ubahMeta($meta);
 		$this->papar->carian[0] = $dataID;
-		$this->papar->senarai[$jadual] = $result;
+		$this->papar->senarai[$jadual] = $data;
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($jadual, $jadual);
 	}
