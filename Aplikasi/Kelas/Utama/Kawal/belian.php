@@ -257,11 +257,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 				}
 		endif; endforeach;//*/
 
-		/*echo '<pre>'; foreach($debugData as $semak): if(isset($$semak)):
-			echo '<br>$' . $semak . ' : '; print_r($$semak);
-		endif; endforeach; echo '</pre>';//*/
-
-		return array($posmen,$senaraiJadual,$senaraiJadual[0],$medanID); # pulangkan nilai
+		return array($posmen,$senaraiJadual,$medanID);# pulangkan nilai
 	}
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPost1($p1)
