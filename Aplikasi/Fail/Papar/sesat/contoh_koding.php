@@ -61,9 +61,11 @@ class <?php echo $namaClass ?> extends \Aplikasi\Kitab\Kawal
 		//*/
 	}
 ##------------------------------------------------------------------------------------------
-	public function semakPembolehubah($senarai)
+	public function semakPembolehubah($senarai,$jadual)
 	{
-		echo '&lt;pre>'; print_r($senarai); echo '&lt;/pre>';//*/
+		echo '&lt;pre>$jadual = ' . $jadual . '|&lt;br>';
+		print_r($senarai); echo '&lt;/pre>';//*/
+		//$this->semakPembolehubah($ujian,'ujian');
 	}
 ##------------------------------------------------------------------------------------------
 	function logout()
