@@ -289,8 +289,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		# ubahsuai $posmen
 		list($posmen,$senaraiJadual,$myTable) = $this->ubahsuaiPost1($p1);
-		//echo '<hr><pre>$_POST='; print_r($_POST); echo '</pre>';
-		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
+		//$this->semakPembolehubah($_POST,'_POST');
+		//$this->semakPembolehubah($posmen,'posmen');
 
 		# mula ulang $senaraiJadual
 		foreach ($senaraiJadual as $kunci => $jadual)
