@@ -22,15 +22,6 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 			'namaPendek' => 'james007',
 			'namaPenuh' => 'Polan Bin Polan',
 			'level' => 'pelawat',
-			. ' concat_ws("|",' . "\r"
-			. ' 	concat_ws("="," hasil",format(hasil,0)),' . "\r"
-			. ' 	concat_ws("="," belanja",format(belanja,0)),' . "\r"
-			. ' 	concat_ws("="," gaji",format(gaji,0)),' . "\r"
-			. ' 	concat_ws("="," aset",format(aset,0)),' . "\r"
-			. ' 	concat_ws("="," staf",format(staf,0)),' . "\r"
-			. ' 	concat_ws("="," stok akhir",format(stok,0))' . "\r"
-			. ' ) as data5P,nota'
-
 		); # dapatkan medan terlibat
 		$kira = 1; # kira jumlah data
 
