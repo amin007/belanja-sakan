@@ -102,7 +102,7 @@ class <?php echo $namaClass ?>_Tanya extends \Aplikasi\Kitab\Tanya
 	{
 		echo '&lt;pre>$jadual = ' . $jadual . '|&lt;br>';
 		print_r($senarai); echo '&lt;/pre>';//*/
-		//$this->semakPembolehubah($bentukJadual01,'teste');
+		//$this->semakPembolehubah($ujian,'ujian');
 	}
 #------------------------------------------------------------------------------------------#
 </code></pre>
