@@ -19,7 +19,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 		//$this->papar->c1 = $this->tanya->pilihPencam();
 		$this->panggilKhas02('punca',null);
-		$this->panggilKhas02('medium',null);
+		$this->panggilKhas02('tukaran',null);
 		$this->papar->c1 = $this->tanya->
 			contoh_cariKhas02($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
