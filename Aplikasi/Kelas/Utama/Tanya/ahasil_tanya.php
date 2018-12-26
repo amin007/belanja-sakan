@@ -466,5 +466,25 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		return ($p);
 	}
 #------------------------------------------------------------------------------------------#
+	public function susunPembolehubah($pilih, $dataID = null)
+	{
+		//$pilih = null;
+		if($pilih == 'punca_hasil'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->kodPuncaHasil();
+		elseif($pilih == 'medium_hasil'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->kodMediumHasil();
+		elseif($pilih == 'senarai_pendapatan'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiPendapatan();
+		elseif($pilih == 'nama_pengguna'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->jadualNamaPengguna();
+		elseif($pilih == 'xxx'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->xxx();
+		else: //echo "\$pilih = $pilih <br>";
+			$myTable = $medan = $carian = $susun = null;
+		endif;
+
+		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
+	}
+#------------------------------------------------------------------------------------------#
 #===========================================================================================
 }
