@@ -45,6 +45,12 @@ class Html_TD
 		return $p;
 	}
 #==========================================================================================
+	function primaryKey03($semua)
+	{
+		list($pengguna,$level,$birutua,$birumuda,$merah) = $this->setPencam();
+		list($key,$data,$myTable,$ca,$cb) = $semua;
+		return $data;
+	}
 #==========================================================================================
 	function paparURL($key, $data, $myTable = null, $ca = null, $cb = null)
 	{
@@ -52,7 +58,7 @@ class Html_TD
 		if(in_array($key,array('newss','no')))
 		{# primary key
 			//$k1 = $this->primaryKey($key,$data,$myTable,$ca,$cb);
-			$k1 = $this->primaryKey3($semua);
+			$k1 = $this->primaryKey03($semua);
 			?><td><?php echo $k1 ?></td><?php
 		}
 		elseif(in_array($key,array('batchAwal')))
