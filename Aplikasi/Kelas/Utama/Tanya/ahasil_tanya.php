@@ -16,7 +16,7 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		//$this->semakPembolehubah($bentukJadual01,'teste');
 	}
 #------------------------------------------------------------------------------------------#
-	public function contoh_cariKhas01()
+	public function contoh_borangBaru01()
 	{
 		$medan[0] = array(
 			//'no' => null, //int(11) Auto Increment
