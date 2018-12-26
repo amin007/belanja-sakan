@@ -339,17 +339,17 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		$this->panggilKhas02('punca_pembelian',null);
-		$this->panggilKhas02('medium_pembayaran',null);
+		$this->panggilKhas02('punca_hasil',null);
+		$this->panggilKhas02('medium_hasil',null);
 		$this->papar->bentukJadual01 = $this->tanya->
-			contoh_cariKhas04($this->papar->bentukJadual02);
-		unset($this->papar->bentukJadual02);
-		$this->pilihMedan('senarai_belanja');
+			contoh_cariKhas02($this->papar->bentukJadual02);
+		unset($this->papar->bentukJadual02);//*/
+		$this->pilihMedan('senarai_pendapatan');
 		//$this->pilihMedan('nama_pengguna');
 		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
-		$this->_folder = 'cari';
+		/*$this->_folder = 'cari';
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[2], $noInclude=0);
