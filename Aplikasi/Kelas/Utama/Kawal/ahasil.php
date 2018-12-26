@@ -358,24 +358,22 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 	public function baruSimpan($idBorang)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		//echo '<pre>$_POST:'; print_r($_POST); echo '</pre>';//*/
 		$senaraiJadual = array('senarai_pendapatan');
 		# ubahsuai $posmen
 		$posmen = $this->ubahsuaiPostBaru($senaraiJadual);
-		//echo '<br>$dataID=' . $dataID . '<br>';
 		//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
 		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
 
 		# mula ulang $senaraiJadual
 		foreach ($senaraiJadual as $kunci => $jadual)
 		{# mula ulang table
-			$this->tanya->tambahSql($jadual, $posmen[$jadual]);
-			//$this->tanya->tambahData($jadual, $posmen[$jadual]);
+			//$this->tanya->tambahSql($jadual, $posmen[$jadual]);
+			$this->tanya->tambahData($jadual, $posmen[$jadual]);
 		}# tamat ulang table
 
 		# pergi papar kandungan
-		echo 'location: ' . URL . '';
-		//header('location: ' . URL . ''); //*/
+		//echo 'location:' . URL . '';
+		header('location:' . URL . '');//*/
 	}
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPostBaru($senaraiJadual)
