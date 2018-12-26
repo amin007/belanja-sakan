@@ -38,6 +38,24 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 		return $medan;
 	}
 #------------------------------------------------------------------------------------------#
+	public function contoh_cariKhas02($medan1)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		$medanA['hasil_sebenar'][0]['kod'] = '1';
+		$medanA['hasil_sebenar'][0]['keterangan'] = 'sebenar';
+		$medanA['hasil_sebenar'][1]['kod'] = '2';
+		$medanA['hasil_sebenar'][1]['keterangan'] = 'anggaran';
+		$medanA['medium_edagang'][0]['kod'] = '1';
+		$medanA['medium_edagang'][0]['keterangan'] = 'ya';
+		$medanA['medium_edagang'][1]['kod'] = '2';
+		$medanA['medium_edagang'][1]['keterangan'] = 'tidak';
+		$medanA = array_merge($medan1, $medanA);
+		$medan = array_merge($medanA, $this->pilihPencam());
+		//$this->semakPembolehubah($medan,'medan');
+
+		return $medan;
+	}
+#------------------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------------------#
 	function pilihPencam()
 	{
