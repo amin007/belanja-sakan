@@ -335,7 +335,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		$this->paparKandungan($this->_folder, $fail[2], $noInclude=1);
 	}
 #-------------------------------------------------------------------------------------------
-	public function google2()
+	public function baru()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
