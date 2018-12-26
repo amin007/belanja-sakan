@@ -333,8 +333,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$senaraiJadual = array('senarai_belanja');
 		# ubahsuai $posmen
 		$posmen = $this->ubahsuaiPostBaru($senaraiJadual);
-		//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
-		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
+		//$this->semakPembolehubah($_POST,'_POST');
+		//$this->semakPembolehubah($posmen,'posmen');
 
 		# mula ulang $senaraiJadual
 		foreach ($senaraiJadual as $kunci => $jadual)
