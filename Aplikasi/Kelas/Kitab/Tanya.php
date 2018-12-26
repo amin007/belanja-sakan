@@ -257,6 +257,8 @@ class Tanya
 
 		echo '<pre>DB_NAME:' . DB_NAME . '</pre><br>';
 		echo '<pre>sql:' . htmlentities($sql) . '</pre><br>';
+
+		return array(null,null);
 	}
 	#---------------------------------------------------------------------------------------------
 	public function paparSql($myTable, $medan, $carian, $susun)
