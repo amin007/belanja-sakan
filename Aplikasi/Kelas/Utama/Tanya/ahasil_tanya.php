@@ -41,10 +41,10 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 	public function contoh_cariKhas02($medan1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		$medanA['hasil_sebenar'][0]['kod'] = '1';
-		$medanA['hasil_sebenar'][0]['keterangan'] = 'sebenar';
-		$medanA['hasil_sebenar'][1]['kod'] = '2';
-		$medanA['hasil_sebenar'][1]['keterangan'] = 'anggaran';
+		$medanA['nilai_sebenar'][0]['kod'] = '1';
+		$medanA['nilai_sebenar'][0]['keterangan'] = 'sebenar';
+		$medanA['nilai_sebenar'][1]['kod'] = '2';
+		$medanA['nilai_sebenar'][1]['keterangan'] = 'anggaran';
 		$medanA['medium_edagang'][0]['kod'] = '1';
 		$medanA['medium_edagang'][0]['keterangan'] = 'ya';
 		$medanA['medium_edagang'][1]['kod'] = '2';
