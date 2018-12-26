@@ -262,45 +262,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		return array($posmen,$senaraiJadual,$medanID);# pulangkan nilai
 	}
 #-------------------------------------------------------------------------------------------
-	function ubahsuaiPost1($p1)
-	{
-		$senaraiJadual = $this->tanya->pilihJadual($p1);
-		//$this->semakPembolehubah($senaraiJadual,'senaraiJadual');
-		//$this->semakPembolehubah($_POST,'_POST');
-
-		$posmen = array();
-		foreach ($_POST as $myTable => $value):
-		if ( in_array($myTable,$senaraiJadual) ):
-			foreach ($value as $kekunci => $papar)
-			{
-				$posmen[$myTable][$kekunci] = bersih($papar);
-			}//*/
-		endif; endforeach;
-
-
-		return array($posmen,$senaraiJadual,$senaraiJadual[0]); # pulangkan nilai
-	}
-#-------------------------------------------------------------------------------------------
-	public function insertID($p1)
-	{
-		# ubahsuai $posmen
-		list($posmen,$senaraiJadual,$myTable) = $this->ubahsuaiPost1($p1);
-		//$this->semakPembolehubah($_POST,'_POST');
-		//$this->semakPembolehubah($posmen,'posmen');
-
-		# mula ulang $senaraiJadual
-		foreach ($senaraiJadual as $kunci => $jadual)
-		{# mula ulang table
-			$this->tanya->tambahSql($jadual, $posmen[$jadual]);
-			//$this->tanya->tambahData($jadual, $posmen[$jadual]);
-		}# tamat ulang table
-
-		# Pergi papar kandungan
-		$lokasi = '' . $myTable;
-		echo '<br>location: ' . URL . $lokasi;
-		//header('location: ' . URL . $lokasi); //*/
-	}
-#-------------------------------------------------------------------------------------------
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
 	public function baru()
