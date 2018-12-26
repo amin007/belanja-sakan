@@ -48,7 +48,7 @@ class Html_TD
 	function paparURL($key, $data, $myTable = null, $ca = null, $cb = null)
 	{
 		$semua = array($key, $data, $myTable, $ca, $cb);
-		if(in_array($key,array('newss','no')))
+		if(in_array($key,array('newss','nox')))
 		{# primary key
 			$k1 = $this->primaryKey($key,$data,$myTable,$ca,$cb);
 			?><td><?php echo $k1 ?></td><?php
