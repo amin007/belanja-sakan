@@ -10,9 +10,12 @@ for ($kira=0; $kira < count($row); $kira++)
 	{## papar data $row ----------------------------------------------------------
 		$dataType = $this->_meta[$myTable][$key]['type'];
 		$namaKey = "$key|$dataType";
-	## ---------------------------------------------------------------------------
+		$class = 'col-sm-2 control-label text-right';
+	## ---------------------------------------------------------------------------?>
+<!-- ================================================================================================= --><?php
+		echo "\n\t";
 		?><div class="form-group row"><?php echo "\n\t";
-		?><label for="inputTajuk" class="col-sm-2 control-label text-right"><?php
+		?><label for="inputTajuk" class="<?php echo $class ?>"><?php
 		echo $namaKey ?></label><?php echo "\n\t";
 		?><div class="<?php echo $class2 ?>"><?php
 		$paparData = $html->ubahInput2($this->bentukJadual01,
