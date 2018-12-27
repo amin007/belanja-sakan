@@ -108,8 +108,8 @@ class BrgBaru01
 	{
 		$input2 = null;
 		$input2 = ($data==null) ? '' :
-				'<div class="input-group-prepend"><div class="input-group-text">'
-				. $data . '</div></div>'
+				'<div class="input-group-prepend"><span class="input-group-text">'
+				. "\n\t\t\t\t" . $data . '</span></div>'
 				. '';
 
 		return $input2;
