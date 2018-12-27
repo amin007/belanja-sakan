@@ -16,6 +16,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 	public function index()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		$this->paparJadual(); # Set pembolehubah utama
 
 		# Pergi papar kandungan
 		$this->_folder = 'cari';
