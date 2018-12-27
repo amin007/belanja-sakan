@@ -73,9 +73,10 @@ class BrgBaru01
 	{	# istihar pembolehubah
 		$name = 'name="' . $jadual . '[' . $key . ']"';
 		$dataType = $jenis[$jadual][$key]['type'];// myGetType($data);
-		$semua = array($jenis,$jadual,$kira,$key,$data,$name);
+		$input = "$name|$jadual";
+		//$semua = array($jenis,$jadual,$kira,$key,$data,$name);
 		//if ( in_array($key,array(...)) )
-		if( in_array($key,array('password','kataLaluan')) )
+		/*if( in_array($key,array('password','kataLaluan')) )
 			$input = $this->inputPassword($semua);
 		/*elseif( in_array($key,array('nohp')) )
 			$input = $this->inputBiodata($semua);
@@ -92,12 +93,12 @@ class BrgBaru01
 		//elseif(in_array($dataType,array('TINY')))
 		//	$input = $this->inputTeksKecil($semua);
 		elseif(in_array($dataType,array('TINY','STRING')))
-			$input = $this->inputSelectOption($semua,$ulangdata);//*/
+			$input = $this->inputSelectOption($semua,$ulangdata);//*
 		else
 		{#kod untuk lain2
 			$input = "\n\t\t" . '<p class="form-control-static text-info">'
 				   . $data . '</p>';
-		}
+		}//*/
 
 		return $input; # pulangkan nilai
 	}
