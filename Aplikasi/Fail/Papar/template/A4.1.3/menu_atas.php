@@ -19,7 +19,20 @@ $iconFA['video'] = '<i class="fas fa-video"></i>';
 $iconFA['search'] = '<i class="fas fa-search"></i>';
 
 echo "\n\n"; $paras = null;
-if ($paras == null): else: ?>
+if ($paras == null):?>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+	<a class="navbar-brand" href="<?php echo URL ?>">
+		<?php echo $iconFA['video'] . Tajuk_Muka_Surat . ':' . $paras ?></a>
+	<a class="navbar-brand" href="<?php echo URL ?>ruangtamu/logout">
+		<i class="fa fa-times fa-2x" aria-hidden="true"></i>Keluar</a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+	aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+</nav>
+<br>
+<?php else: ?>
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
 	<a class="navbar-brand" href="<?php echo URL ?>">
 		<?php echo $iconFA['video'] . Tajuk_Muka_Surat . ':' . $paras ?></a>
