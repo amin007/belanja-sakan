@@ -107,12 +107,10 @@ class BrgBaru01
 	function labelTeks($data)
 	{
 		$input2 = null;
-		$tab2 = "\n\t\t";
-		$tab3 = "\n\t\t\t";
 		$input2 = ($data==null) ? '' :
 				'<div class="input-group-prepend"><div class="input-group-text">'
 				. $data . '</div></div>'
-				. $tab3;
+				. '';
 
 		return $input2;
 	}
