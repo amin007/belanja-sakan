@@ -1,5 +1,6 @@
 <?php
-$html = new Aplikasi\Kitab\Borang01_Tambah;
+//$html = new Aplikasi\Kitab\Borang01_Tambah;
+$html = new Aplikasi\Kitab\BrgBaru01;
 $aksi = URL . $this->_method . '/baruSimpan/' . $this->carian[0];
 $class1 = 'col-sm-7'; # untuk tajuk dan hantar
 $class2 = 'col-sm-6 '; # untuk $data
