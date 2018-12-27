@@ -201,7 +201,7 @@ class BrgBaru01
 		. $this->labelTeks('Nilai')
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
-		. ' class="form-control">' . $tab2
+		. ' class="form-control">' . $tab3
 		. $this->labelTeks(kira($data))
 		. '</div>' . $komenInput
 		. '';
