@@ -1,7 +1,7 @@
 <!-- khas untuk jquery dan js2 lain
 ================================================== -->
 <script type="text/javascript" src="<?=JQUERY?>"></script>
-<script type="text/javascript" src="<?=BOOTSTRAPJS413?>"></script>
+<script type="text/javascript" src="<?=BOOTSTRAPJS421?>"></script>
 <?php
 if (isset($this->js))
 {
