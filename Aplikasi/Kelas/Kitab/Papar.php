@@ -122,7 +122,7 @@ class Papar
 	{
 		switch ($template)
 		{
-			case 6: $jenis = 'A4.1.1';
+			case 6: $jenis = 'A0';
 			break;
 
 			case 5: $jenis = 'miminium';
@@ -140,7 +140,7 @@ class Papar
 			case 1: $jenis = 'AdminLTE-2.3.0';
 			break;
 
-			default: $jenis = 'A0';
+			default: $jenis = 'A4.1.3';
 			break;
 		}
 		return $jenis;
