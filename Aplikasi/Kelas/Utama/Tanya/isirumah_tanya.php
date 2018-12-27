@@ -61,6 +61,22 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 #------------------------------------------------------------------------------------------#
 #===========================================================================================
 #------------------------------------------------------------------------------------------#
+	public function susunPembolehubah($pilih,$medanID = null, $dataID = null)
+	{
+		//$pilih = null;
+		if($pilih == 'senarai_isirumah1'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah1();
+		elseif($pilih == 'senarai_isirumah2'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah2();
+		elseif($pilih == 'xxx'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->xxx();
+		else: //echo "\$pilih = $pilih <br>";
+			$myTable = $medan = $carian = $susun = null;
+		endif;
+
+		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
+	}
+#------------------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------------------#
 #===========================================================================================
 }
