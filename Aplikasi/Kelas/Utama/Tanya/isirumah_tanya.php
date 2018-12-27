@@ -80,12 +80,13 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 	public function susunPembolehubah($a, $b = null, $c = null)
 	{
 		//$a = null;
+		$p = array($a,$b,$c);
 		if($a == 'senarai_isirumah1'): //echo "\$a = $a <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah1();
+			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah1($p);
 		elseif($a == 'senarai_isirumah2'): //echo "\$a = $a <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah2();
+			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah2($p);
 		elseif($a == 'xxx'): //echo "\$a = $a <br>";
-			list($myTable, $medan, $carian, $susun) = $this->xxx();
+			list($myTable, $medan, $carian, $susun) = $this->xxx($p);
 		else: //echo "\$a = $a <br>";
 			$myTable = $medan = $carian = $susun = null;
 		endif;
