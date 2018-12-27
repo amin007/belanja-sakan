@@ -34,8 +34,7 @@ class <?php echo $namaClass ?> extends \Aplikasi\Kitab\Kawal
 	public function index()
 	{
 		echo '&lt;hr> Nama class : ' . __METHOD__ . '&lt;hr>';
-		# Set pembolehubah utama
-		//$this->debugKandunganPaparan();//*/
+		$this->paparJadual(); # Set pembolehubah utama
 
 		# Pergi papar kandungan
 		//$this->_folder = 'cari';
