@@ -21,10 +21,10 @@ $bootstrapCSS_cdn = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstr
  $ceruleanCSS_cdn = 'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css';
  $fontawesome_cdn = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 ## 4.1
- $bootstrapJS_411 = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js';
-$bootstrapCSS_411 = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css';
- $ceruleanCSS_411 = 'https://maxcdn.bootstrapcdn.com/bootswatch/4.1.3/cerulean/bootstrap.min.css';
- $fontawesome_510 = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+ $bootstrapJS_413 = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js';
+$bootstrapCSS_413 = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css';
+ $ceruleanCSS_413 = 'https://maxcdn.bootstrapcdn.com/bootswatch/4.1.3/cerulean/bootstrap.min.css';
+ $fontawesome_563 = 'https://use.fontawesome.com/releases/v5.6.3/css/all.css';
 ## local
             $sumber = 'sumber/utama/';
       $jquery_local = $sumber . 'jquery/jquery-2.2.3.min.js';
@@ -70,9 +70,9 @@ else
 	define('FONTAWESOME', $fontawesome_local);
 	define('BOOTSTRAPJS', $bootstrapJS_local);
 	define('BOOTSTRAPCSS', $bootstrapCSS_local);
-	define('BOOTSTRAPJS411', $bootstrapJS_411);
-	define('BOOTSTRAPCSS411', $bootstrapCSS_411);
-	define('FONTAWESOME510', $fontawesome_510);
+	define('BOOTSTRAPJS413', $bootstrapJS_413);
+	define('BOOTSTRAPCSS413', $bootstrapCSS_413);
+	define('FONTAWESOME563', $fontawesome_563);
 }
 //echo DB_HOST . "," . DB_USER . "," . DB_PASS . ",," . DB_NAME . "<br>";
 ############################################################################################
