@@ -121,7 +121,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		return $meta;
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilJadual01($p1)
+	function panggilBorang01($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
@@ -135,7 +135,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->kandunganPaparan($p1, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilJadual02($p1)
+	function panggilJadual01($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
