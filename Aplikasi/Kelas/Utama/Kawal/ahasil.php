@@ -16,15 +16,6 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 	public function index()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
-		# Set pembolehubah utama
-		$this->panggilKhas02('punca',null);
-		$this->panggilKhas02('tukaran',null);
-		$this->papar->c1 = $this->tanya->
-			cariKhas01($this->papar->bentukJadual02);
-		unset($this->papar->bentukJadual02);
-		$this->panggilJadual('senarai_pendapatan');
-		//$this->panggilJadual('nama_pengguna');//*/
-		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
 		$this->_folder = 'cari';
@@ -224,6 +215,20 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 	}
 #-------------------------------------------------------------------------------------------
 #===========================================================================================
+#-------------------------------------------------------------------------------------------
+	function paparJadual()
+	{# untuk paparkan jadual sahaja
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
+		$this->panggilKhas02('punca',null);
+		$this->panggilKhas02('tukaran',null);
+		$this->papar->c1 = $this->tanya->
+			cariKhas01($this->papar->bentukJadual02);
+		unset($this->papar->bentukJadual02);
+		$this->panggilJadual('senarai_pendapatan');
+		//$this->panggilJadual('nama_pengguna');//*/
+		//$this->debugKandunganPaparan();//*/
+	}
 #-------------------------------------------------------------------------------------------
 	public function baru()
 	{
