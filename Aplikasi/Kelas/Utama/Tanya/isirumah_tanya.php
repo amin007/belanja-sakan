@@ -85,6 +85,51 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'1', $b=>'Lelaki');
 		$p[$k][]=array($a=>'2', $b=>'Perempuan');
 	#***************************************************************************************
+		$k = 'warganegara';
+		$p[$k][]=array($a=>'1', $b=>'Warganegara Malaysia');
+		$p[$k][]=array($a=>'2', $b=>'Bukan Warganegara Malaysia');
+	#***************************************************************************************
+		$k = 'residen';
+		$p[$k][]=array($a=>'1', $b=>'Ya');
+		$p[$k][]=array($a=>'2', $b=>'Tidak');
+	#***************************************************************************************
+		$k = 'taraf_perkahwinan';
+		$p[$k][]=array($a=>'1', $b=>'Tidak pernah berkahwin');
+		$p[$k][]=array($a=>'2', $b=>'Berkahwin');
+		$p[$k][]=array($a=>'3', $b=>'Balu/Duda');
+		$p[$k][]=array($a=>'4', $b=>'Bercerai');
+		$p[$k][]=array($a=>'5', $b=>'Berpisah');
+	#***************************************************************************************
+		$k = 'sekolah';
+		$p[$k][]=array($a=>'1', $b=>'Tidak bersekolah');
+		$p[$k][]=array($a=>'2', $b=>'Bersekolah');
+		$p[$k][]=array($a=>'3', $b=>'Tamat Sekolah');
+	#***************************************************************************************
+		$k = 'sebab_tak_sek';
+		$p[$k][]=array($a=>'1', $b=>'Tidak mampu dari segi kewangan');
+		$p[$k][]=array($a=>'2', $b=>'Terlalu jauh dari institusi pendidikan');
+		$p[$k][]=array($a=>'3', $b=>'Tidak berminat');
+		$p[$k][]=array($a=>'4', $b=>'Cacat');
+		$p[$k][]=array($a=>'5', $b=>'Perlu bekerja untuk menambah pendapatan keluarga');
+		$p[$k][]=array($a=>'6', $b=>'Tiada sijil kelahiran');
+		$p[$k][]=array($a=>'7', $b=>'Tidak berkenaan');
+	#***************************************************************************************
+		$k = 'pendidikan_tertinggi';
+		$p[$k][]=array($a=>'01', $b=>'PHD');
+		$p[$k][]=array($a=>'02', $b=>'MASTER');
+		$p[$k][]=array($a=>'03', $b=>'IJAZAH');
+		$p[$k][]=array($a=>'04', $b=>'DIPLOMA');
+		$p[$k][]=array($a=>'05', $b=>'SIJIL');
+		$p[$k][]=array($a=>'06', $b=>'STPM');
+		$p[$k][]=array($a=>'07', $b=>'SPM');
+		$p[$k][]=array($a=>'08', $b=>'PMR');
+		$p[$k][]=array($a=>'09', $b=>'UPSR');
+		$p[$k][]=array($a=>'10', $b=>'Tidak berkenaan');
+	#***************************************************************************************
+		$k = 'penerima_pendapatan';
+		$p[$k][]=array($a=>'1', $b=>'Ya');
+		$p[$k][]=array($a=>'2', $b=>'Tidak');
+	#***************************************************************************************
 		return $p;
 	}
 #------------------------------------------------------------------------------------------#
