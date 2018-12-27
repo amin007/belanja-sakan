@@ -61,20 +61,20 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 #------------------------------------------------------------------------------------------#
 #===========================================================================================
 #------------------------------------------------------------------------------------------#
-	public function susunPembolehubah($pilih,$medanID = null, $dataID = null)
+	public function susunPembolehubah($a, $b = null, $c = null)
 	{
-		//$pilih = null;
-		if($pilih == 'senarai_isirumah1'): //echo "\$pilih = $pilih <br>";
+		//$a = null;
+		if($a == 'senarai_isirumah1'): //echo "\$a = $a <br>";
 			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah1();
-		elseif($pilih == 'senarai_isirumah2'): //echo "\$pilih = $pilih <br>";
+		elseif($a == 'senarai_isirumah2'): //echo "\$a = $a <br>";
 			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah2();
-		elseif($pilih == 'xxx'): //echo "\$pilih = $pilih <br>";
+		elseif($a == 'xxx'): //echo "\$a = $a <br>";
 			list($myTable, $medan, $carian, $susun) = $this->xxx();
-		else: //echo "\$pilih = $pilih <br>";
+		else: //echo "\$a = $a <br>";
 			$myTable = $medan = $carian = $susun = null;
 		endif;
 
-		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
+		return array($myTable, $medan, $carian, $susun);# pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
 	function ubahPencam($jadual,$b,$c)
