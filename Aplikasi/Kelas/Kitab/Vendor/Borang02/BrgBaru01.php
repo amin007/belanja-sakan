@@ -182,9 +182,10 @@ class BrgBaru01
 		$Sesi = new \Aplikasi\Kitab\Sesi(); $Sesi->init();
 		$data = $Sesi->get('bs_nohp');
 		return '<div class="'.$classInput.'">' . $tab3
-		. '<input type="hidden" ' . $name  . ' value="' . $data . '"'
+		. '<input type="hidden" ' . $name
+		. ' value="' . $data . '"'
 		. ' class="form-control">' . $tab3
-		. $this->labelTeks($data)
+		. $this->labelTeks($data) . $tab3
 		. '</div>' . $komenInput
 		. '';
 	}
@@ -199,7 +200,7 @@ class BrgBaru01
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
 		. ' class="form-control">' . $tab3
-		. $this->labelTeks(kira($data))
+		. $this->labelTeks(kira($data)) . $tab3
 		. '</div>' . $komenInput
 		. '';
 	}
@@ -209,11 +210,11 @@ class BrgBaru01
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
-		return '<div class="input-group input-group-sm">' . $tab2
+		return '<div class="input-group input-group-sm">' . $tab3
 		. '<span class="input-group-addon">Bitcoin</span>'
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
-		. ' class="form-control">' . $tab2
+		. ' class="form-control">' . $tab3
 		. '<span class="input-group-addon">' . kira($data) . '</span>'
 		. $tab2 . '</div>' . $komenInput
 		. '';
