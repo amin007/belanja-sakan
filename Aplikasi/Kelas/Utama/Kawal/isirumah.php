@@ -138,8 +138,8 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
-	function setSemuaPembolehubah()
-	{
+	function paparJadual()
+	{# untuk paparkan jadual sahaja
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		/*$this->panggilKhas02('punca',null);
