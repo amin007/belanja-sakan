@@ -1,6 +1,6 @@
 <?php
 namespace Aplikasi\Kitab; //echo __NAMESPACE__;
-class Borang01_Tambah
+class BrgBaru01
 {
 #==========================================================================================
 ###########################################################################################
@@ -74,16 +74,12 @@ class Borang01_Tambah
 		$name = 'name="' . $jadual . '[' . $key . ']"';
 		$dataType = $jenis[$key]['type'];// myGetType($data);
 		$semua = array($jenis,$jadual,$kira,$key,$data,$name);
-		# css
-		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
-			$classInput,$komenInput) = $this->ccs();
-		$css2 = array($tab2,$tab3,$classInput,$komenInput);
 		//if ( in_array($key,array(...)) )
 		if( in_array($key,array('password','kataLaluan')) )
 			$input = $this->inputPassword($semua);
 		elseif( in_array($key,array('nohp')) )
 			$input = $this->inputBiodata($semua);
-		elseif(in_array($dataType,array('VAR_STRING')))
+		/*elseif(in_array($dataType,array('VAR_STRING')))
 			$input = $this->inputTeksBesar($semua);
 		elseif(in_array($dataType,array('BLOB')))
 			$input = $this->inputTextarea($semua); #kod utk textarea
@@ -96,10 +92,10 @@ class Borang01_Tambah
 		//elseif(in_array($dataType,array('TINY')))
 		//	$input = $this->inputTeksKecil($semua);
 		elseif(in_array($dataType,array('TINY','STRING')))
-			$input = $this->inputSelectOption($semua,$ulangdata);
+			$input = $this->inputSelectOption($semua,$ulangdata);//*/
 		else
 		{#kod untuk lain2
-			$input = $tab2 . '<p class="form-control-static text-info">'
+			$input = "\n\t\t" . '<p class="form-control-static text-info">'
 				   . $data . '</p>';
 		}
 
