@@ -152,7 +152,7 @@ class BrgBaru01
 		return ''
 		. '<textarea ' . $name . ' rows="1" cols="20"' . $tab2 
 		. ' class="form-control">' . $data . '</textarea>'
-		. $tab2 . '<pre>' . $data . '</pre>'
+		. $tab2 . '<pre class="input-group-text">' . $data . '</pre>'
 		. '';
 	}
 #------------------------------------------------------------------------------------------
