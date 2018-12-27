@@ -180,7 +180,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->panggilBorang01('senarai_isirumah1');
 		$this->panggilBorang01('senarai_isirumah2');
 		//$this->pilihMedan('nama_pengguna');
-		//$this->debugKandunganPaparan();//*/
+		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
 		$this->_folder = 'cari';
