@@ -16,8 +16,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 	public function index()
 	{
 		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
-		# Set pembolehubah utama
-		$this->paparJadual();
+		$this->paparJadual(); # Set pembolehubah utama
 
 		# Pergi papar kandungan
 		/*$this->_folder = 'cari';
