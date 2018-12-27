@@ -1,7 +1,7 @@
 <?php
 $bootstrapCSS_413 = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css';
- $ceruleanCSS_413 = 'https://maxcdn.bootstrapcdn.com/bootswatch/4.1.3/cerulean/bootstrap.min.css';
- $fontawesome_510 = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+$ceruleanCSS_413 = 'https://maxcdn.bootstrapcdn.com/bootswatch/4.1.3/cerulean/bootstrap.min.css';
+$fontawesome_563 = 'https://use.fontawesome.com/releases/v5.6.3/css/all.css';
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@ $bootstrapCSS_413 = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstr
 <title>Belanja Sakan</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="<?php echo $bootstrapCSS_413 ?>" rel="stylesheet" type="text/css">
-<link href="<?php echo $fontawesome_510 ?>" rel="stylesheet" type="text/css">
+<link href="<?php echo $fontawesome_563 ?>" rel="stylesheet" type="text/css">
 
 <style type="text/css">
 table.excel {
