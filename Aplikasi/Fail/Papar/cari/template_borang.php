@@ -4,8 +4,7 @@
 $html = new Aplikasi\Kitab\BrgBaru01;
 $aksi = URL . $this->_method . '/baruSimpan/' . $this->carian[0];
 $class1 = 'col-sm-7'; # untuk tajuk dan hantar
-$class2 = 'col-sm-6 '; # untuk $data
-
+$class2 = 'col-sm-6'; # untuk $data
 echo "\n";?><br>
 <br><span class="border border-secondary">
 <form method="POST" action="<?php echo $aksi ?>" class="form-horizontal">
