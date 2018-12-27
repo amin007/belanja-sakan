@@ -18,7 +18,6 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
 		$this->setSemuaPembolehubah();
-		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
 		/*$this->_folder = 'cari';
