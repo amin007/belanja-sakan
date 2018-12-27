@@ -202,8 +202,8 @@ class BrgBaru01
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
 		. ' class="form-control">' . $tab2
-		. '<span class="input-group-addon">' . kira($data) . '</span>'
-		. $tab2 . '</div>' . $komenInput
+		. $this->labelTeks(kira($data))
+		. '</div>' . $komenInput
 		. '';
 	}
 #------------------------------------------------------------------------------------------
