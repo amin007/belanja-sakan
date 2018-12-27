@@ -123,7 +123,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		return $meta;
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilJadual($p1)
+	function panggilJadual01($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
@@ -148,8 +148,8 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->papar->c1 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
-		$this->panggilJadual('senarai_isirumah1');
-		$this->panggilJadual('senarai_isirumah2');
+		$this->panggilJadual01('senarai_isirumah1');
+		$this->panggilJadual01('senarai_isirumah2');
 		//$this->panggilJadual('nama_pengguna');
 		//$this->debugKandunganPaparan();//*/
 	}
