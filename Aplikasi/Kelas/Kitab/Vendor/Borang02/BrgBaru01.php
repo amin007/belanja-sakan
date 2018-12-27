@@ -186,7 +186,8 @@ class BrgBaru01
 			$classInput,$komenInput) = $this->ccs();
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return '<div class="input-group input-group-sm">' . $tab2
-		. '<span class="input-group-addon">Nilai</span>'
+		. '<div class="input-group-prepend"><div class="input-group-text">'
+		. 'Nilai</div></div>'
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
 		. ' class="form-control">' . $tab2
