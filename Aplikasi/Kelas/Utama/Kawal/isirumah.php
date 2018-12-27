@@ -152,5 +152,26 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan();//*/
 	}
 #-------------------------------------------------------------------------------------------
+	public function baru()
+	{
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		# Set pembolehubah utama
+		//$this->panggilKhas02('punca');
+		//$this->panggilKhas02('tukaran');
+		/*$this->papar->bentukJadual01 = $this->tanya->
+			cariKhas01($this->papar->bentukJadual02);
+		unset($this->papar->bentukJadual02);//*/
+		$this->panggilBorang01('senarai_isirumah1');
+		$this->panggilBorang01('senarai_isirumah2');
+		//$this->pilihMedan('nama_pengguna');
+		//$this->debugKandunganPaparan();//*/
+
+		# Pergi papar kandungan
+		$this->_folder = 'cari';
+		$fail = array('1cari','index','b_baru','b_ubah');
+		//echo '<br>$fail = ' . $fail[0] . '<hr>';
+		$this->paparKandungan($this->_folder, $fail[2], $noInclude=0);//*/
+	}
+#-------------------------------------------------------------------------------------------
 #===========================================================================================
 }
