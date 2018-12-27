@@ -135,6 +135,20 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->kandunganPaparan($p1, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
+	function panggilJadual02($p1)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
+		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
+		list($data,$meta) = $this->tanya->//cariSql
+			cariSemuaDataMeta
+			($jadual, $medan, $carian, $susun);
+		$this->papar->_meta = $this->ubahMeta($meta);
+		$this->papar->senarai[$jadual] = $data;
+		# Set pembolehubah untuk Papar
+		$this->kandunganPaparan($p1, $jadual);
+	}
+#-------------------------------------------------------------------------------------------
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
 	function paparJadual()
