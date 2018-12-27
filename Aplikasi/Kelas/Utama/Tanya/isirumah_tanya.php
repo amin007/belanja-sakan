@@ -114,7 +114,7 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'6', $b=>'Tiada sijil kelahiran');
 		$p[$k][]=array($a=>'7', $b=>'Tidak berkenaan');
 	#***************************************************************************************
-		$k = 'pendidikan_tertinggi';
+		$k = 'sijil_tertinggi';
 		$p[$k][]=array($a=>'01', $b=>'PHD');
 		$p[$k][]=array($a=>'02', $b=>'MASTER');
 		$p[$k][]=array($a=>'03', $b=>'IJAZAH');
