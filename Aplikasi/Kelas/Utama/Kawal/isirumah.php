@@ -63,6 +63,15 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 	function setSemuaPembolehubah()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
+		/*$this->panggilKhas02('punca',null);
+		$this->panggilKhas02('tukaran',null);
+		$this->papar->c1 = $this->tanya->
+			cariKhas01($this->papar->bentukJadual02);
+		unset($this->papar->bentukJadual02);//*/
+		$this->panggilJadual('senarai_isirumah1');
+		$this->panggilJadual('senarai_isirumah2');
+		//$this->panggilJadual('nama_pengguna');
 		//$this->debugKandunganPaparan();//*/
 	}
 #-------------------------------------------------------------------------------------------
