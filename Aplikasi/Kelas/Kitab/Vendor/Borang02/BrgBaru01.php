@@ -183,12 +183,10 @@ class BrgBaru01
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		$Sesi = new \Aplikasi\Kitab\Sesi(); $Sesi->init();
 		$data = $Sesi->get('bs_nohp');
-		return $tab2 
-		. '<div class="'.$classInput.'">' . $tab3
-		//. '<span class="input-group-addon"></span>' . $tab3
+		return '<div class="'.$classInput.'">' . $tab3
 		. '<input type="hidden" ' . $name  . ' value="' . $data . '"'
-		. ' class="form-control">'
-		. $tab2 . $this->labelBawah($data)
+		. ' class="form-control">' . $tab3
+		. $this->labelTeks($data)
 		. '</div>' . $komenInput
 		. '';
 	}
