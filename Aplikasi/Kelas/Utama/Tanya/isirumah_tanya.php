@@ -130,6 +130,23 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'1', $b=>'Ya');
 		$p[$k][]=array($a=>'2', $b=>'Tidak');
 	#***************************************************************************************
+		$k = 'taraf_aktiviti';
+		$p[$k][]=array($a=>'01', $b=>'Majikan');
+		$p[$k][]=array($a=>'02', $b=>'Pekerja kerajaan');
+		$p[$k][]=array($a=>'03', $b=>'Pekerja swasta');
+		$p[$k][]=array($a=>'04', $b=>'Bekerja sendiri');
+		$p[$k][]=array($a=>'05', $b=>'Pekerja keluarga tanpa gaji');
+		$p[$k][]=array($a=>'06', $b=>'Penganggur');
+		$p[$k][]=array($a=>'07', $b=>'Suri rumah/menjaga rumah');
+		$p[$k][]=array($a=>'08', $b=>'Pelajar');
+		$p[$k][]=array($a=>'09', $b=>'Pesara kerajaan');
+		$p[$k][]=array($a=>'10', $b=>'Pesara swasta');
+		$p[$k][]=array($a=>'11', $b=>'Warga emas');
+		$p[$k][]=array($a=>'12', $b=>'OKU');
+		$p[$k][]=array($a=>'13', $b=>'Kanak-kanak');
+		$p[$k][]=array($a=>'14', $b=>'Bayi');
+		$p[$k][]=array($a=>'15', $b=>'Lain-lain');
+	#***************************************************************************************
 		return $p;
 	}
 #------------------------------------------------------------------------------------------#
