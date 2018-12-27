@@ -107,6 +107,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 	{
 		foreach($meta as $key => $pilih):
 			$key2 = $pilih['name'];
+			$data[$key2] = null;
 			//$meta[$key2]['table'] = $pilih['table'];
 			//$meta[$key2]['nama'] = $pilih['name'];
 			$meta[$key2]['len'] = $pilih['len'];
@@ -118,7 +119,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 			unset($meta[$key]);
 		endforeach;
 
-		return $meta;
+		return array($data,$meta);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilBorang01($p1)
@@ -126,10 +127,11 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
-		list($data,$meta) = $this->tanya->//cariSql
+		list($a,$b) = $this->tanya->//cariSql
 			cariSemuaDataMeta
 			($jadual, $medan, $carian, $susun);
-		$this->papar->_meta = $this->ubahMeta($meta);
+		list($data,$meta) = $this->ubahMeta($b);
+		$this->papar->_meta = $meta;
 		$this->papar->senarai[$jadual] = $data;
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($p1, $jadual);
