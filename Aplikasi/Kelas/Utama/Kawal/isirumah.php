@@ -107,15 +107,15 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 	{
 		foreach($meta as $key => $pilih):
 			$key2 = $pilih['name'];
-			$data[$key2] = null;
-			//$meta[$key2]['table'] = $pilih['table'];
+			$data[0][$key2] = null;
+			$table = $pilih['table'];
 			//$meta[$key2]['nama'] = $pilih['name'];
-			$meta[$key2]['len'] = $pilih['len'];
-			$meta[$key2]['type'] = $pilih['native_type'];
-			$meta[$key2]['key'] = isset($pilih['flags'][1]) ?
+			$meta[$table][$key2]['len'] = $pilih['len'];
+			$meta[$table][$key2]['type'] = $pilih['native_type'];
+			$meta[$table][$key2]['key'] = isset($pilih['flags'][1]) ?
 				$pilih['flags'][0].'|'.$pilih['flags'][1] : null;
-			$meta[$key2]['type_pdo'] = $pilih['pdo_type'];
-			$meta[$key2]['type_precision'] = $pilih['precision'];
+			$meta[$table][$key2]['type_pdo'] = $pilih['pdo_type'];
+			$meta[$table][$key2]['type_precision'] = $pilih['precision'];
 			unset($meta[$key]);
 		endforeach;
 
