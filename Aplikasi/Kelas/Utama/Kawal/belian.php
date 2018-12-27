@@ -29,7 +29,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		$lokasi = 'belian/google2';
 		//echo '<br>location: ' . URL . $lokasi;
-		header('location: ' . URL . $lokasi); //*/
+		header('location: ' . URL . $lokasi);//*/
 	}
 ##------------------------------------------------------------------------------------------
 	public function paparKandungan($folder, $fail, $noInclude)
