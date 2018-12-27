@@ -131,7 +131,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 			cariSemuaDataMeta
 			($jadual, $medan, $carian, $susun);
 		list($data,$meta) = $this->ubahMeta($b);
-		$this->papar->_meta = $meta;
+		$this->papar->_meta[$jadual] = $meta;
 		$this->papar->senarai[$jadual] = $data;
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($p1, $jadual);
