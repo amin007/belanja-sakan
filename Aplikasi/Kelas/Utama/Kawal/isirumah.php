@@ -174,8 +174,8 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 		//$this->panggilKhas02('punca');
 		//$this->panggilKhas02('tukaran');
-		/*$this->papar->bentukJadual01 = $this->tanya->
-			cariKhas01($this->papar->bentukJadual02);
+		$this->papar->bentukJadual01 = $this->tanya->tentangMedan();
+		/*	cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
 		$this->panggilBorang01('senarai_isirumah1');
 		$this->panggilBorang01('senarai_isirumah2');
