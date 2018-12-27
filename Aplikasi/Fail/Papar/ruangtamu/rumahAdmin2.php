@@ -1,7 +1,7 @@
 <?php include 'atas4.1.3/diatas.php'; ?>
 
 <div class="container">
-<hr><h1>Admin2home - Kita Tanya Apa Khabar</h1><hr>
+<hr><h1 class="display-2 text-center">Admin2home <br> Kita Tanya Apa Khabar</h1><hr>
 <hr><h2>Untuk Projek HIES sahaja</h2><hr>
 <div class="hero-unit">
 <p><?php
@@ -17,8 +17,9 @@ echo 'url=' . URL . '';
 //*/
 ?></p>
 
-	<a class="btn btn-primary btn-large" href="<?php echo URL ?>admin2home/logout">Keluar<i class="fa fa-binoculars fa-2x"></i></a>
-	<a class="btn btn-success btn-large" href="<?php echo URL ?>ahasil">Dapatan<i class="fa fa-binoculars fa-2x"></i></a>
+	<a class="btn btn-primary btn-large" href="<?php echo URL ?>admin2home/logout">Keluar<i class="fas fa-door-open fa-2x"></i></a>
+	<a class="btn btn-info btn-large" href="<?php echo URL ?>isirumah">Isi Rumah<i class="fas fa-users fa-2x"></i></a>
+	<a class="btn btn-success btn-large" href="<?php echo URL ?>ahasil">Hasil<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-danger btn-large" href="<?php echo URL ?>belian">Belian<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-warning btn-large" href="<?php echo URL ?>semakan">Semakan<i class="fa fa-binoculars fa-2x"></i></a>
 
