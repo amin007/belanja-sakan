@@ -1,25 +1,25 @@
-<!-- menu_atas.php A0 --><?php 
+<!-- menu_atas.php A4.1.3 --><?php
 $sesi = \Aplikasi\Kitab\Sesi::init();
 //echo '<pre>MENU_ATAS - $_SESSION:', print_r($_SESSION, 1) . '</pre><br>';
 # set pembolehubah
-$pengguna = \Aplikasi\Kitab\Sesi::get('namaPendek');
-$level = \Aplikasi\Kitab\Sesi::get('levelPengguna');
+$pengguna = \Aplikasi\Kitab\Sesi::get('bs_namaPendek');
+$level = \Aplikasi\Kitab\Sesi::get('bs_levelPengguna');
 
 $senaraiPengguna = array('pentadbir','biasa');
 $senaraiPentadbir = array('pentadbir','biasa');
-if (in_array($level, $senaraiPentadbir)) 
+if (in_array($level, $senaraiPentadbir))
 	$paras = '' . $level;
 elseif (in_array($level, $senaraiPengguna))
 	$paras = '' . $level;
-else 
+else
 	$paras = null; # untuk pelawat sahaja
 
 $iconFA['home2'] = '<i class="fa fa-home fa-2x" aria-hidden="true"></i>';
 $iconFA['video'] = '<i class="fas fa-video"></i>';
 $iconFA['search'] = '<i class="fas fa-search"></i>';
 
-echo "\n\n"; 
-//if ($paras == null): else: ?>
+echo "\n\n"; $paras = null;
+if ($paras == null): else: ?>
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
 	<a class="navbar-brand" href="<?php echo URL ?>">
 		<?php echo $iconFA['video'] . Tajuk_Muka_Surat . ':' . $paras ?></a>
@@ -45,4 +45,4 @@ echo "\n\n";
 <?php require 'menubar_atas.php'; ?>
 </nav>
 <?php
-// endif;
+endif;

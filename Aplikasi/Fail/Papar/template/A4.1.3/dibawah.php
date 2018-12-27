@@ -3,9 +3,9 @@
 <!-- footer class="footer">
 	<div class="container">
 		<span class="label label-info">
-		&copy; Hak Cipta Terperihara 2016. Theme <?php 
+		&copy; Hak Cipta Terperihara 2019. Theme <?php
 $theme = ( !isset($pilih) ) ? 'Asal Bootstrap Twitter' : $pilih;
-echo $theme = (isset($theme)) ? $theme : null; ?>	
+echo $theme = (isset($theme)) ? $theme : null; ?>
 		</span>
 	</div>
 </footer -->

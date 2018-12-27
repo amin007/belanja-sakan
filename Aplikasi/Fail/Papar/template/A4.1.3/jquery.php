@@ -1,9 +1,9 @@
-<!-- khas untuk jquery dan js2 lain 
+<!-- khas untuk jquery dan js2 lain
 ================================================== -->
 <script type="text/javascript" src="<?=JQUERY?>"></script>
-<script type="text/javascript" src="<?=BOOTSTRAPJS411?>"></script>
+<script type="text/javascript" src="<?=BOOTSTRAPJS413?>"></script>
 <?php
-if (isset($this->js)) 
+if (isset($this->js))
 {
     foreach ($this->js as $js)
     {
@@ -12,38 +12,38 @@ if (isset($this->js))
 		?><script type="text/javascript" src="<?php echo $js ?>"></script><?php
     }
 }
-?><?php 
+?><?php
 $dataURL = dpt_url();
 //echo '<pre>'; echo '<br>$dataURL:<br>'; print_r($dataURL); echo '</pre>';
 $classKhas = array('ubah','hadirbulan','awal','batch','senarai');
-if ( isset($dataURL[1]) && ( in_array($dataURL[1],$classKhas) )) :
+if ( isset($dataURL[1]) && ( in_array($dataURL[1],$classKhas) ) ):
 echo "\n\n"; ?>
 <script type="text/javascript">
-	function lookup(inputString) 
+	function lookup(inputString)
 	{
-		if(inputString.length == 1) 
-		{ 
+		if(inputString.length == 1)
+		{
 			$('#suggestions').hide();// Hide the suggestion box.
-		} 
-		else 
+		}
+		else
 		{
 			$.get("<?php echo URL ?>cari/syarikat/", {cari: inputString}, function(data)
 			{
-				if(data.length >0) 
-				{ 
-				$('#suggestions').show();
-				$('#autoSuggestionsList').html(data); 
+				if(data.length >0)
+				{
+					$('#suggestions').show();
+					$('#autoSuggestionsList').html(data);
 				}
 			});
 		}
-	} // lookup
-	
-	function fill(thisValue) 
+	}// lookup
+
+	function fill(thisValue)
 	{
 		$('#inputString').val(thisValue);
 		setTimeout("$('#suggestions').hide();", 200);
 	}
-	
+
 // kod jquery global
 	$(document).ready(function(){
 		/* ---------- Text editor ---------- */
@@ -60,16 +60,15 @@ echo "\n\n"; ?>
 
 		/* ---------- Auto Height texarea ---------- */
 		$('textarea').autosize();
-		
+
 		/* ---------- Masked Input ---------- */
 		$("#date").mask("99/99/9999");
 		$("#phone").mask("(999) 999-9999");
 		$("#tin").mask("99-9999999");
 		$("#ssn").mask("999-99-9999");
-		
 		$.mask.definitions['~']='[+-]';
 		$("#eyescript").mask("~9.99 ~9.99 999");
-		
+
 		/* ---------- Textarea with limits ---------- */
 		$('#limit').inputlimiter({
 			limit: 10,
@@ -77,18 +76,18 @@ echo "\n\n"; ?>
 			remText: 'You only have %n word%s remaining...',
 			limitText: 'Field limited to %n word%s.'
 		});
-		
+
 		/* ---------- Timepicker for Bootstrap ---------- */
 		$('#timepicker1').timepicker();
-		
+
 		/* ---------- DateRangepicker for Bootstrap ---------- */
 		$('#daterange').daterangepicker();
-		
+
 		/* ---------- Bootstrap Wysiwig ---------- */
 		$('.editor').wysiwyg();
-		
+
 		/* ---------- Colorpicker for Bootstrap ---------- */
-		$('#colorpicker1').colorpicker();	
+		$('#colorpicker1').colorpicker();
 	});
 </script>
 <style type="text/css">
@@ -100,25 +99,25 @@ echo "\n\n"; ?>
 		background-color: #212427;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
-		border: 2px solid #000000;	
+		border: 2px solid #000000;
 		color: #ffff00;
 	}
-	
+
 	.suggestionList {margin: 0px;padding: 0px;}
-	
-	.suggestionList li {		
+
+	.suggestionList li {
 		margin: 0px 0px 3px 0px;
 		padding: 3px;
 		cursor: pointer;
 	}
-	
+
 	.suggestionList li:hover {background-color: #659CD8;}
 </style>
 <?php elseif ( isset($dataURL[1]) && $dataURL[1]=='laporan') : echo "\n";?>
 <script>
 
 	var barChartData = {
-		labels: ["BEK", "ICT", "SIH", "WANG", "BUAT", "DIDIK", 
+		labels: ["BEK", "ICT", "SIH", "WANG", "BUAT", "DIDIK",
 		"LORI", "HOTEL", "LAIN", "PRO"],
 		datasets: [
 				{
@@ -137,7 +136,7 @@ echo "\n\n"; ?>
 	var myLine = new Chart(document.getElementById("bar-chart1").getContext("2d")).Bar(barChartData);
 	var myLine = new Chart(document.getElementById("bar-chart2").getContext("2d")).Bar(barChartData);
 
-    var pieData = [	
+    var pieData = [
 		{value: 0, color: "#1A1130"},
 		{value: 1, color: "#1B8632"},
 		{value: 4, color: "#1C8633"},
@@ -150,11 +149,11 @@ echo "\n\n"; ?>
 		{value: 3, color: "#F5D630"}
 	];
     var myPie = new Chart(document.getElementById("pie-chart").getContext("2d")).Pie(pieData);
-	
+
 </script>
 <?php elseif ( isset($dataURL[1]) && $dataURL[1]=='laporanSubjek') : echo "\n";?>
 <script>
-<?php 
+<?php
 	$jquery = new \Aplikasi\Kitab\Jquery_Script();
 	echo $jquery->Summary();
 ?>
@@ -169,7 +168,7 @@ echo "\n\n"; ?>
 ?></script>
 <?php elseif ( isset($dataURL[1]) && $dataURL[1]=='analisa') : echo "\n";?>
 <script>
-<?php 
+<?php
 	$jquery = new \Aplikasi\Kitab\Jquery_Script();
 	echo $jquery->kodSummary1($this->namaTajukGraf);
 ?>
