@@ -211,12 +211,12 @@ class BrgBaru01
 			$classInput,$komenInput) = $this->ccs();
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return '<div class="input-group input-group-sm">' . $tab3
-		. '<span class="input-group-addon">Bitcoin</span>'
+		. $this->labelTeks('Bitcoin') . $tab3
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
 		. ' class="form-control">' . $tab3
-		. '<span class="input-group-addon">' . kira($data) . '</span>'
-		. $tab2 . '</div>' . $komenInput
+		. $this->labelTeks(kira($data)) . $tab3
+		. '</div>' . $komenInput
 		. '';
 	}
 #------------------------------------------------------------------------------------------
@@ -232,9 +232,9 @@ class BrgBaru01
 			: '<input type="checkbox" ' . $X . ' value="x"> ' . $data;
 
 		return '<div class="input-group input-group-sm">' . $tab3
-		. '<span class="input-group-addon">' . $dataX . '</span>' . $tab3
-		. '<input type="date" ' . $name //. 'class="input-date tarikh" readonly>'
-		. ' value="' . $data . '"'
+		. $this->labelTeks($dataX) . $tab3
+		. '<input type="date" ' . $name
+		. ' value="' . $data . '"'//. 'class="input-date tarikh" readonly>'
 		. $tab3 . ' class="form-control date-picker"'
 		. $tab3 . ' placeholder="Cth: 2014-05-01"'
 		. $tab3 . ' id="date' . $key . '" data-date-format="yyyy/mm/dd"/>'
@@ -248,7 +248,7 @@ class BrgBaru01
 			$classInput,$komenInput) = $this->ccs();
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return '<div class="input-group input-group">' . $tab3
-		. '<span class="input-group-addon">' . $data . '</span>' . $tab3
+		. $this->labelTeks($data) . $tab3
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
 		. ' class="form-control">'
@@ -263,11 +263,11 @@ class BrgBaru01
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#kod utk input text saiz besar
 		return '<div class="input-group input-group-lg">' . $tab3
-		. '<span class="input-group-addon">' . $data . '</span>' . $tab3
+		. $this->labelTeks($data) . $tab3
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
-		. ' class="form-control">'
-		. $tab2 . '</div>' . $komenInput
+		. ' class="form-control">' . $tab2 
+		. '</div>' . $komenInput
 		. '';
 	}
 #------------------------------------------------------------------------------------------
@@ -278,11 +278,11 @@ class BrgBaru01
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		#kod utk input text saiz besar
 		return '<div class="input-group input-group-sm">' . $tab3
-		. '<span class="input-group-addon">Kecil:' . $data . '</span>' . $tab3
+		. $this->labelTeks('Kecil:' . $data) . $tab3
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
-		. ' class="form-control">'
-		. $tab2 . '</div>' . $komenInput
+		. ' class="form-control">' . $tab2
+		. '</div>' . $komenInput
 		. '';
 	}
 #------------------------------------------------------------------------------------------
@@ -294,7 +294,7 @@ class BrgBaru01
 		#kod utk input text saiz besar
 		return ''
 		//'<div class="input-group input-group">' . $tab3
-		//. '<span class="input-group-addon"></span>' . $tab3
+		//. $this->labelTeks('') . $tab3
 		. '<input type="text" ' . $name
 		. ' class="form-control">'
 		//. $tab2 . '</div>' . $komenInput
