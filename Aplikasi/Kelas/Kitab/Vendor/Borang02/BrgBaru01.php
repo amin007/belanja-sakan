@@ -149,7 +149,7 @@ class BrgBaru01
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
 			$classInput,$komenInput) = $this->ccs();
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
-		return $tab2
+		return ''
 		. '<textarea ' . $name . ' rows="1" cols="20"' . $tab2 
 		. ' class="form-control">' . $data . '</textarea>'
 		. $tab2 . '<pre>' . $data . '</pre>'
@@ -266,8 +266,8 @@ class BrgBaru01
 		. $this->labelTeks($data) . $tab3
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
-		. ' class="form-control">' . $tab2 
-		. '</div>' . $komenInput
+		. ' class="form-control">'
+		. $tab2 . '</div>' . $komenInput
 		. '';
 	}
 #------------------------------------------------------------------------------------------
@@ -281,8 +281,8 @@ class BrgBaru01
 		. $this->labelTeks('Kecil:' . $data) . $tab3
 		. '<input type="text" ' . $name
 		. ' value="' . $data . '"'
-		. ' class="form-control">' . $tab2
-		. '</div>' . $komenInput
+		. ' class="form-control">'
+		. $tab2 . '</div>' . $komenInput
 		. '';
 	}
 #------------------------------------------------------------------------------------------
