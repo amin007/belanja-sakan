@@ -108,10 +108,11 @@ class BrgBaru01
 	{
 		$input2 = null;
 		$tab2 = "\n\t\t";
+		$tab3 = "\n\t\t\t";
 		$input2 = ($data==null) ? '' :
 				'<div class="input-group-prepend"><div class="input-group-text">'
 				. $data . '</div></div>'
-				. $tab2;
+				. $tab3;
 
 		return $input2;
 	}
