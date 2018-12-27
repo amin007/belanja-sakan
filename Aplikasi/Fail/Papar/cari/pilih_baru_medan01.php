@@ -12,7 +12,7 @@ for ($kira=0; $kira < count($row); $kira++)
 		$class = 'col-sm-2 control-label text-right';
 	## ---------------------------------------------------------------------------?>
 <!-- ================================================================================================= --><?php
-		echo "\n\t";
+		echo "\n";
 		?><div class="form-group row"><?php echo "\n\t";
 		?><label for="inputTajuk" class="<?php echo $class ?>"><?php
 		echo $key ?></label><?php echo "\n\t";
