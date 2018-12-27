@@ -8,15 +8,14 @@ $html->medanCarian(
 for ($kira=0; $kira < count($row); $kira++)
 {	foreach ( $row[$kira] as $key=>$data )
 	{## papar data $row ----------------------------------------------------------
-		$dataType = $this->_meta[$myTable][$key]['type'];
-		$namaKey = "$key|$dataType";
+		//$dataType = $this->_meta[$myTable][$key]['type'];
 		$class = 'col-sm-2 control-label text-right';
 	## ---------------------------------------------------------------------------?>
 <!-- ================================================================================================= --><?php
 		echo "\n\t";
 		?><div class="form-group row"><?php echo "\n\t";
 		?><label for="inputTajuk" class="<?php echo $class ?>"><?php
-		echo $namaKey ?></label><?php echo "\n\t";
+		echo $key ?></label><?php echo "\n\t";
 		?><div class="<?php echo $class2 ?>"><?php
 		$paparData = $html->ubahInput2($this->bentukJadual01,
 			$this->_meta, $myTable,$kira, $key, $data);
@@ -25,4 +24,4 @@ for ($kira=0; $kira < count($row); $kira++)
 		?></div><!-- / class="form-group" --><?php echo "\n";
 	}## --------------------------------------------------------------------------
 }
-?>
+?><!-- ================================================================================================= -->
