@@ -176,9 +176,9 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->papar->bentukJadual01 = $this->tanya->tentangMedan();
 		/*	cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
-		$this->panggilBorang01('senarai_isirumah1');
-		$this->panggilBorang01('senarai_isirumah2');
+		$this->panggilBorang01('senarai_isirumah');
 		//$this->pilihMedan('nama_pengguna');
+		$this->papar->template = 'template_borang';
 		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
