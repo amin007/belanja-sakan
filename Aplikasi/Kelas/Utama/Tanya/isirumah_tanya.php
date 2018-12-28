@@ -158,7 +158,7 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		//$a = null;
 		$p = array($a,$b,$c);
 		if($a == 'senarai_isirumah1'): //echo "\$a = $a <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah1($p);
+			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah($p);
 		elseif($a == 'senarai_isirumah2'): //echo "\$a = $a <br>";
 			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah2($p);
 		elseif($a == 'xxx'): //echo "\$a = $a <br>";
@@ -185,7 +185,7 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($jadual, $medan, $carian, $susun);#pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
-	function jadualSenaraiIsirumah1($p)
+	function jadualSenaraiIsirumah($p)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
@@ -200,7 +200,7 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($jadual, $medan, $carian, $susun);#pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
-	function jadualSenaraiIsirumah2($p)
+	function xxx($p)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
