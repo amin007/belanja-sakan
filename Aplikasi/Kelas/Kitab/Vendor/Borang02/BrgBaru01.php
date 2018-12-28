@@ -69,11 +69,8 @@ class BrgBaru01
 	}
 ###########################################################################################
 #------------------------------------------------------------------------------------------
-	public function ubahInput2($ulangdata,$jenis,$jadual,$kira,$key,$data)
+	public function ubahInput2($key,$data,$dataType,$semua,$ulangdata)
 	{	# istihar pembolehubah
-		$name = 'name="' . $jadual . '[' . $key . ']"';
-		$dataType = $jenis[$jadual][$key]['type'];// myGetType($data);
-		$semua = array($jenis,$jadual,$kira,$key,$data,$name);
 		//if ( in_array($key,array(...)) )
 		if( in_array($key,array('password','kataLaluan')) )
 			$input = $this->inputPassword($semua);
