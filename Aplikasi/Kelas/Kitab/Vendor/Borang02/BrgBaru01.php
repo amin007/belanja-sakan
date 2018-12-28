@@ -24,13 +24,11 @@ class BrgBaru01
 	{
 		echo "\n"; $class = 'col-sm-8';
 ?><div class="container">
-<div class="form-group"><div class="<?php echo $class ?>">
-	<div class="input-group input-group-lg">
-		<div class="input-group-prepend"><span class="input-group-text btn-block">
+<div class="<?php echo $class ?>">
+		<span class="input-group-text">
 			Jadual : <?php echo $myTable ?>
-		</span></div>
-	</div>
-</div></div>
+		</span>
+</div>
 </div><br><?php echo "\n";
 	}
 #------------------------------------------------------------------------------------------
