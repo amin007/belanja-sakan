@@ -211,5 +211,24 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		//header('location:' . URL . ''); //*/
 	}
 #-------------------------------------------------------------------------------------------
+	function ubahsuaiPostBaru($senaraiJadual)
+	{
+		$posmen = array();
+		foreach ($_POST as $myTable => $value):
+		if ( in_array($myTable,$senaraiJadual) ):
+			foreach ($value as $kekunci => $papar)
+			{
+				$posmen[$myTable][$kekunci] = bersih($papar);
+			}//*/
+		endif; endforeach;
+
+		/*$debugData = array('pilih','senaraiJadual','medanID','dataID','posmen');
+		echo '<pre>'; foreach($debugData as $semak): if(isset($$semak)):
+			echo '<br>$' . $semak . ' : '; print_r($$semak);
+		endif; endforeach; echo '</pre>';//*/
+
+		return $posmen;
+	}
+#-------------------------------------------------------------------------------------------
 #===========================================================================================
 }
