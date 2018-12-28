@@ -19,7 +19,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->paparJadual(); # Set pembolehubah utama
 
 		# Pergi papar kandungan
-		/*$this->_folder = 'cari';
+		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[1], $noInclude=0);//*/
