@@ -106,6 +106,7 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'3', $b=>'Tamat Sekolah');
 	#***************************************************************************************
 		$k = 'sebab_tak_sek';
+		$p[$k][]=array($a=>'0', $b=>'Jika tidak sekolah, jawap soalan ini');
 		$p[$k][]=array($a=>'1', $b=>'Tidak mampu dari segi kewangan');
 		$p[$k][]=array($a=>'2', $b=>'Terlalu jauh dari institusi pendidikan');
 		$p[$k][]=array($a=>'3', $b=>'Tidak berminat');
