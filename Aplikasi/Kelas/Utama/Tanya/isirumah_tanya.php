@@ -159,8 +159,6 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p = array($a,$b,$c);
 		if($a == 'senarai_isirumah1'): //echo "\$a = $a <br>";
 			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah($p);
-		elseif($a == 'senarai_isirumah2'): //echo "\$a = $a <br>";
-			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah2($p);
 		elseif($a == 'xxx'): //echo "\$a = $a <br>";
 			list($myTable, $medan, $carian, $susun) = $this->xxx($p);
 		else: //echo "\$a = $a <br>";
