@@ -165,7 +165,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->panggilJadual01('senarai_isirumah');
 		//$this->panggilJadual('nama_pengguna');
 		$this->papar->template = 'template_bootstrap';
-		$this->debugKandunganPaparan();//*/
+		//$this->debugKandunganPaparan();//*/
 	}
 #-------------------------------------------------------------------------------------------
 	public function baru()
