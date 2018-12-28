@@ -193,8 +193,22 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 	public function baruSimpan($semua)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		$this->semakPembolehubah($_POST,'POST');//*/
-		//$this->debugKandunganPaparan();//*/
+		$senaraiJadual = array('senarai_isirumah');
+		# ubahsuai $posmen
+		$posmen = $this->ubahsuaiPostBaru($senaraiJadual);
+		//$this->semakPembolehubah($_POST,'_POST');
+		//$this->semakPembolehubah($posmen,'posmen');
+
+		# mula ulang $senaraiJadual
+		foreach ($senaraiJadual as $kunci => $jadual)
+		{# mula ulang table
+			$this->tanya->tambahSql($jadual, $posmen[$jadual]);
+			//$this->tanya->tambahData($jadual, $posmen[$jadual]);
+		}# tamat ulang table
+
+		# pergi papar kandungan
+		//echo 'location:' . URL . '';
+		//header('location:' . URL . ''); //*/
 	}
 #-------------------------------------------------------------------------------------------
 #===========================================================================================
