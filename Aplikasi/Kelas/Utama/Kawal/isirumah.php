@@ -190,5 +190,12 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->paparKandungan($this->_folder, $fail[2], $noInclude=0);//*/
 	}
 #-------------------------------------------------------------------------------------------
+	public function baruSimpan($semua)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		$this->semakPembolehubah($_POST,'POST');//*/
+		//$this->debugKandunganPaparan();//*/
+	}
+#-------------------------------------------------------------------------------------------
 #===========================================================================================
 }
