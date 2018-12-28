@@ -79,7 +79,7 @@ class <?php echo $namaClass ?> extends \Aplikasi\Kitab\Kawal
 	public function <?php echo $namaFungsi ?>(<?php echo $pencam ?>)
 	{
 		//echo '&lt;hr>Nama class :' . __METHOD__ . '()&lt;hr>';
-		echo '&lt;pre>$_POST:'; print_r($_POST); echo '&lt;/pre>';//*/
+		$this->semakPembolehubah($_POST,'POST');//*/
 		//$this->debugKandunganPaparan();//*/
 	}
 #-------------------------------------------------------------------------------------------
