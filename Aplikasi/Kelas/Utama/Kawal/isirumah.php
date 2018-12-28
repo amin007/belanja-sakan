@@ -163,8 +163,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->papar->c1 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
-		$this->panggilJadual01('senarai_isirumah1');
-		$this->panggilJadual01('senarai_isirumah2');
+		$this->panggilJadual01('senarai_isirumah');
 		//$this->panggilJadual('nama_pengguna');
 		//$this->debugKandunganPaparan();//*/
 	}
