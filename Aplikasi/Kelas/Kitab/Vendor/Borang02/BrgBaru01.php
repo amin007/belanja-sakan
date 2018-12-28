@@ -25,8 +25,11 @@ class BrgBaru01
 		echo "\n"; $class = 'col-sm-8';
 ?><div class="container">
 <div class="form-group"><div class="<?php echo $class ?>">
-	<div class="input-group input-group-lg"><?php
-		echo $this->labelTeks('Jadual :' . $myTable)?></div>
+	<div class="input-group input-group-lg">
+		<div class="input-group-prepend"><span class="input-group-text btn-block">
+			Jadual : <?php echo $myTable ?>
+		</span></div>
+	</div>
 </div></div>
 </div><br><?php echo "\n";
 	}
