@@ -230,5 +230,12 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		return $posmen;
 	}
 #-------------------------------------------------------------------------------------------
+	public function ubah($dataID)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		$this->semakPembolehubah($dataID,'dataID');//*/
+		//$this->debugKandunganPaparan();//*/
+	}
+#-------------------------------------------------------------------------------------------
 #===========================================================================================
 }
