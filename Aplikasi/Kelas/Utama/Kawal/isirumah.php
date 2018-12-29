@@ -257,10 +257,11 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		unset($this->papar->bentukJadual02);*/
 		$this->papar->bentukJadual01 = $this->tanya->tentangMedan();
 		$this->panggilTable('senarai_isirumah','no',$dataID);
-		$this->debugKandunganPaparan();//*/
+		$this->papar->template = 'template_borang';
+		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
-		/*$this->_folder = 'cari';
+		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[3], $noInclude=0);//*/
