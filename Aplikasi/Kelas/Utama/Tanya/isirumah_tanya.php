@@ -169,7 +169,7 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun);# pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
-	function ubahPencam($jadual,$b,$c)
+	function ubahPencam($jadual,$apa,$cari)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
@@ -178,8 +178,8 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		# semak database
 			$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
 				'atau'=>'WHERE', # WHERE / OR / AND
-				'medan' => $medanID, # cari dalam medan apa
-				'apa' => $dataID); # benda yang dicari//*/
+				'medan' => $apa, # cari dalam medan apa
+				'apa' => $cari); # benda yang dicari//*/
 
 		return array($jadual, $medan, $carian, $susun);#pulangkan nilai
 	}
