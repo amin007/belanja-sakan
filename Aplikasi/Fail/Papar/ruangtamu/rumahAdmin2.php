@@ -2,7 +2,6 @@
 
 <div class="container">
 <hr><h1 class="display-2 text-center">Admin2home <br> Kita Tanya Apa Khabar</h1><hr>
-<hr><h2>Untuk Projek HIES sahaja</h2><hr>
 <div class="hero-unit">
 <p><?php
 $Sesi = new \Aplikasi\Kitab\Sesi();
