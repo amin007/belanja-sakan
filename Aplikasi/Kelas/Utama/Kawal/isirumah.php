@@ -233,8 +233,21 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 	public function ubah($dataID)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		$this->semakPembolehubah($dataID,'dataID');//*/
-		//$this->debugKandunganPaparan();//*/
+		# Set pembolehubah utama
+		/*$this->panggilKhas02('punca');
+		$this->panggilKhas02('tukaran');
+		$this->papar->bentukJadual01 = $this->tanya->
+			cariKhas01($this->papar->bentukJadual02);
+		unset($this->papar->bentukJadual02);*/
+		$this->papar->bentukJadual01 = $this->tanya->tentangMedan();
+		$this->panggilTable('senarai_isirumah','no',$dataID);
+		$this->debugKandunganPaparan();//*/
+
+		# Pergi papar kandungan
+		/*$this->_folder = 'cari';
+		$fail = array('1cari','index','b_baru','b_ubah');
+		//echo '<br>$fail = ' . $fail[0] . '<hr>';
+		$this->paparKandungan($this->_folder, $fail[3], $noInclude=0);//*/
 	}
 #-------------------------------------------------------------------------------------------
 #===========================================================================================
