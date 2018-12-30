@@ -6,9 +6,7 @@ for ($kira=0; $kira < count($row); $kira++)
 		?><label for="inputTajuk" class="col-sm-2 control-label"><?php echo $key
 		?></label><?php echo "\n\t";
 		?><div class="<?php echo $class2 ?>"><?php
-		$paparData = $html->ubahInput2($this->bentukJadual01,
-			$this->_meta, $this->_jadual,$kira, $key, $data);
-		echo "\n\t\t" . $paparData . "\n\t";
+		echo "\n\t\t" . $data . "\n\t";
 		?></div><!-- / class="<?php echo $class2 ?>" --><?php echo "\n";
 		?></div><!-- / class="form-group" --><?php echo "\n";
 	}## --------------------------------------------------------------------------
