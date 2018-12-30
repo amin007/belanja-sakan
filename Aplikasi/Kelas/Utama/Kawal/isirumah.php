@@ -270,7 +270,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 	public function ubahSimpan($dataID)
 	{
 		# ubahsuai $posmen
-		list($posmen,$senaraiJadual,$medanID) = $this->ubahsuaiPost($p1);
+		list($posmen,$senaraiJadual,$medanID) = $this->ubahsuaiPost($dataID);
 		//echo '<br>$medanID=' . $medanID . '<br>';
 		//$this->semakPembolehubah($_POST,'_POST');
 		//$this->semakPembolehubah($posmen,'posmen');
@@ -287,6 +287,23 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$lokasi = 'belian/';
 		//echo '<br>location:' . URL . $lokasi;
 		//header('location:' . URL . $lokasi); //*/
+	}
+#-------------------------------------------------------------------------------------------
+	function ubahsuaiPost($dataID)
+	{
+		list($medanID,$senaraiJadual) = $this->tanya->pilihUbahPost();
+
+		$posmen = array(); //$this->semakPembolehubah($_POST,'_POST');
+		foreach ($_POST as $myTable => $value):
+			if ( in_array($myTable,$senaraiJadual) ):
+				foreach ($value as $kekunci => $papar)
+				{
+					$posmen[$myTable][$kekunci] = bersih($papar);
+					$posmen[$myTable][$medanID] = bersih($dataID);
+				}
+		endif; endforeach;//*/
+
+		return array($posmen,$senaraiJadual,$medanID);# pulangkan nilai
 	}
 #-------------------------------------------------------------------------------------------
 #===========================================================================================
