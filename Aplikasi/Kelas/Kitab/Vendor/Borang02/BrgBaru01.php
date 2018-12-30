@@ -343,8 +343,10 @@ class BrgBaru01
 		foreach ($ulangData[$key] as $myTable => $bil)
 		{# mula ulang $bil
 			//echo "\r" . $bil['keterangan'] . '<br>';
-			$dropmenu .= '<option value="' . $bil['kod'] . '">' . $bil['kod']
-			. '-' . $bil['keterangan'] . '</option>' . $tab3;
+			$p0 = ($data == $bil['kod']) ?  $data .'" selected' : $bil['kod'] . '"';
+			$p1 = ($data == $bil['kod']) ? '*' . $bil['kod'] : $bil['kod'];
+			$dropmenu .= '<option value="' . $p0 . '>'
+			. $p1 . '-' . $bil['keterangan'] . '</option>' . $tab3;
 		}# tamat ulang $bil//*/
 
 		return $dropmenu;
