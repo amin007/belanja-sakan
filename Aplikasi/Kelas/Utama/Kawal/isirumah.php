@@ -257,7 +257,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		unset($this->papar->bentukJadual02);*/
 		$this->papar->bentukJadual01 = $this->tanya->tentangMedan();
 		$this->panggilTable('senarai_isirumah','no',$dataID);
-		$this->papar->template = 'template_borang';
+		$this->papar->template = 'template_borang_ubah';
 		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
