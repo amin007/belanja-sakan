@@ -1,4 +1,4 @@
-<!-- h1> Ini Template Borang </h1 -->
+<!-- h1> Ini Template Borang Baru </h1 -->
 <?php
 //$html = new Aplikasi\Kitab\Borang01_Tambah;
 $html = new Aplikasi\Kitab\BrgBaru01;
