@@ -158,13 +158,12 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 		list($p1, $medan, $carian, $susun) =
 			$this->tanya->ubahPencam($jadual,$cari,$apa);
-		list($data,$b) = $this->tanya->//cariSql
-			cariSemuaDataMeta
+		list($data,$b) = $this->tanya->cariSemuaDataMeta//cariSql
 			($jadual, $medan, $carian, $susun);
+		$this->papar->senarai[$jadual] = $data;
 		list($a,$meta) = $this->ubahMeta($b);
 		$this->papar->_meta = $meta;
 		$this->papar->carian[0] = $apa;
-		$this->papar->senarai[$jadual] = $data;
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($jadual, $jadual);
 	}
