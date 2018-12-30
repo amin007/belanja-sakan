@@ -214,5 +214,13 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($jadual, $medan, $carian, $susun);#pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
+	function pilihUbahPost()
+	{
+		$medan = 'no';
+		$jadual = array('senarai_isirumah');
+
+		return array($medan,$jadual);
+	}
+#------------------------------------------------------------------------------------------#
 #===========================================================================================
 }
