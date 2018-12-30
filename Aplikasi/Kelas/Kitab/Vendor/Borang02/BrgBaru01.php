@@ -328,7 +328,8 @@ class BrgBaru01
 		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
 		return '<div class="input-group input-group-sm">' . $tab2
 		. '<select ' . $name . ' class="form-control">' . $tab3
-		. $this->inputOption($semua,$ulangData) . '</select>'
+		. $this->inputOption($semua,$ulangData) . '</select>' . $tab3
+		. $this->labelTeks(kira($data))
 		. $tab2 . '</div>'
 		. '';
 	}
