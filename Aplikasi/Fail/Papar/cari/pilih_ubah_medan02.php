@@ -1,5 +1,4 @@
 <?php
-$classTajuk = 'col-sm-2 control-label text-right';
 for ($kira=0; $kira < count($row); $kira++)
 {	foreach ( $row[$kira] as $key=>$data )
 	{## papar data $row ----------------------------------------------------------
