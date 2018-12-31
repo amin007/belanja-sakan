@@ -231,6 +231,15 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan();//*/
 	}
 #-------------------------------------------------------------------------------------------
+	function jenis()
+	{
+		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		# Set pembolehubah utama
+		$pilih = new \Aplikasi\Kitab\Tatasusunan;
+		$data = $pilih->pilihPencam();
+		$this->semakPembolehubah($data,'data');
+	}
+#-------------------------------------------------------------------------------------------
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
 	public function baru()
