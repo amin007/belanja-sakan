@@ -1,7 +1,7 @@
 <?php 
 namespace Aplikasi\Kitab; //echo __NAMESPACE__; 
 class Tatasusunan
-{
+{//new \Aplikasi\Kitab\Tatasusunan ->pilihPencam()
 #==========================================================================================
 	function array_to_xml($array, &$xml_user_info) 
 	{# buat pecahan tatasusunan
