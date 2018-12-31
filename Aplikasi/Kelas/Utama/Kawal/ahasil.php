@@ -233,11 +233,19 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function jenis()
 	{
-		echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
 		$pilih = new \Aplikasi\Kitab\Tatasusunan;
-		$data = $pilih->pilihPencam();
-		$this->semakPembolehubah($data,'data');
+		$this->papar->senarai = $pilih->pilihPencam();
+		//$this->semakPembolehubah($data,'data');
+		$this->kandunganPaparan('mmm', 'jenis_hasil');
+		//$this->debugKandunganPaparan();//*/
+
+		# Pergi papar kandungan
+		$this->_folder = 'cari';
+		$fail = array('1cari','index','b_baru','b_ubah');
+		//echo '<br>$fail = ' . $fail[0] . '<hr>';
+		$this->paparKandungan($this->_folder, $fail[1], $noInclude=0);//*/
 	}
 #-------------------------------------------------------------------------------------------
 #===========================================================================================
