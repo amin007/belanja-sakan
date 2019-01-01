@@ -255,10 +255,10 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->papar->bentukJadual01 = $this->tanya->tentangMedan();
 		$this->panggilTable('senarai_isirumah','no',$dataID);
 		$this->papar->template = 'template_borang_ubah';
-		$this->debugKandunganPaparan();//*/
+		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
-		/*$this->_folder = 'cari';
+		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[3], $noInclude=0);//*/
