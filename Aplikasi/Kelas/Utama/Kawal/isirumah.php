@@ -197,10 +197,10 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->panggilBorang01('senarai_isirumah');
 		//$this->pilihMedan('nama_pengguna');
 		$this->papar->template = 'template_borang_baru';
-		//$this->debugKandunganPaparan();//*/
+		$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
-		$this->_folder = 'cari';
+		/*$this->_folder = 'cari';
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[2], $noInclude=0);//*/
