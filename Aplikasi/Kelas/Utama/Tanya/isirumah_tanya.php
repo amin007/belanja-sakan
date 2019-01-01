@@ -149,13 +149,21 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'42', $b=>'STPM/STP/HSC');
 		$p[$k][]=array($a=>'43', $b=>'GCE `A` Level');
 		$p[$k][]=array($a=>'44', $b=>'Sijil Matrikulasi');
-		$p[$k][]=array($a=>'51', $b=>'Sijil kemahiran kursus &amp; teknikal');
+		$p[$k][]=array($a=>'51', $b=>'Sijil kemahiran kursus & teknikal');
 		$p[$k][]=array($a=>'61', $b=>'Sijil drp badan2 yg memberi pengitirafan'.$b1);
 		$p[$k][]=array($a=>'62', $b=>'Sijil drp kolej'.$b1);
 		$p[$k][]=array($a=>'63', $b=>'Sijil drp politeknik'.$b1);
 		$p[$k][]=array($a=>'64', $b=>'Sijil drp universiti'.$b1);
 		$p[$k][]=array($a=>'65', $b=>'Sijil perguruan/kejururawatan/kesihatan bersekutu');
-		$p[$k][]=array($a=>'', $b=>'Sijil');
+		$p[$k][]=array($a=>'71', $b=>'Diploma dlm kemahiran kursus & teknikal');
+		$p[$k][]=array($a=>'72', $b=>'Diploma Lanjutan/Higher Nasional Diploma'
+		. ' dlm kemahiran kursus & teknikal');
+		$p[$k][]=array($a=>'81', $b=>'Diploma drp kolej'.$b1);
+		$p[$k][]=array($a=>'82', $b=>'Diploma drp politeknik'.$b1);
+		$p[$k][]=array($a=>'83', $b=>'Diploma drp universiti'.$b1);
+		$p[$k][]=array($a=>'84', $b=>'Diploma perguruan/kejururawatan/'
+		. 'kesihatan bersekutu');
+		$p[$k][]=array($a=>'', $b=>'');
 	#***************************************************************************************
 		$k = 'penerima_pendapatan';
 		$p[$k][]=array($a=>'1', $b=>'Ya');
