@@ -181,7 +181,6 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
 		$this->panggilJadual01('senarai_isirumah');
-		//$this->panggilJadual('nama_pengguna');
 		$this->papar->template = 'template_bootstrap';
 		//$this->debugKandunganPaparan();//*/
 	}
@@ -191,12 +190,10 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
 		//$this->panggilKhas02('punca');
-		//$this->panggilKhas02('tukaran');
 		/*	cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
 		$this->papar->bentukJadual01 = $this->tanya->tentangMedan();
 		$this->panggilBorang01('senarai_isirumah');
-		//$this->pilihMedan('nama_pengguna');
 		$this->papar->template = 'template_borang_baru';
 		//$this->debugKandunganPaparan();//*/
 
