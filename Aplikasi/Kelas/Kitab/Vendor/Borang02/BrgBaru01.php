@@ -25,9 +25,9 @@ class BrgBaru01
 		echo "\n"; $class = 'col-sm-8';
 ?><div class="container">
 <div class="<?php echo $class ?>">
-		<span class="input-group-text">
-			Jadual : <?php echo $myTable ?>
-		</span>
+	<span class="input-group-text">
+		Jadual : <?php echo $myTable ?>
+	</span>
 </div>
 </div><br><?php echo "\n";
 	}
