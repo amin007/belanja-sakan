@@ -133,12 +133,12 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$k = 'pendidikan_tertinggi';
 		$b1 = ':taraf persamaan pendidikan luar negara';
 		$p[$k][]=array($a=>'00', $b=>'Pendidikan pra-sekolah|-'.$b1);
-		$p[$k][]=array($a=>'11', $b=>'Tahun 1|1'.$b1);
-		$p[$k][]=array($a=>'12', $b=>'Tahun 2|2'.$b1);
-		$p[$k][]=array($a=>'13', $b=>'Tahun 3|3'.$b1);
-		$p[$k][]=array($a=>'14', $b=>'Tahun 4|4'.$b1);
-		$p[$k][]=array($a=>'15', $b=>'Tahun 5|5'.$b1);
-		$p[$k][]=array($a=>'16', $b=>'Tahun 6|6'.$b1);
+		$p[$k][]=array($a=>'11', $b=>'Thn 1|1'.$b1);
+		$p[$k][]=array($a=>'12', $b=>'Thn 2|2'.$b1);
+		$p[$k][]=array($a=>'13', $b=>'Thn 3|3'.$b1);
+		$p[$k][]=array($a=>'14', $b=>'Thn 4|4'.$b1);
+		$p[$k][]=array($a=>'15', $b=>'Thn 5|5'.$b1);
+		$p[$k][]=array($a=>'16', $b=>'Thn 6|6'.$b1);
 		$p[$k][]=array($a=>'21', $b=>'Kelas peralihan|7'.$b1);
 		$p[$k][]=array($a=>'22', $b=>'Ting. 1|7/8'.$b1);
 		$p[$k][]=array($a=>'23', $b=>'Ting. 2|8/9'.$b1);
