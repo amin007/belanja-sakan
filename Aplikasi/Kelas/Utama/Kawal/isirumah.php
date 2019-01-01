@@ -196,7 +196,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		unset($this->papar->bentukJadual02);//*/
 		$this->panggilBorang01('senarai_isirumah');
 		//$this->pilihMedan('nama_pengguna');
-		$this->papar->template = 'template_borang';
+		$this->papar->template = 'template_borang_baru';
 		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
