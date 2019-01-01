@@ -164,7 +164,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 			($jadual, $medan, $carian, $susun);
 		$this->papar->senarai[$jadual] = $data;
 		list($c,$meta) = $this->ubahMeta($b);
-		$this->papar->_meta = $meta;
+		$this->papar->_meta[$jadual] = $meta;
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($jadual, $jadual);
 	}
