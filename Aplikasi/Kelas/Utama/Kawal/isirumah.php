@@ -107,7 +107,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 	{
 		foreach($meta as $key => $pilih):
 			$key2 = $pilih['name'];
-			//if(!isset($pilih['flags'][1]))// jika ('primary_key'), abaikan
+			if(!isset($pilih['flags'][1]))# jika ('primary_key'), abaikan
 				$data[0][$key2] = null;
 			//$table = $pilih['table'];
 			$meta[$key2]['len'] = $pilih['len'];
