@@ -143,6 +143,50 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		return array($data,$meta);
 	}
 #-------------------------------------------------------------------------------------------
+	function panggilBorang01($p1)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
+		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
+		list($a,$b) = $this->tanya->cariSemuaDataMeta//cariSql
+			($jadual, $medan, $carian, $susun);
+		//$this->papar->senarai[$jadual] = $a;# $a pulangkan nilai null
+		list($data,$meta) = $this->ubahMeta($b);
+		$this->papar->_meta[$jadual] = $meta;
+		$this->papar->senarai[$jadual] = $data;# $data pulangkan nilai tatasusunan
+		# Set pembolehubah untuk Papar
+		$this->kandunganPaparan($p1, $jadual);
+	}
+#-------------------------------------------------------------------------------------------
+	function panggilJadual01($p1)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
+		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
+		list($data,$a) = $this->tanya->cariSemuaDataMeta//cariSql
+			($jadual, $medan, $carian, $susun);
+		$this->papar->senarai[$jadual] = $data;
+		list($b,$meta) = $this->ubahMeta($a);
+		$this->papar->_meta[$jadual] = $meta;
+		# Set pembolehubah untuk Papar
+		$this->kandunganPaparan($p1, $jadual);
+	}
+#-------------------------------------------------------------------------------------------
+	function panggilTable($jadual,$cari,$apa)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
+		list($a, $medan, $carian, $susun) =
+			$this->tanya->ubahPencam($jadual,$cari,$apa);
+		$this->papar->carian[0] = $apa;
+		list($data,$b) = $this->tanya->cariSemuaDataMeta//cariSql
+			($jadual, $medan, $carian, $susun);
+		$this->papar->senarai[$jadual] = $data;
+		list($c,$meta) = $this->ubahMeta($b);
+		$this->papar->_meta[$jadual] = $meta;
+		# Set pembolehubah untuk Papar
+		$this->kandunganPaparan($jadual, $jadual);
+	}
 #-------------------------------------------------------------------------------------------
 	function tambahMedanDB($p1)
 	{
