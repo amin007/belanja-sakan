@@ -348,15 +348,15 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		# mula ulang $senaraiJadual
 		foreach ($senaraiJadual as $kunci => $jadual)
 		{# mula ulang table
-			$this->tanya->ubahSqlSimpan
-			//ubahSimpan
+			$this->tanya->//ubahSqlSimpan
+			ubahSimpan
 			($posmen[$jadual], $jadual, $medanID);
 		}# tamat ulang table
 
 		# Pergi papar kandungan
 		$lokasi = 'ahasil/';
 		//echo '<br>location:' . URL . $lokasi;
-		//header('location:' . URL . $lokasi); //*/
+		header('location:' . URL . $lokasi);//*/
 	}
 #-------------------------------------------------------------------------------------------
 	function ubahsuaiPost($dataID)
