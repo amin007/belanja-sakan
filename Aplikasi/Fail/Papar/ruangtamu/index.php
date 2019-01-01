@@ -16,7 +16,7 @@ echo 'url=' . URL . '';
 
 	<a class="btn btn-primary btn-large" href="<?php echo URL ?>ruangtamu/logout">Pergi Lebih Jauh<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-info btn-large" href="<?php echo URL ?>isirumah">Isi Rumah<i class="fas fa-users fa-2x"></i></a>
-	<a class="btn btn-success btn-large" href="<?php echo URL ?>dapatan">Dapatan<i class="fa fa-binoculars fa-2x"></i></a>
+	<a class="btn btn-success btn-large" href="<?php echo URL ?>ahasil">Dapatan<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-danger btn-large" href="<?php echo URL ?>belian">Belian<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-warning btn-large" href="<?php echo URL ?>semakan">Semakan<i class="fa fa-binoculars fa-2x"></i></a>
 
