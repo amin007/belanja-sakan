@@ -12,5 +12,5 @@ $pilihJadual = 'baru_medan01'; # borang baru berasaskan bootstrap
 include $this->template . '.php';
 //include 'z-navtab.php';
 #---------------------------------------------------------------------------------------
-echo '<pre>$bentukJadual01='; print_r($this->bentukJadual01); echo '</pre>';
-echo '<pre>$meta='; print_r($this->_meta); echo '</pre>';
+//echo '<pre>$bentukJadual01='; print_r($this->bentukJadual01); echo '</pre>';
+//echo '<pre>$meta='; print_r($this->_meta); echo '</pre>';
