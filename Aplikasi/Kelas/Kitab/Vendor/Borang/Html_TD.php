@@ -92,8 +92,10 @@ class Html_TD
 		{
 			?><td><?php echo nl2br($data) ?></td><?php
 		}
-		elseif(in_array($key,array('nilai_sebenar','punca','tukaran',
-		'edagang')))
+		elseif(in_array($key,array('nilai_sebenar','punca','tukaran','edagang',
+			'hubungan_kod','jantina','warganegara','residen','taraf_perkahwinan',
+			'sekolah','sebab_tak_sek','pendidikan_tertinggi','sijil_tertinggi',
+			'taraf_aktiviti','penerima_pendapatan')))
 		{
 			$k0 = $this->pilihKey($semua);
 			?><td><?php echo nl2br($k0) ?></td><?php
