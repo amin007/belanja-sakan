@@ -131,6 +131,7 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'7', $b=>'Tidak berkenaan');
 	#***************************************************************************************
 		$k = 'sijil_tertinggi';
+		$b1 = ' @ yg setaraf';
 		$p[$k][]=array($a=>'01', $b=>'Masih belum bersekolah');
 		$p[$k][]=array($a=>'02', $b=>'Tiada sijil');
 		$p[$k][]=array($a=>'03', $b=>'Tidak berkenaan');
@@ -147,6 +148,14 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'41', $b=>'STA/STAM/STU');
 		$p[$k][]=array($a=>'42', $b=>'STPM/STP/HSC');
 		$p[$k][]=array($a=>'43', $b=>'GCE `A` Level');
+		$p[$k][]=array($a=>'44', $b=>'Sijil Matrikulasi');
+		$p[$k][]=array($a=>'51', $b=>'Sijil kemahiran kursus &amp; teknikal');
+		$p[$k][]=array($a=>'61', $b=>'Sijil drp badan2 yg memberi pengitirafan'.$b1);
+		$p[$k][]=array($a=>'62', $b=>'Sijil drp kolej'.$b1);
+		$p[$k][]=array($a=>'63', $b=>'Sijil drp politeknik'.$b1);
+		$p[$k][]=array($a=>'64', $b=>'Sijil drp universiti'.$b1);
+		$p[$k][]=array($a=>'65', $b=>'Sijil perguruan/kejururawatan/kesihatan bersekutu');
+		$p[$k][]=array($a=>'', $b=>'Sijil');
 	#***************************************************************************************
 		$k = 'penerima_pendapatan';
 		$p[$k][]=array($a=>'1', $b=>'Ya');
