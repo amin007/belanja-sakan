@@ -110,7 +110,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		$this->papar->_method = 'ahasil';
 		$this->papar->baruBorang = 'ahasil/baru';
 		$this->papar->cariID = 'papar';
-		$this->papar->template = 'template_biasa';
+		//$this->papar->template = 'template_biasa';
 		$this->papar->pilihJadual = 'pilih_jadual_am';
 		$this->papar->template2 = 'template_khas02';
 		$this->papar->pilihJadual2 = 'pilih_jadual_am2';
