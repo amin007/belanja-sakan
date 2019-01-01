@@ -180,6 +180,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->papar->c1 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
+		$this->papar->c1 = $this->tanya->tentangMedan();
 		$this->panggilJadual01('senarai_isirumah');
 		$this->papar->template = 'template_bootstrap';
 		//$this->debugKandunganPaparan();//*/
