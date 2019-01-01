@@ -131,7 +131,24 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'7', $b=>'Tidak berkenaan');
 	#***************************************************************************************
 		$k = 'pendidikan_tertinggi';
-		//$b1 = ' @ yg setaraf';
+		$b1 = ':taraf persamaan pendidikan luar negara';
+		$p[$k][]=array($a=>'00', $b=>'Pendidikan pra-sekolah|-'.$b1);
+		$p[$k][]=array($a=>'11', $b=>'Tahun 1|1'.$b1);
+		$p[$k][]=array($a=>'12', $b=>'Tahun 2|2'.$b1);
+		$p[$k][]=array($a=>'13', $b=>'Tahun 3|3'.$b1);
+		$p[$k][]=array($a=>'14', $b=>'Tahun 4|4'.$b1);
+		$p[$k][]=array($a=>'15', $b=>'Tahun 5|5'.$b1);
+		$p[$k][]=array($a=>'16', $b=>'Tahun 6|6'.$b1);
+		$p[$k][]=array($a=>'21', $b=>'Kelas peralihan|7'.$b1);
+		$p[$k][]=array($a=>'22', $b=>'Ting. 1|7/8'.$b1);
+		$p[$k][]=array($a=>'23', $b=>'Ting. 2|8/9'.$b1);
+		$p[$k][]=array($a=>'24', $b=>'Ting. 3|9/10'.$b1);
+		$p[$k][]=array($a=>'31', $b=>'Ting. 4|10/11'.$b1);
+		$p[$k][]=array($a=>'32', $b=>'Ting. 5|11/12'.$b1);
+		$p[$k][]=array($a=>'33', $b=>'Program kemahiran asas -GIATMARA|-'.$b1);
+		$p[$k][]=array($a=>'41', $b=>'Ting. 6(rendah)|12/13'.$b1);
+		$p[$k][]=array($a=>'42', $b=>'Ting. 6(atas)|13/14'.$b1);
+		$p[$k][]=array($a=>'43', $b=>'Matrikulasi');
 		$p[$k][]=array($a=>'', $b=>'');
 		$p[$k][]=array($a=>'91', $b=>'Masih belum bersekolah');
 		$p[$k][]=array($a=>'22', $b=>'Tiada sijil');
