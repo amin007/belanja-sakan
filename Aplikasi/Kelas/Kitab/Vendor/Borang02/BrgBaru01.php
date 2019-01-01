@@ -173,6 +173,20 @@ class BrgBaru01
 		. '';
 	}
 #------------------------------------------------------------------------------------------
+	function inputPrimaryKey($semua)
+	{
+		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
+			$classInput,$komenInput) = $this->ccs();
+		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
+		return '<div class="'.$classInput.'">' . $tab3
+		. '<input type="hidden" ' . $name
+		. ' value="' . $data . '"'
+		. ' class="form-control">' . $tab3
+		. $this->labelTeks($data) . $tab3
+		. '</div>' . $komenInput
+		. '';
+	}
+#------------------------------------------------------------------------------------------
 	function inputBiodata($semua)
 	{
 		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
