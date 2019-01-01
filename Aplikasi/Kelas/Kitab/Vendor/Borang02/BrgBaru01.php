@@ -74,6 +74,8 @@ class BrgBaru01
 		//if ( in_array($key,array(...)) )
 		if( in_array($key,array('password','kataLaluan')) )
 			$input = $this->inputPassword($semua);
+		elseif( in_array($key,array('no')) )
+			$input = $this->inputPrimaryKey($semua);
 		elseif( in_array($key,array('nohp')) )
 			$input = $this->inputBiodata($semua);
 		elseif(in_array($dataType,array('VAR_STRING')))
