@@ -39,13 +39,9 @@ class BrgBaru01
 	<label for="inputSubmit" class="col-sm-2 control-label text-right"><?php
 	echo $myTable ?></label>
 	<div class="<?php echo $class ?>">
-		<div class="input-group input-group-lg">
-		<span class="input-group-addon">
-			<input type="hidden" name="jadual" value="<?php echo $myTable ?>">
-			<input type="submit" name="Simpan" value="Simpan" class="btn btn-primary btn-large">
-			<!-- input type="reset" name="Reset" value="Reset" class="btn btn-default btn-large" -->
-		</span>
-		</div>
+		<input type="hidden" name="jadual" value="<?php echo $myTable ?>">
+		<input type="submit" name="Simpan" value="Simpan" class="btn btn-primary btn-large btn-block">
+		<!-- input type="reset" name="Reset" value="Reset" class="btn btn-default btn-large" -->
 	</div><!-- / class="<?php echo $class ?>" -->
 </div><!-- / class="form-group row" -->
 <!-- ================================================================================================= --><?php
