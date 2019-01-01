@@ -130,6 +130,13 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'6', $b=>'Tiada sijil kelahiran');
 		$p[$k][]=array($a=>'7', $b=>'Tidak berkenaan');
 	#***************************************************************************************
+		$k = 'pendidikan_tertinggi';
+		//$b1 = ' @ yg setaraf';
+		$p[$k][]=array($a=>'', $b=>'');
+		$p[$k][]=array($a=>'91', $b=>'Masih belum bersekolah');
+		$p[$k][]=array($a=>'22', $b=>'Tiada sijil');
+		$p[$k][]=array($a=>'93', $b=>'Tidak berkenaan');
+	#***************************************************************************************
 		$k = 'sijil_tertinggi';
 		$b1 = ' @ yg setaraf';
 		$p[$k][]=array($a=>'01', $b=>'Masih belum bersekolah');
