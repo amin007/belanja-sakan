@@ -126,8 +126,9 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		foreach($meta as $key => $pilih):
 			$key2 = $pilih['name'];
-			//$meta[$key2]['table'] = $pilih['table'];
-			//$meta[$key2]['nama'] = $pilih['name'];
+			if(!isset($pilih['flags'][1]))# jika ('primary_key'), abaikan
+				$data[0][$key2] = null;
+			//$table = $pilih['table'];
 			$meta[$key2]['len'] = $pilih['len'];
 			$meta[$key2]['type'] = $pilih['native_type'];
 			$meta[$key2]['key'] = isset($pilih['flags'][1]) ?
@@ -136,8 +137,10 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			$meta[$key2]['type_precision'] = $pilih['precision'];
 			unset($meta[$key]);
 		endforeach;
+		//$this->semakPembolehubah($meta,'meta');
+		//$this->semakPembolehubah($data,'data');
 
-		return $meta;
+		return array($data,$meta);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilBorang01($p1)
