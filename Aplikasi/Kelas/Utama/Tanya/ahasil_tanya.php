@@ -170,15 +170,16 @@ class Ahasil_Tanya extends \Aplikasi\Kitab\Tanya
 	function jadualSenaraiPendapatan()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
+		list($idUser,$nohp) = $this->tanyaDataSesi();
 		$myTable = 'senarai_pendapatan';
-		$medan = '*';
+		$medan = 'no,nohp,tarikh,hasil_keterangan,amaun_rm,'
+		. 'nilai_sebenar,punca,tukaran,edagang,catatan';
 		$carian = $susun = null;
 		# semak database
-			/*$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
+			$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
 				'atau'=>'WHERE', # WHERE / OR / AND
-				'medan' => $medanID, # cari dalam medan apa
-				'apa' => $dataID); # benda yang dicari//*/
+				'medan' => 'nohp', # cari dalam medan apa
+				'apa' => $nohp); # benda yang dicari//*/
 
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
