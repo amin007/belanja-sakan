@@ -15,11 +15,11 @@ foreach($this->senarai as $myTable => $row)
 		$html->medanCarian(
 			array($this->_method, $myTable, $this->senarai, $this->cariID, $this->_jadual)
 			);
-		echo "\n" . '<form method="POST" action="' . $aksi . '" class="form-horizontal">';
+		echo "\n" . '<form method="POST" action="' . $aksi . '" class="form-horizontal">' . "\n";
 		include 'b_baru/pilih_' . $pilihJadual . '.php';
 		$html->medanHantar($this->myTable, $class1);
-		echo "\n" . '</form><!-- / class="form-horizontal" -->';
+		echo "\n" . '</form><!-- / class="form-horizontal" -->' . "\n";
 #----------------------------------------------------------------------------------------------------
 	}#if ( count($row)==0 )
 }
-/*<!-- / class="container" -->*/ ?>
+/*<!-- / class="container" -->*/
