@@ -157,7 +157,8 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'64', $b=>'Prog. Diploma dlm kemahiran kursus & teknikal');
 		$p[$k][]=array($a=>'65', $b=>'Prog. Diploma Lanjutan/Higher Nasional|'
 		. '  Diploma kemahiran kursus & teknikal');
-		$p[$k][]=array($a=>'66', $b=>'Prog. Diploma drp kolej/politeknik/universiti'.$b1);
+		$p[$k][]=array($a=>'66', $b=>'Prog. Diploma drp kolej/politeknik/universiti'
+		. ' @ yg setaraf');
 		$p[$k][]=array($a=>'67', $b=>'Prog. Diploma perguruan/kejururawatan/'
 		. 'kesihatan bersekutu');
 		$p[$k][]=array($a=>'71', $b=>'Prog.Ijazah Sarjana Muda/Diploma Lanjutan');
