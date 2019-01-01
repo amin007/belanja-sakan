@@ -42,8 +42,7 @@ class BrgBaru01
 		<input type="submit" name="Simpan" value="Simpan" class="btn btn-primary btn-large btn-block">
 		<!-- input type="reset" name="Reset" value="Reset" class="btn btn-default btn-large" -->
 	</div><!-- / class="<?php echo $class ?>" -->
-</div><!-- / class="form-group row" -->
-<!-- ================================================================================================= --><?php
+</div><!-- / class="form-group row" --><?php
 	}
 #------------------------------------------------------------------------------------------
 	public function atasInputCarian($mencari, $carian, $mesej, $class)
