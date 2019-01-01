@@ -129,9 +129,9 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
-		list($data,$a) = $this->tanya->cariSemuaDataMeta//cariSql
+		list($a,$b) = $this->tanya->cariSemuaDataMeta//cariSql
 			($jadual, $medan, $carian, $susun);
-		//$this->papar->senarai[$jadual] = $data;
+		//$this->papar->senarai[$jadual] = $a;
 		list($b,$meta) = $this->ubahMeta($a);
 		$this->papar->_meta[$jadual] = $meta;
 		# Set pembolehubah untuk Papar
