@@ -140,31 +140,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		return $meta;
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilJadual($p1)
-	{
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		# Set pembolehubah utama
-		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
-		list($data,$meta) = $this->tanya->pilihMedan03($jadual, $medan, $carian, $susun);
-		$this->papar->_meta = $this->ubahMeta($meta);
-		$this->papar->senarai[$jadual] = $data;
-		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($p1, $jadual);
-	}
-#-------------------------------------------------------------------------------------------
-	function pilihMedan($p1)
-	{
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		# Set pembolehubah utama
-		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
-		list($data,$meta) = $this->tanya->pilihMedan03//cariSql
-			($jadual, $medan, $carian, $susun);
-		$this->papar->_meta = $this->ubahMeta($meta);
-		$this->papar->senarai[$jadual] = $this->tanya->borangBaru01();
-		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($p1, $jadual);//*/
-	}
-#-------------------------------------------------------------------------------------------
 	function tambahMedanDB($p1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
@@ -173,22 +148,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->papar->medan = $this->tanya->pilihMedan02($jadual);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($p1, $jadual);
-	}
-#-------------------------------------------------------------------------------------------
-	function panggilTable($jadual,$medanID,$dataID)
-	{
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		# Set pembolehubah utama
-		list($p1, $medan, $carian, $susun) =
-			$this->tanya->ubahPencam($jadual,$medanID,$dataID);
-		list($data,$meta) = $this->tanya->//cariSql
-			cariSemuaDataMeta
-			($jadual, $medan, $carian, $susun);
-		$this->papar->_meta = $this->ubahMeta($meta);
-		$this->papar->carian[0] = $dataID;
-		$this->papar->senarai[$jadual] = $data;
-		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($jadual, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
 	function panggilKhas01($p1)
