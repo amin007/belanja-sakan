@@ -36,7 +36,8 @@ class BrgBaru01
 	{
 		$class = 'col-sm-8';
 		?><div class="form-group row">
-	<!--label for="inputSubmit" class="col-sm-3 control-label"><?=$myTable?></label -->
+	<label for="inputSubmit" class="col-sm-2 control-label text-right"><?php
+	echo $myTable ?></label>
 		<div class="input-group input-group-lg">
 		<span class="input-group-addon">
 			<input type="hidden" name="jadual" value="<?php echo $myTable ?>">
