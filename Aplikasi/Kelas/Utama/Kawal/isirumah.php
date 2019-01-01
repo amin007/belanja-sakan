@@ -109,13 +109,13 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 			$key2 = $pilih['name'];
 			if(!isset($pilih['flags'][1]))// jika ('primary_key'), abaikan
 				$data[0][$key2] = null;
-			$table = $pilih['table'];
-			$meta[$table][$key2]['len'] = $pilih['len'];
-			$meta[$table][$key2]['type'] = $pilih['native_type'];
-			$meta[$table][$key2]['key'] = isset($pilih['flags'][1]) ?
+			//$table = $pilih['table'];
+			$meta[$key2]['len'] = $pilih['len'];
+			$meta[$key2]['type'] = $pilih['native_type'];
+			$meta[$key2]['key'] = isset($pilih['flags'][1]) ?
 				$pilih['flags'][0].'|'.$pilih['flags'][1] : null;
-			$meta[$table][$key2]['type_pdo'] = $pilih['pdo_type'];
-			$meta[$table][$key2]['type_precision'] = $pilih['precision'];
+			$meta[$key2]['type_pdo'] = $pilih['pdo_type'];
+			$meta[$key2]['type_precision'] = $pilih['precision'];
 			unset($meta[$key]);
 		endforeach;
 		//$this->semakPembolehubah($meta,'meta');
