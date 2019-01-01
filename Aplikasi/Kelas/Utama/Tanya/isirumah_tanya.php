@@ -81,13 +81,13 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 	{
 		$a = 'kod'; $b = 'keterangan';
 	#***************************************************************************************
-		$k = 'hubungan';
+		$k = 'hubungan_kod';
 		$b2 = ' KIR @ kpd isteri/suami KIR';
 		$p[$k][]=array($a=>'01', $b=>'Ketua isi rumah (KIR)');
 		$p[$k][]=array($a=>'02', $b=>'Isteri/suami ketua');
 		$p[$k][]=array($a=>'03', $b=>'Anak KIR yg belum berkahwin');
 		$p[$k][]=array($a=>'04', $b=>'Anak KIR yg telah berkahwin');
-		$p[$k][]=array($a=>'05', $b=>'Menantu perempaun/lelaki KIR');
+		$p[$k][]=array($a=>'05', $b=>'Menantu perempuan/lelaki KIR');
 		$p[$k][]=array($a=>'06', $b=>'Cucu KIR');
 		$p[$k][]=array($a=>'07', $b=>'Bapa/ibu'.$b2);
 		$p[$k][]=array($a=>'08', $b=>'Datuk/Nenek'.$b2);
