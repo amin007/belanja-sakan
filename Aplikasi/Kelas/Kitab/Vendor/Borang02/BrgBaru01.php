@@ -35,7 +35,7 @@ class BrgBaru01
 	public function medanHantar($myTable, $class = 'col-sm-7')
 	{
 		$class = 'col-sm-8';
-		?><div class="form-group">
+		?><div class="form-group row">
 	<div class="<?php echo $class ?>">
 		<!--label for="inputSubmit" class="col-sm-3 control-label"><?=$myTable?></label -->
 		<div class="input-group input-group-lg">
@@ -46,7 +46,8 @@ class BrgBaru01
 		</span>
 		</div>
 	</div>
-</div><?php
+</div><!-- / class="form-group row" -->
+<!-- ================================================================================================= --><?php
 	}
 #------------------------------------------------------------------------------------------
 	public function atasInputCarian($mencari, $carian, $mesej, $class)
