@@ -131,16 +131,19 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'7', $b=>'Tidak berkenaan');
 	#***************************************************************************************
 		$k = 'sijil_tertinggi';
-		$p[$k][]=array($a=>'01', $b=>'PHD');
-		$p[$k][]=array($a=>'02', $b=>'MASTER');
-		$p[$k][]=array($a=>'03', $b=>'IJAZAH');
-		$p[$k][]=array($a=>'04', $b=>'DIPLOMA');
-		$p[$k][]=array($a=>'05', $b=>'SIJIL');
-		$p[$k][]=array($a=>'06', $b=>'STPM');
-		$p[$k][]=array($a=>'07', $b=>'SPM');
-		$p[$k][]=array($a=>'08', $b=>'PMR');
-		$p[$k][]=array($a=>'09', $b=>'UPSR');
-		$p[$k][]=array($a=>'10', $b=>'Tidak berkenaan');
+		$p[$k][]=array($a=>'11', $b=>'UPKK');
+		$p[$k][]=array($a=>'12', $b=>'UPSR/UPSRA');
+		$p[$k][]=array($a=>'21', $b=>'SRA');
+		$p[$k][]=array($a=>'22', $b=>'PMR/SRP/LCE');
+		$p[$k][]=array($a=>'31', $b=>'SMA/SMU');
+		$p[$k][]=array($a=>'32', $b=>'4 Thanawi');
+		$p[$k][]=array($a=>'33', $b=>'SPM/MCE/SC/FMCE/CSC');
+		$p[$k][]=array($a=>'34', $b=>'SPVM/SPM(V)/MCVE');
+		$p[$k][]=array($a=>'35', $b=>'GCE `O` Level');
+		$p[$k][]=array($a=>'36', $b=>'Sijil kemahiran asas - Sijil GIATMARA');
+		$p[$k][]=array($a=>'41', $b=>'STA/STAM/STU');
+		$p[$k][]=array($a=>'42', $b=>'STPM/STP/HSC');
+		$p[$k][]=array($a=>'43', $b=>'GCE `A` Level');
 	#***************************************************************************************
 		$k = 'penerima_pendapatan';
 		$p[$k][]=array($a=>'1', $b=>'Ya');
