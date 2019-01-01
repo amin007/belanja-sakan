@@ -145,11 +145,26 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'24', $b=>'Ting. 3|9/10'.$b1);
 		$p[$k][]=array($a=>'31', $b=>'Ting. 4|10/11'.$b1);
 		$p[$k][]=array($a=>'32', $b=>'Ting. 5|11/12'.$b1);
-		$p[$k][]=array($a=>'33', $b=>'Program kemahiran asas -GIATMARA|-'.$b1);
+		$p[$k][]=array($a=>'33', $b=>'Prog. kemahiran asas -GIATMARA|-'.$b1);
 		$p[$k][]=array($a=>'41', $b=>'Ting. 6(rendah)|12/13'.$b1);
 		$p[$k][]=array($a=>'42', $b=>'Ting. 6(atas)|13/14'.$b1);
 		$p[$k][]=array($a=>'43', $b=>'Matrikulasi');
-		$p[$k][]=array($a=>'', $b=>'');
+		$p[$k][]=array($a=>'51', $b=>'Prog. sijil kemahiran khusus & teknikal');
+		$p[$k][]=array($a=>'61', $b=>'Prog. sijil oleh badan2 yg memberi pengitirafan');
+		$p[$k][]=array($a=>'62', $b=>'Prog. sijil drp kolej/politeknik/universiti'
+		. ' @ yg setaraf');
+		$p[$k][]=array($a=>'63', $b=>'Prog. sijil perguruan/kejururawatan/kesihatan bersekutu');
+		$p[$k][]=array($a=>'64', $b=>'Prog. Diploma dlm kemahiran kursus & teknikal');
+		$p[$k][]=array($a=>'65', $b=>'Prog. Diploma Lanjutan/Higher Nasional|'
+		. '  Diploma kemahiran kursus & teknikal');
+		$p[$k][]=array($a=>'66', $b=>'Prog. Diploma drp kolej/politeknik/universiti'.$b1);
+		$p[$k][]=array($a=>'67', $b=>'Prog. Diploma perguruan/kejururawatan/'
+		. 'kesihatan bersekutu');
+		$p[$k][]=array($a=>'71', $b=>'Prog.Ijazah Sarjana Muda/Diploma Lanjutan');
+		$p[$k][]=array($a=>'72', $b=>'Prog. lepasan ijazah - KPLI');
+		$p[$k][]=array($a=>'73', $b=>'Prog. Sarjana');
+		$p[$k][]=array($a=>'81', $b=>'Prog. Ijazah Falsafah Kedoktoran)');
+		$p[$k][]=array($a=>'82', $b=>'Skim pasca kedoktoran');
 		$p[$k][]=array($a=>'91', $b=>'Masih belum bersekolah');
 		$p[$k][]=array($a=>'22', $b=>'Tiada sijil');
 		$p[$k][]=array($a=>'93', $b=>'Tidak berkenaan');
