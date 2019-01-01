@@ -163,7 +163,12 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		$p[$k][]=array($a=>'83', $b=>'Diploma drp universiti'.$b1);
 		$p[$k][]=array($a=>'84', $b=>'Diploma perguruan/kejururawatan/'
 		. 'kesihatan bersekutu');
-		$p[$k][]=array($a=>'', $b=>'');
+		$p[$k][]=array($a=>'91', $b=>'Ijazah Sarjana Muda/Diploma Lanjutan');
+		$p[$k][]=array($a=>'92', $b=>'Diploma/Sijil pasca ijazah @ badan'
+		. ' profesional - AACA/CA @KPLI');
+		$p[$k][]=array($a=>'93', $b=>'Ijazah Sarjana');
+		$p[$k][]=array($a=>'94', $b=>'Doktor Falsafah(PHD)');
+		$p[$k][]=array($a=>'95', $b=>'Diploma/Sijil pasca kedoktoran');
 	#***************************************************************************************
 		$k = 'penerima_pendapatan';
 		$p[$k][]=array($a=>'1', $b=>'Ya');
