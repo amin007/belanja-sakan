@@ -36,8 +36,7 @@ class BrgBaru01
 	{
 		$class = 'col-sm-8';
 		?><div class="form-group row">
-	<div class="<?php echo $class ?>">
-		<!--label for="inputSubmit" class="col-sm-3 control-label"><?=$myTable?></label -->
+	<!--label for="inputSubmit" class="col-sm-3 control-label"><?=$myTable?></label -->
 		<div class="input-group input-group-lg">
 		<span class="input-group-addon">
 			<input type="hidden" name="jadual" value="<?php echo $myTable ?>">
@@ -45,7 +44,6 @@ class BrgBaru01
 			<!-- input type="reset" name="Reset" value="Reset" class="btn btn-default btn-large" -->
 		</span>
 		</div>
-	</div>
 </div><!-- / class="form-group row" -->
 <!-- ================================================================================================= --><?php
 	}
