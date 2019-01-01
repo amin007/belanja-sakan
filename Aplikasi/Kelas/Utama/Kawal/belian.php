@@ -310,6 +310,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
 		$this->panggilTable('senarai_belanja','no',$dataID);
+		$this->papar->template = 'template_borang_ubah';
 		//$this->debugKandunganPaparan();//*/
 
 		# Pergi papar kandungan
