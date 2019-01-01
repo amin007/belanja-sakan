@@ -244,7 +244,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->papar->bentukJadual01 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
-		$this->pilihMedan('senarai_belanja');
+		$this->panggilBorang01('senarai_belanja');
 		$this->papar->template = 'template_borang_baru';
 		//$this->debugKandunganPaparan();//*/
 
