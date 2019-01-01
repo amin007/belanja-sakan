@@ -193,8 +193,8 @@ class Html_TD
 #==========================================================================================
 	public function iconFA($pilih)
 	{# icon font awesome
-		$a[0] = '<i class="fa fa-user-o" aria-hidden="true"></i>';
-		$a[1] = '<i class="fa fa-pencil" aria-hidden="true"></i>';
+		$a[0] = '<i class="far fa-user-circle"></i>';
+		$a[1] = '<i class="fas fa-pencil-alt"></i>';
 
 		return $a[$pilih];
 	}
