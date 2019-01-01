@@ -34,10 +34,9 @@ class BrgBaru01
 #------------------------------------------------------------------------------------------
 	public function medanHantar($myTable, $class = 'col-sm-7')
 	{
-		$class = 'col-sm-8';
+		$class = 'col-sm-6';
 		?><div class="form-group row">
-	<label for="inputSubmit" class="col-sm-2 control-label text-right"><?php
-	echo $myTable ?></label>
+	<label for="inputSubmit" class="col-sm-2 control-label text-right"></label>
 	<div class="<?php echo $class ?>">
 		<input type="hidden" name="jadual" value="<?php echo $myTable ?>">
 		<input type="submit" name="Simpan" value="Simpan" class="btn btn-primary btn-large btn-block">
