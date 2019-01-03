@@ -70,7 +70,7 @@ class Ruangtamu extends \Aplikasi\Kitab\Kawal
 		$this->papar->senarai['modul'] = $this->tanya->jadualModul();
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->senarai,'senarai',0);# Semak data dulu
 		$this->paparKandungan($this->_folder, 'pelawat', $noInclude=0);
 	}
 #-------------------------------------------------------------------------------------------
