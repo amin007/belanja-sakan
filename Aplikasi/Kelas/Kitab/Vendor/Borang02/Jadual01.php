@@ -190,9 +190,8 @@ class Jadual01
 	{# icon font awesome
 		$a[0] = '<i class="fa fa-user-o" aria-hidden="true"></i>';
 		$a[1] = '<i class="fas fa-pencil-alt"></i>';
-		$a[2] = '<i class="fa fa-pencil" aria-hidden="true"></i>Ubah1';
-		$a[3] = '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>Ubah2';
-		$a[4] = '<i class="fa fa-pencil" aria-hidden="true"></i>Ubah1';
+		$a[2] = '<i class="fas fa-pencil"></i>Ubah';
+		$a[3] = '<i class="fas fa-pencil-square-o"></i>Ubah2';
 
 		return $a[$pilih];
 	}
