@@ -66,16 +66,16 @@ class Jadual01
 			//$p = '<a '. $btn . '>' . Jadual01::iconFA(1) . 'Ubah</a><br>' . $data;
 			$p = Jadual01::pautanTD01('_blank',$href,$data,$c2);
 		echo "\n\t\t\t";
-		?><td><?php echo $p ?></td><?php
+		?><td><?php echo $p.'|'.$c2 ?></td><?php
 	}
 #------------------------------------------------------------------------------------------
 	public static function pautanTD01($target, $href, $data)
 	{
 		$t = ($target == null) ? '':' target="' . $target . '"';
 		$data = ($data == '0' or $data == null) ? '&nbsp;':$data;
-		$iconFA = ($iconFA == null) ? '':$iconFA;
+		//$iconFA = ($iconFA == null) ? '':$iconFA;
 
-		return "<a $t $href>$data|$c2</a>";
+		return "<a $t $href>$data</a>";
 	}
 #------------------------------------------------------------------------------------------
 	public static function gaya_url_1($data)
