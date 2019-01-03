@@ -115,7 +115,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($idUser,$nohp);
 	}
 #------------------------------------------------------------------------------------------#
-	public function susunPembolehubah($pilih,$idBorang = null)
+	public function susunPembolehubah($pilih,$p2=null)
 	{
 		//$pilih = null;
 		if($pilih == 'kod_borang'): //echo "\$pilih = $pilih <br>";
