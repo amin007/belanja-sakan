@@ -9,6 +9,12 @@ class Papar
 		//echo '<br>1. Anda berada di class Papar<br>';
 	}
 #------------------------------------------------------------------------------------------
+	public function semakData($senarai,$jadual)
+	{
+		echo '<pre>' . $jadual . '<br>';
+		print_r($senarai); echo '</pre>';//*/
+		//$this->semakData($ujian,'ujian');
+	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
 	public function baca($nama, $template, $noInclude = false)
