@@ -14,12 +14,13 @@ class Jadual01
 #------------------------------------------------------------------------------------------
 	public static function paparData($semua)
 	{
-		//$jadual = $meta = $ulangdata = $dataKey = $dataType = null;
 		list($key,$data,$dataType,$meta,$ulangdata) = $semua;
-		?><td><?php echo $dataType . '|' . $data ?></td><?php
-		/*if ($data==null):Jadual01::gaya_url_0($data);
-		//elseif(in_array($dataType,array('TINY','STRING')))
-			//Jadual01::gaya01($dataType,$data);
+		Jadual01::paparDataDaa($semua);
+
+		if ($data==null):Jadual01::gaya_url_0($data);
+		endif;
+		/*elseif(in_array($dataType,array('TINY','STRING')))
+			Jadual01::gaya01($semua);
 			//Jadual01::inputSelectOption($semua,$ulangdata);
 		//elseif ($dataKey=='not_null|primary_key'):Jadual01::primaryKey($data);
 		//elseif ($dataType=='NEWDECIMAL'):Jadual01::gaya_url_6($data);
@@ -33,8 +34,14 @@ class Jadual01
 		else:
 			$papar = $dataType . '|' . $data;
 			echo "\n\t\t\t";
-			?><td><?php echo $papar ?></td><?php
-		endif;//*/
+			?><td><?php echo $papar ?></td><?php//*/
+	}
+#------------------------------------------------------------------------------------------
+	public static function paparDataDaa($semua)
+	{
+		list($key,$data,$dataType,$meta,$ulangdata) = $semua;
+		echo "\n\t\t\t";
+		?><td><?php echo $dataType . '|' . $data; ?></td><?php
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
