@@ -255,7 +255,7 @@ class Tanya
 	{
 		$sql = $this->sql->bentukSqlSelect($myTable, $medan, $carian, $susun);
 
-		echo '<pre>DB_NAME:' . DB_NAME . '</pre><br>';
+		echo '<br>DB_NAME:' . DB_NAME;
 		echo '<pre>sql:' . htmlentities($sql) . '</pre><br>';
 
 		return array(null,null);
