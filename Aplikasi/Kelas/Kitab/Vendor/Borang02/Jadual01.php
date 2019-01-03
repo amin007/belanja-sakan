@@ -15,13 +15,14 @@ class Jadual01
 	public static function paparData($semua)
 	{
 		list($key,$data,$dataType,$meta,$ulangdata) = $semua;
-		Jadual01::paparDataDaa($semua);
+		//Jadual01::paparDataDaa($semua);
 
 		if ($data==null):Jadual01::gaya_url_0($data);
+		elseif(in_array($dataType,array('TINY','STRING'))):
+			Jadual01::inputSelectOption($semua)
+		else:Jadual01::paparDataDaa($semua);
 		endif;
-		/*elseif(in_array($dataType,array('TINY','STRING')))
-			Jadual01::gaya01($semua);
-			//Jadual01::inputSelectOption($semua,$ulangdata);
+		/*
 		//elseif ($dataKey=='not_null|primary_key'):Jadual01::primaryKey($data);
 		//elseif ($dataType=='NEWDECIMAL'):Jadual01::gaya_url_6($data);
 		/*elseif ($key=='no'):Html_Url::gaya_url_1($data);
