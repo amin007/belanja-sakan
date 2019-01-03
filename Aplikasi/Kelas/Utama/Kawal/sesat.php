@@ -51,7 +51,7 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 		$this->papar->mesej = 'Class wujud tapi parameter/method/fungsi tidak wujud';
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->mesej,'mesej',0); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->mesej,'mesej',0);# Semak data dulu
 		$this->paparKandungan($this->_folder, 'index');
 	}
 #-------------------------------------------------------------------------------------------
@@ -63,7 +63,7 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 		$this->papar->Tajuk_Muka_Surat = $this->_tajukAtas . $this->papar->mesej;
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->mesej,'mesej',0); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->mesej,'mesej',0);# Semak data dulu
 		$this->paparKandungan($this->_folder, 'index');
 	}
 #-------------------------------------------------------------------------------------------
@@ -76,7 +76,7 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 		$this->papar->Tajuk_Muka_Surat = $this->_tajukAtas . $this->papar->mesej;
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->mesej,'mesej',0); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->mesej,'mesej',0);# Semak data dulu
 		$this->paparKandungan($this->_folder, 'index');
 	}
 #-------------------------------------------------------------------------------------------
@@ -88,7 +88,7 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 		$this->papar->Tajuk_Muka_Surat = $this->_tajukAtas . $this->papar->mesej;
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->mesej,'mesej',0); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->mesej,'mesej',0);# Semak data dulu
 		$this->paparKandungan($this->_folder, 'index');
 	}
 #-------------------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 		$this->papar->Tajuk_Muka_Surat = $this->_tajukAtas . $this->papar->mesej;
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->mesej,'mesej',0); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->mesej,'mesej',0);# Semak data dulu
 		$this->paparKandungan($this->_folder, 'index');
 	}
 #-------------------------------------------------------------------------------------------
@@ -112,7 +112,7 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 		$this->papar->Tajuk_Muka_Surat = $this->_tajukAtas . $this->papar->mesej;
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->mesej,'mesej',0); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->mesej,'mesej',0);# Semak data dulu
 		$this->paparKandungan($this->_folder, 'index');
 	}
 #-------------------------------------------------------------------------------------------
