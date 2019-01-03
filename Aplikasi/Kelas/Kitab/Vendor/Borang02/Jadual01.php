@@ -61,22 +61,21 @@ class Jadual01
 		list($key,$data,$dataKey,$dataType,$meta,$c1,$c2) = $semua;
 		$birumuda = 'btn btn-info btn-mini';
 		//list($pengguna,$level,$birutua,$birumuda,$merah) = $this->setPencam();
-			$k0 = URL . $cb . '/ubah/' . $data;
+			$k0 = URL . $c2 . '/ubah/' . $data;
 			$href = 'href="' . $k0 . '" class="' . $birumuda . '"';
 			//$p = '<a '. $btn . '>' . Jadual01::iconFA(1) . 'Ubah</a><br>' . $data;
-			//pautanTD($target, $href, $class, $data, $iconFA)
-			$p = $this->pautanTD01('_blank',$href,$data);
+			$p = Jadual01::pautanTD01('_blank',$href,$data,$c2);
 		echo "\n\t\t\t";
 		?><td><?php echo $p ?></td><?php
 	}
 #------------------------------------------------------------------------------------------
-	public function pautanTD01($target, $href, $data)
+	public static function pautanTD01($target, $href, $data)
 	{
 		$t = ($target == null) ? '':' target="' . $target . '"';
 		$data = ($data == '0' or $data == null) ? '&nbsp;':$data;
 		$iconFA = ($iconFA == null) ? '':$iconFA;
 
-		return "<a $t $href>$data</a>";
+		return "<a $t $href>$data|$c2</a>";
 	}
 #------------------------------------------------------------------------------------------
 	public static function gaya_url_1($data)
