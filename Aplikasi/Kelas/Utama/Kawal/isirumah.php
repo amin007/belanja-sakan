@@ -214,8 +214,8 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$senaraiJadual = array('senarai_isirumah');
 		# ubahsuai $posmen
 		$posmen = $this->ubahsuaiPostBaru($senaraiJadual);
-		//$this->semakPembolehubah($_POST,'_POST');
-		//$this->semakPembolehubah($posmen,'posmen');
+		//$this->semakPembolehubah($_POST,'_POST',0);
+		//$this->semakPembolehubah($posmen,'posmen',0);
 
 		# mula ulang $senaraiJadual
 		foreach ($senaraiJadual as $kunci => $jadual)
@@ -272,9 +272,9 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 	{
 		# ubahsuai $posmen
 		list($posmen,$senaraiJadual,$medanID) = $this->ubahsuaiPost($dataID);
-		//echo '<br>$medanID=' . $medanID . '<br>';
-		//$this->semakPembolehubah($_POST,'_POST');
-		//$this->semakPembolehubah($posmen,'posmen');
+		//$this->semakPembolehubah($medanID,'medanID',0);
+		//$this->semakPembolehubah($_POST,'_POST',0);
+		//$this->semakPembolehubah($posmen,'posmen',0);
 
 		# mula ulang $senaraiJadual
 		foreach ($senaraiJadual as $kunci => $jadual)
@@ -294,7 +294,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 	{
 		list($medanID,$senaraiJadual) = $this->tanya->pilihUbahPost();
 
-		$posmen = array(); //$this->semakPembolehubah($_POST,'_POST');
+		$posmen = array(); //$this->semakPembolehubah($_POST,'_POST',0);
 		foreach ($_POST as $myTable => $value):
 			if ( in_array($myTable,$senaraiJadual) ):
 				foreach ($value as $kekunci => $papar)
