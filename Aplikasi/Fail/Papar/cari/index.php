@@ -23,6 +23,7 @@ echo '<a class="btn btn-primary" href="' . URL . $this->baruBorang . '">Tambah B
 //else # jenis template
 	include $this->template . '.php';
 #-------------------------------------------------------------------------------
+#http://php.net/manual/en/function.var-export.php
 //echo '<pre>$c2='; var_export($this->bentukJadual02); echo '</pre>';
 //echo '<pre>$c1='; var_export($this->c1); echo '</pre>';
 //echo '<pre>$_meta='; print_r($this->_meta); echo '</pre>';
