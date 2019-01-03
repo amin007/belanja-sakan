@@ -47,21 +47,19 @@ class Login extends \Aplikasi\Kitab\Kawal
 	function register()
 	{
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->mesej); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->mesej,'mesej',0);# Semak data dulu
 		$this->paparKandungan('index', 'register');
 	}
 #------------------------------------------------------------------------------------------
 	function registerid()
 	{
-		# debug $_POST
-		//echo '<pre>Test $_POST->'; print_r($_POST); echo '</pre>';
 		# Set pembolehubah utama
 		list($jadual, $medan01, $medan02, $medan) = dpt_senarai('jadual_login');
 		$posmen = $this->tanya->ubahsuaiPostBaru(array($jadual));
 		# Semak data
 			/*$this->tanya->tambahSql($jadual, $posmen[$jadual]);
-			echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
-			echo '<pre>$posmen='; print_r($posmen); echo '</pre>';//*/
+			$this->semakPembolehubah($_POST,'POST',0);
+			$this->semakPembolehubah($posmen,'posmen',0)//*/
 		# sql insert
 		$this->tanya->tambahData($jadual, $posmen[$jadual]);
 		//$this->log_sql($jadual, $medan, $posmen);
@@ -82,7 +80,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 		$this->papar->isi = '';
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->mesej); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->mesej,'mesej',0); # Semak data dulu
 		$this->paparKandungan('index', 'salah', $noInclude=1);
 	}
 #------------------------------------------------------------------------------------------
@@ -90,7 +88,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 	{
 		# debug $_POST
 		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
-		//echo '<pre>Test $_POST->'; print_r($_POST); echo '</pre>';
+		//$this->semakPembolehubah($_POST,'POST',0);
 
 		# semak data $this->tanya->ujiID(); 
 		//$this->tanya->semakid();
@@ -101,7 +99,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 	function login()
 	{
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->mesej); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->mesej,'mesej',0); # Semak data dulu
 		$this->paparKandungan('index', 'login2', $noInclude=1);
 	}
 #------------------------------------------------------------------------------------------
@@ -128,9 +126,9 @@ class Login extends \Aplikasi\Kitab\Kawal
 				//$this->tanya->cariSql("`$myTable`", $medan, $carian, null);
 				$kira = sizeof($cariNama);//*/
 		# semak pembolehubah
-		//echo '<pre>Test $_POST->'; print_r($_POST); echo '</pre>';
-		//echo '<pre>password->'; print_r($password); echo '</pre>';
-		/*echo '<pre>$cariNama::'; print_r($cariNama); echo '</pre>';
+		//$this->semakPembolehubah($_POST,'POST',0);
+		//$this->semakPembolehubah($password,'password',0);
+		/*$this->semakPembolehubah($cariNama,'cariNama',0);
 		echo '<hr>$data->' . sizeof($cariNama) . '<hr>';//*/
 
 		$this->kunciPintu($kira, $cariNama); # pilih pintu masuk
