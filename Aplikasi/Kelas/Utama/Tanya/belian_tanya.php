@@ -63,16 +63,10 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 #------------------------------------------------------------------------------------------#
 	public function cariKhas01($medan1)
 	{
-		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		$medanA['nilai_sebenar'][0]['kod'] = '1';
-		$medanA['nilai_sebenar'][0]['keterangan'] = 'sebenar';
-		$medanA['nilai_sebenar'][1]['kod'] = '2';
-		$medanA['nilai_sebenar'][1]['keterangan'] = 'anggaran';
-		$medanA['edagang'][0]['kod'] = '1';
-		$medanA['edagang'][0]['keterangan'] = 'ya';
-		$medanA['edagang'][1]['kod'] = '2';
-		$medanA['edagang'][1]['keterangan'] = 'tidak';
-		$medan = array_merge($medan1, $medanA);
+		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		$this->semakPembolehubah($medan1,'medan1');
+		//$medanA['edagang'][1]['keterangan'] = 'tidak';
+		//$medan = array_merge($medan1, $medanA);
 		//*/
 
 		return $medan;
