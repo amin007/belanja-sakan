@@ -78,27 +78,6 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return $medan;
 	}
 #------------------------------------------------------------------------------------------#
-	public function borangBaru01()
-	{
-		$medan[0] = array(
-			//'no' => null, //int(11) Auto Increment
-			'nohp' => null, //varchar(20)
-			//'noair' => null, //char(2)
-			//'jenis_belanja' => null, //varchar(50)
-			'tarikh' => null, //date
-			'belanja_keterangan' => null, //text
-			//'belanja_kod' => null, //int(11)
-			'amaun_rm' => null, //decimal(10,2)
-			'nilai_sebenar' => null, //tinyint(4)|1-sebenar/2-anggaran
-			'punca' => null, //char(2)
-			'tukaran' => null, //
-			'edagang' => null, //int(11)|1-ya/2-tidak
-			'catatan' => null, //text
-		);
-
-		return $medan;
-	}
-#------------------------------------------------------------------------------------------#
 	public function tanyaDataSesi()
 	{
 		$dataSulit = new \Aplikasi\Kitab\Sesi();
