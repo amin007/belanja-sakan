@@ -45,13 +45,6 @@ class Ruangtamu extends \Aplikasi\Kitab\Kawal
 		//*/
 	}
 ##-----------------------------------------------------------------------------------------
-	public function semakPembolehubah($senarai)
-	{
-		echo '<pre>$senarai:<br>';
-		print_r($senarai);
-		echo '</pre>|';//*/
-	}
-##-----------------------------------------------------------------------------------------
 	function logout()
 	{
 		//echo '<pre>sebelum:'; print_r($_SESSION); echo '</pre>';
