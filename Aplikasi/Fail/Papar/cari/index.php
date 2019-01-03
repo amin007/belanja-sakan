@@ -24,7 +24,7 @@ echo '<a class="btn btn-primary" href="' . URL . $this->baruBorang . '">Tambah B
 	include $this->template . '.php';
 #-------------------------------------------------------------------------------
 #http://php.net/manual/en/function.var-export.php
-//echo '<pre>$c2='; var_export($this->bentukJadual02); echo '</pre>';
-//echo '<pre>$c1='; var_export($this->c1); echo '</pre>';
-//echo '<pre>$_meta='; print_r($this->_meta); echo '</pre>';
-//echo '<pre>$senarai='; print_r($this->senarai); echo '</pre>';
+//$this->semakData(1,$this->bentukJadual02,'bentukJadual02');
+//$this->semakData(1,$this->c1,'c1');
+//$this->semakData(0,$this->_meta,'_meta');
+//$this->semakData(0,$this->senarai,'senarai');
