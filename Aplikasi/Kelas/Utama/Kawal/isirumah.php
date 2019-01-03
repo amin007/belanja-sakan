@@ -196,7 +196,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->papar->template = 'template_borang_baru';
 		//$this->debugKandunganPaparan();//*/
 
-		# Pergi papar kandungan
+		/*# Pergi papar kandungan
 		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
