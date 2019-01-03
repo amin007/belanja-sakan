@@ -4,11 +4,10 @@ class Jadual01
 {
 #==========================================================================================
 #------------------------------------------------------------------------------------------
-	//public static function gaya01($semua,$ulangdata)
-	public static function gaya01($dataType,$data)
+	public static function gaya01($semua,$ulangdata)
+	//public static function gaya01($dataType,$data)
 	{
-		//list($key,$data,$jadual,$meta,$ulangdata) = $semua;
-		//$dataType = $meta[$jadual][$key]['type'];
+		list($key,$data,$dataType,$meta,$ulangdata) = $semua;
 		echo "\n\t\t\t";
 		?><td><?php echo $dataType . '|' . $data ?></td><?php
 	}
