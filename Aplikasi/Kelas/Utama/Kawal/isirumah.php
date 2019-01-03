@@ -25,9 +25,8 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		$this->paparKandungan($this->_folder, $fail[1], $noInclude=0);//*/
 	}
 ##------------------------------------------------------------------------------------------
-	public function paparHeader()
+	public function paparHeader($lokasi = 'pergi/mana')
 	{
-		$lokasi = 'pergi/mana';
 		//echo '<br>location: ' . URL . $lokasi;
 		header('location:' . URL . $lokasi);//*/
 	}
