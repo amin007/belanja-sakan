@@ -64,7 +64,7 @@ class Jadual01
 			$btn = 'href="' . $k0 . '" class="' . $birumuda . '"';
 			//$p = '<a '. $btn . '>' . Jadual01::iconFA(1) . 'Ubah</a><br>' . $data;
 			//pautanTD($target, $href, $class, $data, $iconFA)
-			$this->pautanTD('_blank',$k0,$birutua,$data,Jadual01::iconFA(1));
+			$p = $this->pautanTD02('_blank',$k0,$birutua,$data,Jadual01::iconFA(1));
 	}
 #------------------------------------------------------------------------------------------
 	public static function gaya_url_1($data)
@@ -227,6 +227,15 @@ class Jadual01
 
 		?><a<?php echo $t ?> href="<?php echo $href ?>" class="<?php
 		echo $class ?>"><?php echo $data ?></a><?php
+	}
+#------------------------------------------------------------------------------------------
+	public function pautanTD02($target, $href, $class, $data, $iconFA)
+	{
+		$t = ($target == null) ? '':' target="' . $target . '"';
+		$data = ($data == '0' or $data == null) ? '&nbsp;':$data;
+		$iconFA = ($iconFA == null) ? '':$iconFA;
+
+		return "<a $t href=\"$href\" class=\"$class\">$data</a>";
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
