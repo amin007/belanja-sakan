@@ -64,9 +64,19 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 	public function cariKhas01($medan1)
 	{
 		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		$this->semakPembolehubah($medan1,'medan1');
+		//$this->semakPembolehubah($medan1,'medan1');
+		foreach($medan1 as $key => $nilai0):
+		foreach($nilai0 as $key1 => $nilai1):
+		foreach($nilai1 as $key2 => $nilai2):
+			//echo "<br>$key\n";# nama jadual
+			//echo "<br>$key1\n";# nilai tatasusunan
+			echo "<br>$key2\n";# nilai medan
+		endforeach;
+		endforeach;
+		endforeach;
 		//$medanA['edagang'][1]['keterangan'] = 'tidak';
 		//$medan = array_merge($medan1, $medanA);
+		echo "\n<hr>tamat<hr>\n";
 		//*/
 
 		return $medan;
