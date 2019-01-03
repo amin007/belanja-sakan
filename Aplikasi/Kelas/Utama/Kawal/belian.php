@@ -210,11 +210,12 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		$this->kandunganPaparan($p1, $jadual);
 	}
 #-------------------------------------------------------------------------------------------
-	function panggilKhas02($p1)
+	function panggilKhas02($p1,$p2=null)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		list($jadual, $medan, $carian, $susun) = $this->tanya->susunPembolehubah($p1);
+		list($jadual, $medan, $carian, $susun) =
+			$this->tanya->susunPembolehubah($p1,$p2);
 		$this->papar->bentukJadual02[$p1] = $this->tanya->//cariSql
 			cariSemuaData
 			($jadual, $medan, $carian, $susun);
