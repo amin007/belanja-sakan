@@ -7,14 +7,14 @@ class Jadual01
 	public static function gaya01($semua,$ulangdata)
 	//public static function gaya01($dataType,$data)
 	{
-		list($key,$data,$dataType,$meta,$ulangdata) = $semua;
+		list($key,$data,$dataKey,$dataType,$meta,$ulangdata) = $semua;
 		echo "\n\t\t\t";
 		?><td><?php echo $dataType . '|' . $data ?></td><?php
 	}
 #------------------------------------------------------------------------------------------
 	public static function paparData($semua)
 	{
-		list($key,$data,$dataType,$meta,$ulangdata) = $semua;
+		list($key,$data,$dataKey,$dataType,$meta,$ulangdata) = $semua;
 		//Jadual01::paparDataDaa($semua);
 
 		if ($data==null):Jadual01::gaya_url_0($data);
@@ -40,7 +40,7 @@ class Jadual01
 #------------------------------------------------------------------------------------------
 	public static function paparDataDaa($semua)
 	{
-		list($key,$data,$dataType,$meta,$ulangdata) = $semua;
+		list($key,$data,$dataKey,$dataType,$meta,$ulangdata) = $semua;
 		echo "\n\t\t\t";
 		?><td><?php echo $dataType . '|' . $data; ?></td><?php
 	}
@@ -143,7 +143,7 @@ class Jadual01
 #------------------------------------------------------------------------------------------
 	public static function pilihKey($semua)
 	{
-		list($key,$data,$dataType,$meta,$ulangdata) = $semua;
+		list($key,$data,$dataKey,$dataType,$meta,$ulangdata) = $semua;
 		$papar = '';
 		foreach ($ulangdata[$key] as $kpd => $bil)
 		{# mula ulang $bil
