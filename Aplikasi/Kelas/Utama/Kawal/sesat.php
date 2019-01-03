@@ -17,9 +17,9 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 ##-----------------------------------------------------------------------------------------
 	public function index()
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		# Set pemboleubah utama
 		$this->papar->mesej = __METHOD__;
-		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 
 		# Pergi papar kandungan
 		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
@@ -46,6 +46,8 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 #==========================================================================================
 	function parameter()
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
+		# Set pemboleubah utama
 		$this->papar->mesej = 'Class wujud tapi parameter/method/fungsi tidak wujud';
 
 		# Pergi papar kandungan
@@ -55,6 +57,8 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function classTidakWujud($amaran)
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
+		# Set pemboleubah utama
 		$this->papar->mesej = $amaran;
 		$this->papar->Tajuk_Muka_Surat = $this->_tajukAtas . $this->papar->mesej;
 
@@ -65,6 +69,8 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function methodTanyaTidakWujud($amaran,$class,$method)
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
+		# Set pemboleubah utama
 		$this->papar->mesej = $amaran
 			. "|class=$class|fungsi=$method|";
 		$this->papar->Tajuk_Muka_Surat = $this->_tajukAtas . $this->papar->mesej;
@@ -76,6 +82,8 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function folderPaparTidakWujud() 
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
+		# Set pemboleubah utama
 		echo $this->papar->mesej = 'folder tidak wujud dalam PAPAR';
 		$this->papar->Tajuk_Muka_Surat = $this->_tajukAtas . $this->papar->mesej;
 
@@ -86,6 +94,8 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function failTidakWujud() 
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
+		# Set pemboleubah utama
 		$this->papar->mesej = 'Fail tidak wujud dalam PAPAR';
 		$this->papar->Tajuk_Muka_Surat = $this->_tajukAtas . $this->papar->mesej;
 
@@ -96,6 +106,8 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 	function masalahDB($amaran)
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
+		# Set pemboleubah utama
 		$this->papar->mesej = $amaran;
 		$this->papar->Tajuk_Muka_Surat = $this->_tajukAtas . $this->papar->mesej;
 
