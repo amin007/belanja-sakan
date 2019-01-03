@@ -75,7 +75,7 @@ class Jadual01
 		$data = ($data == '0' or $data == null) ? '&nbsp;':$data;
 		$iconFA = ($iconFA == null) ? '':$iconFA;
 
-		return "<a $t $href>$data</a>";
+		return "<a $t $href>$iconFA</a>$data";
 	}
 #------------------------------------------------------------------------------------------
 	public static function gaya_url_1($data)
