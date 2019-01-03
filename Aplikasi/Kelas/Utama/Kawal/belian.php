@@ -18,7 +18,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$this->paparJadual(); # Set pembolehubah utama
 
-		/*# Pergi papar kandungan
+		# Pergi papar kandungan
 		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
@@ -235,7 +235,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		unset($this->papar->bentukJadual02);
 		$this->panggilJadual01('senarai_belanja');
 		$this->papar->template = 'template_biasa';
-		$this->debugKandunganPaparan();//*/
+		//$this->debugKandunganPaparan();//*/
 	}
 #-------------------------------------------------------------------------------------------
 	public function baru()
