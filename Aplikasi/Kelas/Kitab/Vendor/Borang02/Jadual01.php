@@ -19,7 +19,7 @@ class Jadual01
 
 		if ($data==null):Jadual01::gaya_url_0($data);
 		elseif ($dataKey=='not_null|primary_key'):
-			Jadual01::primaryKey($data);
+			Jadual01::primaryKey($semua);
 		elseif(in_array($dataType,array('TINY','STRING'))):
 			Jadual01::pilihKey($semua);
 		else:Jadual01::paparDataDaa($semua);
