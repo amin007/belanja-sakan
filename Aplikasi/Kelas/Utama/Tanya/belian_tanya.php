@@ -63,23 +63,39 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 #------------------------------------------------------------------------------------------#
 	public function cariKhas01($medan1)
 	{
-		echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		//$this->semakPembolehubah($medan1,'medan1');
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		$mula = 0;
 		foreach($medan1 as $key => $nilai0):
 		foreach($nilai0 as $key1 => $nilai1):
 		foreach($nilai1 as $key2 => $nilai2):
-			//echo "<br>$key\n";# nama jadual
-			//echo "<br>$key1\n";# nilai tatasusunan
-			echo "<br>$key2\n";# nilai medan
-		endforeach;
-		endforeach;
-		endforeach;
-		//$medanA['edagang'][1]['keterangan'] = 'tidak';
+			if($key2 == 'medan')
+			{
+				$key3[$key1] = $nilai2;
+			}
+			if($key2 == 'kod')
+			{
+				$namaMedan = $key3[$key1];
+				//echo "<br>\$medanA[$namaMedan][$key1][$key2] = $nilai2\n";
+				$medanA[$namaMedan][$mula]['kod'] = $nilai2;
+			}
+			if($key2 == 'keterangan')
+			{
+				$namaMedan = $key3[$key1];
+				$medanA[$namaMedan][$mula++]['keterangan'] = $nilai2;
+			}
+		endforeach;endforeach;$mula = 0;endforeach;
+		/*$medanB['edagang'][0]['kod'] = '1';
+		$medanB['edagang'][0]['keterangan'] = 'ya';
+		$medanB['edagang'][1]['kod'] = '2';
+		$medanB['edagang'][1]['keterangan'] = 'tidak';*/
 		//$medan = array_merge($medan1, $medanA);
-		echo "\n<hr>tamat<hr>\n";
+		//$this->semakPembolehubah($medan1,'medan1');
+		//$this->semakPembolehubah($medanA,'medanA');
+		//$this->semakPembolehubah($medanB,'medanB');
+		//echo "\n<hr>tamat<hr>\n";
 		//*/
 
-		return $medan;
+		return $medanA;
 	}
 #------------------------------------------------------------------------------------------#
 	public function tanyaDataSesi()
