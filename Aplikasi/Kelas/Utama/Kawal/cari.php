@@ -93,7 +93,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$fail = array('index','b_ubah','b_ubah_kawalan');
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->senarai,'senarai',0);# Semak data dulu
 		$this->paparKandungan($this->_folder, $fail[0], $noInclude=0); //*/
     }
 #------------------------------------------------------------------------------------------
@@ -132,8 +132,8 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$fail = array('index','a_mula','b_ubah','b_ubah_kawalan');
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
-		//$this->semakPembolehubah($this->papar->url); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->senarai,'senarai',0);# Semak data dulu
+		//$this->semakPembolehubah($this->papar->url,'url',0); # Semak data dulu
 		$this->paparKandungan($this->_folder, $fail[1], $noInclude=0); //*/
 	}
 #------------------------------------------------------------------------------------------
@@ -142,8 +142,8 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		echo '<pre>'; # semak output
 		echo 'Patah balik ke ' . $lokasi . '/' . $namajadual . '<hr>';
 		echo '$mesej = ' . $mesej . '';
-		echo '<br>$this->papar->carian :'; print_r($this->papar->carian);
-		echo '<br>$this->papar->senarai:'; print_r($this->papar->senarai);
+		$this->semakPembolehubah($this->papar->carian,'carian',0);
+		$this->semakPembolehubah($this->papar->senarai,'senarai',0);
 		echo '</pre>';
 	}
 #------------------------------------------------------------------------------------------

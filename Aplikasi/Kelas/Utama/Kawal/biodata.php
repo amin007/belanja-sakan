@@ -99,7 +99,7 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		//echo '<hr>' . $this->_namaClass . '<hr>';
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->senarai,'senarai',0);# Semak data dulu
 		//$this->_folder = ''; # jika mahu ubah lokasi Papar
 		$this->paparKandungan($this->_folder, $pilihFail, $noInclude=1);
 	}
@@ -120,7 +120,7 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->senarai,'senarai',0);# Semak data dulu
 		//$this->_folder = ''; # jika mahu ubah lokasi Papar
 		//$this->paparKandungan($this->_folder, 'b_register' , $noInclude=0); 
 		//*/
@@ -136,7 +136,7 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		$fail = array('index','b_ubah','b_ubah_kawalan');
 
 		# Pergi papar kandungan
-		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
+		//$this->semakPembolehubah($this->papar->senarai,'senarai',0);# Semak data dulu
 		$this->_folder = 'cari'; # jika mahu ubah lokasi Papar
 		$this->paparKandungan($this->_folder, $fail[1] , $noInclude=0);//*/
     }
@@ -187,9 +187,9 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 		list($medanID,$senaraiJadual,$pass,$pass2) = dpt_senarai('jadual_biodata3');
 		# ubahsuai $posmen
 		$posmen = $this->ubahsuaiPost($medanID, $dataID, $senaraiJadual, $pass, $pass2);
-		//echo '<br>$dataID=' . $dataID . '<br>';
-		//echo '<pre>$_POST='; print_r($_POST); echo '</pre>';
-		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
+		//$this->semakPembolehubah($dataID,'dataID',0);
+		//$this->semakPembolehubah($_POST,'_POST',0);
+		//$this->semakPembolehubah($posmen,'posmen',0);
 
 		# mula ulang $senaraiJadual
 		foreach ($senaraiJadual as $kunci => $jadual)
@@ -216,10 +216,10 @@ class Biodata extends \Aplikasi\Kitab\Kawal
 				}//*/
 		endif; endforeach;
 
-		//echo '<pre>$senaraiJadual='; print_r($senaraiJadual); echo '</pre>';
-		//echo '<pre>$medanID='; print_r($medanID); echo '</pre>';
-		//echo '<pre>$dataID='; print_r($dataID); echo '</pre>';
-		//echo '<pre>$posmen='; print_r($posmen); echo '</pre>';
+		//$this->semakPembolehubah($senaraiJadual,'senaraiJadual',0);
+		//$this->semakPembolehubah($medanID,'medanID',0);
+		//$this->semakPembolehubah($_POST,'_POST',0);
+		//$this->semakPembolehubah($posmen,'posmen',0);
 
 		$posmen = $this->kataLaluanX($senaraiJadual[0], $posmen);
 		$posmen = $this->tanya->semakPosmen($senaraiJadual[0], $posmen, $pass, $pass2);
