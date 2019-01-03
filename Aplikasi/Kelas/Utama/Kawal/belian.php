@@ -220,7 +220,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 			cariSemuaData
 			($jadual, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
-		$this->kandunganPaparan($p1, $jadual);
+		$this->kandunganPaparan($p1, $p2);
 	}
 #-------------------------------------------------------------------------------------------
 #===========================================================================================
