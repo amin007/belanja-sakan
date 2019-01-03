@@ -9,11 +9,15 @@ class Papar
 		//echo '<br>1. Anda berada di class Papar<br>';
 	}
 #------------------------------------------------------------------------------------------
-	public function semakData($senarai,$jadual)
+	public function semakData($senarai,$jadual,$p=0)
 	{
-		echo '<pre>' . $jadual . '<br>';
-		print_r($senarai); echo '</pre>';//*/
-		//$this->semakData($ujian,'ujian');
+		echo '<pre>$' . $jadual . '=><br>';
+			if($p = 0) print_r($senarai);
+			if($p = 1) var_export($senarai);
+		echo '</pre>';//*/
+		//$this->semakData(0,$ujian,'ujian');
+		#http://php.net/manual/en/function.var-export.php
+		#http://php.net/manual/en/function.print-r.php
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
