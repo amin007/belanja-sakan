@@ -140,7 +140,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
 		$myTable = 'kod_borang';
-		$medan = 'jadual,medan,kod,keterangan';
+		$medan = 'medan,kod,keterangan';
 		$carian = $susun = null;
 		# semak database
 			$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
