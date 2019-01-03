@@ -16,11 +16,12 @@
 		}
 	# papar data $row ------------------------------------------------
 	?><tr><td align="center"><?php echo $kira+1 ?></td><?php
-		$html = new \Aplikasi\Kitab\Html_TD;
+		//$html = new \Aplikasi\Kitab\Html_TD;
+		$html = new \Aplikasi\Kitab\Jadual01;
 		foreach ( $row[$kira] as $key=>$data )
 		{
-			$html->paparURL($key, $data, $myTable,
-			$this->c1, $this->c2);
+			$semua = array($myTable, $this->c1, $this->c2);
+			$html->paparData($key, $data, $semua);
 		}
 		?></tr>
 	<?php
