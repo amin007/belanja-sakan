@@ -188,7 +188,7 @@ class Jadual01
 #------------------------------------------------------------------------------------------
 	public static function iconFA($pilih)
 	{# icon font awesome
-		$a[0] = '<i class="fa fa-user-o" aria-hidden="true"></i>';
+		$a[0] = '<i class="far fa-user-circle"></i>';
 		$a[1] = '<i class="fas fa-pencil-alt"></i>';
 		$a[2] = '<i class="fas fa-pencil"></i>Ubah';
 		$a[3] = '<i class="fas fa-pencil-square-o"></i>Ubah2';
