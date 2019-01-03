@@ -4,10 +4,11 @@ class Jadual01
 {
 #==========================================================================================
 #------------------------------------------------------------------------------------------
-	public static function gaya01($semua,$ulangdata)
+	//public static function gaya01($semua,$ulangdata)
+	public static function gaya01($dataType,$data)
 	{
-		list($key,$data,$jadual,$meta,$ulangdata) = $semua;
-		$dataType = $meta[$jadual][$key]['type'];
+		//list($key,$data,$jadual,$meta,$ulangdata) = $semua;
+		//$dataType = $meta[$jadual][$key]['type'];
 		echo "\n\t\t\t";
 		?><td><?php echo $dataType . '|' . $data ?></td><?php
 	}
@@ -15,29 +16,26 @@ class Jadual01
 	public static function paparData($semua)
 	{
 		//$jadual = $meta = $ulangdata = $dataKey = $dataType = null;
-		list($key,$data,$myTable,$meta,$ulangdata) = $semua;
-		$dataType = $meta[$myTable][$key]['type'];// myGetType($data);
-		if ($data==null):Jadual01::gaya_url_0($data);
+		list($key,$data,$dataType,$meta,$ulangdata) = $semua;
+		?><td><?php echo $dataType . '|' . $data ?></td><?php
+		/*if ($data==null):Jadual01::gaya_url_0($data);
 		//elseif(in_array($dataType,array('TINY','STRING')))
-			//Jadual01::gaya01($semua,$ulangdata);
+			//Jadual01::gaya01($dataType,$data);
 			//Jadual01::inputSelectOption($semua,$ulangdata);
 		//elseif ($dataKey=='not_null|primary_key'):Jadual01::primaryKey($data);
 		//elseif ($dataType=='NEWDECIMAL'):Jadual01::gaya_url_6($data);
 		/*elseif ($key=='no'):Html_Url::gaya_url_1($data);
 		elseif(in_array($key,array('posdaftar'))):Html_Url::gaya_url_2($data);
-		elseif ($key=='pegawaiborang'): Html_Url::gaya_url_3($data);
-		elseif ($key=='hantar_prosesan'):Html_Url::gaya_url_4($data);
-		elseif ($key=='terimaProsesan'):Html_Url::gaya_url_5($data);
 		elseif ($key=='Total'):Html_Url::gaya_url_6($data);
 		elseif ($key=='subject'):Html_Url::gaya_huruf('Besar_Depan', $data);
 		elseif(in_array($key,array('Mesej'))):
 			echo "\n\t\t\t";
-			?><td><?php echo nl2br($data) ?></td><?php//*/
+			?><td><?php echo nl2br($data) ?></td><?php//
 		else:
 			$papar = $dataType . '|' . $data;
 			echo "\n\t\t\t";
 			?><td><?php echo $papar ?></td><?php
-		endif;
+		endif;//*/
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
