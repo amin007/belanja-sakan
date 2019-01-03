@@ -248,9 +248,9 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		unset($this->papar->bentukJadual02);//*/
 		$this->panggilBorang01('senarai_belanja');
 		$this->papar->template = 'template_borang_baru';
-		$this->debugKandunganPaparan();//*/
+		//$this->debugKandunganPaparan();//*/
 
-		/*# Pergi papar kandungan
+		# Pergi papar kandungan
 		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
