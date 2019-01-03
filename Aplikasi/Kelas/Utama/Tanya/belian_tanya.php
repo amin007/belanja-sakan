@@ -172,7 +172,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		list($idUser,$nohp) = $this->tanyaDataSesi();
 		$myTable = 'senarai_belanja';
 		$medan = 'no,nohp,tarikh,belanja_keterangan,amaun_rm,'
-		. 'nilai_sebenar,punca,tukaran,edagang,catatan';
+		. 'nilai_sebenar,punca,tukarduit,edagang,catatan';
 		$carian = $susun = null;
 		# semak database
 			/*$carian[] = array('fix' => 'x=', # cari x= / %like% / xlike
