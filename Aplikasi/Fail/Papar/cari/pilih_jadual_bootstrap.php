@@ -20,8 +20,12 @@
 		$html = new \Aplikasi\Kitab\Jadual01;
 		foreach ( $row[$kira] as $key=>$data )
 		{
-			$semua = array($myTable, $this->c1, $this->c2);
-			$html::paparData($key, $data, $semua);
+			$dataKey = $this->_meta[$myTable][$key]['key'];
+			$dataType = $this->_meta[$myTable][$key]['type'];
+			$semua = array($key,$data,$dataKey,$dataType,
+			$this->_meta,$this->c1,$this->c2);
+			$html::paparData($semua);
+			//$html::gaya01($dataType,$data);
 		}
 		?></tr>
 	<?php
