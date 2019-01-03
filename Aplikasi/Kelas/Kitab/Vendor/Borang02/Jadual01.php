@@ -4,15 +4,23 @@ class Jadual01
 {
 #==========================================================================================
 #------------------------------------------------------------------------------------------
-	public static function paparData($key, $data, $semua)
+	public static function gaya01($semua,$ulangdata)
 	{
-		$jadual = $meta = $ulangdata = $dataKey = $dataType = null;
-		list($jadual,$meta,$ulangdata) = $semua;
-		$dataType = $meta[$jadual][$key]['type'];// myGetType($data);
-		//$dataKey = $jenis[$key]['key'];// myGetType($data);
+		list($key,$data,$jadual,$meta,$ulangdata) = $semua;
+		$dataType = $meta[$jadual][$key]['type'];
+		echo "\n\t\t\t";
+		?><td><?php echo $dataType . '|' . $data ?></td><?php
+	}
+#------------------------------------------------------------------------------------------
+	public static function paparData($semua)
+	{
+		//$jadual = $meta = $ulangdata = $dataKey = $dataType = null;
+		list($key,$data,$myTable,$meta,$ulangdata) = $semua;
+		$dataType = $meta[$myTable][$key]['type'];// myGetType($data);
 		if ($data==null):Jadual01::gaya_url_0($data);
-		elseif(in_array($dataType,array('TINY','STRING')))
-			Jadual01::inputSelectOption($semua,$ulangdata);
+		//elseif(in_array($dataType,array('TINY','STRING')))
+			//Jadual01::gaya01($semua,$ulangdata);
+			//Jadual01::inputSelectOption($semua,$ulangdata);
 		//elseif ($dataKey=='not_null|primary_key'):Jadual01::primaryKey($data);
 		//elseif ($dataType=='NEWDECIMAL'):Jadual01::gaya_url_6($data);
 		/*elseif ($key=='no'):Html_Url::gaya_url_1($data);
@@ -26,8 +34,9 @@ class Jadual01
 			echo "\n\t\t\t";
 			?><td><?php echo nl2br($data) ?></td><?php//*/
 		else:
+			$papar = $dataType . '|' . $data;
 			echo "\n\t\t\t";
-			?><td><?php echo $data ?></td><?php
+			?><td><?php echo $papar ?></td><?php
 		endif;
 	}
 #------------------------------------------------------------------------------------------
