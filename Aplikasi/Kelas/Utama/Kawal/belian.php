@@ -228,8 +228,8 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{# untuk paparkan jadual sahaja
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		$this->panggilKhas02('punca',null);
-		$this->panggilKhas02('tukaran',null);
+		$this->panggilKhas02('kod_borang',null);
+		//$this->panggilKhas02('tukaran',null);
 		$this->papar->c1 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
