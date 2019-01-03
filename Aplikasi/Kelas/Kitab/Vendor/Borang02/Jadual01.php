@@ -141,6 +141,20 @@ class Jadual01
 		?></td><?php
 	}
 #------------------------------------------------------------------------------------------
+	public static function pilihKey($semua)
+	{
+		list($key,$data,$dataType,$meta,$ulangdata) = $semua;
+		$papar = '';
+		foreach ($ulangdata[$key] as $kpd => $bil)
+		{# mula ulang $bil
+			//echo "\r" . $bil['kod'] . '|' . $bil['keterangan'] . '<br>';
+			if($bil['kod'] == $data)
+				$papar = $data . '-' . $bil['keterangan'];
+		}# tamat ulang $bil//*/
+
+		echo "\n\t\t\t";
+		?><td><?php echo $papar; ?></td><?php
+	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
 #------------------------------------------------------------------------------------------
