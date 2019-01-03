@@ -56,8 +56,9 @@ class Jadual01
 		?><td>&nbsp;</td><?php
 	}
 #------------------------------------------------------------------------------------------
-	public static function primaryKey($data)
+	public static function primaryKey($semua)
 	{# primary key
+		list($key,$data,$dataKey,$dataType,$meta,$c1,$c2) = $semua;
 		$k0 = URL . 'belian/ubah/' . $data; //$this->iconFA(4)
 		list($pengguna,$level,$birutua,$birumuda,$merah) = $this->setPencam();
 
