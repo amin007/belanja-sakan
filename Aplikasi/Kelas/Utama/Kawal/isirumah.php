@@ -175,8 +175,8 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		# Set pembolehubah utama
 		list($jadual, $medan, $carian, $susun) =
 			$this->tanya->susunPembolehubah($p1,$p2);
-		$this->papar->bentukJadual02[$p2] = $this->tanya->cariSql
-			//cariSemuaData
+		$this->papar->bentukJadual02[$p2] = $this->tanya->//cariSql
+			cariSemuaData
 			($jadual, $medan, $carian, $susun);
 		# Set pembolehubah untuk Papar
 		$this->kandunganPaparan($p1, $p2);
