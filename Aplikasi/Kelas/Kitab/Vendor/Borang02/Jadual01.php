@@ -19,7 +19,7 @@ class Jadual01
 
 		if ($data==null):Jadual01::gaya_url_0($data);
 		elseif(in_array($dataType,array('TINY','STRING'))):
-			Jadual01::inputSelectOption($semua)
+			Jadual01::inputSelectOption($semua);
 		else:Jadual01::paparDataDaa($semua);
 		endif;
 		/*
@@ -141,36 +141,6 @@ class Jadual01
 		?></td><?php
 	}
 #------------------------------------------------------------------------------------------
-	public static function inputSelectOption($semua,$ulangData)
-	{
-		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
-			$classInput,$komenInput) = $this->ccs();
-		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
-		return '<div class="input-group input-group-sm">' . $tab2
-		. '<select ' . $name . ' class="form-control">' . $tab3
-		. $this->inputOption($semua,$ulangData) . '</select>' . $tab3
-		. $this->labelTeks(kira($data))
-		. $tab2 . '</div>'
-		. '';
-	}
-#------------------------------------------------------------------------------------------
-	function inputOption($semua,$ulangData)
-	{
-		list($tab2,$tab3,$tab4,$birutua,$birumuda,$merah,
-			$classInput,$komenInput) = $this->ccs();
-		list($jenis,$jadual,$kira,$key,$data,$name) = $semua;
-		$dropmenu = '';
-		foreach ($ulangData[$key] as $myTable => $bil)
-		{# mula ulang $bil
-			//echo "\r" . $bil['keterangan'] . '<br>';
-			$p0 = ($data == $bil['kod']) ?  $data .'" selected' : $bil['kod'] . '"';
-			$p1 = ($data == $bil['kod']) ? '*' . $bil['kod'] : $bil['kod'];
-			$dropmenu .= '<option value="' . $p0 . '>'
-			. $p1 . '-' . $bil['keterangan'] . '</option>' . $tab3;
-		}# tamat ulang $bil//*/
-
-		return $dropmenu;
-	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
 #------------------------------------------------------------------------------------------
