@@ -118,8 +118,8 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 	public function susunPembolehubah($pilih,$idBorang = null)
 	{
 		//$pilih = null;
-		if($pilih == 'punca'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->kodPuncapembelian();
+		if($pilih == 'kod_borang'): //echo "\$pilih = $pilih <br>";
+			list($myTable, $medan, $carian, $susun) = $this->kodBorang();
 		elseif($pilih == 'tukaran'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->kodMediumpembayaran();
 		elseif($pilih == 'senarai_belanja'): //echo "\$pilih = $pilih <br>";
@@ -135,12 +135,12 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
-	function kodPuncapembelian()
+	function kodBorang()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
-		$myTable = 'kod_puncapembelian';
-		$medan = 'kod,keterangan';
+		$myTable = 'kod_borang';
+		$medan = 'jadual,medan,kod,keterangan';
 		$carian = $susun = null;
 		# semak database
 			/*$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
