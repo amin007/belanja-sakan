@@ -21,7 +21,7 @@
 		foreach ( $row[$kira] as $key=>$data )
 		{
 			$semua = array($myTable, $this->c1, $this->c2);
-			$html->paparData($key, $data, $semua);
+			$html::paparData($key, $data, $semua);
 		}
 		?></tr>
 	<?php
