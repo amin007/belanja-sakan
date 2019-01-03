@@ -59,10 +59,12 @@ class Jadual01
 	public static function primaryKey($semua)
 	{# primary key
 		list($key,$data,$dataKey,$dataType,$meta,$c1,$c2) = $semua;
-		$k0 = URL . 'belian/ubah/' . $data; //$this->iconFA(4)
 		list($pengguna,$level,$birutua,$birumuda,$merah) = $this->setPencam();
-
-		$this->pautanTD('_blank',$k0,$birutua,$data,$this->iconFA(4));
+			$k0 = URL . $cb . '/ubah/' . $data;
+			$btn = 'href="' . $k0 . '" class="' . $birumuda . '"';
+			//$p = '<a '. $btn . '>' . Jadual01::iconFA(1) . 'Ubah</a><br>' . $data;
+			//pautanTD($target, $href, $class, $data, $iconFA)
+			$this->pautanTD('_blank',$k0,$birutua,$data,Jadual01::iconFA(1));
 	}
 #------------------------------------------------------------------------------------------
 	public static function gaya_url_1($data)
