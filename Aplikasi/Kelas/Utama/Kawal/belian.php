@@ -229,7 +229,6 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
 		$this->panggilKhas02('kod_borang',null);
-		//$this->panggilKhas02('tukaran',null);
 		$this->papar->c1 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
@@ -242,16 +241,15 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		$this->panggilKhas02('punca');
-		$this->panggilKhas02('tukaran');
+		$this->panggilKhas02('kod_borang',null);
 		$this->papar->bentukJadual01 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
 		$this->panggilBorang01('senarai_belanja');
 		$this->papar->template = 'template_borang_baru';
-		//$this->debugKandunganPaparan();//*/
+		$this->debugKandunganPaparan();//*/
 
-		# Pergi papar kandungan
+		/*# Pergi papar kandungan
 		$this->_folder = 'cari';
 		$fail = array('1cari','index','b_baru','b_ubah');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
