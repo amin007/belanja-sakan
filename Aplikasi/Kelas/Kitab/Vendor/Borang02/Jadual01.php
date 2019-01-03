@@ -18,12 +18,14 @@ class Jadual01
 		//Jadual01::paparDataDaa($semua);
 
 		if ($data==null):Jadual01::gaya_url_0($data);
+		elseif ($dataKey=='not_null|primary_key'):
+			Jadual01::primaryKey($data);
 		elseif(in_array($dataType,array('TINY','STRING'))):
 			Jadual01::pilihKey($semua);
 		else:Jadual01::paparDataDaa($semua);
 		endif;
 		/*
-		//elseif ($dataKey=='not_null|primary_key'):Jadual01::primaryKey($data);
+		//
 		//elseif ($dataType=='NEWDECIMAL'):Jadual01::gaya_url_6($data);
 		/*elseif ($key=='no'):Html_Url::gaya_url_1($data);
 		elseif(in_array($key,array('posdaftar'))):Html_Url::gaya_url_2($data);
