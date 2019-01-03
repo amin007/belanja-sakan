@@ -119,7 +119,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 	{
 		//$pilih = null;
 		if($pilih == 'kod_borang'): //echo "\$pilih = $pilih <br>";
-			list($myTable, $medan, $carian, $susun) = $this->kodBorang();
+			list($myTable, $medan, $carian, $susun) = $this->kodBorang($p2);
 		elseif($pilih == 'tukaran'): //echo "\$pilih = $pilih <br>";
 			list($myTable, $medan, $carian, $susun) = $this->kodMediumpembayaran();
 		elseif($pilih == 'senarai_belanja'): //echo "\$pilih = $pilih <br>";
@@ -135,7 +135,7 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
-	function kodBorang()
+	function kodBorang($p2=null)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
@@ -143,10 +143,10 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		$medan = 'jadual,medan,kod,keterangan';
 		$carian = $susun = null;
 		# semak database
-			/*$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
+			$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
 				'atau'=>'WHERE', # WHERE / OR / AND
-				'medan' => $medanID, # cari dalam medan apa
-				'apa' => $dataID); # benda yang dicari//*/
+				'medan' => 'jadual', # cari dalam medan apa
+				'apa' => $p2); # benda yang dicari//*/
 
 		return array($myTable, $medan, $carian, $susun); # pulangkan nilai
 	}
