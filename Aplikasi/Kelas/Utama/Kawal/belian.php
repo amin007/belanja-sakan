@@ -228,7 +228,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{# untuk paparkan jadual sahaja
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		$this->panggilKhas02('kod_borang',null);
+		$this->panggilKhas02('kod_borang','senarai_belanja');
 		$this->papar->c1 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
@@ -241,7 +241,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
-		$this->panggilKhas02('kod_borang',null);
+		$this->panggilKhas02('kod_borang','senarai_belanja');
 		$this->papar->bentukJadual01 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
@@ -302,8 +302,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
-		$this->panggilKhas02('punca');
-		$this->panggilKhas02('tukaran');
+		$this->panggilKhas02('kod_borang','senarai_belanja');
 		$this->papar->bentukJadual01 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);
