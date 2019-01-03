@@ -125,9 +125,8 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 #===========================================================================================
 ## untuk setkan nama $myTable,$medan,$carian,$susun
 #------------------------------------------------------------------------------------------#
-	public function susunPembolehubah($a, $b = null, $c = null)
+	public function susunPembolehubah($a = null, $b = null, $c = null)
 	{
-		//$a = null;
 		$p = array($a,$b,$c);
 		if($a == 'senarai_isirumah'): //echo "\$a = $a <br>";
 			list($myTable, $medan, $carian, $susun) = $this->jadualSenaraiIsirumah($p);
