@@ -64,16 +64,16 @@ class Jadual01
 			$k0 = URL . $c2 . '/ubah/' . $data;
 			$href = 'href="' . $k0 . '" class="' . $birumuda . '"';
 			//$p = '<a '. $btn . '>' . Jadual01::iconFA(1) . 'Ubah</a><br>' . $data;
-			$p = Jadual01::pautanTD01('_blank',$href,$data,$c2);
+			$p = Jadual01::pautanTD01('_blank',$href,$data,Jadual01::iconFA(1));
 		echo "\n\t\t\t";
-		?><td><?php echo $p.'|'.$c2 ?></td><?php
+		?><td><?php echo $p ?></td><?php
 	}
 #------------------------------------------------------------------------------------------
-	public static function pautanTD01($target, $href, $data)
+	public static function pautanTD01($target, $href, $data, $iconFA)
 	{
 		$t = ($target == null) ? '':' target="' . $target . '"';
 		$data = ($data == '0' or $data == null) ? '&nbsp;':$data;
-		//$iconFA = ($iconFA == null) ? '':$iconFA;
+		$iconFA = ($iconFA == null) ? '':$iconFA;
 
 		return "<a $t $href>$data</a>";
 	}
