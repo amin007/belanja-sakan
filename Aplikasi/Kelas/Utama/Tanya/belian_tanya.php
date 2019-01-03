@@ -9,11 +9,15 @@ class Belian_Tanya extends \Aplikasi\Kitab\Tanya
 		parent::__construct();
 	}
 #------------------------------------------------------------------------------------------#
-	public function semakPembolehubah($senarai,$jadual)
+	public function semakPembolehubah($senarai,$jadual,$p='0')
 	{
-		echo '<pre>$jadual = ' . $jadual . '|<br>';
-		print_r($senarai); echo '</pre>';//*/
-		//$this->semakPembolehubah($ujian,'ujian');
+		echo '<pre>$' . $jadual . '=><br>';
+		if($p == '0') print_r($senarai);
+		if($p == '1') var_export($senarai);
+		echo '</pre>';//*/
+		//$this->semakData($ujian,'ujian',0);
+		#http://php.net/manual/en/function.var-export.php
+		#http://php.net/manual/en/function.print-r.php
 	}
 #------------------------------------------------------------------------------------------#
 	function contoh_sql01($url, $cariID)
