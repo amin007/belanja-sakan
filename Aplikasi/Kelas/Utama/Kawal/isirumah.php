@@ -202,7 +202,7 @@ class Isirumah extends \Aplikasi\Kitab\Kawal
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
 		$this->panggilKhas02('kod_borang','senarai_isirumah');
-		$this->papar->c1 = $this->tanya->
+		$this->papar->bentukJadual01 = $this->tanya->
 			cariKhas01($this->papar->bentukJadual02);
 		unset($this->papar->bentukJadual02);//*/
 		$this->panggilBorang01('senarai_isirumah');
