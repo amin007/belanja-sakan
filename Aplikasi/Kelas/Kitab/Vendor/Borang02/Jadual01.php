@@ -4,13 +4,13 @@ class Jadual01
 {
 #==========================================================================================
 #------------------------------------------------------------------------------------------
-	function paparData($key, $data, $semua)
+	public static function paparData($key, $data, $semua)
 	{
-		$myTable = $meta = $jenis = $dataKey = $dataType = null;
-		list($myTable,$meta,$jenis) = $semua;
-		//$dataType = $jenis[$key]['type'];// myGetType($data);
+		$jadual = $meta = $jenis = $dataKey = $dataType = null;
+		list($jadual,$meta,$jenis) = $semua;
+		$dataType = $meta[$jadual][$key]['type'];// myGetType($data);
 		//$dataKey = $jenis[$key]['key'];// myGetType($data);
-		if ($data==null):Borang04_Jadual::gaya_url_0($data);
+		if ($data==null):Jadual01::gaya_url_0($data);
 		//elseif ($dataKey=='not_null|primary_key'):Jadual01::primaryKey($data);
 		//elseif ($dataType=='NEWDECIMAL'):Jadual01::gaya_url_6($data);
 		/*elseif ($key=='no'):Html_Url::gaya_url_1($data);
