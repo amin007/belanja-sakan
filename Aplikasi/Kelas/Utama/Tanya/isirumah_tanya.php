@@ -172,6 +172,22 @@ class Isirumah_Tanya extends \Aplikasi\Kitab\Tanya
 		return array($jadual, $medan, $carian, $susun);#pulangkan nilai
 	}
 #------------------------------------------------------------------------------------------#
+	function kodBorang($p)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		//list($idUser,$namaPendek) = $this->tanyaDataSesi();
+		list($jadual,$b,$c) = $p;
+		$medan = 'medan,kod,keterangan';
+		$carian = $susun = null;
+		# semak database
+			$carian[] = array('fix'=>'x=', # cari x= / %like% / xlike
+				'atau'=>'WHERE', # WHERE / OR / AND
+				'medan' => 'jadual', # cari dalam medan apa
+				'apa' => $b); # benda yang dicari//*/
+
+		return array($jadual, $medan, $carian, $susun);#pulangkan nilai
+	}
+#------------------------------------------------------------------------------------------#
 	function xxx($p)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
