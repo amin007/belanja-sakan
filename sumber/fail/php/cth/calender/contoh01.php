@@ -10,11 +10,16 @@
 </div><!-- / class="container" -->
 <br>
 <?php include 'fungsi_kalender.php'; ?>
-<?php 
-$bulan = 1;
+<table class="table">
+<tr><?php
 $tahun = 2019;
-
-echo calendar($bulan , $tahun); ?>
+$setahun = array(1,2,3,4,5,6,7,8,9,10,11,12);
+foreach($setahun as $bulan):
+	echo "\n\t<td text-center>" . calendar($bulan,$tahun) . '</td>';
+	echo ($bulan % 3 == '0') ? "</tr>\n<tr>\n" : "";
+endforeach;
+?></tr>
+</table>
 <br>
 <table class="table table-bordered table-hover">
 <thead class="thead-dark">
@@ -26,11 +31,16 @@ echo calendar($bulan , $tahun); ?>
 
 
 <?php
+echo  '<br>(3 / 3) = ' . (3 / 3) . ' |(3 % 3) = ' . (3 % 3) . "\n";
+echo  '<br>(6 / 3) = ' . (6 / 3) . ' |(6 % 3) = ' . (6 % 3) . "\n";
+echo  '<br>(9 / 3) = ' . (9 / 3) . ' |(9 % 3) = ' . (9 % 3) . "\n";
+echo '<br>(12 / 3) = ' . (12 / 3) . '|(12 % 3) = ' . (12 % 3) . "\n";
+#----------------------------------------------------------------------------------------------------------
 $hari = 7;
 $bulan = 1;
 $tahun = 2019;
 $number = cal_days_in_month(CAL_GREGORIAN, $bulan , $tahun); // 31
-echo "There were {$number} days in {$bulan} {$tahun}<br>";
+echo "<br>There were {$number} days in {$bulan} {$tahun}<br>";
 
 $jd=gregoriantojd($bulan,$hari,$tahun);
 $namaHari = jddayofweek($jd,2);
