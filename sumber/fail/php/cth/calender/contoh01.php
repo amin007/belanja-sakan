@@ -13,11 +13,12 @@
 <?php include 'fungsi_kalender.php'; ?>
 <table class="table">
 <tr><?php
+$kira = 1;
 $tahun = 2019;
-$setahun = array(1,2,3,4,5,6,7,8,9,10,11,12);
+$setahun = array(2,3,4,5,6,7,8,9,10,11,12,13);
 foreach($setahun as $bulan):
 	echo "\n\t<td text-center>" . calendar($bulan,$tahun) . '</td>';
-	echo ($bulan % 3 == '0') ? "</tr>\n<tr>\n" : "";
+	echo ($kira++ % 3 == '0') ? "</tr>\n<tr>\n" : "";
 endforeach;
 ?></tr>
 </table>
