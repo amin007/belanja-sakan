@@ -167,13 +167,16 @@
 	#---------------------------------------------------------------------------------------------
 	$day_num = 1;# day number
 	$cnt = $blankdays;# skip blank days in first week
+	$today = date('d');
 	#---------------------------------------------------------------------------------------------
 	while ( $day_num <= $days_in_month )
 	{# count days until done
 		if ($cnt==7) {$cnt = 0;};
 		while ($cnt < 7)
 		{
-			$papar .= "<td>$day_num</td>";
+			$papar .= ($day_num == $today) ?
+				"<td>|$day_num|</td>"
+				:"<td>$day_num</td>";
 			$day_num++;
 			$day_count++;
 			$cnt++;
