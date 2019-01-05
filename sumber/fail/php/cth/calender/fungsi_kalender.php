@@ -13,15 +13,15 @@
 	#---------------------------------------------------------------------------------------------
 		# make title of month
 		$monthTitle = ''
-		/*'<th><a class="prev" href="?m='
+		. '<th><a class="prev" href="?m='
 			. $date->modify('-1 month')->format('n')
-			. '&amp;y=' . $date->format('Y') . '">&#9664;</a></th>'*/
-		. '<th colspan="7" class="text-center">'
+			. '&amp;y=' . $date->format('Y') . '">&#9664;</a></th>'
+		. '<th colspan="5" class="text-center">'
 			. $date->modify('0 month')->format('F Y')
 		. '</th>'
-		/*. '<th><a class="next" href="?m='
+		. '<th><a class="next" href="?m='
 			. $date->modify('+1 month')->format('n')
-			. '&amp;y='.$date->format('Y').'">&#9654;</a></th>'*/
+			. '&amp;y='.$date->format('Y').'">&#9654;</a></th>'
 		. '';
 	#---------------------------------------------------------------------------------------------
 		$month = array(
@@ -141,22 +141,22 @@
 	#---------------------------------------------------------------------------------------------
 	$days_in_month = cal_days_in_month(0, $month, $year);# days in the month
 	$papar = '';
-	$papar .= "<table>";
-	$papar .= "<tr><th colspan=\"7\" class=\"text-center\">";
+	$papar .= '<table class="table">';
+	$papar .= "\n\t" . '<tr><th colspan="7" class="text-center">';
 	$papar .= " $title $year </th></tr>";
-	$papar .= "<tr><!-- table header row  -->
-            <td width=42>S</td>
-            <td width=42>M</td>
-            <td width=42>T</td>
-            <td width=42>W</td>
-            <td width=42>T</td>
-            <td width=42>F</td>
-            <td width=42>S</td>
-          </tr>";
+	$papar .= "\n\t" . '<tr>';
+	$papar .= '<td width=42>S</td>';
+	$papar .= '<td width=42>M</td>';
+	$papar .= '<td width=42>T</td>';
+	$papar .= '<td width=42>W</td>';
+	$papar .= '<td width=42>T</td>';
+	$papar .= '<td width=42>F</td>';
+	$papar .= '<td width=42>S</td>';
+	$papar .= "</tr>";
 	#---------------------------------------------------------------------------------------------
 	$day_count = 1;
 	$blank_cnt =  $blankdays;
-	$papar .= "<tr>";
+	$papar .= "\n\t<tr>";
 	#---------------------------------------------------------------------------------------------
 	while ( $blank_cnt > 0 )# blank day table cells
 	{
@@ -173,12 +173,12 @@
 		if ($cnt==7) {$cnt = 0;};
 		while ($cnt < 7)
 		{
-			$papar .= " <td>$day_num</td> ";
+			$papar .= "<td>$day_num</td>";
 			$day_num++;
 			$day_count++;
 			$cnt++;
 			if ($day_num > $days_in_month) {break;}
-			if ($cnt == 7) { $papar .= "</tr>"; }
+			if ($cnt == 7) { $papar .= "</tr>\n\t<tr>"; }
 		}
 	}
 	#---------------------------------------------------------------------------------------------
@@ -188,7 +188,22 @@
 		$cnt++;
 	}
 	#---------------------------------------------------------------------------------------------
-	$papar .= "</tr></table>";
+	$papar .= "\n\t</table>";
 	return $papar;
 	}# end of function
+#-------------------------------------------------------------------------------------------------
+	function warnaTD($a)
+	{
+		$p[] = 'class="table-active"';
+		$p[] = 'class="table-primary"';
+		$p[] = 'class="table-secondary"';
+		$p[] = 'class="table-success"';
+		$p[] = 'class="table-danger"';
+		$p[] = 'class="table-warning"';
+		$p[] = '<td class="table-info"';
+		$p[] = 'class="table-light"';
+		$p[] = '<td class="table-dark"';
+
+		return $p[$a];
+	}
 #-------------------------------------------------------------------------------------------------
