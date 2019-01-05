@@ -17,7 +17,7 @@
 			. $date->modify('-1 month')->format('n')
 			. '&amp;y=' . $date->format('Y') . '">&#9664;</a></th>'*/
 		. '<th colspan="7" class="text-center">'
-			. $date->modify('+1 month')->format('F Y')
+			. $date->modify('0 month')->format('F Y')
 		. '</th>'
 		/*. '<th><a class="next" href="?m='
 			. $date->modify('+1 month')->format('n')
