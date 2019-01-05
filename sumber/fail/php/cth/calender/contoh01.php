@@ -1,4 +1,5 @@
 <?php include 'atas/diatas.php'; ?>
+<?php include 'atas/stylecontoh01.php'; ?>
 
 <div class="container">
 <hr><h1>Ruangtamu - Kita Tanya Apa Khabar</h1><hr>
