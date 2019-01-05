@@ -38,6 +38,27 @@ include 'contoh02.php';
 		return $medanA;
 	}
 #------------------------------------------------------------------------------------------#
+	function cariKhas02($medan1)
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		echo "<pre>INSERT INTO kod_borang01\r";
+		$mula = 0;
+		foreach($medan1 as $key => $nilai0):
+		foreach($nilai0 as $key1 => $nilai1):
+		foreach($nilai1 as $key2 => $nilai2):
+			//echo "<br>\$medanA[$key][$key1][$key2] = $nilai2\n";
+			echo "('senarai_isirumah','$key','$key1','$key2','$nilai2'),\r";
+		endforeach;endforeach;endforeach;
+		/*$medanB['edagang'][0]['kod'] = '1';
+		$medanB['edagang'][0]['keterangan'] = 'ya';
+		$medanB['edagang'][1]['kod'] = '2';
+		$medanB['edagang'][1]['keterangan'] = 'tidak';*/
+		//echo "\n<hr>tamat<hr>\n";
+		//*/
+
+		return $medanA;
+	}
+#------------------------------------------------------------------------------------------#
 	function semakPembolehubah($senarai,$jadual,$p='0')
 	{
 		echo '<pre>$' . $jadual . '=><br>';
@@ -53,5 +74,5 @@ include 'contoh02.php';
 //echo '<pre>'; var_export(tentangMedan()); echo '</pre>';
 $medan = tentangMedan();
 //semakPembolehubah($medan,'medan');
-$medanA = cariKhas01($medan);
+$medanA = cariKhas02($medan);
 semakPembolehubah($medanA,'medanA');
