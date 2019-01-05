@@ -12,16 +12,17 @@
 		$date->setDate($y, $m, 1);
 	#---------------------------------------------------------------------------------------------
 		# make title of month
-		$monthTitle =
-		'<th><a class="prev" href="?m='
+		$monthTitle = ''
+		/*'<th><a class="prev" href="?m='
 			. $date->modify('-1 month')->format('n')
-			. '&amp;y=' . $date->format('Y') . '">&#9664;</a></th>'
-		. '<th colspan="5" class="text-center">'
+			. '&amp;y=' . $date->format('Y') . '">&#9664;</a></th>'*/
+		. '<th colspan="7" class="text-center">'
 			. $date->modify('+1 month')->format('F Y')
 		. '</th>'
-		. '<th><a class="next" href="?m='
+		/*. '<th><a class="next" href="?m='
 			. $date->modify('+1 month')->format('n')
-			. '&amp;y='.$date->format('Y').'">&#9654;</a></th>';
+			. '&amp;y='.$date->format('Y').'">&#9654;</a></th>'*/
+		. '';
 	#---------------------------------------------------------------------------------------------
 		$month = array(
 			'this_month_start_dow' => $date->modify('-1 month')->format('w'),
@@ -42,8 +43,8 @@
 		$calendar = ''//'<table class="calendar">'
 		. '<table class="table">'
 		//. '<tr class="month-heading">' . $monthTitle . '</tr>'
-		. '<tr>' . $monthTitle . '</tr>'
-		. '<tr class="week-heading">'
+		. '<tr>' . $monthTitle . '</tr><tr>'
+		//. '<tr class="week-heading">'
 		. '<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>'
 		. '</tr><tr>';
 		# create the grid
