@@ -16,7 +16,7 @@
 		'<th><a class="prev" href="?m='
 			. $date->modify('-1 month')->format('n')
 			. '&amp;y=' . $date->format('Y') . '">&#9664;</a></th>'
-		. '<th colspan="5" class="big">'
+		. '<th colspan="5" class="text-center">'
 			. $date->modify('+1 month')->format('F Y')
 		. '</th>'
 		. '<th><a class="next" href="?m='
@@ -39,9 +39,10 @@
 #-------------------------------------------------------------------------------------------------
 	function paparTarikh($monthTitle,$days_arr)
 	{
-		$calendar = '<table class="calendar">'
-		//. ''
-		. '<tr class="month-heading">' . $monthTitle . '</tr>'
+		$calendar = ''//'<table class="calendar">'
+		. '<table class="table">'
+		//. '<tr class="month-heading">' . $monthTitle . '</tr>'
+		. '<tr>' . $monthTitle . '</tr>'
 		. '<tr class="week-heading">'
 		. '<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>'
 		. '</tr><tr>';
@@ -98,5 +99,22 @@
 	#---------------------------------------------------------------------------------------------
 		return $days_arr;
 	#---------------------------------------------------------------------------------------------
+	}
+#-------------------------------------------------------------------------------------------------
+	function tajukBulan($date)
+	{
+		# make title of month
+		$monthTitle =
+		'<th><a class="prev" href="?m='
+			. $date->modify('-1 month')->format('n')
+			. '&amp;y=' . $date->format('Y') . '">&#9664;</a></th>'
+		. '<th colspan="5" class="big">'
+			. $date->modify('+1 month')->format('F Y')
+		. '</th>'
+		. '<th><a class="next" href="?m='
+			. $date->modify('+1 month')->format('n')
+			. '&amp;y='.$date->format('Y').'">&#9654;</a></th>';
+
+		return $monthTitle;
 	}
 #-------------------------------------------------------------------------------------------------
