@@ -41,14 +41,19 @@ include 'contoh02.php';
 	function cariKhas02($medan1)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
-		echo "<pre>INSERT INTO kod_borang01\r";
+		echo "<pre>INSERT INTO kod_borang01(`jadual`,`medan`,`kod`,`keterangan`)\r"
+			. "VALUES\r";
 		$mula = 0;
 		foreach($medan1 as $key => $nilai0):
 		foreach($nilai0 as $key1 => $nilai1):
+			$a = '';
+			echo "('senarai_isirumah','$key',";
 		foreach($nilai1 as $key2 => $nilai2):
 			//echo "<br>\$medanA[$key][$key1][$key2] = $nilai2\n";
-			echo "('senarai_isirumah','$key','$key1','$key2','$nilai2'),\r";
-		endforeach;endforeach;endforeach;
+			$a .= "'$nilai2',";
+		endforeach;
+			echo substr($a,0,-1) . "),\r";
+		endforeach;endforeach;
 		/*$medanB['edagang'][0]['kod'] = '1';
 		$medanB['edagang'][0]['keterangan'] = 'ya';
 		$medanB['edagang'][1]['kod'] = '2';
