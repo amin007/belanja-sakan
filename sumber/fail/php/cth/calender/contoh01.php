@@ -29,9 +29,8 @@ endforeach;
 </thead><!-- / class="thead-dark" -->
 </table>
 
-
 <?php
-echo  '<br>(3 / 3) = ' . (3 / 3) . ' |(3 % 3) = ' . (3 % 3) . "\n";
+/*echo  '<br>(3 / 3) = ' . (3 / 3) . ' |(3 % 3) = ' . (3 % 3) . "\n";
 echo  '<br>(6 / 3) = ' . (6 / 3) . ' |(6 % 3) = ' . (6 % 3) . "\n";
 echo  '<br>(9 / 3) = ' . (9 / 3) . ' |(9 % 3) = ' . (9 % 3) . "\n";
 echo '<br>(12 / 3) = ' . (12 / 3) . '|(12 % 3) = ' . (12 % 3) . "\n";
@@ -45,8 +44,6 @@ echo "<br>There were {$number} days in {$bulan} {$tahun}<br>";
 $jd=gregoriantojd($bulan,$hari,$tahun);
 $namaHari = jddayofweek($jd,2);
 $namaBulan = jdmonthname($jd,1);
-echo "$hari-$bulan-$tahun : $namaHari | $namaBulan";
+echo "$hari-$bulan-$tahun : $namaHari | $namaBulan";//*/
 ?>
-
-
 <?php include 'atas/dibawah.php'; ?>
