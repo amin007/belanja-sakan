@@ -147,7 +147,7 @@
 	$papar .= "\n\t" . '<tr class="text-center">';
 	//foreach(array('S','M','T','W','T','F','S' as $namaHari):
 	foreach(array('A','I','S','R','K','J','S') as $namaHari):
-		$papar .= '<td width=42>' . $namaHari . '</td>';
+		$papar .= '<td width=90>' . $namaHari . '</td>';
 	endforeach;
 	$papar .= "</tr>";
 	#---------------------------------------------------------------------------------------------
@@ -199,7 +199,7 @@
 		$bln = str_pad($month, 2, '0', STR_PAD_LEFT);
 		$semak = $hri.'/'.$bln;
 		$style = 'style="text-align:center;background-color:#000000;color:#ffffff"';
-		$style2 = 'style="text-align:center;background-color:#cccccc;color:#ffffff"';
+		$style2 = 'style="text-align:center;background-color:#cccccc;color:#000000"';
 		if($day_num == $hariini && $month == $bulanini):
 			//$p = '<td class="text-center"><strong>'.$day_num.'</strong></td>';
 			$p = '<td class="text-center">'.$day_num.'</td>';
@@ -211,7 +211,7 @@
 			.$day_num.'<br>Gaji</strong></td>';
 		elseif(
 			in_array($semak,array('05/02','06/02','30/05','31/05',
-			'01/06','02/06','27/10','25/12'))
+			'01/06','02/06','31/08','27/10','25/12'))
 			):#cuti umum
 			$p = '<td '.$style.'><i>'
 			.$day_num.'<br>Umum</i></td>';
