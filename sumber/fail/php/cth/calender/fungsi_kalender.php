@@ -203,6 +203,8 @@
 		if($day_num == $hariini && $month == $bulanini):
 			//$p = '<td class="text-center"><strong>'.$day_num.'</strong></td>';
 			$p = '<td class="text-center">'.$day_num.'</td>';
+		elseif($blankdays == '5' OR $blankdays == '6'):#hari jumaat dan sabtu
+			$p = '<td '.$style2.'>'.$day_num.'</td>';
 		elseif(
 			in_array($semak,array('24/01','25/02','25/03','25/04','23/05','25/06',
 			'25/07','22/08','25/09','17/10','25/11','18/12'))
@@ -210,19 +212,17 @@
 			$p = '<td '.$style.'><strong>'
 			.$day_num.'<br>Gaji</strong></td>';
 		elseif(
+			in_array($semak,array('05/06','06/06','11/08'))
+			):#cuti raya
+			$p = '<td '.$style.'><i>'
+			.$day_num.'<br>Raya</i></td>';
+		elseif(
 			in_array($semak,array('21/01','05/02','06/02',/*thn baru cina*/
 			'23/03','01/05','06/05','19/05','31/08',
 			'27/10','25/12'/*krismas*/))
 			):#cuti umum
 			$p = '<td '.$style.'><i>'
 			.$day_num.'<br>Umum</i></td>';
-		elseif(
-			in_array($semak,array('05/06','06/06','11/08'))
-			):#cuti raya
-			$p = '<td '.$style.'><i>'
-			.$day_num.'<br>Raya</i></td>';
-		elseif($blankdays == '5' OR $blankdays == '6'):
-			$p = '<td '.$style2.'>'.$day_num.'</td>';
 		else:
 			$p = '<td class="text-center">'.$day_num.'</td>';
 		endif;
