@@ -210,8 +210,9 @@
 			$p = '<td '.$style.'><strong>'
 			.$day_num.'<br>Gaji</strong></td>';
 		elseif(
-			in_array($semak,array('05/02','06/02','30/05','31/05',
-			'01/06','02/06','31/08','27/10','25/12'))
+			in_array($semak,array('21/01',/*thaimusam*/'05/02','06/02',/*thn baru cina*/
+			'30/05','31/05',/*pesta keamatan*/'01/06','02/06',/*hari gawai*/'31/08',
+			'27/10',/*dewali*/'25/12'/*krismas*/))
 			):#cuti umum
 			$p = '<td '.$style.'><i>'
 			.$day_num.'<br>Umum</i></td>';
