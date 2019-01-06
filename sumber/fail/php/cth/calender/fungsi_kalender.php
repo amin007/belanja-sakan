@@ -172,7 +172,7 @@
 		while ($cnt < 7)
 		{
 			//$papar .= "<td>$day_num</td>";
-			$papar .= semakTarikh($day_num,$tarikh,$month,$year);
+			$papar .= semakTarikh($day_num,$tarikh,$month,$year,$cnt);
 			$day_num++;
 			$day_count++;
 			$cnt++;
@@ -191,23 +191,37 @@
 	return $papar;
 	}# end of function
 #-------------------------------------------------------------------------------------------------
-	function semakTarikh($day_num,$tarikh,$month,$year)
+	function semakTarikh($day_num,$tarikh,$month,$year,$blankdays)
 	{
 		$hariini = $tarikh['harian'];
 		$bulanini = $tarikh['bulanan'];
+		$hri = str_pad($day_num, 2, '0', STR_PAD_LEFT);
 		$bln = str_pad($month, 2, '0', STR_PAD_LEFT);
-		$gaji = $day_num.'/'.$bln;
+		$semak = $hri.'/'.$bln;
+		$style = 'style="text-align:center;background-color:#000000;color:#ffffff"';
+		$style2 = 'style="text-align:center;background-color:#cccccc;color:#ffffff"';
 		if($day_num == $hariini && $month == $bulanini):
 			//$p = '<td class="text-center"><strong>'.$day_num.'</strong></td>';
 			$p = '<td class="text-center">'.$day_num.'</td>';
 		elseif(
-			in_array($gaji,array('24/01','25/02','25/03','25/04',
-			'23/05','25/06','25/07','22/08',
-			'25/09','17/10','25/11','18/12'))
-			):
-			$style = 'style="background-color:#000000;color:#ffffff"';
+			in_array($semak,array('24/01','25/02','25/03','25/04','23/05','25/06',
+			'25/07','22/08','25/09','17/10','25/11','18/12'))
+			):#tarikh gaji
 			$p = '<td '.$style.'><strong>'
 			.$day_num.'<br>Gaji</strong></td>';
+		elseif(
+			in_array($semak,array('05/02','06/02','30/05','31/05',
+			'01/06','02/06','27/10','25/12'))
+			):#cuti umum
+			$p = '<td '.$style.'><i>'
+			.$day_num.'<br>Umum</i></td>';
+		elseif(
+			in_array($semak,array('05/06','06/06','11/08'))
+			):#cuti raya
+			$p = '<td '.$style.'><i>'
+			.$day_num.'<br>Raya</i></td>';
+		elseif($blankdays == '5' OR $blankdays == '6'):
+			$p = '<td '.$style2.'>'.$day_num.'</td>';
 		else:
 			$p = '<td class="text-center">'.$day_num.'</td>';
 		endif;
