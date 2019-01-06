@@ -21,7 +21,7 @@ foreach($setahun as $bulan):
 	. "\n\t<!-- *********************************************************************** -->\n\t"
 	. "</td>\n\t<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>";
 	//echo "\n\t<td text-center>Bulan " . $bulan . '</td>';
-	echo ($bulan % 3 == '0') ? "\n</tr>\n<tr>" : "";
+	echo ($bulan % 4 == '0') ? "\n</tr>\n<tr>" : "";
 endforeach;
 ?></tr>
 </table></div><!-- align="center" -->
