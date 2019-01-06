@@ -207,7 +207,7 @@
 			):
 			$style = 'style="background-color:#000000;color:#ffffff"';
 			$p = '<td '.$style.'><strong>'
-			.$day_num.'|Gaji</strong></td>';
+			.$day_num.'<br>Gaji</strong></td>';
 		else:
 			$p = '<td class="text-center">'.$day_num.'</td>';
 		endif;
@@ -223,9 +223,9 @@
 		$p[] = 'class="table-success"';
 		$p[] = 'class="table-danger"';
 		$p[] = 'class="table-warning"';
-		$p[] = '<td class="table-info"';
+		$p[] = 'class="table-info"';
 		$p[] = 'class="table-light"';
-		$p[] = '<td class="table-dark"';
+		$p[] = 'class="table-dark"';
 
 		return $p[$a];
 	}
