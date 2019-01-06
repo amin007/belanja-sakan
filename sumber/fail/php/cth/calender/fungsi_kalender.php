@@ -175,7 +175,7 @@
 		while ($cnt < 7)
 		{
 			//$papar .= "<td>$day_num</td>";
-			$papar .= '<td>' . semakTarikh($day_num,$tarikh,$month,$year) . '</td>';
+			$papar .= semakTarikh($day_num,$tarikh,$month,$year);
 			$day_num++;
 			$day_count++;
 			$cnt++;
@@ -198,10 +198,19 @@
 	{
 		$hariini = $tarikh['harian'];
 		$bulanini = $tarikh['bulanan'];
+		$bln = str_pad($month, 2, '0', STR_PAD_LEFT);
+		$gaji = $day_num.'/'.$bln;
 		if($day_num == $hariini && $month == $bulanini):
-			$p = '<strong>'.$day_num.'</strong>';
+			$p = '<td class="text-center"><strong>'.$day_num.'</strong></td>';
+		elseif(
+			in_array($gaji,array('24/01','25/02','25/03','25/04',
+			'23/05','25/06','25/07','22/08',
+			'25/09','17/10','25/11','18/12'))
+			):
+			$style = 'style="background-color:#000000;color:#ffffff"';
+			$p = '<td class="table-dark text-center">'.$day_num.'|Gaji</td>';
 		else:
-			$p = ''.$day_num.'';
+			$p = '<td class="text-center">'.$day_num.'</td>';
 		endif;
 
 		return $p;
