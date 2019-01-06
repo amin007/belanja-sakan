@@ -121,7 +121,7 @@
 #-------------------------------------------------------------------------------------------------
 ##################################################################################################
 #-------------------------------------------------------------------------------------------------
-	function showmonth($month, $year)
+	function showmonth($month, $year, $tarikh)
 	{# https://www.codeproject.com/Tips/661698/Simple-Calendar
 	#---------------------------------------------------------------------------------------------
 	$first_day = mktime(0,0,0,$month, 1, $year);  // Here we generate the first day of the month
@@ -141,7 +141,7 @@
 	#---------------------------------------------------------------------------------------------
 	$days_in_month = cal_days_in_month(0, $month, $year);# days in the month
 	$papar = '';
-	$papar .= '<table class="table">';
+	$papar .= '<table class="table table-bordered">';
 	$papar .= "\n\t" . '<tr><th colspan="7" class="text-center">';
 	$papar .= " $title $year </th></tr>";
 	$papar .= "\n\t" . '<tr>';
@@ -174,9 +174,8 @@
 		if ($cnt==7) {$cnt = 0;};
 		while ($cnt < 7)
 		{
-			$papar .= ($day_num == $today) ?
-				"<td>|$day_num|</td>"
-				:"<td>$day_num</td>";
+			//$papar .= "<td>$day_num</td>";
+			$papar .= '<td>' . semakTarikh($day_num,$tarikh,$month,$year) . '</td>';
 			$day_num++;
 			$day_count++;
 			$cnt++;
@@ -189,11 +188,24 @@
 	{# continue with $cnt for end of month blank days
 		$papar .= "<td>&nbsp;</td>";
 		$cnt++;
-	}
+	}if ($cnt == 7) { $papar .= "</tr>"; }
 	#---------------------------------------------------------------------------------------------
 	$papar .= "\n\t</table>";
 	return $papar;
 	}# end of function
+#-------------------------------------------------------------------------------------------------
+	function semakTarikh($day_num,$tarikh,$month,$year)
+	{
+		$hariini = $tarikh['harian'];
+		$bulanini = $tarikh['bulanan'];
+		if($day_num == $hariini && $month == $bulanini):
+			$p = '<strong>'.$day_num.'</strong>';
+		else:
+			$p = ''.$day_num.'';
+		endif;
+
+		return $p;
+	}//*/
 #-------------------------------------------------------------------------------------------------
 	function warnaTD($a)
 	{
