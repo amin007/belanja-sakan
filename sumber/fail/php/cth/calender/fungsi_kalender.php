@@ -141,17 +141,14 @@
 	#---------------------------------------------------------------------------------------------
 	$days_in_month = cal_days_in_month(0, $month, $year);# days in the month
 	$papar = '';
-	$papar .= '<table class="table table-bordered">';
+	$papar .= '<table class="excel">';#table table-bordered
 	$papar .= "\n\t" . '<tr><th colspan="7" class="text-center">';
 	$papar .= " $title $year </th></tr>";
-	$papar .= "\n\t" . '<tr>';
-	$papar .= '<td width=42>S</td>';
-	$papar .= '<td width=42>M</td>';
-	$papar .= '<td width=42>T</td>';
-	$papar .= '<td width=42>W</td>';
-	$papar .= '<td width=42>T</td>';
-	$papar .= '<td width=42>F</td>';
-	$papar .= '<td width=42>S</td>';
+	$papar .= "\n\t" . '<tr class="text-center">';
+	//foreach(array('S','M','T','W','T','F','S' as $namaHari):
+	foreach(array('A','I','S','R','K','J','S') as $namaHari):
+		$papar .= '<td width=42>' . $namaHari . '</td>';
+	endforeach;
 	$papar .= "</tr>";
 	#---------------------------------------------------------------------------------------------
 	$day_count = 1;
@@ -201,14 +198,16 @@
 		$bln = str_pad($month, 2, '0', STR_PAD_LEFT);
 		$gaji = $day_num.'/'.$bln;
 		if($day_num == $hariini && $month == $bulanini):
-			$p = '<td class="text-center"><strong>'.$day_num.'</strong></td>';
+			//$p = '<td class="text-center"><strong>'.$day_num.'</strong></td>';
+			$p = '<td class="text-center">'.$day_num.'</td>';
 		elseif(
 			in_array($gaji,array('24/01','25/02','25/03','25/04',
 			'23/05','25/06','25/07','22/08',
 			'25/09','17/10','25/11','18/12'))
 			):
 			$style = 'style="background-color:#000000;color:#ffffff"';
-			$p = '<td class="table-dark text-center">'.$day_num.'|Gaji</td>';
+			$p = '<td '.$style.'><strong>'
+			.$day_num.'|Gaji</strong></td>';
 		else:
 			$p = '<td class="text-center">'.$day_num.'</td>';
 		endif;
