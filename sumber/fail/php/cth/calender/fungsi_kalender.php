@@ -210,9 +210,9 @@
 			$p = '<td '.$style.'><strong>'
 			.$day_num.'<br>Gaji</strong></td>';
 		elseif(
-			in_array($semak,array('21/01',/*thaimusam*/'05/02','06/02',/*thn baru cina*/
-			'30/05','31/05',/*pesta keamatan*/'01/06','02/06',/*hari gawai*/'31/08',
-			'27/10',/*dewali*/'25/12'/*krismas*/))
+			in_array($semak,array('21/01','05/02','06/02',/*thn baru cina*/
+			'23/03','01/05','06/05','19/05','31/08',
+			'27/10','25/12'/*krismas*/))
 			):#cuti umum
 			$p = '<td '.$style.'><i>'
 			.$day_num.'<br>Umum</i></td>';
@@ -229,6 +229,31 @@
 
 		return $p;
 	}//*/
+#-------------------------------------------------------------------------------------------------
+/* Cuti Umum Johor 2019 ->https://publicholidays.com.my/ms/johor/2019-dates/
+21 Jan	Isnin	Hari Thaipusam
+5 Feb	Selasa	Tahun Baru Cina
+6 Feb	Rabu	Tahun Baru Cina Hari Kedua
+23 Mac	Sabtu	Hari Keputeraan Sultan Johor
+1 Mei	Rabu	Hari Pekerja
+6 Mei	Isnin	Awal Ramadan
+19 Mei	Ahad	Hari Wesak
+5 Jun	Rabu	Hari Raya Aidilfitri
+6 Jun	Khamis	Hari Raya Aidilfitri Hari Kedua
+11 Ogos	Ahad	Hari Raya Haji
+31 Ogos	Sabtu	Hari Kebangsaan
+1 Sep	Ahad	Awal Muharram
+1 Sep	Ahad	Cuti Hari Kebangsaan
+9 Sep	Isnin	Hari Keputeraan YDP Agong
+16 Sep	Isnin	Hari Malaysia
+5 Okt	Sabtu	Hari Hol Almarhum Sultan Iskandar
+27 Okt	Ahad	Hari Deepavali
+9 Nov	Sabtu	Maulidur Rasul
+25 Dis	Rabu	Hari Krismas
+#
+'30/05','31/05',pesta keamatan
+'01/06','02/06',hari gawai
+*/
 #-------------------------------------------------------------------------------------------------
 	function warnaTD($a)
 	{
