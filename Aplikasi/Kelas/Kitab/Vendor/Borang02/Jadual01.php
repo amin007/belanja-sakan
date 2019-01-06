@@ -64,7 +64,7 @@ class Jadual01
 			$k0 = URL . $c2 . '/ubah/' . $data;
 			$href = 'href="' . $k0 . '" class="' . $birumuda . '"';
 			//$p = '<a '. $btn . '>' . Jadual01::iconFA(1) . 'Ubah</a><br>' . $data;
-			$p = Jadual01::pautanTD01('_blank',$href,$data,Jadual01::iconFA(1));
+			$p = Jadual01::pautanTD01('_blank',$href,$data,Jadual01::iconFA(2));
 		echo "\n\t\t\t";
 		?><td><?php echo $p ?></td><?php
 	}
