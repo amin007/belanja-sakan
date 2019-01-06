@@ -23,16 +23,16 @@ table.excel thead th, table.excel tbody th {
 	border-style:ridge;
 	border-width:1;
 	text-align: center;
-	font-size:20px;
+	font-size:25px;
 	vertical-align: top;
 }
 table.excel tbody th { text-align:center; vertical-align: top; }
 table.excel tbody td
 {
-	padding: 14px;/*padding: 0 3px; */
+	padding: 10px;/*padding: 0 3px; */
 	border: 2px solid #000000;/*border: 1px solid #aaaaaa;*/
 	background:#ffffff;
-	vertical-align:bottom;
+	/*vertical-align:bottom;*/
 }
 .fa-input {font-family: FontAwesome}
 </style>
