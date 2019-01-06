@@ -191,7 +191,7 @@
 	return $papar;
 	}# end of function
 #-------------------------------------------------------------------------------------------------
-	function semakTarikh($day_num,$tarikh,$month,$year,$blankdays)
+	function semakTarikh($day_num,$tarikh,$month,$year,$cutiminggu)
 	{
 		$hariini = $tarikh['harian'];
 		$bulanini = $tarikh['bulanan'];
@@ -203,7 +203,7 @@
 		if($day_num == $hariini && $month == $bulanini):
 			//$p = '<td class="text-center"><strong>'.$day_num.'</strong></td>';
 			$p = '<td class="text-center">'.$day_num.'</td>';
-		elseif($blankdays == '5' OR $blankdays == '6'):#hari jumaat dan sabtu
+		elseif(in_array($cutiminggu,array('5','6'))):#hari jumaat dan sabtu
 			$p = '<td '.$style2.'>'.$day_num.'</td>';
 		elseif(
 			in_array($semak,array('24/01','25/02','25/03','25/04','23/05','25/06',
