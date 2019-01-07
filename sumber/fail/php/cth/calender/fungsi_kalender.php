@@ -212,17 +212,13 @@
 			$p = '<td '.$style.'><strong>'
 			.$day_num.'<br>Gaji</strong></td>';
 		elseif(
-			in_array($semak,array('05/06','06/06','11/08'))
-			):#cuti raya
-			$p = '<td '.$style.'><i>'
-			.$day_num.'<br>Raya</i></td>';
-		elseif(
 			in_array($semak,array('21/01','05/02','06/02',/*thn baru cina*/
-			'23/03','01/05','06/05','19/05','31/08','01/09','09/09','16/09','05/10',
+			'23/03','01/05','06/05','19/05','05/06','06/06','11/08','31/08',
+			'01/09','09/09','16/09','05/10',
 			'27/10','09/11','25/12'/*krismas*/))
 			):#cuti umum
-			$p = '<td '.$style.'><i>'
-			.$day_num.'<br>Umum</i></td>';
+			$p = '<td '.$style.'><i>'.$day_num.'<br>'
+			.cutiUmum($semak).'</i></td>';
 		else:
 			$p = '<td class="text-center">'.$day_num.'</td>';
 		endif;
@@ -230,30 +226,33 @@
 		return $p;
 	}//*/
 #-------------------------------------------------------------------------------------------------
-/* Cuti Umum Johor 2019 ->https://publicholidays.com.my/ms/johor/2019-dates/
-21 Jan	Isnin	Hari Thaipusam
-5 Feb	Selasa	Tahun Baru Cina
-6 Feb	Rabu	Tahun Baru Cina Hari Kedua
-23 Mac	Sabtu	Hari Keputeraan Sultan Johor
-1 Mei	Rabu	Hari Pekerja
-6 Mei	Isnin	Awal Ramadan
-19 Mei	Ahad	Hari Wesak
-5 Jun	Rabu	Hari Raya Aidilfitri
-6 Jun	Khamis	Hari Raya Aidilfitri Hari Kedua
-11 Ogos	Ahad	Hari Raya Haji
-31 Ogos	Sabtu	Hari Kebangsaan
-1 Sep	Ahad	Awal Muharram
-1 Sep	Ahad	Cuti Hari Kebangsaan
-9 Sep	Isnin	Hari Keputeraan YDP Agong
-16 Sep	Isnin	Hari Malaysia
-5 Okt	Sabtu	Hari Hol Almarhum Sultan Iskandar
-27 Okt	Ahad	Hari Deepavali
-9 Nov	Sabtu	Maulidur Rasul
-25 Dis	Rabu	Hari Krismas
-#
-'30/05','31/05',pesta keamatan
-'01/06','02/06',hari gawai
-*/
+	function cutiUmum($semak)
+	{# Cuti Umum Johor 2019 ->https://publicholidays.com.my/ms/johor/2019-dates/
+		if($semak == '21/01') $cu = 'Thaipusam';#21 Jan	Isnin	Hari Thaipusam
+		if($semak == '05/02') $cu = 'CNY';#5 Feb	Selasa	Tahun Baru Cina
+		if($semak == '06/02') $cu = 'CNY';#6 Feb	Rabu	Tahun Baru Cina Hari Kedua
+		if($semak == '23/03') $cu = 'Keputeraan Sultan Johor';
+			#23 Mac	Sabtu	Hari Keputeraan Sultan Johor
+		if($semak == '01/05') $cu = 'Pekerja';#1 Mei	Rabu	Hari Pekerja
+		if($semak == '06/05') $cu = 'Awal Ramadan';#6 Mei	Isnin	Awal Ramadan
+		if($semak == '19/05') $cu = 'Wesak';#19 Mei	Ahad	Hari Wesak
+		if($semak == '05/06') $cu = 'Raya Puasa';#5 Jun	Rabu	Hari Raya Aidilfitri
+		if($semak == '06/06') $cu = 'Raya Puasa';#6 Jun	Khamis	Hari Raya Aidilfitri Hari Kedua
+		if($semak == '11/08') $cu = 'Haji';#11 Ogos	Ahad	Hari Raya Haji
+		if($semak == '31/08') $cu = 'Merdeka';#31 Ogos	Sabtu	Hari Kebangsaan
+		if($semak == '01/09') $cu = 'Muharam';#1 Sep	Ahad	Awal Muharram/Cuti Hari Kebangsaan
+		if($semak == '09/09') $cu = 'Agong';#9 Sep	Isnin	Hari Keputeraan YDP Agong
+		if($semak == '16/09') $cu = 'Msia';#16 Sep	Isnin	Hari Malaysia
+		if($semak == '05/10') $cu = 'Hol';#5 Okt	Sabtu	Hari Hol Almarhum Sultan Iskandar
+		if($semak == '27/10') $cu = 'Dewali';#27 Okt	Ahad	Hari Deepavali
+		if($semak == '09/11') $cu = 'Maulidur';#9 Nov	Sabtu	Maulidur Rasul
+		if($semak == '25/12') $cu = 'Krismas';#25 Dis	Rabu	Hari Krismas
+		#
+		/*'30/05','31/05',pesta keamatan
+		'01/06','02/06',hari gawai
+		*/
+		return $cu;
+	}
 #-------------------------------------------------------------------------------------------------
 	function warnaTD($a)
 	{
