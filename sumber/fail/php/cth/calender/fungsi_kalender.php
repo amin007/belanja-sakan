@@ -234,7 +234,7 @@
 		if($semak == '23/03') $cu = 'Keputeraan Sultan Johor';
 			#23 Mac	Sabtu	Hari Keputeraan Sultan Johor
 		if($semak == '01/05') $cu = 'Pekerja';#1 Mei	Rabu	Hari Pekerja
-		if($semak == '06/05') $cu = 'Awal Ramadan';#6 Mei	Isnin	Awal Ramadan
+		if($semak == '06/05') $cu = 'Awal Puasa';#6 Mei	Isnin	Awal Ramadan
 		if($semak == '19/05') $cu = 'Wesak';#19 Mei	Ahad	Hari Wesak
 		if($semak == '05/06') $cu = 'Raya Puasa';#5 Jun	Rabu	Hari Raya Aidilfitri
 		if($semak == '06/06') $cu = 'Raya Puasa';#6 Jun	Khamis	Hari Raya Aidilfitri Hari Kedua
