@@ -203,14 +203,12 @@
 		if($day_num == $hariini && $month == $bulanini):
 			//$p = '<td class="text-center"><strong>'.$day_num.'</strong></td>';
 			$p = '<td class="text-center">'.$day_num.'</td>';
-		elseif(in_array($cutiminggu,array('5','6'))):#hari jumaat dan sabtu
-			$p = '<td '.$style2.'>'.$day_num.'</td>';
 		elseif(
 			in_array($semak,array('24/01','25/02','25/03','25/04','23/05','25/06',
 			'25/07','22/08','25/09','17/10','25/11','18/12'))
 			):#tarikh gaji
-			$p = '<td '.$style.'><strong>'
-			.$day_num.'<br>Gaji</strong></td>';
+			$p = '<td '.$style.'><strong>'.$day_num
+			.'<br>Gaji</strong></td>';
 		elseif(
 			in_array($semak,array('21/01','05/02','06/02',/*thn baru cina*/
 			'23/03','01/05','06/05','19/05','05/06','06/06','11/08','31/08',
@@ -219,6 +217,8 @@
 			):#cuti umum
 			$p = '<td '.$style.'><i>'.$day_num.'<br>'
 			.cutiUmum($semak).'</i></td>';
+		elseif(in_array($cutiminggu,array('5','6'))):#hari jumaat dan sabtu
+			$p = '<td '.$style2.'>'.$day_num.'</td>';
 		else:
 			$p = '<td class="text-center">'.$day_num.'</td>';
 		endif;
@@ -231,7 +231,7 @@
 		if($semak == '21/01') $cu = 'Thaipusam';#21 Jan	Isnin	Hari Thaipusam
 		if($semak == '05/02') $cu = 'CNY';#5 Feb	Selasa	Tahun Baru Cina
 		if($semak == '06/02') $cu = 'CNY';#6 Feb	Rabu	Tahun Baru Cina Hari Kedua
-		if($semak == '23/03') $cu = 'Keputeraan Sultan Johor';
+		if($semak == '23/03') $cu = 'Keputeraan Sultan JDT';
 			#23 Mac	Sabtu	Hari Keputeraan Sultan Johor
 		if($semak == '01/05') $cu = 'Pekerja';#1 Mei	Rabu	Hari Pekerja
 		if($semak == '06/05') $cu = 'Awal Puasa';#6 Mei	Isnin	Awal Ramadan
