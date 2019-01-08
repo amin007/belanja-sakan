@@ -103,7 +103,7 @@ class <?php echo $namaClass ?>_Tanya extends \Aplikasi\Kitab\Tanya
 ##-------------------------------------------------------------------------------------------------#
 	public function semakPembolehubah($senarai,$jadual)
 	{
-		echo '&lt;pre>$jadual = ' . $jadual . '|&lt;br>';
+		echo '&lt;pre>' . $jadual . '|&lt;br>';
 		print_r($senarai); echo '&lt;/pre>';//*/
 		//$this->semakPembolehubah($ujian,'ujian');
 	}
