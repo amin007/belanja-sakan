@@ -230,6 +230,25 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan();//*/
 	}
 #-------------------------------------------------------------------------------------------
+	public function pdf()
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
+		# Set pembolehubah utama
+		$this->panggilKhas02('kod_borang','senarai_belanja');
+		$this->papar->c1 = $this->tanya->
+			cariKhas01($this->papar->bentukJadual02);
+		unset($this->papar->bentukJadual02);
+		$this->panggilJadual01('senarai_belanja');
+		$this->papar->template = 'template_biasa';
+		//$this->debugKandunganPaparan();//*/'
+
+		# Pergi papar kandungan
+		$this->_folder = 'cari/pdf/';
+		$fail = array('1cari','tcpdf');
+		//echo '<br>$fail = ' . $fail[0] . '<hr>';
+		$this->paparKandungan($this->_folder, $fail[1], $noInclude=0);//*/
+	}
+#-------------------------------------------------------------------------------------------
 	public function baru()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
