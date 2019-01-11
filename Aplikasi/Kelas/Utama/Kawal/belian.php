@@ -243,10 +243,10 @@ class Belian extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan();//*/'
 
 		# Pergi papar kandungan
-		$this->_folder = 'cari/pdf/';
-		$fail = array('1cari','tcpdf');
+		$this->_folder = 'caripdf';
+		$fail = array('1cari','contoh001');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
-		$this->paparKandungan($this->_folder, $fail[1], $noInclude=0);//*/
+		$this->paparKandungan($this->_folder, $fail[1], $noInclude=1);//*/
 	}
 #-------------------------------------------------------------------------------------------
 	public function baru()
