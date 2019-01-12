@@ -22,7 +22,9 @@ $pdf->setPrintHeader(false);
 $pdf->setPrintFooter(false);
 
 # set margins
-$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+//SetMargins($left,$top,$right = -1,$keepmargins = false)
+//$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+$pdf->SetMargins(5, 5, 5);
 
 # set auto page breaks
 $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
