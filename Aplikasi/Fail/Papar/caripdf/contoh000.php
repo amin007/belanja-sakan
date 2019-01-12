@@ -21,7 +21,10 @@
 # create new PDF document
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 require 'atas/diatas.php';
+require 'atas/pilih_jadual_bootstrap.php';
 #---------------------------------------------------------------------------------------------------
+# set pembolehubah
+$jadual = ulangTable($this->senarai);
 #---------------------------------------------------------------------------------------------------
 $jadual = <<<EOD
 <style type="text/css">
@@ -49,23 +52,8 @@ table.excel tbody td
 .fa-input {font-family: FontAwesome}
 </style>
 <br>
-<table class="excel" border="1" cellspacing="0" cellpadding="1">
-<tr>
-	<td>COL 1 - ROW 1</td>
-	<td>COL 2 - ROW 1</td>
-	<td>COL 3 - ROW 1</td>
-</tr>
-<tr>
-	<td>COL 1 - ROW 1</td>
-	<td>COL 2 - ROW 1</td>
-	<td>COL 3 - ROW 1</td>
-</tr>
-<tr>
-	<td>COL 1 - ROW 1</td>
-	<td>COL 2 - ROW 1</td>
-	<td>COL 3 - ROW 1</td>
-</tr>
-</table>
+$jadual
+<br>
 EOD;
 
 $pdf->writeHTML($jadual, true, false, false, false, '');
