@@ -21,9 +21,6 @@ $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 $pdf->setPrintHeader(false);
 $pdf->setPrintFooter(false);
 
-# set default monospaced font
-$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
-
 # set margins
 $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
 
@@ -33,6 +30,8 @@ $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 # set image scale factor
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 #---------------------------------------------------------------------------------------------------
-$pdf->SetFont('times', 'BI', 20);# set font
+# set default monospaced font
+//$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+//$pdf->SetFont('times', 'BI', 12);# set font
 //$pdf->AddPage();# add a page
 $pdf->AddPage('L', 'A4');# A4 LANDSCAPE
