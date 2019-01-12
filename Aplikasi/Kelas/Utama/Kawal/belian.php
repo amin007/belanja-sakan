@@ -245,7 +245,7 @@ class Belian extends \Aplikasi\Kitab\Kawal
 
 		# Pergi papar kandungan
 		$this->_folder = 'caripdf';
-		$fail = array('contoh001');
+		$fail = array('contoh000');
 		//echo '<br>$fail = ' . $fail[0] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);//*/
 	}
