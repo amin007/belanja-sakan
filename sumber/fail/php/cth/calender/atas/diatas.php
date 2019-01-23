@@ -36,5 +36,17 @@ table.excel tbody td
 }
 .fa-input {font-family: FontAwesome}
 </style>
+<style>
+/*@media print
+{
+	*:after {
+	color: #000 !important;
+	background: transparent !important;
+	}
+	@page {
+		margin: 2cm;
+	}
+}*/
+</style>
 </head>
 <body>
