@@ -1,4 +1,6 @@
 <!-- h1> Ini Template Borang Baru </h1 -->
+<table border="1" class="table"><tr><td>
+<!--  mula - senarai borang baru ------------------------------------------------------------------------------- -->
 <?php
 //$html = new Aplikasi\Kitab\Borang01_Tambah;
 $html = new Aplikasi\Kitab\BrgBaru01;
@@ -24,3 +26,24 @@ foreach($this->senarai as $myTable => $row)
 	}#if ( count($row)==0 )
 }
 /*<!-- / class="container" -->*/
+?>
+<!--  mula - senarai borang baru ------------------------------------------------------------------------------- -->
+</td>
+<td>
+<!--  mula - senarai jadual yang ada --------------------------------------------------------------------------- -->
+<?php
+foreach($this->bentukJadual01 as $myTable => $row)
+{
+	if ( count($row)==0 ) echo '';
+	else
+	{
+#----------------------------------------------------------------------------------------------------
+		$tajukjadual = $myTable;
+		include 'pilih_jadual_am.php';
+		//include 'pilih_jadual_bootstrap.php';
+#----------------------------------------------------------------------------------------------------
+	}#if ( count($row)==0 )
+}
+?>
+<!-- tamat - senarai jadual yang ada --------------------------------------------------------------------------- -->
+</td></tr></table>
