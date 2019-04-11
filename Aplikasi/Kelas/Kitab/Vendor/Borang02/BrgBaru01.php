@@ -74,6 +74,8 @@ class BrgBaru01
 			$input = $this->inputPrimaryKey($semua);
 		elseif( in_array($key,array('nohp')) )
 			$input = $this->inputBiodata($semua);
+		elseif( in_array($key,array('jadual','medan')) )
+			$input = $this->inputSelectOption($semua,$ulangdata);
 		elseif(in_array($dataType,array('VAR_STRING')))
 			$input = $this->inputTeksBesar($semua);
 		elseif(in_array($dataType,array('BLOB')))
