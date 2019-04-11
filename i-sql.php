@@ -226,7 +226,24 @@ INSERT INTO `kod_borang` (`no`, `jadual`, `medan`, `kod`, `keterangan`, `catatan
 (204,	'senarai-isirumah',	'kumpulan-etnik',	'2133',	'Melayu Asli - Orang Kuala',	NULL),
 (205,	'senarai-isirumah',	'kumpulan-etnik',	'2134',	'Melayu Asli - Orang Seletar',	NULL),
 (206,	'senarai-isirumah',	'kumpulan-etnik',	'2135',	'Melayu Asli - Semalai',	NULL),
-(207,	'senarai-isirumah',	'kumpulan-etnik',	'2136',	'Melayu Asli - Temuan',	NULL);
+(207,	'senarai-isirumah',	'kumpulan-etnik',	'2136',	'Melayu Asli - Temuan',	NULL),
+(208,	'senarai-isirumah',	'kumpulan-etnik',	'3110',	'Bumiputera Sabah - Bajau',	NULL),
+(209,	'senarai-isirumah',	'kumpulan-etnik',	'3120',	'Bumiputera Sabah - Balalak / Molbog',	NULL),
+(210,	'senarai-isirumah',	'kumpulan-etnik',	'3130',	'Bumiputera Sabah - Bisaya / Bisayah',	NULL),
+(211,	'senarai-isirumah',	'kumpulan-etnik',	'3140',	'Bumiputera Sabah - Bulongan',	NULL),
+(212,	'senarai-isirumah',	'kumpulan-etnik',	'3150',	'Bumiputera Sabah - Dusun',	NULL),
+(213,	'senarai-isirumah',	'kumpulan-etnik',	'3160',	'Bumiputera Sabah - Idahan / Ida`an',	NULL),
+(214,	'senarai-isirumah',	'kumpulan-etnik',	'3170',	'Bumiputera Sabah - Iranun / Ilanun',	NULL),
+(215,	'senarai-isirumah',	'kumpulan-etnik',	'3180',	'Bumiputera Sabah - Kadayan / Kedayan',	NULL),
+(216,	'senarai-isirumah',	'kumpulan-etnik',	'3190',	'Bumiputera Sabah - Kadazan',	NULL),
+(217,	'senarai-isirumah',	'kumpulan-etnik',	'3200',	'Bumiputera Sabah - Lundayuh / Lundayeh',	NULL),
+(218,	'senarai-isirumah',	'kumpulan-etnik',	'3210',	'Bumiputera Sabah - Melayu Brunei',	NULL),
+(219,	'senarai-isirumah',	'kumpulan-etnik',	'3220',	'Bumiputera Sabah - Murut',	NULL),
+(220,	'senarai-isirumah',	'kumpulan-etnik',	'3230',	'Bumiputera Sabah - Orang Sungai / Sungoi',	NULL),
+(221,	'senarai-isirumah',	'kumpulan-etnik',	'3240',	'Bumiputera Sabah - Rungus',	NULL),
+(222,	'senarai-isirumah',	'kumpulan-etnik',	'3250',	'Bumiputera Sabah - Suluk',	NULL),
+(223,	'senarai-isirumah',	'kumpulan-etnik',	'3260',	'Bumiputera Sabah - Tidung',	NULL),
+(224,	'senarai-isirumah',	'kumpulan-etnik',	'3998',	'Bumiputera Sabah Lain',	NULL);
 
 DROP TABLE IF EXISTS `kod_ihp_spec`;
 CREATE TABLE `kod_ihp_spec` (
