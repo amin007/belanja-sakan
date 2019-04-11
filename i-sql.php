@@ -10,12 +10,13 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 DROP TABLE IF EXISTS `kod_borang`;
 CREATE TABLE `kod_borang` (
-  `no` int(11) DEFAULT NULL,
+  `no` int(11) NOT NULL AUTO_INCREMENT,
   `jadual` varchar(255) DEFAULT NULL,
   `medan` varchar(255) DEFAULT NULL,
   `kod` varchar(255) DEFAULT NULL,
   `keterangan` varchar(255) DEFAULT NULL,
-  `catatan` text
+  `catatan` text,
+  PRIMARY KEY (`no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `kod_borang` (`no`, `jadual`, `medan`, `kod`, `keterangan`, `catatan`) VALUES
@@ -206,7 +207,26 @@ INSERT INTO `kod_borang` (`no`, `jadual`, `medan`, `kod`, `keterangan`, `catatan
 (185,	'senarai_isirumah',	'taraf_aktiviti',	'12',	'OKU',	NULL),
 (186,	'senarai_isirumah',	'taraf_aktiviti',	'13',	'Kanak-kanak',	NULL),
 (187,	'senarai_isirumah',	'taraf_aktiviti',	'14',	'Bayi',	NULL),
-(188,	'senarai_isirumah',	'taraf_aktiviti',	'15',	'Lain-lain',	NULL);
+(188,	'senarai_isirumah',	'taraf_aktiviti',	'15',	'Lain-lain',	NULL),
+(189,	'senarai-isirumah',	'kumpulan-etnik',	'1100',	'Melayu',	NULL),
+(190,	'senarai-isirumah',	'kumpulan-etnik',	'2111',	'Negrito - Bateq',	NULL),
+(191,	'senarai-isirumah',	'kumpulan-etnik',	'2112',	'Negrito - Jahai',	NULL),
+(192,	'senarai-isirumah',	'kumpulan-etnik',	'2113',	'Negrito - Kensiu',	NULL),
+(193,	'senarai-isirumah',	'kumpulan-etnik',	'2114',	'Negrito - Kintak',	NULL),
+(194,	'senarai-isirumah',	'kumpulan-etnik',	'2115',	'Negrito - Lanoh',	NULL),
+(195,	'senarai-isirumah',	'kumpulan-etnik',	'2116',	'Negrito - Mendriq',	NULL),
+(196,	'senarai-isirumah',	'kumpulan-etnik',	'2121',	'Senoi - Che Wong',	NULL),
+(197,	'senarai-isirumah',	'kumpulan-etnik',	'2122',	'Senoi - Jahut',	NULL),
+(198,	'senarai-isirumah',	'kumpulan-etnik',	'2123',	'Senoi - Mahmeri',	NULL),
+(199,	'senarai-isirumah',	'kumpulan-etnik',	'2124',	'Senoi - Semai',	NULL),
+(200,	'senarai-isirumah',	'kumpulan-etnik',	'2125',	'Senoi - Semoq Beri',	NULL),
+(201,	'senarai-isirumah',	'kumpulan-etnik',	'2126',	'Senoi - Temiar',	NULL),
+(202,	'senarai-isirumah',	'kumpulan-etnik',	'2131',	'Melayu Asli - Jakun',	NULL),
+(203,	'senarai-isirumah',	'kumpulan-etnik',	'2132',	'Melayu Asli - Orang Kanaq',	NULL),
+(204,	'senarai-isirumah',	'kumpulan-etnik',	'2133',	'Melayu Asli - Orang Kuala',	NULL),
+(205,	'senarai-isirumah',	'kumpulan-etnik',	'2134',	'Melayu Asli - Orang Seletar',	NULL),
+(206,	'senarai-isirumah',	'kumpulan-etnik',	'2135',	'Melayu Asli - Semalai',	NULL),
+(207,	'senarai-isirumah',	'kumpulan-etnik',	'2136',	'Melayu Asli - Temuan',	NULL);
 
 DROP TABLE IF EXISTS `kod_ihp_spec`;
 CREATE TABLE `kod_ihp_spec` (
