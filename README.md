@@ -59,4 +59,5 @@ ___
 
 # Sumber ilham dari
 * http://jream.com/lab
+* https://www.php-fig.org
 * https://github.com/amin007/mvc-melayu
